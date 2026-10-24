@@ -252,13 +252,17 @@ async function renderLibrary() {
   }));
   const host = (u) => (u ? u.replace(/^https?:\/\/(www\.)?/, "").split("/")[0] : "");
   view.innerHTML = `<div class="wide-col"><h1>Texts</h1><div class="lib">${items.map((t) => {
-    const f = "t:" + t.id, saved = counts[f] || 0, done = learned[f] || 0;
+    const f = "t:" + t.id, saved = counts[f] || 0, done = learned[f] || 0, read = readPos(t.id).max;
+    const cta = read >= 0.99 ? "Read again" : read > 0.02 ? "Continue" : "Start";
     return `<div class="item-wrap"><a class="item" href="#/read/${encodeURIComponent(t.id)}">
       <div class="item-top"><span class="lang-badge ${t.lang === "en" ? "en" : "es"}">${t.lang === "en" ? "EN" : "ES"}</span>
         <span class="item-src">${esc(host(t.source) || "study text")}</span></div>
       <div class="item-title">${esc(titleOf(t))}</div>
-      <div class="item-bar" title="${done} of ${saved} saved words learned"><div style="width:${saved ? Math.round((done / saved) * 100) : 0}%"></div></div>
-      <div class="meta">${Number(t.words).toLocaleString("en-US")} words · ${saved} saved · ${done} learned</div>
+      <div class="bars">
+        <div class="bar-row"><span>Read</span><div class="mini-bar read"><div style="width:${Math.round(read * 100)}%"></div></div><em>${Math.round(read * 100)}%</em></div>
+        <div class="bar-row"><span>Learned</span><div class="mini-bar learned"><div style="width:${saved ? Math.round((done / saved) * 100) : 0}%"></div></div><em>${done}/${saved}</em></div>
+      </div>
+      <div class="meta"><span>${Number(t.words).toLocaleString("en-US")} words · ${saved} saved</span><span class="cta">${cta} →</span></div>
     </a><div class="item-tools"><button class="tool-btn" data-rename-text="${esc(t.id)}" aria-label="Rename" title="Rename">${ICON_PEN}</button>
       <button class="tool-btn del-text" data-del-text="${esc(t.id)}" aria-label="Delete text" title="Delete text">${ICON_TRASH}</button></div></div>`;
   }).join("") || `<div class="empty">No texts yet.</div>`}</div>
@@ -446,26 +450,81 @@ async function renderReader(id) {
       const key = t.forms[tok[1]].lemma, occ = occAt[pi + ":" + ti];
       return `<span class="w${S.cards[key] ? " learning" : ""}${occ ? " ph " + phClass(t, occ[0]) : ""}"${occ ? ` data-o="${occ.join(",")}"` : ""} data-p="${pi}" data-t="${ti}">${esc(tok[0])}</span>`;
     }).join("");
-    html += heads.has(pi) ? `<h3>${inner}</h3>` : `<p>${inner}</p>`;
+    html += heads.has(pi) ? `<h3 data-pi="${pi}">${inner}</h3>` : `<p data-pi="${pi}">${inner}</p>`;
   });
+  html += finishCardHtml(t);
   html += `<p class="src">Source: ${t.source.ref ? `<a href="${esc(t.source.ref)}" target="_blank" rel="noopener">${esc(t.source.ref)}</a>` : esc(t.source.kind)}${t.source.edited ? "<br>" + esc(t.source.edited) : ""}</p></article>`;
   view.innerHTML = html;
-  const pos = S.positions[id];
-  if (pos) requestAnimationFrame(() => window.scrollTo(0, pos * (document.body.scrollHeight - innerHeight)));
+  view.insertAdjacentHTML("afterbegin", `<div class="read-progress"><div></div></div>`);
+  const pos = readPos(id);
+  if (pos.p > 0) {
+    setTimeout(() => {                                   // (not rAF: it never fires while the tab is in the background)
+      const el = view.querySelector(`[data-pi="${pos.p}"]`);
+      if (el) window.scrollTo(0, el.getBoundingClientRect().top + window.scrollY - headerH() - 12);
+      updateReadProgress(); showResumeBanner();
+    }, 30);
+  }
+  updateReadProgress(); refreshHighlights();
 }
 function phClass(t, oi) {
   const P = t.phrases[t.chapters[0].phraseOcc[oi].ph];
   return "ph-" + P.type + (S.cards[phraseKey(P)] ? " ph-saved" : "");
 }
+// ---- reading position & progress ----
+// positions[id] = { p: first paragraph on screen (where to resume), max: furthest share of the text read (0–1) }
+// (old builds stored a plain scroll fraction — still read correctly)
+function readPos(id) {
+  const v = S.positions[id];
+  if (typeof v === "number") return { p: 0, max: v };
+  return Object.assign({ p: 0, max: 0 }, v || {});
+}
+const headerH = () => ($(".top") ? $(".top").offsetHeight : 0);
+function scrollShare() {
+  const max = document.body.scrollHeight - innerHeight;
+  return max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 1;
+}
+function updateReadProgress() {
+  const bar = $(".read-progress > div"); if (bar) bar.style.width = Math.round(scrollShare() * 100) + "%";
+}
+function showResumeBanner() {
+  const b = document.createElement("div");
+  b.className = "resume-banner ui";
+  b.innerHTML = `<span>Continuing where you left off</span><button class="link-btn" id="rs-top">Start over</button><button class="x-mini" aria-label="Close">×</button>`;
+  document.body.appendChild(b);
+  const close = () => { b.classList.add("out"); setTimeout(() => b.remove(), 250); };
+  b.querySelector("#rs-top").onclick = () => { window.scrollTo(0, 0); updateReadProgress(); close(); };
+  b.querySelector(".x-mini").onclick = close;
+  setTimeout(close, 5000);
+}
 let scrollTimer = null;
 window.addEventListener("scroll", () => {
   if (!current || !location.hash.startsWith("#/read/")) return;
+  updateReadProgress();
   clearTimeout(scrollTimer);
   scrollTimer = setTimeout(() => {
-    const max = document.body.scrollHeight - innerHeight;
-    if (max > 0) { S.positions[current.id] = window.scrollY / max; Store.save(); }
+    const top = headerH() + 4;
+    let p = 0;
+    for (const el of view.querySelectorAll("[data-pi]")) { if (el.getBoundingClientRect().bottom > top) { p = +el.dataset.pi; break; } }
+    const old = readPos(current.id);
+    const share = scrollShare() > 0.97 ? 1 : scrollShare();
+    S.positions[current.id] = { p, max: Math.round(Math.max(old.max, share) * 100) / 100 };
+    Store.save();
   }, 400);
 }, { passive: true });
+function textProgress(id) {
+  const f = "t:" + id, cards = Object.values(S.cards).filter((c) => c.folders.includes(f));
+  return { read: readPos(id).max, saved: cards.length, learned: cards.filter((c) => status(c) === "learned").length };
+}
+function finishCardHtml(t) {
+  return `<div class="finish ui" id="finish">
+    <div class="finish-ic">✓</div><div class="finish-body"><b>You've reached the end</b>
+    <span id="finish-stats"></span>
+    <a class="btn primary" href="#/words" data-practice="${esc(t.id)}">Practice words from this text</a></div></div>`;
+}
+document.addEventListener("click", (e) => {
+  const a = e.target.closest("[data-practice]");
+  if (a) { S.selected = ["t:" + a.dataset.practice]; S.statusFilter = "all"; Store.save(); }
+});
 
 // word popup
 const popup = $("#popup");
@@ -526,6 +585,8 @@ function hidePopup() {
 }
 function refreshHighlights() {
   if (!current) return;
+  const fs = $("#finish-stats");
+  if (fs) { const pr = textProgress(current.id); fs.textContent = pr.saved ? `${plural(pr.saved, "word")} saved from this text · ${pr.learned} learned` : "Tap words while reading to save them for practice."; }
   document.querySelectorAll(".reader .w[data-p]").forEach((el) => {
     const tok = current.chapters[0].paragraphs[+el.dataset.p][+el.dataset.t];
     el.classList.toggle("learning", !!S.cards[current.forms[tok[1]].lemma]);
