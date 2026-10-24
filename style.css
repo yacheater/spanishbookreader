@@ -265,6 +265,11 @@ h2.sec { font-size: .95rem; margin: 1.4rem 0 .5rem; }
 .pill.sg-done { border-color: var(--ok); color: var(--ok); background: var(--ok-soft); }
 .pill.sg-processing { border-color: var(--learn-line); color: var(--text); background: var(--learn); }
 .pill.sg-rejected { border-color: var(--bad); color: var(--bad); }
-.sg-form label { display: block; font-size: .8rem; color: var(--muted); margin-top: .6rem; }
-.sg-form .answer { margin-top: .2rem; font-size: .95rem; }
-textarea.answer { resize: vertical; font-family: inherit; line-height: 1.4; }
+.sg-form label { display: flex; flex-direction: column; align-items: stretch; gap: .3rem; padding: 0;
+  font-size: .8rem; color: var(--muted); margin-top: .8rem; }
+.sg-form .answer { font-size: .95rem; }
+textarea.answer { display: block; width: 100%; min-height: 9rem; padding: .6rem .8rem; border: 1px solid var(--line);
+  border-radius: .6rem; background: var(--bg); color: var(--text); resize: vertical; font-family: inherit; line-height: 1.45; }
+.answer:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.answer::placeholder { color: var(--faint); }
+.sg-form + #sg-msg:not(:empty) { margin-top: .6rem; }
