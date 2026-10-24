@@ -7,7 +7,7 @@
    Merge = per item, newest event wins (edit on one device, delete on another → whichever is later). */
 "use strict";
 
-const SYNCED = ["cards", "folders", "known", "positions"];
+const SYNCED = ["cards", "folders", "known", "positions", "hidden"];
 
 const Sync = {
   snapshot: {},
@@ -165,6 +165,12 @@ const Cloud = {
     const { data, error } = await this.client.from("submissions").select("id,title,source_url,status,reply,created_at")
       .order("created_at", { ascending: false }).limit(20);
     return error ? [] : data;
+  },
+  /** Deletes the text if you own it; returns false when it isn't yours (shared with you) — then hide it instead. */
+  async deleteText(id) {
+    const { data, error } = await this.client.from("texts").delete().eq("id", id).select("id");
+    if (error) throw error;
+    return !!(data && data.length);
   },
   async loadText(id) {
     const { data, error } = await this.client.from("texts").select("data").eq("id", id).maybeSingle();

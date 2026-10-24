@@ -44,11 +44,14 @@ account; commits as `yacheater` / its noreply address — repo-local config, nev
 4. Mark multi-word expressions in `lex/phrases/<id>.json` (idioms, collocations, grammar constructions —
    NOT plain connectors; format and rules in `lex/ANNOTATION.md` → «Phrases»).
 5. Rebuild; done when it prints `missing 0`, no `!` problems and `validate: OK`.
-6. `python3 tools/publish_texts.py <id>` — uploads to the owner's account (+ readers from `share`); the person must
+6. `python3 tools/publish_texts.py <id>` (always name the ids; `--all` would bring back texts the user deleted in the app) — uploads to the owner's account (+ readers from `share`); the person must
    have signed up once. Sharing an existing text = add `"share": [...]` to its meta and publish again.
 
 Colloquial elisions with an ASCII apostrophe (`demasia'o`, `pa'`, `estamo'`) are one word token; they need a
 manual analysis naming the standard form. Typographic ‘ ’ stay quotes.
+
+English texts (for the friend learning English — `"lang": "en"`, glosses in Rioplatense Spanish with vos) will
+use `tools/english.py` (forms + analysis, self-test) — the build/app integration is still to do (SPEC history).
 
 Grammar (tense/person, number, gender, conjugation tables) is computed by `tools/conjugate.py`
 — never typed by hand. After changing it run `python3 tools/conjugate.py` (self-test).

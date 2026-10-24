@@ -59,3 +59,6 @@ create policy "suggest texts" on public.submissions
 drop policy if exists "see own suggestions" on public.submissions;
 create policy "see own suggestions" on public.submissions
   for select using (user_id = auth.uid());
+drop policy if exists "delete own texts" on public.texts;
+create policy "delete own texts" on public.texts
+  for delete using (owner = auth.uid());

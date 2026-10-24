@@ -104,6 +104,7 @@ def lemma_entry(key, lm):
         c = conjugate(lemma, lm.get("m"))
         e["conjugation"] = {t: c[t] for t in TENSES}
         e["gerundio"], e["participio"] = c["gerundio"], c["participio"]
+        e["vos"] = c["vos"]                    # Rioplatense: {"presente": "tenés", "imperativo": "tené"}
         if "m" in lm:
             e["model"] = lm["m"]
     if lm.get("note"):
@@ -176,7 +177,34 @@ def locate_phrases(tid, paragraphs, line_to_par, problems):
                 continue
             taken.update((pi, t) for t in found)
             occs.append({"ph": pid, "p": pi, "t": found})
+            if "example" not in phrases[pid]:
+                phrases[pid]["example"] = sentence_span(paragraphs[pi], found[0], found[-1])
     return phrases, occs
+
+
+def sentence_span(para, i0, i1):
+    """The sentence around tokens i0..i1 as {before, word, after} (same shape as card examples in the app)."""
+    parts = [t if isinstance(t, str) else t[0] for t in para]
+    start, end = 0, len(parts)
+    for i in range(i0 - 1, -1, -1):
+        if isinstance(para[i], str) and re.search(r"[.!?:;]", para[i]):
+            m = re.match(r"^[\s\S]*[.!?:;][\"”’»)]*\s*", para[i])
+            parts[i] = para[i][m.end():]
+            start = i
+            break
+    for i in range(i1 + 1, len(para)):
+        if isinstance(para[i], str) and re.search(r"[.!?]", para[i]):
+            parts[i] = re.match(r"^[^.!?]*[.!?][\"”’»]*", para[i]).group()
+            end = i + 1
+            break
+    return {"before": "".join(parts[start:i0]).lstrip(" “\"‘"), "word": "".join(parts[i0:i1 + 1]),
+            "after": "".join(parts[i1 + 1:end])}
+
+
+def phrase_index(d):
+    """Expressions that translate one-to-one (idioms, collocations) — for the Translate mode."""
+    return [{"key": p["key"], "type": p["type"], "en": p["en"], "example": p.get("example")}
+            for p in d.get("phrases", {}).values() if p["type"] in ("idiom", "collocation")]
 
 
 def input_path(tid):
@@ -304,7 +332,8 @@ def write_index():
             continue
         items.append({"id": d["id"], "title": d["title"], "source": d["source"].get("ref", ""),
                       "chapters": [{"id": c["id"], "title": c["title"]} for c in d["chapters"]],
-                      "words": sum(1 for c in d["chapters"] for p in c["paragraphs"] for t in p if isinstance(t, list))})
+                      "words": sum(1 for c in d["chapters"] for p in c["paragraphs"] for t in p if isinstance(t, list)),
+                      "lang": d.get("lang", "es"), "phrases": phrase_index(d)})
     (ROOT / "app/data/index.js").write_text(
         "window.LECTOR_INDEX=" + json.dumps(items, ensure_ascii=False) + ";\n", encoding="utf-8")
 

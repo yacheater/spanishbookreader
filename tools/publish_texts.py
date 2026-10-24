@@ -5,8 +5,8 @@ Sharing: "share": ["maria"] in inputs/<user>/<id>.meta.json adds those accounts 
 Texts are never published with the site. Needs .env (see .env.example) and accounts that exist
 (the person must have signed up in the app once).
 
-Usage: python3 tools/publish_texts.py            (all texts)
-       python3 tools/publish_texts.py mate        (one text)
+Usage: python3 tools/publish_texts.py mate [bby_wow …]   (these texts)
+       python3 tools/publish_texts.py --all                (every built text — would bring back texts deleted in the app)
 """
 import datetime
 import json
@@ -19,7 +19,9 @@ from supa import ROOT, call, users  # noqa: E402
 
 def main():
     reg = users()
-    ids = sys.argv[1:] or [p.stem for p in sorted((ROOT / "texts").glob("*.json"))]
+    if not sys.argv[1:]:
+        sys.exit(__doc__)
+    ids = [p.stem for p in sorted((ROOT / "texts").glob("*.json"))] if sys.argv[1:] == ["--all"] else sys.argv[1:]
     for tid in ids:
         d = json.loads((ROOT / f"texts/{tid}.json").read_text(encoding="utf-8"))
         if "chapters" not in d:
@@ -35,7 +37,9 @@ def main():
         for n in meta.get("share", []):
             (readers if reg.get(n, {}).get("id") else missing).append(reg.get(n, {}).get("id") or n)
         words = sum(1 for c in d["chapters"] for p in c["paragraphs"] for t in p if isinstance(t, list))
-        info = {"source": d["source"].get("ref", ""), "words": words,
+        from build_text import phrase_index
+        info = {"source": d["source"].get("ref", ""), "words": words, "lang": d.get("lang", "es"),
+                "phrases": phrase_index(d),
                 "chapters": [{"id": c["id"], "title": c["title"]} for c in d["chapters"]]}
         row = {"id": tid, "owner": owner, "title": d["title"], "meta": info, "data": d,
                "updated_at": datetime.datetime.now(datetime.timezone.utc).isoformat()}

@@ -14,18 +14,29 @@
     FAKE.db[table] = FAKE.db[table] || [];
     const rows = () => FAKE.db[table].filter((r) => q.filters.every(([c, v]) => r[c] === v)).map((r) => pick(r, q.cols));
     Object.assign(q, {
-      select(cols) { q.cols = cols; FAKE.calls.push("select " + table); return q; },
+      select(cols) { q.cols = cols; FAKE.calls.push((q.del ? "delete " : "select ") + table); return q; },
       eq(c, v) { q.filters.push([c, v]); return q; },
       order() { return q; },
       limit() { return q; },
+      delete() { q.del = true; return q; },
       insert(row) {
         FAKE.calls.push("insert " + table);
         FAKE.db[table].push({ id: FAKE.db[table].length + 1, user_id: FAKE.session.user.id, status: "new", reply: "",
           created_at: new Date().toISOString(), ...copy(row) });
         FAKE.persist(); return Promise.resolve({ error: null });
       },
+      select_after_delete: null,
       maybeSingle() { return Promise.resolve({ data: rows()[0] || null, error: null }); },
-      then(ok, bad) { return Promise.resolve({ data: rows(), error: null }).then(ok, bad); },
+      then(ok, bad) {
+        const out = rows();
+        if (q.del) {
+          const mine = (r) => q.filters.every(([c, v]) => r[c] === v) && r.owner === FAKE.session.user.id;   // RLS: owner only
+          const gone = FAKE.db[table].filter(mine).map((r) => pick(r, q.cols));
+          FAKE.db[table] = FAKE.db[table].filter((r) => !mine(r)); FAKE.persist();
+          return Promise.resolve({ data: gone, error: null }).then(ok, bad);
+        }
+        return Promise.resolve({ data: out, error: null }).then(ok, bad);
+      },
       upsert(obj) {
         FAKE.calls.push("upsert " + table); obj = copy(obj);
         const key = table === "progress" ? "user_id" : "id";

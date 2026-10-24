@@ -176,6 +176,7 @@ def conjugate(inf, model=None):
         pro = ["me", "te", "se", "nos", "os", "se"]
         for k in TENSES + ["subjuntivo_imperfecto"]:
             t[k] = [f"{p} {f}" for p, f in zip(pro, t[k])]
+        t["vos"] = {"presente": "te " + t["vos"]["presente"], "imperativo": strip_acc(t["vos"]["imperativo"]) + "te"}
         return t
 
     prefix, base = _base(inf)
@@ -292,7 +293,24 @@ def conjugate(inf, model=None):
         out["participio"] = stem + "ado"
     else:
         out["participio"] = stem + ("ído" if vowel_stem else "ido")
+    out["vos"] = vos_forms(inf, out)
     return out
+
+
+def vos_forms(inf, out):
+    """Rioplatense voseo: presente from the vosotros form without the i (tenéis → tenés, tomáis → tomás,
+    vivís stays), no stem change; imperativo = infinitive minus -r with a stressed vowel (tomá, tené, viví)."""
+    special = {"ser": ("sos", "sé"), "ir": ("vas", "andá"), "haber": ("has", "habé")}
+    if inf in special:
+        pres, imp = special[inf]
+    else:
+        v = out["presente"][4]
+        pres = v[:-3] + "ás" if v.endswith("áis") else v[:-3] + "és" if v.endswith("éis") else \
+            v if v.endswith("ís") else v.replace("ais", "as").replace("eis", "es")
+        stem = inf[:-1]
+        one_syllable = sum(ch in "aeiouáéíóú" for ch in stem) == 1          # da, ve: no written accent
+        imp = stem[:-1] + acc(stem[-1]) if stem[-1] in "aei" and not one_syllable else stem
+    return {"presente": pres, "imperativo": imp}
 
 
 def analyse(surface, inf, model=None):
@@ -307,8 +325,13 @@ def analyse(surface, inf, model=None):
         ps = [PERSONS[i] for i, f in enumerate(plain[t]) if f == s]
         if ps:
             hits.append(f"{TENSE_LABEL[t]} · {' / '.join(ps)}")
+    vos = plain.get("vos", {})
+    if s == vos.get("presente"):
+        hits = [h + " / vos" if h.startswith("presente") else h for h in hits] or ["presente · vos"]
     if hits:
         return "; ".join(hits)
+    if s == vos.get("imperativo"):
+        return "imperativo · vos"
     if inf == "haber" and s == "hay":
         return "presente · impersonal (there is / there are)"
     part = plain["participio"]
@@ -376,7 +399,22 @@ if __name__ == "__main__":
         ("leer", "gerundio"): "leyendo", ("ir", "gerundio"): "yendo", ("poder", "gerundio"): "pudiendo",
         ("servir", "gerundio"): "sirviendo", ("leer", "participio"): "leído",
     }
+    vos_checks = {"tener": ("tenés", "tené"), "tomar": ("tomás", "tomá"), "vivir": ("vivís", "viví"),
+                  "querer": ("querés", "queré"), "poder": ("podés", "podé"), "ser": ("sos", "sé"),
+                  "ir": ("vas", "andá"), "decir": ("decís", "decí"), "hacer": ("hacés", "hacé"),
+                  "dar": ("das", "da"), "ver": ("ves", "ve"), "dormir": ("dormís", "dormí"),
+                  "estar": ("estás", "está"), "saber": ("sabés", "sabé"), "levantarse": ("te levantás", "levantate")}
     bad = 0
+    for v, (pres, imp) in vos_checks.items():
+        got = conjugate(v)["vos"]
+        if (got["presente"], got["imperativo"]) != (pres, imp):
+            bad += 1
+            print(f"FAIL vos {v}: got {got}, exp {pres} / {imp}")
+    for s_, v, exp in [("querés", "querer", "presente · vos"), ("vivís", "vivir", "presente · vosotros/as / vos"),
+                       ("tomá", "tomar", "imperativo · vos")]:
+        if analyse(s_, v) != exp:
+            bad += 1
+            print(f"FAIL analyse {s_}: {analyse(s_, v)}")
     for (v, t), exp in checks.items():
         got = " ".join(conjugate(v, "o>ue" if v == "volcar" else None)[t])
         if got != exp:
