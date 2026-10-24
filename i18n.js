@@ -54,7 +54,7 @@ const I18N = {
     "+ Learn": "+ Учить", "Remove": "Убрать", "✓ Known": "✓ Знаю", "I know it": "Знаю", "+ Learn phrase": "+ Учить выражение",
     "+ Learn construction": "+ Учить конструкцию", "New": "Новое", "Learning": "Учу",
     "expression": "выражение", "collocation": "сочетание", "phrasal verb": "фразовый глагол", "grammar": "грамматика",
-    "masculine": "мужской род", "feminine": "женский род", "masc. / fem.": "м. / ж. род", "Other tenses": "Другие времена", "plural:": "мн. ч.:",
+    "masculine": "мужской род", "feminine": "женский род", "masc. / fem.": "м. / ж. род", "Other tenses": "Другие времена", "Conjugation": "Спряжение", "plural:": "мн. ч.:",
     // words page
     "All": "Все", "+ Folder": "+ Папка", "Rename folder": "Переименовать папку", "Delete folder": "Удалить папку",
     "of {n} learned": "из {n} выучено", "{n} due today": "на сегодня: {n}", "nothing due": "на сегодня всё",
@@ -138,7 +138,7 @@ const I18N = {
     "+ Learn": "+ Aprender", "Remove": "Quitar", "✓ Known": "✓ La sé", "I know it": "La sé", "+ Learn phrase": "+ Aprender expresión",
     "+ Learn construction": "+ Aprender construcción", "New": "Nueva", "Learning": "Aprendiendo",
     "expression": "expresión", "collocation": "colocación", "phrasal verb": "phrasal verb", "grammar": "gramática",
-    "masculine": "masculino", "feminine": "femenino", "masc. / fem.": "masc. / fem.", "Other tenses": "Otros tiempos", "plural:": "plural:",
+    "masculine": "masculino", "feminine": "femenino", "masc. / fem.": "masc. / fem.", "Other tenses": "Otros tiempos", "Conjugation": "Conjugación", "plural:": "plural:",
     "All": "Todas", "+ Folder": "+ Carpeta", "Rename folder": "Renombrar carpeta", "Delete folder": "Borrar carpeta",
     "of {n} learned": "de {n} aprendidas", "{n} due today": "{n} para hoy", "nothing due": "nada para hoy",
     "learned": "aprendidas", "learning": "aprendiendo", "new": "nuevas",

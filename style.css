@@ -430,3 +430,34 @@ h1 { font-size: 1.65rem; letter-spacing: -.01em; }
 .pf-opts .chip { font-size: 15px; padding: 6px 14px; }
 .pf-opts .chip:disabled { opacity: .35; cursor: default; }
 .open-badge { margin-left: auto; font-size: 10px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--ok); }
+
+/* ---- word popup v2 ---- */
+.popup { padding: 0; width: min(21rem, calc(100vw - 1.5rem)); }
+.pp { padding: 14px 16px 12px; }
+.pp + .pp, .ph-block + .pp { border-top: 1px solid var(--line); }
+.ph-block { margin: 0; border-bottom: none; background: color-mix(in srgb, var(--accent) 6%, transparent); }
+.pp-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.pp-lemma { display: flex; align-items: center; gap: 4px; font-family: Georgia, serif; font-weight: 700; font-size: 1.2rem; }
+.pp-kind { font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--accent); }
+.ph-block .pp-lemma { margin-top: 2px; font-size: 1.08rem; }
+.pp-form { display: flex; align-items: center; flex-wrap: wrap; gap: 2px 4px; margin-top: 2px; font-size: .78rem; color: var(--muted); }
+.pp-form b { color: var(--text); font-weight: 600; }
+.pp-form .speak { font-size: .9em; padding: 0 2px; }
+.pp-tr { font-size: 1.12rem; font-weight: 600; line-height: 1.35; margin: 10px 0 2px; }
+.pp-sub { font-size: .82rem; color: var(--muted); }
+.pp-explain { font-size: .82rem; color: var(--muted); margin-top: 6px; line-height: 1.45; }
+.pp .gram { margin-top: 8px; font-size: .8rem; color: var(--muted); }
+.pp-conj { margin-top: 10px; font-size: .8rem; }
+.pp-conj summary { cursor: pointer; color: var(--muted); list-style: none; display: inline-flex; align-items: center; gap: 4px; }
+.pp-conj summary::-webkit-details-marker { display: none; }
+.pp-conj summary::before { content: "▸"; display: inline-block; transition: transform .15s; font-size: .8em; }
+.pp-conj[open] summary::before { transform: rotate(90deg); }
+.cg { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; margin-top: 6px; padding: 8px 10px; border-radius: 8px; background: var(--bg); }
+.cg-p { color: var(--faint); }
+.pp-actions { display: flex; gap: 8px; margin-top: 12px; }
+.pp-actions .btn { flex: 1; padding: 7px 10px; font-size: .85rem; }
+.btn.ghost { background: none; }
+.btn.ghost.on { border-color: var(--ok); color: var(--ok); }
+.pill.sm { font-size: 10.5px; padding: 1px 8px; flex: none; }
+.ph-block .btn.primary { background: none; color: var(--accent); border-color: var(--accent); }
+.ph-block .btn.primary:hover { background: var(--accent-soft); }

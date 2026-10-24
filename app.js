@@ -592,25 +592,25 @@ function showPopup(el) {
   const formG = NATIVE() === "ru" && F.ru ? F.ru : (info.en || F.en);
   const phHtml = info.occs.map((o, i) => {
     const P = current.phrases[o.ph], pc = S.cards[phraseKey(P)];
-    return `<div class="ph-block"><div class="ph-type">${esc(t(P.typeLabel))}</div>
-      <div class="head"><span class="surface">${esc(P.key)}</span>${speakBtn(P.key.replace(/\+.*$/, ""), current.lang)}</div>
-      <div class="en">${esc(gl(P))}</div>${explainOf(P) ? `<div class="explain">${esc(explainOf(P))}</div>` : ""}
-      <div class="actions">${pc ? `<span class="pill ${status(pc)}">${STATUS_LABEL[status(pc)]}</span><button class="btn" data-act="ph-remove" data-i="${i}">${t("Remove")}</button>`
+    return `<div class="pp ph-block pp-${P.type}">
+      <div class="pp-top"><span class="pp-kind">${esc(t(P.typeLabel))}</span>${pc ? `<span class="pill sm ${status(pc)}">${STATUS_LABEL[status(pc)]}</span>` : ""}</div>
+      <div class="pp-lemma">${esc(P.key)}${speakBtn(P.key.replace(/\+.*$/, ""), current.lang)}</div>
+      <div class="pp-tr">${esc(gl(P))}</div>${explainOf(P) ? `<div class="pp-explain">${esc(explainOf(P))}</div>` : ""}
+      <div class="pp-actions">${pc ? `<button class="btn ghost" data-act="ph-remove" data-i="${i}">${t("Remove")}</button>`
         : `<button class="btn primary" data-act="ph-learn" data-i="${i}">${P.type === "grammar" ? t("+ Learn construction") : t("+ Learn phrase")}</button>`}</div></div>`;
   }).join("");
-  popup.innerHTML = phHtml + `
-    <div class="head"><span class="surface">${esc(info.surface)}</span>${speakBtn(info.surface, current.lang)}
-      ${same ? "" : `<span class="arrow">→</span><span class="lemma">${esc(displayLemma(L))}</span>${speakBtn(displayLemma(L), current.lang)}`}
-      <span class="pos">${esc(t(L.posLabel))}</span></div>
-    ${F.analysis ? `<div class="analysis">${esc(F.analysis)}</div>` : ""}
-    <div class="en">${esc(formG)}</div>
-    ${gl(L) && gl(L) !== formG ? `<div class="en-l">${esc(L.lemma)}: ${esc(gl(L))}</div>` : ""}
+  const formLine = [same ? "" : `<b>${esc(info.surface)}</b>`, F.analysis ? esc(F.analysis) : "", esc(t(L.posLabel))].filter(Boolean).join(" · ");
+  popup.innerHTML = phHtml + `<div class="pp">
+    <div class="pp-top"><div class="pp-lemma">${esc(displayLemma(L))}${speakBtn(same ? info.surface : displayLemma(L), current.lang)}</div>
+      ${card ? `<span class="pill sm ${status(card)}">${STATUS_LABEL[status(card)]}</span>` : known ? `<span class="pill sm learned">${t("✓ Known")}</span>` : ""}</div>
+    <div class="pp-form">${formLine}${same ? "" : speakBtn(info.surface, current.lang)}</div>
+    <div class="pp-tr">${esc(formG)}</div>
+    ${gl(L) && gl(L) !== formG ? `<div class="pp-sub">${esc(L.lemma)} — ${esc(gl(L))}</div>` : ""}
     ${grammarHtml(L, true)}
-    <div class="actions">
-      ${card ? `<span class="pill ${status(card)}">${STATUS_LABEL[status(card)]}</span><button class="btn" data-act="remove">${t("Remove")}</button>`
-             : `<button class="btn primary" data-act="learn">${t("+ Learn")}</button>`}
-      <button class="btn${known ? " ok" : ""}" data-act="known">${known ? t("✓ Known") : t("I know it")}</button>
-    </div>`;
+    <div class="pp-actions">
+      ${card ? `<button class="btn ghost" data-act="remove">${t("Remove")}</button>` : `<button class="btn primary" data-act="learn">${t("+ Learn")}</button>`}
+      ${card ? "" : `<button class="btn ghost${known ? " on" : ""}" data-act="known">${known ? t("✓ Known") : t("I know it")}</button>`}
+    </div></div>`;
   popup.hidden = false;
   const r = el.getBoundingClientRect(), pw = popup.offsetWidth, ph = popup.offsetHeight;
   const left = Math.min(Math.max(8, r.left + r.width / 2 - pw / 2), innerWidth - pw - 8);
@@ -696,7 +696,11 @@ function grammarHtml(L, compact) {
   if (L.pos === "v" && L.conjugation) {
     const pres = L.conjugation.presente.map(esc);
     if (L.vos) pres[1] += ` <span class="vos">(vos ${esc(L.vos.presente)})</span>`;
-    if (compact) return `<div class="gram">presente: ${pres.join(", ")}</div>`;
+    if (compact) {
+      const rows = L.conjugation.presente.map((f, i) => `<span class="cg-p">${PERS[i]}</span><span>${esc(f)}</span>`);
+      if (L.vos) rows.splice(2, 0, `<span class="cg-p vos">vos</span><span class="vos">${esc(L.vos.presente)}</span>`);
+      return `<details class="pp-conj"><summary>${t("Conjugation")} · presente</summary><div class="cg">${rows.join("")}</div></details>`;
+    }
     const others = Object.keys(TENSE_NAMES).filter((t) => t !== "presente");
     const rows = L.conjugation.presente.map((f, i) => `<tr><td>${PERS[i]}</td><td>${esc(f)}</td></tr>`);
     if (L.vos) rows.splice(2, 0, `<tr class="vos"><td>vos</td><td>${esc(L.vos.presente)}</td></tr>`);
