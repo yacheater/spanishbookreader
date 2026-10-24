@@ -1,0 +1,452 @@
+{
+ "esclavo.n": {
+  "en": "slave",
+  "g": "m"
+ },
+ "escoger.v": {
+  "en": "to choose; to pick"
+ },
+ "escribir.v": {
+  "en": "to write"
+ },
+ "ese.det": {
+  "en": "that"
+ },
+ "eso.pron": {
+  "en": "that"
+ },
+ "espacio.n": {
+  "en": "space; room; slot",
+  "g": "m"
+ },
+ "español.n": {
+  "en": "Spanish (language); Spaniard",
+  "g": "m"
+ },
+ "especialista.n": {
+  "en": "specialist; expert",
+  "g": "m/f"
+ },
+ "especialmente.adv": {
+  "en": "especially"
+ },
+ "específico.adj": {
+  "en": "specific"
+ },
+ "esperar.v": {
+  "en": "to wait; to hope; to expect"
+ },
+ "espiritual.adj": {
+  "en": "spiritual"
+ },
+ "espumosidad.n": {
+  "en": "frothiness; foaminess",
+  "g": "f"
+ },
+ "espíritu.n": {
+  "en": "spirit",
+  "g": "m"
+ },
+ "este.det": {
+  "en": "this"
+ },
+ "establecer.v": {
+  "en": "to establish; to set up"
+ },
+ "establecimiento.n": {
+  "en": "establishment; business",
+  "g": "m"
+ },
+ "estado.n": {
+  "en": "state; condition",
+  "g": "m"
+ },
+ "estar.v": {
+  "en": "to be (state, location)"
+ },
+ "estatus.n": {
+  "en": "status",
+  "g": "m",
+  "pl": "estatus"
+ },
+ "estereotipo.n": {
+  "en": "stereotype",
+  "g": "m"
+ },
+ "estrato.n": {
+  "en": "stratum; (social) class",
+  "g": "m"
+ },
+ "estructura.n": {
+  "en": "structure",
+  "g": "f"
+ },
+ "estudiar.v": {
+  "en": "to study"
+ },
+ "estudiante.n": {
+  "en": "student",
+  "g": "m/f"
+ },
+ "estudio.n": {
+  "en": "study; studio",
+  "g": "m"
+ },
+ "etnográfico.adj": {
+  "en": "ethnographic"
+ },
+ "evidenciar.v": {
+  "en": "to show; to make evident"
+ },
+ "evitar.v": {
+  "en": "to avoid"
+ },
+ "evolución.n": {
+  "en": "evolution; development",
+  "g": "f"
+ },
+ "excepción.n": {
+  "en": "exception",
+  "g": "f"
+ },
+ "exclusivo.adj": {
+  "en": "exclusive"
+ },
+ "existir.v": {
+  "en": "to exist"
+ },
+ "expandir.v": {
+  "en": "to expand; to spread"
+ },
+ "experiencia.n": {
+  "en": "experience",
+  "g": "f"
+ },
+ "experimental.adj": {
+  "en": "experimental; experiential"
+ },
+ "experto.adj": {
+  "en": "expert; skilled"
+ },
+ "explicar.v": {
+  "en": "to explain"
+ },
+ "explorar.v": {
+  "en": "to explore"
+ },
+ "expresar.v": {
+  "en": "to express"
+ },
+ "expuesto.adj": {
+  "en": "exposed; set out, presented"
+ },
+ "extranjero.adj": {
+  "en": "foreign"
+ },
+ "extraño.n": {
+  "en": "stranger",
+  "g": "m"
+ },
+ "factor.n": {
+  "en": "factor",
+  "g": "m"
+ },
+ "falso.adj": {
+  "en": "false; fake"
+ },
+ "familiar.adj": {
+  "en": "family; familiar"
+ },
+ "familiaridad.n": {
+  "en": "familiarity",
+  "g": "f"
+ },
+ "favorecer.v": {
+  "en": "to favour; to benefit"
+ },
+ "fecha.n": {
+  "en": "date",
+  "g": "f"
+ },
+ "federal.adj": {
+  "en": "federal"
+ },
+ "figura.n": {
+  "en": "figure; role",
+  "g": "f"
+ },
+ "fijo.adj": {
+  "en": "fixed; set"
+ },
+ "finalizar.v": {
+  "en": "to finish; to conclude"
+ },
+ "fomentar.v": {
+  "en": "to promote; to encourage"
+ },
+ "forastero.n": {
+  "en": "outsider; stranger",
+  "g": "m"
+ },
+ "forma.n": {
+  "en": "form; way; shape",
+  "g": "f"
+ },
+ "formal.adj": {
+  "en": "formal"
+ },
+ "formalidad.n": {
+  "en": "formality",
+  "g": "f"
+ },
+ "fuerte.adj": {
+  "en": "strong"
+ },
+ "frase.n": {
+  "en": "phrase; sentence",
+  "g": "f"
+ },
+ "frente.adv": {
+  "en": "in front; opposite (frente a: in front of, facing)"
+ },
+ "frustración.n": {
+  "en": "frustration",
+  "g": "f"
+ },
+ "frío.adj": {
+  "en": "cold"
+ },
+ "ser.v": {
+  "en": "to be"
+ },
+ "fuego.n": {
+  "en": "fire",
+  "g": "m"
+ },
+ "funcionar.v": {
+  "en": "to work; to function"
+ },
+ "función.n": {
+  "en": "function",
+  "g": "f"
+ },
+ "futuro.n": {
+  "en": "future",
+  "g": "m"
+ },
+ "fórmula.n": {
+  "en": "formula",
+  "g": "f"
+ },
+ "generar.v": {
+  "en": "to generate; to cause"
+ },
+ "generacional.adj": {
+  "en": "generational"
+ },
+ "generación.n": {
+  "en": "generation",
+  "g": "f"
+ },
+ "general.adj": {
+  "en": "general"
+ },
+ "generalidad.n": {
+  "en": "generality",
+  "g": "f"
+ },
+ "generalizador.adj": {
+  "en": "generalizing"
+ },
+ "generalizar.v": {
+  "en": "to generalize; (se) to become widespread"
+ },
+ "geográfico.adj": {
+  "en": "geographical"
+ },
+ "gesto.n": {
+  "en": "gesture",
+  "g": "m"
+ },
+ "gobernador.n": {
+  "en": "governor",
+  "g": "m"
+ },
+ "gobernar.v": {
+  "en": "to govern; to rule",
+  "m": "e>ie"
+ },
+ "gracia.n": {
+  "en": "grace; (pl.) thanks",
+  "g": "f"
+ },
+ "grado.n": {
+  "en": "degree; grade",
+  "g": "m"
+ },
+ "gradualmente.adv": {
+  "en": "gradually"
+ },
+ "gramatical.adj": {
+  "en": "grammatical"
+ },
+ "grande.adj": {
+  "en": "big; large; great"
+ },
+ "grupo.n": {
+  "en": "group",
+  "g": "m"
+ },
+ "guaraní.n": {
+  "en": "Guarani (person; language)",
+  "g": "m/f",
+  "pl": "guaraníes"
+ },
+ "género.n": {
+  "en": "gender; genre; kind",
+  "g": "m"
+ },
+ "haber.v": {
+  "en": "to have (auxiliary); there is/are (hay)"
+ },
+ "habitante.n": {
+  "en": "inhabitant",
+  "g": "m/f"
+ },
+ "habla.n": {
+  "en": "speech; way of speaking",
+  "g": "f",
+  "art": "el"
+ },
+ "hablado.adj": {
+  "en": "spoken"
+ },
+ "hablante.n": {
+  "en": "speaker",
+  "g": "m/f"
+ },
+ "hablar.v": {
+  "en": "to speak; to talk"
+ },
+ "hacer.v": {
+  "en": "to do; to make"
+ },
+ "hacia.prep": {
+  "en": "towards"
+ },
+ "hasta.prep": {
+  "en": "until; up to; even"
+ },
+ "hecho.n": {
+  "en": "fact; event",
+  "g": "m"
+ },
+ "heredar.v": {
+  "en": "to inherit"
+ },
+ "hervir.v": {
+  "en": "to boil",
+  "m": "e>ie,i"
+ },
+ "hinchar.v": {
+  "en": "to swell; to inflate"
+ },
+ "historia.n": {
+  "en": "history; story",
+  "g": "f"
+ },
+ "histórico.adj": {
+  "en": "historical; historic"
+ },
+ "hoja.n": {
+  "en": "leaf; sheet",
+  "g": "f"
+ },
+ "hombre.n": {
+  "en": "man",
+  "g": "m"
+ },
+ "hoy.adv": {
+  "en": "today"
+ },
+ "ibérico.adj": {
+  "en": "Iberian"
+ },
+ "idea.n": {
+  "en": "idea",
+  "g": "f"
+ },
+ "identidad.n": {
+  "en": "identity",
+  "g": "f"
+ },
+ "ignorar.v": {
+  "en": "to ignore; not to know"
+ },
+ "igual.adj": {
+  "en": "equal; same"
+ },
+ "igualar.v": {
+  "en": "to equalize; to make equal"
+ },
+ "igualmente.adv": {
+  "en": "equally; likewise"
+ },
+ "ilustración.n": {
+  "en": "illustration",
+  "g": "f"
+ },
+ "importante.adj": {
+  "en": "important"
+ },
+ "imagen.n": {
+  "en": "image; picture",
+  "g": "f",
+  "pl": "imágenes"
+ },
+ "inalterado.adj": {
+  "en": "unchanged; unaltered"
+ },
+ "inclinación.n": {
+  "en": "slope; incline; inclination",
+  "g": "f"
+ },
+ "inclusivo.adj": {
+  "en": "inclusive"
+ },
+ "incluso.adv": {
+  "en": "even; including"
+ },
+ "incluir.v": {
+  "en": "to include"
+ },
+ "incremento.n": {
+  "en": "increase",
+  "g": "m"
+ },
+ "independencia.n": {
+  "en": "independence",
+  "g": "f"
+ },
+ "indexicalidad.n": {
+  "en": "indexicality",
+  "g": "f"
+ },
+ "indicar.v": {
+  "en": "to indicate; to point out"
+ },
+ "individuo.n": {
+  "en": "individual; person",
+  "g": "m"
+ },
+ "indígena.adj": {
+  "en": "indigenous"
+ },
+ "influencia.n": {
+  "en": "influence",
+  "g": "f"
+ },
+ "influenciar.v": {
+  "en": "to influence"
+ }
+}

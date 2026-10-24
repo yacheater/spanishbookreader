@@ -1,0 +1,707 @@
+{
+ "a": [
+  "a.prep",
+  "to"
+ ],
+ "abajo": [
+  "abajo.adv",
+  "below (de abajo = bottom)"
+ ],
+ "aborda": [
+  "abordar.v",
+  "addresses; deals with"
+ ],
+ "acaloradas": [
+  "acalorado.adj",
+  "heated"
+ ],
+ "acción": [
+  "acción.n",
+  "action; act"
+ ],
+ "acentúa": [
+  "acentuar.v",
+  "is emphasized (se acentúa)"
+ ],
+ "acepta": [
+  "aceptar.v",
+  "accepts"
+ ],
+ "acerca": [
+  "acerca.adv",
+  "about (acerca de)"
+ ],
+ "actitud": [
+  "actitud.n",
+  "attitude"
+ ],
+ "actitudes": [
+  "actitud.n",
+  "attitudes"
+ ],
+ "acto": [
+  "acto.n",
+  "act"
+ ],
+ "actual": [
+  "actual.adj",
+  "current; present"
+ ],
+ "actuar": [
+  "actuar.v",
+  "to act"
+ ],
+ "acuerdo": [
+  "acuerdo.n",
+  "agreement (de acuerdo con = according to)"
+ ],
+ "adapten": [
+  "adaptar.v",
+  "(they) adapt"
+ ],
+ "adicionalmente": [
+  "adicionalmente.adv",
+  "additionally"
+ ],
+ "aditamentos": [
+  "aditamento.n",
+  "additions; add-ins"
+ ],
+ "admiración": [
+  "admiración.n",
+  "admiration"
+ ],
+ "afectivo": [
+  "afectivo.adj",
+  "affective; emotional"
+ ],
+ "afectivos": [
+  "afectivo.adj",
+  "affective; emotional"
+ ],
+ "afecto": [
+  "afecto.n",
+  "affection"
+ ],
+ "afianzamiento": [
+  "afianzamiento.n",
+  "consolidation; strengthening"
+ ],
+ "afirma": [
+  "afirmar.v",
+  "states; affirms"
+ ],
+ "afirman": [
+  "afirmar.v",
+  "they state; they affirm"
+ ],
+ "agrega": [
+  "agregar.v",
+  "adds"
+ ],
+ "agregándole": [
+  "agregar.v",
+  "adding (to it)"
+ ],
+ "agua": [
+  "agua.n",
+  "water"
+ ],
+ "ahora": [
+  "ahora.adv",
+  "now"
+ ],
+ "ahí": [
+  "ahí.adv",
+  "there"
+ ],
+ "aisladas": [
+  "aislado.adj",
+  "isolated"
+ ],
+ "al": [
+  "a.prep",
+  "to the; per (al año); when (al + infinitive)"
+ ],
+ "algo": [
+  "algo.pron",
+  "something"
+ ],
+ "algunas": [
+  "alguno.det",
+  "some"
+ ],
+ "algunos": [
+  "alguno.det",
+  "some"
+ ],
+ "aliento": [
+  "aliento.n",
+  "encouragement"
+ ],
+ "alimentando": [
+  "alimentar.v",
+  "feeding; nourishing"
+ ],
+ "allí": [
+  "allí.adv",
+  "there"
+ ],
+ "alrededor": [
+  "alrededor.adv",
+  "around (alrededor de)"
+ ],
+ "alta": [
+  "alto.adj",
+  "high; upper"
+ ],
+ "altos": [
+  "alto.adj",
+  "high; upper"
+ ],
+ "amor": [
+  "amor.n",
+  "love"
+ ],
+ "amos": [
+  "amo.n",
+  "masters"
+ ],
+ "antes": [
+  "antes.adv",
+  "before (antes de)"
+ ],
+ "análisis": [
+  "análisis.n",
+  "analysis"
+ ],
+ "aparente": [
+  "aparente.adj",
+  "apparent"
+ ],
+ "aplicable": [
+  "aplicable.adj",
+  "applicable"
+ ],
+ "apocopada": [
+  "apocopado.adj",
+  "apocopated (shortened)"
+ ],
+ "aporta": [
+  "aportar.v",
+  "gives; contributes"
+ ],
+ "aprendices": [
+  "aprendiz.n",
+  "learners"
+ ],
+ "aprovecha": [
+  "aprovechar.v",
+  "takes advantage of; uses"
+ ],
+ "aquel": [
+  "aquel.det",
+  "that (aquel entonces = back then)"
+ ],
+ "aquellos": [
+  "aquel.det",
+  "those (aquellos que = those who)"
+ ],
+ "argentina": [
+  "argentino.adj",
+  "Argentine"
+ ],
+ "argentinos": [
+  "argentino.adj",
+  "Argentines; Argentine people"
+ ],
+ "aristócratas": [
+  "aristócrata.n",
+  "aristocrats"
+ ],
+ "armado": [
+  "armado.adj",
+  "armed"
+ ],
+ "aromas": [
+  "aroma.n",
+  "aromas"
+ ],
+ "arraigándose": [
+  "arraigarse.v",
+  "taking root"
+ ],
+ "arruina": [
+  "arruinar.v",
+  "is ruined (se arruina)"
+ ],
+ "asegura": [
+  "asegurar.v",
+  "assures; states"
+ ],
+ "asimismo": [
+  "asimismo.adv",
+  "likewise; also"
+ ],
+ "asociaba": [
+  "asociar.v",
+  "was associated (se asociaba)"
+ ],
+ "asociadas": [
+  "asociar.v",
+  "associated (han sido asociadas = have been associated)"
+ ],
+ "asociado": [
+  "asociar.v",
+  "associated (han asociado = have associated)"
+ ],
+ "asocian": [
+  "asociar.v",
+  "are associated (se asocian)"
+ ],
+ "asociaron": [
+  "asociar.v",
+  "they associated"
+ ],
+ "asoció": [
+  "asociar.v",
+  "associated"
+ ],
+ "aspecto": [
+  "aspecto.n",
+  "aspect"
+ ],
+ "aspectos": [
+  "aspecto.n",
+  "aspects"
+ ],
+ "así": [
+  "así.adv",
+  "thus; so; this way"
+ ],
+ "atrajo": [
+  "atraer.v",
+  "attracted"
+ ],
+ "atravesaba": [
+  "atravesar.v",
+  "cut across; spanned"
+ ],
+ "aun": [
+  "aun.adv",
+  "even"
+ ],
+ "aunque": [
+  "aunque.conj",
+  "although"
+ ],
+ "autor": [
+  "autor.n",
+  "author"
+ ],
+ "autores": [
+  "autor.n",
+  "authors"
+ ],
+ "ayuda": [
+  "ayudar.v",
+  "helps"
+ ],
+ "año": [
+  "año.n",
+  "year"
+ ],
+ "años": [
+  "año.n",
+  "years"
+ ],
+ "baja": [
+  "bajo.adj",
+  "low; lower"
+ ],
+ "bajas": [
+  "bajo.adj",
+  "low; lower"
+ ],
+ "bajo": [
+  "bajo.prep",
+  "under"
+ ],
+ "barroco": [
+  "barroco.adj",
+  "baroque; ornate"
+ ],
+ "beberlo": [
+  "beber.v",
+  "to drink it"
+ ],
+ "bebida": [
+  "bebida.n",
+  "drink; beverage"
+ ],
+ "bienes": [
+  "bien.n",
+  "goods; possessions"
+ ],
+ "boca": [
+  "boca.n",
+  "mouth; opening"
+ ],
+ "bogotano": [
+  "bogotano.adj",
+  "from Bogotá"
+ ],
+ "bogotanos": [
+  "bogotano.adj",
+  "people of Bogotá"
+ ],
+ "boletín": [
+  "boletín.n",
+  "bulletin; gazette (Boletín Oficial)"
+ ],
+ "bombilla": [
+  "bombilla.n",
+  "metal drinking straw (for mate)"
+ ],
+ "bregaban": [
+  "bregar.v",
+  "were struggling; fought"
+ ],
+ "brindarán": [
+  "brindar.v",
+  "will provide"
+ ],
+ "buen": [
+  "bueno.adj",
+  "good",
+  "m. sg. (shortened before a noun)"
+ ],
+ "buena": [
+  "bueno.adj",
+  "good (en buena parte = in large part)"
+ ],
+ "bueno": [
+  "bueno.adj",
+  "good"
+ ],
+ "busca": [
+  "buscar.v",
+  "seeks; aims"
+ ],
+ "busquen": [
+  "buscar.v",
+  "(they) seek"
+ ],
+ "cada": [
+  "cada.det",
+  "each; every"
+ ],
+ "café": [
+  "café.n",
+  "coffee"
+ ],
+ "cambiar": [
+  "cambiar.v",
+  "to change"
+ ],
+ "cambio": [
+  "cambio.n",
+  "exchange (moneda de cambio = currency)"
+ ],
+ "cambios": [
+  "cambio.n",
+  "changes"
+ ],
+ "canela": [
+  "canela.n",
+  "cinnamon"
+ ],
+ "capacidad": [
+  "capacidad.n",
+  "capacity; ability"
+ ],
+ "capital": [
+  "capital.n",
+  "capital (city)"
+ ],
+ "caracterización": [
+  "caracterización.n",
+  "characterization"
+ ],
+ "cargadas": [
+  "cargado.adj",
+  "loaded; charged (with)"
+ ],
+ "cariño": [
+  "cariño.n",
+  "affection; tenderness"
+ ],
+ "cariñosa": [
+  "cariñoso.adj",
+  "affectionate"
+ ],
+ "carácter": [
+  "carácter.n",
+  "character; nature"
+ ],
+ "casa": [
+  "casa.n",
+  "house"
+ ],
+ "casas": [
+  "casa.n",
+  "houses"
+ ],
+ "caso": [
+  "caso.n",
+  "case"
+ ],
+ "castellano": [
+  "castellano.n",
+  "Castilian (Spanish)"
+ ],
+ "caudillo": [
+  "caudillo.n",
+  "leader; strongman"
+ ],
+ "ceba": [
+  "cebar.v",
+  "is prepared and poured (se ceba el mate)"
+ ],
+ "cebadora": [
+  "cebadora.n",
+  "woman who prepares and serves mate"
+ ],
+ "cebar": [
+  "cebar.v",
+  "to prepare and serve (mate)"
+ ],
+ "cebarse": [
+  "cebar.v",
+  "to be prepared and served (cebarse mates)"
+ ],
+ "celebró": [
+  "celebrar.v",
+  "was celebrated (se celebró)"
+ ],
+ "cerca": [
+  "cerca.adv",
+  "close; near (cerca de)"
+ ],
+ "cercana": [
+  "cercano.adj",
+  "close; friendly"
+ ],
+ "cercano": [
+  "cercano.adj",
+  "close; friendly"
+ ],
+ "charla": [
+  "charla.n",
+  "talk"
+ ],
+ "charlas": [
+  "charla.n",
+  "talks"
+ ],
+ "chorrito": [
+  "chorrito.n",
+  "small splash"
+ ],
+ "chorro": [
+  "chorro.n",
+  "stream; splash"
+ ],
+ "cientos": [
+  "ciento.num",
+  "hundreds"
+ ],
+ "cierta": [
+  "cierto.det",
+  "certain; a certain"
+ ],
+ "cierto": [
+  "cierto.det",
+  "certain; a certain"
+ ],
+ "ciertos": [
+  "cierto.det",
+  "certain"
+ ],
+ "cinco": [
+  "cinco.num",
+  "five"
+ ],
+ "ciudad": [
+  "ciudad.n",
+  "city"
+ ],
+ "clase": [
+  "clase.n",
+  "class"
+ ],
+ "clases": [
+  "clase.n",
+  "classes"
+ ],
+ "clasificados": [
+  "clasificar.v",
+  "classified (fueron clasificados = were classified)"
+ ],
+ "clasificaron": [
+  "clasificar.v",
+  "were classified (se clasificaron)"
+ ],
+ "clave": [
+  "clave.n",
+  "key (palabras clave = keywords)"
+ ],
+ "clavo": [
+  "clavo.n",
+  "clove (clavo de olor)"
+ ],
+ "cognitiva": [
+  "cognitivo.adj",
+  "cognitive"
+ ],
+ "cognitivo": [
+  "cognitivo.adj",
+  "cognitive"
+ ],
+ "coloca": [
+  "colocar.v",
+  "is placed (se coloca)"
+ ],
+ "colocada": [
+  "colocar.v",
+  "placed"
+ ],
+ "comandante": [
+  "comandante.n",
+  "commander"
+ ],
+ "comarcas": [
+  "comarca.n",
+  "regions; districts"
+ ],
+ "combinación": [
+  "combinación.n",
+  "combination"
+ ],
+ "comenzando": [
+  "comenzar.v",
+  "starting; beginning"
+ ],
+ "comenzar": [
+  "comenzar.v",
+  "starting (al comenzar = when starting)"
+ ],
+ "como": [
+  "como.conj",
+  "as; like"
+ ],
+ "compararon": [
+  "comparar.v",
+  "were compared (se compararon)"
+ ],
+ "comparte": [
+  "compartir.v",
+  "shares (with us)"
+ ],
+ "compartiendo": [
+  "compartir.v",
+  "sharing"
+ ],
+ "compartimos": [
+  "compartir.v",
+  "we share"
+ ],
+ "compartir": [
+  "compartir.v",
+  "to share"
+ ],
+ "compartía": [
+  "compartir.v",
+  "was shared (se compartía)"
+ ],
+ "complejidades": [
+  "complejidad.n",
+  "complexities"
+ ],
+ "compone": [
+  "componerse.v",
+  "consists (se compone de = is made up of)"
+ ],
+ "componen": [
+  "componer.v",
+  "make up; compose"
+ ],
+ "componentes": [
+  "componente.n",
+  "components"
+ ],
+ "comprender": [
+  "comprender.v",
+  "to understand"
+ ],
+ "comprenderlas": [
+  "comprender.v",
+  "to understand them"
+ ],
+ "comprobado": [
+  "comprobar.v",
+  "proven (no está comprobado = it is not proven)"
+ ],
+ "comunicativo": [
+  "comunicativo.adj",
+  "communicative"
+ ],
+ "comunidades": [
+  "comunidad.n",
+  "communities"
+ ],
+ "común": [
+  "común.adj",
+  "common; shared"
+ ],
+ "con": [
+  "con.prep",
+  "with"
+ ],
+ "concepto": [
+  "concepto.n",
+  "concept"
+ ],
+ "conceptos": [
+  "concepto.n",
+  "concepts"
+ ],
+ "conceptualiza": [
+  "conceptualizar.v",
+  "conceptualizes"
+ ],
+ "conceptualización": [
+  "conceptualización.n",
+  "conceptualization"
+ ],
+ "conceptualizadas": [
+  "conceptualizar.v",
+  "conceptualized (son conceptualizadas = are conceptualized)"
+ ],
+ "conceptualizan": [
+  "conceptualizar.v",
+  "they conceptualize"
+ ],
+ "condicionan": [
+  "condicionar.v",
+  "condition; shape"
+ ],
+ "condición": [
+  "condición.n",
+  "condition"
+ ],
+ "conducta": [
+  "conducta.n",
+  "behaviour; conduct"
+ ]
+}

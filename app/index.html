@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#c2410c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Lector">
+<link rel="manifest" href="manifest.json">
+<title>Lector</title>
+<link rel="stylesheet" href="style.css?v=7">
+<link rel="icon" href="icon.svg">
+<link rel="apple-touch-icon" href="icon.svg">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#/">Lector</a>
+  <nav>
+    <a href="#/" data-nav="library">Texts</a>
+    <a href="#/words" data-nav="words">Words <span id="nav-count" class="badge"></span></a>
+    <a href="#/study/review" data-nav="review">Review <span id="nav-due" class="badge accent"></span></a>
+  </nav>
+  <button id="sync-status" class="sync-status" aria-live="polite"></button>
+  <button id="settings-btn" class="icon-btn" aria-label="Reading settings" title="Text size and theme">Aa</button>
+</header>
+
+<div id="settings" class="settings" hidden>
+  <div class="row"><span>Size</span>
+    <button data-set="fs-" aria-label="Smaller">A−</button><output id="fs-val"></output><button data-set="fs+" aria-label="Larger">A+</button></div>
+  <div class="row"><span>Spacing</span>
+    <button data-set="lh" data-v="normal">normal</button><button data-set="lh" data-v="wide">relaxed</button></div>
+  <div class="row"><span>Width</span>
+    <button data-set="width" data-v="narrow">narrow</button><button data-set="width" data-v="full">full</button></div>
+  <div class="row"><span>Theme</span>
+    <button data-set="theme" data-v="auto">auto</button><button data-set="theme" data-v="light">light</button><button data-set="theme" data-v="dark">dark</button></div>
+  <div class="row" id="account-row" hidden></div>
+</div>
+
+<main id="view"></main>
+<div id="popup" class="popup" hidden role="dialog"></div>
+<div id="modal" class="modal" hidden></div>
+
+<script src="config.js?v=7"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="data/index.js?v=7" onerror="window.LECTOR_INDEX=[]"></script>
+<script src="sync.js?v=7"></script>
+<script src="app.js?v=7"></script>
+</body>
+</html>

@@ -1,0 +1,730 @@
+{
+ "conductas": [
+  "conducta.n",
+  "behaviours"
+ ],
+ "confianza": [
+  "confianza.n",
+  "trust (de confianza: between close people)"
+ ],
+ "conflicto": [
+  "conflicto.n",
+  "conflict"
+ ],
+ "conformación": [
+  "conformación.n",
+  "shaping; formation"
+ ],
+ "congresales": [
+  "congresal.n",
+  "congress delegates"
+ ],
+ "congreso": [
+  "congreso.n",
+  "Congress"
+ ],
+ "conmemorar": [
+  "conmemorar.v",
+  "to commemorate"
+ ],
+ "conoce": [
+  "conocer.v",
+  "(se conoce) one learns; is known"
+ ],
+ "conocer": [
+  "conocer.v",
+  "to know; to learn"
+ ],
+ "conocimiento": [
+  "conocimiento.n",
+  "knowledge"
+ ],
+ "conocimientos": [
+  "conocimiento.n",
+  "knowledge"
+ ],
+ "conquistadores": [
+  "conquistador.n",
+  "conquistadors"
+ ],
+ "conscientes": [
+  "consciente.adj",
+  "aware"
+ ],
+ "consecuencias": [
+  "consecuencia.n",
+  "consequences"
+ ],
+ "conseguir": [
+  "conseguir.v",
+  "to obtain; to achieve"
+ ],
+ "conservará": [
+  "conservar.v",
+  "it will keep"
+ ],
+ "conservó": [
+  "conservar.v",
+  "(se conservó) was preserved"
+ ],
+ "consideraba": [
+  "considerar.v",
+  "(se lo consideraba) it was considered"
+ ],
+ "consideraban": [
+  "considerar.v",
+  "they considered"
+ ],
+ "consiguiente": [
+  "consiguiente.adj",
+  "(por consiguiente) consequently"
+ ],
+ "consolidación": [
+  "consolidación.n",
+  "consolidation"
+ ],
+ "constante": [
+  "constante.adj",
+  "constant"
+ ],
+ "constantemente": [
+  "constantemente.adv",
+  "constantly"
+ ],
+ "constatado": [
+  "constatar.v",
+  "(have) confirmed"
+ ],
+ "construcciones": [
+  "construcción.n",
+  "constructions"
+ ],
+ "construcción": [
+  "construcción.n",
+  "building; construction"
+ ],
+ "consumen": [
+  "consumir.v",
+  "(se consumen) are consumed"
+ ],
+ "consumido": [
+  "consumir.v",
+  "consumed"
+ ],
+ "consumir": [
+  "consumir.v",
+  "to consume; to drink"
+ ],
+ "consumo": [
+  "consumo.n",
+  "consumption"
+ ],
+ "contamos": [
+  "contar.v",
+  "we tell"
+ ],
+ "contexto": [
+  "contexto.n",
+  "context"
+ ],
+ "contextos": [
+  "contexto.n",
+  "contexts"
+ ],
+ "contrasta": [
+  "contrastar.v",
+  "contrasts"
+ ],
+ "contrastan": [
+  "contrastar.v",
+  "contrast"
+ ],
+ "contó": [
+  "contar.v",
+  "said; told"
+ ],
+ "converger": [
+  "converger.v",
+  "to converge"
+ ],
+ "correcto": [
+  "correcto.adj",
+  "correct; right"
+ ],
+ "correlaciona": [
+  "correlacionar.v",
+  "correlates"
+ ],
+ "cortesía": [
+  "cortesía.n",
+  "politeness; courtesy"
+ ],
+ "cosas": [
+  "cosa.n",
+  "things"
+ ],
+ "costumbres": [
+  "costumbre.n",
+  "customs"
+ ],
+ "cotidiana": [
+  "cotidiano.adj",
+  "everyday; daily"
+ ],
+ "crear": [
+  "crear.v",
+  "to create"
+ ],
+ "crema": [
+  "crema.n",
+  "cream"
+ ],
+ "crónica": [
+  "crónica.n",
+  "chronicle; account"
+ ],
+ "cual": [
+  "cual.pron",
+  "which (lo cual: which)"
+ ],
+ "cuales": [
+  "cual.pron",
+  "which (los cuales: which)"
+ ],
+ "cualitativo": [
+  "cualitativo.adj",
+  "qualitative"
+ ],
+ "cuando": [
+  "cuando.conj",
+  "when"
+ ],
+ "cuanto": [
+  "cuanto.adv",
+  "the (cuanto más... más: the more... the more)"
+ ],
+ "cuartas": [
+  "cuarto.adj",
+  "fourth (tres cuartas partes: three quarters)"
+ ],
+ "cuatro": [
+  "cuatro.num",
+  "four"
+ ],
+ "cuenco": [
+  "cuenco.n",
+  "bowl"
+ ],
+ "cuenta": [
+  "contar.v",
+  "tells; says"
+ ],
+ "cultivo": [
+  "cultivo.n",
+  "cultivation"
+ ],
+ "culto": [
+  "culto.n",
+  "worship (objeto de culto: object of worship)"
+ ],
+ "cuota": [
+  "cuota.n",
+  "share; measure"
+ ],
+ "custodios": [
+  "custodio.n",
+  "guardians; custodians"
+ ],
+ "da": [
+  "dar.v",
+  "gives (da origen a: gives rise to)"
+ ],
+ "dan": [
+  "dar.v",
+  "(they) give"
+ ],
+ "datos": [
+  "dato.n",
+  "data"
+ ],
+ "de": [
+  "de.prep",
+  "of; from"
+ ],
+ "debe": [
+  "deber.v",
+  "must"
+ ],
+ "deben": [
+  "deber.v",
+  "must"
+ ],
+ "debida": [
+  "debido.adj",
+  "due (to)"
+ ],
+ "debido": [
+  "debido.adj",
+  "(debido a) owing to; because of"
+ ],
+ "debían": [
+  "deber.v",
+  "must have (been)"
+ ],
+ "decide": [
+  "decidir.v",
+  "decides"
+ ],
+ "decidieron": [
+  "decidir.v",
+  "they decided"
+ ],
+ "decir": [
+  "decir.v",
+  "to say (es decir: that is)"
+ ],
+ "decisivos": [
+  "decisivo.adj",
+  "decisive"
+ ],
+ "decisión": [
+  "decisión.n",
+  "decision"
+ ],
+ "declara": [
+  "declarar.v",
+  "(se declara) declares herself"
+ ],
+ "declarado": [
+  "declarar.v",
+  "declared"
+ ],
+ "dedicación": [
+  "dedicación.n",
+  "dedication"
+ ],
+ "define": [
+  "definir.v",
+  "defines"
+ ],
+ "deja": [
+  "dejar.v",
+  "(se deja) is left; is placed"
+ ],
+ "dejó": [
+  "dejar.v",
+  "stopped (dejar de: to stop)"
+ ],
+ "del": [
+  "de.prep",
+  "of the; from the (de + el)"
+ ],
+ "delicada": [
+  "delicado.adj",
+  "delicate; refined"
+ ],
+ "demás": [
+  "demás.pron",
+  "(los demás) others; the rest"
+ ],
+ "dentro": [
+  "dentro.adv",
+  "inside (dentro de: inside)"
+ ],
+ "desaparezca": [
+  "desaparecer.v",
+  "(that) disappear(s)"
+ ],
+ "desarrollarse": [
+  "desarrollarse.v",
+  "to take place; to unfold"
+ ],
+ "desarrollo": [
+  "desarrollo.n",
+  "development"
+ ],
+ "descifrar": [
+  "descifrar.v",
+  "to decipher"
+ ],
+ "desconoce": [
+  "desconocer.v",
+  "ignores; is unaware of"
+ ],
+ "describe": [
+  "describir.v",
+  "describes"
+ ],
+ "describen": [
+  "describir.v",
+  "describe"
+ ],
+ "describir": [
+  "describir.v",
+  "to describe"
+ ],
+ "descubrieron": [
+  "descubrir.v",
+  "discovered"
+ ],
+ "desde": [
+  "desde.prep",
+  "from; since"
+ ],
+ "designado": [
+  "designar.v",
+  "appointed"
+ ],
+ "desmentir": [
+  "desmentir.v",
+  "to debunk; to refute"
+ ],
+ "despiertan": [
+  "despertar.v",
+  "(they) arouse"
+ ],
+ "desplazamiento": [
+  "desplazamiento.n",
+  "displacement; shift"
+ ],
+ "desprestigio": [
+  "desprestigio.n",
+  "loss of prestige"
+ ],
+ "después": [
+  "después.adv",
+  "after (después de que: after)"
+ ],
+ "destapar": [
+  "destapar.v",
+  "to unblock"
+ ],
+ "desuso": [
+  "desuso.n",
+  "disuse"
+ ],
+ "detalles": [
+  "detalle.n",
+  "details"
+ ],
+ "determinada": [
+  "determinado.adj",
+  "certain; particular"
+ ],
+ "determinadas": [
+  "determinado.adj",
+  "specific; particular"
+ ],
+ "determinar": [
+  "determinar.v",
+  "to determine"
+ ],
+ "dialectales": [
+  "dialectal.adj",
+  "dialect (zonas dialectales: dialect areas)"
+ ],
+ "dialecto": [
+  "dialecto.n",
+  "dialect"
+ ],
+ "dialectos": [
+  "dialecto.n",
+  "dialects"
+ ],
+ "diario": [
+  "diario.n",
+  "newspaper"
+ ],
+ "dice": [
+  "decir.v",
+  "says"
+ ],
+ "diciembre": [
+  "diciembre.n",
+  "December"
+ ],
+ "dicotomía": [
+  "dicotomía.n",
+  "dichotomy"
+ ],
+ "diferentes": [
+  "diferente.adj",
+  "different"
+ ],
+ "difundidas": [
+  "difundido.adj",
+  "widespread"
+ ],
+ "difundir": [
+  "difundir.v",
+  "to spread"
+ ],
+ "dignatarios": [
+  "dignatario.n",
+  "dignitaries"
+ ],
+ "dijo": [
+  "decir.v",
+  "said"
+ ],
+ "dioses": [
+  "dios.n",
+  "gods"
+ ],
+ "dirigen": [
+  "dirigirse.v",
+  "(they) address"
+ ],
+ "dirigirse": [
+  "dirigirse.v",
+  "to address"
+ ],
+ "discusiones": [
+  "discusión.n",
+  "discussions; arguments"
+ ],
+ "discutan": [
+  "discutir.v",
+  "(se discutan) are discussed"
+ ],
+ "discute": [
+  "discutir.v",
+  "discusses"
+ ],
+ "disposición": [
+  "disposición.n",
+  "disposition"
+ ],
+ "distante": [
+  "distante.adj",
+  "distant"
+ ],
+ "distinguir": [
+  "distinguir.v",
+  "to distinguish"
+ ],
+ "distintos": [
+  "distinto.adj",
+  "different; various"
+ ],
+ "distribución": [
+  "distribución.n",
+  "distribution"
+ ],
+ "diversidad": [
+  "diversidad.n",
+  "diversity"
+ ],
+ "divide": [
+  "dividir.v",
+  "(se divide) is divided"
+ ],
+ "donde": [
+  "donde.adv",
+  "where"
+ ],
+ "dándose": [
+  "dar.v",
+  "(siguen dándose) occurring; taking place"
+ ],
+ "décadas": [
+  "década.n",
+  "decades"
+ ],
+ "día": [
+  "día.n",
+  "day"
+ ],
+ "e": [
+  "e.conj",
+  "and (before i-/hi-)"
+ ],
+ "echa": [
+  "echar.v",
+  "(se echa) is poured"
+ ],
+ "echar": [
+  "echar.v",
+  "to pour"
+ ],
+ "economía": [
+  "economía.n",
+  "economy"
+ ],
+ "edad": [
+  "edad.n",
+  "age"
+ ],
+ "educación": [
+  "educación.n",
+  "education"
+ ],
+ "ejercían": [
+  "ejercer.v",
+  "they carried out"
+ ],
+ "el": [
+  "el.det",
+  "the"
+ ],
+ "elaborado": [
+  "elaborado.adj",
+  "elaborate"
+ ],
+ "elemento": [
+  "elemento.n",
+  "element"
+ ],
+ "elementos": [
+  "elemento.n",
+  "elements"
+ ],
+ "elevado": [
+  "elevado.adj",
+  "high"
+ ],
+ "ellas": [
+  "él.pron",
+  "them (f.)"
+ ],
+ "ello": [
+  "ello.pron",
+  "it; that (por ello: therefore)"
+ ],
+ "ellos": [
+  "él.pron",
+  "they"
+ ],
+ "embargo": [
+  "embargo.n",
+  "(sin embargo) however"
+ ],
+ "emocional": [
+  "emocional.adj",
+  "emotional"
+ ],
+ "emocionales": [
+  "emocional.adj",
+  "emotional"
+ ],
+ "empatía": [
+  "empatía.n",
+  "empathy"
+ ],
+ "empecemos": [
+  "empezar.v",
+  "(that) we start"
+ ],
+ "emperador": [
+  "emperador.n",
+  "emperor"
+ ],
+ "empezó": [
+  "empezar.v",
+  "began"
+ ],
+ "emplean": [
+  "emplear.v",
+  "(se emplean) are used"
+ ],
+ "en": [
+  "en.prep",
+  "in; on"
+ ],
+ "enamorada": [
+  "enamorado.adj",
+  "in love"
+ ],
+ "encargado": [
+  "encargarse.v",
+  "(se ha encargado de) has undertaken"
+ ],
+ "encargaron": [
+  "encargarse.v",
+  "(se encargaron de) took it upon themselves"
+ ],
+ "encuentro": [
+  "encuentro.n",
+  "meeting; encounter"
+ ],
+ "encuestados": [
+  "encuestado.n",
+  "respondents"
+ ],
+ "ende": [
+  "ende.adv",
+  "(por ende) therefore"
+ ],
+ "enfatizan": [
+  "enfatizar.v",
+  "emphasize"
+ ],
+ "enfoque": [
+  "enfoque.n",
+  "approach"
+ ],
+ "enfriarla": [
+  "enfriar.v",
+  "to cool it"
+ ],
+ "enojo": [
+  "enojo.n",
+  "anger"
+ ],
+ "enseñanzas": [
+  "enseñanza.n",
+  "lessons; teachings"
+ ],
+ "entiende": [
+  "entender.v",
+  "(se entiende) is understood"
+ ],
+ "entonces": [
+  "entonces.adv",
+  "then; at that time"
+ ],
+ "entrada": [
+  "entrada.n",
+  "entry (entrada en escena: appearance)"
+ ],
+ "entre": [
+  "entre.prep",
+  "between; among"
+ ],
+ "entrevistas": [
+  "entrevista.n",
+  "interviews"
+ ],
+ "equivalente": [
+  "equivalente.adj",
+  "equivalent"
+ ],
+ "era": [
+  "ser.v",
+  "was"
+ ],
+ "error": [
+  "error.n",
+  "wrong; mistake"
+ ],
+ "es": [
+  "ser.v",
+  "is"
+ ],
+ "esa": [
+  "ese.det",
+  "that"
+ ],
+ "escena": [
+  "escena.n",
+  "scene (entrada en escena: appearance)"
+ ],
+ "esclarece": [
+  "esclarecer.v",
+  "clarifies; sheds light on"
+ ],
+ "esclavo": [
+  "esclavo.n",
+  "slave"
+ ]
+}

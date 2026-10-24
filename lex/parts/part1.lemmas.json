@@ -1,0 +1,466 @@
+{
+ "a.prep": {
+  "en": "to; at"
+ },
+ "abajo.adv": {
+  "en": "below; down"
+ },
+ "abordar.v": {
+  "en": "to address; to deal with; to board"
+ },
+ "acalorado.adj": {
+  "en": "heated; hot"
+ },
+ "acción.n": {
+  "en": "action; act",
+  "g": "f"
+ },
+ "acentuar.v": {
+  "en": "to stress; to emphasize; to accentuate",
+  "m": "ú"
+ },
+ "aceptar.v": {
+  "en": "to accept"
+ },
+ "acerca.adv": {
+  "en": "about (acerca de)"
+ },
+ "actitud.n": {
+  "en": "attitude",
+  "g": "f"
+ },
+ "acto.n": {
+  "en": "act; event",
+  "g": "m"
+ },
+ "actual.adj": {
+  "en": "current; present"
+ },
+ "actuar.v": {
+  "en": "to act; to behave",
+  "m": "ú"
+ },
+ "acuerdo.n": {
+  "en": "agreement (de acuerdo con = according to)",
+  "g": "m"
+ },
+ "adaptar.v": {
+  "en": "to adapt"
+ },
+ "adicionalmente.adv": {
+  "en": "additionally"
+ },
+ "aditamento.n": {
+  "en": "addition; add-in",
+  "g": "m"
+ },
+ "admiración.n": {
+  "en": "admiration",
+  "g": "f"
+ },
+ "afectivo.adj": {
+  "en": "affective; emotional"
+ },
+ "afecto.n": {
+  "en": "affection",
+  "g": "m"
+ },
+ "afianzamiento.n": {
+  "en": "consolidation; strengthening",
+  "g": "m"
+ },
+ "afirmar.v": {
+  "en": "to state; to affirm"
+ },
+ "agregar.v": {
+  "en": "to add"
+ },
+ "agua.n": {
+  "en": "water",
+  "g": "f",
+  "art": "el"
+ },
+ "ahora.adv": {
+  "en": "now"
+ },
+ "ahí.adv": {
+  "en": "there"
+ },
+ "aislado.adj": {
+  "en": "isolated"
+ },
+ "algo.pron": {
+  "en": "something; anything"
+ },
+ "alguno.det": {
+  "en": "some; any"
+ },
+ "aliento.n": {
+  "en": "encouragement; breath",
+  "g": "m"
+ },
+ "alimentar.v": {
+  "en": "to feed; to nourish"
+ },
+ "allí.adv": {
+  "en": "there"
+ },
+ "alrededor.adv": {
+  "en": "around (alrededor de)"
+ },
+ "alto.adj": {
+  "en": "high; tall; upper"
+ },
+ "amor.n": {
+  "en": "love",
+  "g": "m"
+ },
+ "amo.n": {
+  "en": "master; owner",
+  "g": "m"
+ },
+ "antes.adv": {
+  "en": "before (antes de)"
+ },
+ "análisis.n": {
+  "en": "analysis",
+  "g": "m",
+  "pl": "análisis"
+ },
+ "aparente.adj": {
+  "en": "apparent"
+ },
+ "aplicable.adj": {
+  "en": "applicable"
+ },
+ "apocopado.adj": {
+  "en": "apocopated; shortened"
+ },
+ "aportar.v": {
+  "en": "to contribute; to provide"
+ },
+ "aprendiz.n": {
+  "en": "learner; apprentice",
+  "g": "m/f"
+ },
+ "aprovechar.v": {
+  "en": "to take advantage of; to make use of"
+ },
+ "aquel.det": {
+  "en": "that (over there); those"
+ },
+ "argentino.adj": {
+  "en": "Argentine; Argentinian"
+ },
+ "aristócrata.n": {
+  "en": "aristocrat",
+  "g": "m/f"
+ },
+ "armado.adj": {
+  "en": "armed"
+ },
+ "aroma.n": {
+  "en": "aroma; scent",
+  "g": "m"
+ },
+ "arraigarse.v": {
+  "en": "to take root; to become established"
+ },
+ "arruinar.v": {
+  "en": "to ruin"
+ },
+ "asegurar.v": {
+  "en": "to assure; to state; to secure"
+ },
+ "asimismo.adv": {
+  "en": "likewise; also"
+ },
+ "asociar.v": {
+  "en": "to associate"
+ },
+ "aspecto.n": {
+  "en": "aspect; appearance",
+  "g": "m"
+ },
+ "así.adv": {
+  "en": "thus; so; like this"
+ },
+ "atraer.v": {
+  "en": "to attract"
+ },
+ "atravesar.v": {
+  "en": "to cross; to go through",
+  "m": "e>ie"
+ },
+ "aun.adv": {
+  "en": "even"
+ },
+ "aunque.conj": {
+  "en": "although; even if"
+ },
+ "autor.n": {
+  "en": "author",
+  "g": "m"
+ },
+ "ayudar.v": {
+  "en": "to help"
+ },
+ "año.n": {
+  "en": "year",
+  "g": "m"
+ },
+ "bajo.adj": {
+  "en": "low; short; lower"
+ },
+ "bajo.prep": {
+  "en": "under"
+ },
+ "barroco.adj": {
+  "en": "baroque; ornate"
+ },
+ "beber.v": {
+  "en": "to drink"
+ },
+ "bebida.n": {
+  "en": "drink; beverage",
+  "g": "f"
+ },
+ "bien.n": {
+  "en": "good; asset (bienes = goods, possessions)",
+  "g": "m"
+ },
+ "boca.n": {
+  "en": "mouth; opening",
+  "g": "f"
+ },
+ "bogotano.adj": {
+  "en": "from Bogotá; person from Bogotá"
+ },
+ "boletín.n": {
+  "en": "bulletin; gazette",
+  "g": "m",
+  "pl": "boletines"
+ },
+ "bombilla.n": {
+  "en": "metal drinking straw (for mate); light bulb",
+  "g": "f"
+ },
+ "bregar.v": {
+  "en": "to struggle; to toil; to fight"
+ },
+ "brindar.v": {
+  "en": "to provide; to offer; to toast"
+ },
+ "bueno.adj": {
+  "en": "good"
+ },
+ "buscar.v": {
+  "en": "to look for; to seek"
+ },
+ "cada.det": {
+  "en": "each; every"
+ },
+ "café.n": {
+  "en": "coffee; café",
+  "g": "m"
+ },
+ "cambiar.v": {
+  "en": "to change"
+ },
+ "cambio.n": {
+  "en": "change; exchange",
+  "g": "m"
+ },
+ "canela.n": {
+  "en": "cinnamon",
+  "g": "f"
+ },
+ "capacidad.n": {
+  "en": "capacity; ability",
+  "g": "f"
+ },
+ "capital.n": {
+  "en": "capital (city)",
+  "g": "f"
+ },
+ "caracterización.n": {
+  "en": "characterization",
+  "g": "f"
+ },
+ "cargado.adj": {
+  "en": "loaded; charged; strong"
+ },
+ "cariño.n": {
+  "en": "affection; tenderness",
+  "g": "m"
+ },
+ "cariñoso.adj": {
+  "en": "affectionate; loving"
+ },
+ "carácter.n": {
+  "en": "character; nature",
+  "g": "m",
+  "pl": "caracteres"
+ },
+ "casa.n": {
+  "en": "house; home",
+  "g": "f"
+ },
+ "caso.n": {
+  "en": "case",
+  "g": "m"
+ },
+ "castellano.n": {
+  "en": "Castilian; Spanish (language)",
+  "g": "m"
+ },
+ "caudillo.n": {
+  "en": "leader; strongman",
+  "g": "m"
+ },
+ "cebar.v": {
+  "en": "to prepare and serve (mate); to fatten"
+ },
+ "cebadora.n": {
+  "en": "woman who prepares and serves mate",
+  "g": "f"
+ },
+ "celebrar.v": {
+  "en": "to celebrate"
+ },
+ "cerca.adv": {
+  "en": "near; close (cerca de)"
+ },
+ "cercano.adj": {
+  "en": "close; near; friendly"
+ },
+ "charla.n": {
+  "en": "talk; chat",
+  "g": "f"
+ },
+ "chorrito.n": {
+  "en": "small splash; trickle",
+  "g": "m"
+ },
+ "chorro.n": {
+  "en": "stream; jet; splash",
+  "g": "m"
+ },
+ "ciento.num": {
+  "en": "hundred (cientos = hundreds)"
+ },
+ "cierto.det": {
+  "en": "certain; a certain"
+ },
+ "cinco.num": {
+  "en": "five"
+ },
+ "ciudad.n": {
+  "en": "city",
+  "g": "f"
+ },
+ "clase.n": {
+  "en": "class; kind",
+  "g": "f"
+ },
+ "clasificar.v": {
+  "en": "to classify"
+ },
+ "clave.n": {
+  "en": "key; code",
+  "g": "f"
+ },
+ "clavo.n": {
+  "en": "nail; clove (clavo de olor)",
+  "g": "m"
+ },
+ "cognitivo.adj": {
+  "en": "cognitive"
+ },
+ "colocar.v": {
+  "en": "to place; to put"
+ },
+ "comandante.n": {
+  "en": "commander",
+  "g": "m/f"
+ },
+ "comarca.n": {
+  "en": "region; district",
+  "g": "f"
+ },
+ "combinación.n": {
+  "en": "combination",
+  "g": "f"
+ },
+ "comenzar.v": {
+  "en": "to begin; to start",
+  "m": "e>ie"
+ },
+ "como.conj": {
+  "en": "as; like; how"
+ },
+ "comparar.v": {
+  "en": "to compare"
+ },
+ "compartir.v": {
+  "en": "to share"
+ },
+ "complejidad.n": {
+  "en": "complexity",
+  "g": "f"
+ },
+ "componerse.v": {
+  "en": "to consist of; to be made up of"
+ },
+ "componer.v": {
+  "en": "to make up; to compose"
+ },
+ "componente.n": {
+  "en": "component",
+  "g": "m"
+ },
+ "comprender.v": {
+  "en": "to understand; to comprise"
+ },
+ "comprobar.v": {
+  "en": "to check; to prove; to verify",
+  "m": "o>ue"
+ },
+ "comunicativo.adj": {
+  "en": "communicative"
+ },
+ "comunidad.n": {
+  "en": "community",
+  "g": "f"
+ },
+ "común.adj": {
+  "en": "common; shared",
+  "f": "común",
+  "pl": "comunes"
+ },
+ "con.prep": {
+  "en": "with"
+ },
+ "concepto.n": {
+  "en": "concept",
+  "g": "m"
+ },
+ "conceptualizar.v": {
+  "en": "to conceptualize"
+ },
+ "conceptualización.n": {
+  "en": "conceptualization",
+  "g": "f"
+ },
+ "condicionar.v": {
+  "en": "to condition; to shape"
+ },
+ "condición.n": {
+  "en": "condition",
+  "g": "f"
+ },
+ "conducta.n": {
+  "en": "behaviour; conduct",
+  "g": "f"
+ }
+}

@@ -1,0 +1,434 @@
+{
+ "semántico.adj": {
+  "en": "semantic"
+ },
+ "sentimiento.n": {
+  "en": "feeling; sentiment",
+  "g": "m"
+ },
+ "serie.n": {
+  "en": "series; set",
+  "g": "f"
+ },
+ "servir.v": {
+  "en": "to serve; to be useful",
+  "m": "e>i"
+ },
+ "sesión.n": {
+  "en": "session",
+  "g": "f"
+ },
+ "señalar.v": {
+  "en": "to point out; to indicate"
+ },
+ "si.conj": {
+  "en": "if; whether"
+ },
+ "ser.v": {
+  "en": "to be"
+ },
+ "siempre.adv": {
+  "en": "always"
+ },
+ "siglo.n": {
+  "en": "century",
+  "g": "m"
+ },
+ "significar.v": {
+  "en": "to mean"
+ },
+ "significado.n": {
+  "en": "meaning",
+  "g": "m"
+ },
+ "signo.n": {
+  "en": "sign",
+  "g": "m"
+ },
+ "seguir.v": {
+  "en": "to follow; to continue",
+  "m": "e>i"
+ },
+ "similar.adj": {
+  "en": "similar"
+ },
+ "simplicidad.n": {
+  "en": "simplicity",
+  "g": "f"
+ },
+ "sin.prep": {
+  "en": "without"
+ },
+ "singular.n": {
+  "en": "singular",
+  "g": "m"
+ },
+ "sino.conj": {
+  "en": "but (rather); except"
+ },
+ "situacional.adj": {
+  "en": "situational"
+ },
+ "situación.n": {
+  "en": "situation",
+  "g": "f"
+ },
+ "sobre.prep": {
+  "en": "about; on; over"
+ },
+ "social.adj": {
+  "en": "social"
+ },
+ "socioeconómico.adj": {
+  "en": "socioeconomic"
+ },
+ "solidaridad.n": {
+  "en": "solidarity",
+  "g": "f"
+ },
+ "solo.adv": {
+  "en": "only; just"
+ },
+ "solvencia.n": {
+  "en": "solvency; dissolving power",
+  "g": "f"
+ },
+ "sommelier.n": {
+  "en": "sommelier",
+  "g": "m/f",
+  "pl": "sommeliers"
+ },
+ "su.det": {
+  "en": "his; her; its; their; your (formal)"
+ },
+ "suavidad.n": {
+  "en": "smoothness; softness",
+  "g": "f"
+ },
+ "sufrir.v": {
+  "en": "to suffer; to undergo"
+ },
+ "sugerir.v": {
+  "en": "to suggest",
+  "m": "e>ie,i"
+ },
+ "sumercé.pron": {
+  "en": "you (respectful, Colombian; from 'su merced')"
+ },
+ "tabla.n": {
+  "en": "table; chart; board",
+  "g": "f"
+ },
+ "tal.det": {
+  "en": "such; such a"
+ },
+ "también.adv": {
+  "en": "also; too"
+ },
+ "tan.adv": {
+  "en": "so; as"
+ },
+ "tanto.det": {
+  "en": "so much; so many"
+ },
+ "tanto.adv": {
+  "en": "so much; as much"
+ },
+ "tapar.v": {
+  "en": "to cover; to put a lid on"
+ },
+ "taparse.v": {
+  "en": "to get clogged; to cover oneself"
+ },
+ "tarde.adv": {
+  "en": "late; later"
+ },
+ "tardío.adj": {
+  "en": "late; belated"
+ },
+ "te.pron": {
+  "en": "you; (to) you; yourself"
+ },
+ "temperatura.n": {
+  "en": "temperature",
+  "g": "f"
+ },
+ "tener.v": {
+  "en": "to have"
+ },
+ "texto.n": {
+  "en": "text",
+  "g": "m"
+ },
+ "teórico.adj": {
+  "en": "theoretical"
+ },
+ "tibio.adj": {
+  "en": "lukewarm; tepid"
+ },
+ "tiempo.n": {
+  "en": "time; weather",
+  "g": "m"
+ },
+ "tender.v": {
+  "en": "to tend; to hang out (laundry)",
+  "m": "e>ie"
+ },
+ "tierra.n": {
+  "en": "land; earth; soil",
+  "g": "f"
+ },
+ "tipo.n": {
+  "en": "type; kind",
+  "g": "m"
+ },
+ "todo.det": {
+  "en": "all; every; whole"
+ },
+ "tomar.v": {
+  "en": "to drink; to take"
+ },
+ "trabajar.v": {
+  "en": "to work"
+ },
+ "tradicional.adj": {
+  "en": "traditional"
+ },
+ "tradicionalmente.adv": {
+  "en": "traditionally"
+ },
+ "tradición.n": {
+  "en": "tradition",
+  "g": "f"
+ },
+ "transformarse.v": {
+  "en": "to turn into; to be transformed"
+ },
+ "transversal.adj": {
+  "en": "transverse; cross-cutting"
+ },
+ "tratamiento.n": {
+  "en": "treatment; form of address",
+  "g": "m"
+ },
+ "tratar.v": {
+  "en": "to treat; to address; to try"
+ },
+ "trato.n": {
+  "en": "treatment; manner of address; deal",
+  "g": "m"
+ },
+ "través.n": {
+  "en": "a través de: through; across",
+  "g": "m"
+ },
+ "tres.num": {
+  "en": "three"
+ },
+ "trueque.n": {
+  "en": "barter; exchange",
+  "g": "m"
+ },
+ "tucumano.adj": {
+  "en": "from Tucumán; Tucumán"
+ },
+ "tuteante.n": {
+  "en": "person who uses 'tú'",
+  "g": "m/f"
+ },
+ "tuteo.n": {
+  "en": "addressing someone as 'tú'",
+  "g": "m"
+ },
+ "té.n": {
+  "en": "tea",
+  "g": "m",
+  "pl": "tés"
+ },
+ "término.n": {
+  "en": "term; end",
+  "g": "m"
+ },
+ "tú.pron": {
+  "en": "you (informal)"
+ },
+ "u.conj": {
+  "en": "or (before o-/ho-)"
+ },
+ "ubicarse.v": {
+  "en": "to be located; to position oneself"
+ },
+ "un.det": {
+  "en": "a; an; one"
+ },
+ "unido.adj": {
+  "en": "united; close"
+ },
+ "universal.adj": {
+  "en": "universal"
+ },
+ "uno.pron": {
+  "en": "one"
+ },
+ "unir.v": {
+  "en": "to unite; to join"
+ },
+ "usar.v": {
+  "en": "to use"
+ },
+ "uso.n": {
+  "en": "use; usage",
+  "g": "m"
+ },
+ "usted.pron": {
+  "en": "you (formal)"
+ },
+ "ustedeante.n": {
+  "en": "person who uses 'usted'",
+  "g": "m/f"
+ },
+ "ustedear.v": {
+  "en": "to address as 'usted'"
+ },
+ "ustedeo.n": {
+  "en": "addressing someone as 'usted'",
+  "g": "m"
+ },
+ "usuario.n": {
+  "en": "user",
+  "g": "m"
+ },
+ "utilizar.v": {
+  "en": "to use; to utilize"
+ },
+ "valioso.adj": {
+  "en": "valuable"
+ },
+ "valor.n": {
+  "en": "value; courage",
+  "g": "m"
+ },
+ "variación.n": {
+  "en": "variation",
+  "g": "f"
+ },
+ "varios.det": {
+  "en": "several; various"
+ },
+ "variedad.n": {
+  "en": "variety",
+  "g": "f"
+ },
+ "ver.v": {
+  "en": "to see"
+ },
+ "vez.n": {
+  "en": "time (occasion); turn",
+  "g": "f"
+ },
+ "verdadero.adj": {
+  "en": "true; real"
+ },
+ "verter.v": {
+  "en": "to pour",
+  "m": "e>ie"
+ },
+ "vida.n": {
+  "en": "life",
+  "g": "f"
+ },
+ "viejo.adj": {
+  "en": "old"
+ },
+ "vigente.adj": {
+  "en": "current; in force"
+ },
+ "vincular.v": {
+  "en": "to link; to connect"
+ },
+ "virreinato.n": {
+  "en": "viceroyalty",
+  "g": "m"
+ },
+ "virtud.n": {
+  "en": "virtue",
+  "g": "f"
+ },
+ "virtuoso.adj": {
+  "en": "virtuous"
+ },
+ "vivir.v": {
+  "en": "to live"
+ },
+ "volcar.v": {
+  "en": "to pour; to tip over",
+  "m": "o>ue"
+ },
+ "volverse.v": {
+  "en": "to become; to turn around",
+  "m": "o>ue"
+ },
+ "volver.v": {
+  "en": "to return; to turn; to make (+ adj)",
+  "m": "o>ue"
+ },
+ "vos.pron": {
+  "en": "you (singular, familiar in parts of Latin America)"
+ },
+ "vuestro.det": {
+  "en": "your (plural)"
+ },
+ "válido.adj": {
+  "en": "valid"
+ },
+ "xvii.num": {
+  "en": "17th; seventeen (Roman numeral)"
+ },
+ "xviii.num": {
+  "en": "18th; eighteen (Roman numeral)"
+ },
+ "y.conj": {
+  "en": "and"
+ },
+ "ya.adv": {
+  "en": "already; now"
+ },
+ "yerba.n": {
+  "en": "yerba (mate); herb; grass",
+  "g": "f"
+ },
+ "zona.n": {
+  "en": "zone; area",
+  "g": "f"
+ },
+ "árbol.n": {
+  "en": "tree",
+  "g": "m"
+ },
+ "énfasis.n": {
+  "en": "emphasis",
+  "g": "m",
+  "pl": "énfasis"
+ },
+ "época.n": {
+  "en": "time; era; period",
+  "g": "f"
+ },
+ "éste.pron": {
+  "en": "this one; the latter"
+ },
+ "índole.n": {
+  "en": "nature; kind",
+  "g": "f"
+ },
+ "óptica.n": {
+  "en": "perspective; optics",
+  "g": "f"
+ },
+ "último.adj": {
+  "en": "last; latest"
+ },
+ "único.adj": {
+  "en": "only; unique"
+ }
+}

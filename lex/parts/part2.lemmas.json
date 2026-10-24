@@ -1,0 +1,508 @@
+{
+ "conducta.n": {
+  "en": "behaviour; conduct",
+  "g": "f"
+ },
+ "confianza.n": {
+  "en": "trust; confidence",
+  "g": "f"
+ },
+ "conflicto.n": {
+  "en": "conflict",
+  "g": "m"
+ },
+ "conformación.n": {
+  "en": "shaping; formation; makeup",
+  "g": "f"
+ },
+ "congresal.n": {
+  "en": "congress member; delegate",
+  "g": "m/f"
+ },
+ "congreso.n": {
+  "en": "congress",
+  "g": "m"
+ },
+ "conmemorar.v": {
+  "en": "to commemorate"
+ },
+ "conocer.v": {
+  "en": "to know; to get to know; to meet"
+ },
+ "conocimiento.n": {
+  "en": "knowledge",
+  "g": "m"
+ },
+ "conquistador.n": {
+  "en": "conqueror; conquistador",
+  "g": "m"
+ },
+ "consciente.adj": {
+  "en": "aware; conscious"
+ },
+ "consecuencia.n": {
+  "en": "consequence",
+  "g": "f"
+ },
+ "conseguir.v": {
+  "en": "to get; to obtain; to achieve",
+  "m": "e>i"
+ },
+ "conservar.v": {
+  "en": "to keep; to preserve"
+ },
+ "considerar.v": {
+  "en": "to consider"
+ },
+ "consiguiente.adj": {
+  "en": "consequent; por consiguiente: consequently"
+ },
+ "consolidación.n": {
+  "en": "consolidation",
+  "g": "f"
+ },
+ "constante.adj": {
+  "en": "constant"
+ },
+ "constantemente.adv": {
+  "en": "constantly"
+ },
+ "constatar.v": {
+  "en": "to confirm; to verify; to note"
+ },
+ "construcción.n": {
+  "en": "construction; building",
+  "g": "f"
+ },
+ "consumir.v": {
+  "en": "to consume"
+ },
+ "consumo.n": {
+  "en": "consumption",
+  "g": "m"
+ },
+ "contar.v": {
+  "en": "to tell; to count",
+  "m": "o>ue"
+ },
+ "contexto.n": {
+  "en": "context",
+  "g": "m"
+ },
+ "contrastar.v": {
+  "en": "to contrast"
+ },
+ "converger.v": {
+  "en": "to converge"
+ },
+ "correcto.adj": {
+  "en": "correct; right"
+ },
+ "correlacionar.v": {
+  "en": "to correlate"
+ },
+ "cortesía.n": {
+  "en": "courtesy; politeness",
+  "g": "f"
+ },
+ "cosa.n": {
+  "en": "thing",
+  "g": "f"
+ },
+ "costumbre.n": {
+  "en": "custom; habit",
+  "g": "f"
+ },
+ "cotidiano.adj": {
+  "en": "everyday; daily"
+ },
+ "crear.v": {
+  "en": "to create"
+ },
+ "crema.n": {
+  "en": "cream",
+  "g": "f"
+ },
+ "crónica.n": {
+  "en": "chronicle; account; report",
+  "g": "f"
+ },
+ "cual.pron": {
+  "en": "which; who (el cual, lo cual)"
+ },
+ "cualitativo.adj": {
+  "en": "qualitative"
+ },
+ "cuando.conj": {
+  "en": "when"
+ },
+ "cuanto.adv": {
+  "en": "as much as; cuanto más: the more; en cuanto a: as for"
+ },
+ "cuarto.adj": {
+  "en": "fourth; quarter"
+ },
+ "cuatro.num": {
+  "en": "four"
+ },
+ "cuenco.n": {
+  "en": "bowl",
+  "g": "m"
+ },
+ "cultivo.n": {
+  "en": "cultivation; crop",
+  "g": "m"
+ },
+ "culto.n": {
+  "en": "worship; cult",
+  "g": "m"
+ },
+ "cuota.n": {
+  "en": "share; quota; fee",
+  "g": "f"
+ },
+ "custodio.n": {
+  "en": "guardian; custodian",
+  "g": "m"
+ },
+ "dar.v": {
+  "en": "to give"
+ },
+ "dato.n": {
+  "en": "piece of data; fact",
+  "g": "m"
+ },
+ "de.prep": {
+  "en": "of; from"
+ },
+ "deber.v": {
+  "en": "must; to have to; to owe"
+ },
+ "debido.adj": {
+  "en": "due; proper; debido a: because of"
+ },
+ "decidir.v": {
+  "en": "to decide"
+ },
+ "decir.v": {
+  "en": "to say; to tell"
+ },
+ "decisivo.adj": {
+  "en": "decisive"
+ },
+ "decisión.n": {
+  "en": "decision",
+  "g": "f"
+ },
+ "declarar.v": {
+  "en": "to declare"
+ },
+ "dedicación.n": {
+  "en": "dedication",
+  "g": "f"
+ },
+ "definir.v": {
+  "en": "to define"
+ },
+ "dejar.v": {
+  "en": "to leave; to let; dejar de: to stop"
+ },
+ "delicado.adj": {
+  "en": "delicate"
+ },
+ "demás.pron": {
+  "en": "the others; the rest"
+ },
+ "dentro.adv": {
+  "en": "inside; dentro de: inside; within"
+ },
+ "desaparecer.v": {
+  "en": "to disappear"
+ },
+ "desarrollarse.v": {
+  "en": "to develop; to take place"
+ },
+ "desarrollo.n": {
+  "en": "development",
+  "g": "m"
+ },
+ "descifrar.v": {
+  "en": "to decipher"
+ },
+ "desconocer.v": {
+  "en": "not to know; to be unaware of; to ignore"
+ },
+ "describir.v": {
+  "en": "to describe"
+ },
+ "descubrir.v": {
+  "en": "to discover"
+ },
+ "desde.prep": {
+  "en": "from; since"
+ },
+ "designar.v": {
+  "en": "to appoint; to designate"
+ },
+ "desmentir.v": {
+  "en": "to deny; to refute",
+  "m": "e>ie,i"
+ },
+ "despertar.v": {
+  "en": "to wake up; to arouse",
+  "m": "e>ie"
+ },
+ "desplazamiento.n": {
+  "en": "displacement; shift",
+  "g": "m"
+ },
+ "desprestigio.n": {
+  "en": "discredit; loss of prestige",
+  "g": "m"
+ },
+ "después.adv": {
+  "en": "after; afterwards; later"
+ },
+ "destapar.v": {
+  "en": "to uncover; to unblock; to open"
+ },
+ "desuso.n": {
+  "en": "disuse",
+  "g": "m"
+ },
+ "detalle.n": {
+  "en": "detail",
+  "g": "m"
+ },
+ "determinado.adj": {
+  "en": "certain; particular; specific"
+ },
+ "determinar.v": {
+  "en": "to determine"
+ },
+ "dialectal.adj": {
+  "en": "dialectal; dialect"
+ },
+ "dialecto.n": {
+  "en": "dialect",
+  "g": "m"
+ },
+ "diario.n": {
+  "en": "newspaper; diary",
+  "g": "m"
+ },
+ "diciembre.n": {
+  "en": "December",
+  "g": "m"
+ },
+ "dicotomía.n": {
+  "en": "dichotomy",
+  "g": "f"
+ },
+ "diferente.adj": {
+  "en": "different"
+ },
+ "difundido.adj": {
+  "en": "widespread"
+ },
+ "difundir.v": {
+  "en": "to spread; to disseminate"
+ },
+ "dignatario.n": {
+  "en": "dignitary",
+  "g": "m"
+ },
+ "dios.n": {
+  "en": "god",
+  "g": "m",
+  "pl": "dioses"
+ },
+ "dirigirse.v": {
+  "en": "to address; to head for"
+ },
+ "discusión.n": {
+  "en": "discussion; argument",
+  "g": "f"
+ },
+ "discutir.v": {
+  "en": "to discuss; to argue"
+ },
+ "disposición.n": {
+  "en": "disposition; arrangement; disposal",
+  "g": "f"
+ },
+ "distante.adj": {
+  "en": "distant"
+ },
+ "distinguir.v": {
+  "en": "to distinguish"
+ },
+ "distinto.adj": {
+  "en": "different; distinct"
+ },
+ "distribución.n": {
+  "en": "distribution",
+  "g": "f"
+ },
+ "diversidad.n": {
+  "en": "diversity",
+  "g": "f"
+ },
+ "dividir.v": {
+  "en": "to divide"
+ },
+ "donde.adv": {
+  "en": "where"
+ },
+ "década.n": {
+  "en": "decade",
+  "g": "f"
+ },
+ "día.n": {
+  "en": "day",
+  "g": "m"
+ },
+ "e.conj": {
+  "en": "and (before i-/hi-)"
+ },
+ "echar.v": {
+  "en": "to throw; to pour; to put"
+ },
+ "economía.n": {
+  "en": "economy; economics",
+  "g": "f"
+ },
+ "edad.n": {
+  "en": "age",
+  "g": "f"
+ },
+ "educación.n": {
+  "en": "education; manners",
+  "g": "f"
+ },
+ "ejercer.v": {
+  "en": "to exercise; to practise; to carry out"
+ },
+ "el.det": {
+  "en": "the"
+ },
+ "elaborado.adj": {
+  "en": "elaborate"
+ },
+ "elemento.n": {
+  "en": "element",
+  "g": "m"
+ },
+ "elevado.adj": {
+  "en": "high; elevated"
+ },
+ "él.pron": {
+  "en": "he; him; (pl.) they; them"
+ },
+ "ello.pron": {
+  "en": "it; that; por ello: therefore"
+ },
+ "embargo.n": {
+  "en": "embargo; sin embargo: however",
+  "g": "m"
+ },
+ "emocional.adj": {
+  "en": "emotional"
+ },
+ "empatía.n": {
+  "en": "empathy",
+  "g": "f"
+ },
+ "empezar.v": {
+  "en": "to begin; to start",
+  "m": "e>ie"
+ },
+ "emperador.n": {
+  "en": "emperor",
+  "g": "m"
+ },
+ "emplear.v": {
+  "en": "to use; to employ"
+ },
+ "en.prep": {
+  "en": "in; on; at"
+ },
+ "enamorado.adj": {
+  "en": "in love"
+ },
+ "encargarse.v": {
+  "en": "to take charge of; to be in charge of"
+ },
+ "encuentro.n": {
+  "en": "meeting; encounter",
+  "g": "m"
+ },
+ "encuestado.n": {
+  "en": "respondent (survey)",
+  "g": "m/f"
+ },
+ "ende.adv": {
+  "en": "por ende: therefore"
+ },
+ "enfatizar.v": {
+  "en": "to emphasize"
+ },
+ "enfoque.n": {
+  "en": "approach; focus",
+  "g": "m"
+ },
+ "enfriar.v": {
+  "en": "to cool; to chill",
+  "m": "í"
+ },
+ "enojo.n": {
+  "en": "anger",
+  "g": "m"
+ },
+ "enseñanza.n": {
+  "en": "teaching; lesson",
+  "g": "f"
+ },
+ "entender.v": {
+  "en": "to understand",
+  "m": "e>ie"
+ },
+ "entonces.adv": {
+  "en": "then; so; at that time"
+ },
+ "entrada.n": {
+  "en": "entrance; entry; ticket",
+  "g": "f"
+ },
+ "entre.prep": {
+  "en": "between; among"
+ },
+ "entrevista.n": {
+  "en": "interview",
+  "g": "f"
+ },
+ "equivalente.adj": {
+  "en": "equivalent"
+ },
+ "ser.v": {
+  "en": "to be"
+ },
+ "error.n": {
+  "en": "error; mistake",
+  "g": "m"
+ },
+ "ese.det": {
+  "en": "that"
+ },
+ "escena.n": {
+  "en": "scene; stage",
+  "g": "f"
+ },
+ "esclarecer.v": {
+  "en": "to clarify; to shed light on"
+ },
+ "esclavo.n": {
+  "en": "slave",
+  "g": "m"
+ }
+}

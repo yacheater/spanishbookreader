@@ -1,0 +1,714 @@
+{
+ "informa": [
+  "informar.v",
+  "informs (us)"
+ ],
+ "información": [
+  "información.n",
+  "information"
+ ],
+ "informado": [
+  "informado.adj",
+  "informed"
+ ],
+ "informal": [
+  "informal.adj",
+  "informal"
+ ],
+ "informales": [
+  "informal.adj",
+  "informal (pl.)"
+ ],
+ "infusión": [
+  "infusión.n",
+  "infusion (herbal drink)"
+ ],
+ "ingresa": [
+  "ingresar.v",
+  "gets (into); enters"
+ ],
+ "inicie": [
+  "iniciar.v",
+  "(once it) is started"
+ ],
+ "input": [
+  "input.n",
+  "input"
+ ],
+ "intencional": [
+  "intencional.adj",
+  "intentional"
+ ],
+ "intencionalidad": [
+  "intencionalidad.n",
+  "intentionality"
+ ],
+ "interlocutor": [
+  "interlocutor.n",
+  "interlocutor; the person spoken to"
+ ],
+ "interlocutores": [
+  "interlocutor.n",
+  "interlocutors; speakers in a conversation"
+ ],
+ "intermedias": [
+  "intermedio.adj",
+  "intermediate"
+ ],
+ "interno": [
+  "interno.adj",
+  "internal"
+ ],
+ "interpreta": [
+  "interpretar.v",
+  "interprets"
+ ],
+ "introducción": [
+  "introducción.n",
+  "introduction"
+ ],
+ "introdujeron": [
+  "introducir.v",
+  "they introduced"
+ ],
+ "investigaciones": [
+  "investigación.n",
+  "studies; research"
+ ],
+ "investigación": [
+  "investigación.n",
+  "research; study"
+ ],
+ "investigar": [
+  "investigar.v",
+  "to investigate; to research"
+ ],
+ "irá": [
+  "ir.v",
+  "will go (on) (irá alimentando = will gradually feed)"
+ ],
+ "jerarquía": [
+  "jerarquía.n",
+  "hierarchy"
+ ],
+ "jerárquico": [
+  "jerárquico.adj",
+  "hierarchical"
+ ],
+ "jesuitas": [
+  "jesuita.n",
+  "Jesuits"
+ ],
+ "jesuíticas": [
+  "jesuítico.adj",
+  "Jesuit"
+ ],
+ "joven": [
+  "joven.adj",
+  "young"
+ ],
+ "jóvenes": [
+  "joven.n",
+  "young people"
+ ],
+ "la": [
+  "el.det",
+  "the"
+ ],
+ "la#pron": [
+  "lo.pron",
+  "her; it"
+ ],
+ "labores": [
+  "labor.n",
+  "work; tasks"
+ ],
+ "labrar": [
+  "labrar.v",
+  "to craft; to carve (mandaban a labrar = had crafted)"
+ ],
+ "lado": [
+  "lado.n",
+  "side (por otro lado = on the other hand)"
+ ],
+ "lados": [
+  "lado.n",
+  "sides"
+ ],
+ "las": [
+  "el.det",
+  "the"
+ ],
+ "las#pron": [
+  "lo.pron",
+  "them (f.)"
+ ],
+ "latín": [
+  "latín.n",
+  "Latin"
+ ],
+ "lavarán": [
+  "lavar.v",
+  "will get washed out"
+ ],
+ "le": [
+  "le.pron",
+  "(to) him/her/it"
+ ],
+ "leche": [
+  "leche.n",
+  "milk"
+ ],
+ "lejano": [
+  "lejano.adj",
+  "distant"
+ ],
+ "lengua": [
+  "lengua.n",
+  "language"
+ ],
+ "lenguas": [
+  "lengua.n",
+  "languages"
+ ],
+ "lenta": [
+  "lento.adj",
+  "slow"
+ ],
+ "ley": [
+  "ley.n",
+  "law"
+ ],
+ "leyendas": [
+  "leyenda.n",
+  "legends"
+ ],
+ "liberando": [
+  "liberar.v",
+  "releasing"
+ ],
+ "libro": [
+  "libro.n",
+  "book"
+ ],
+ "libros": [
+  "libro.n",
+  "books (libros de texto = textbooks)"
+ ],
+ "lingüística": [
+  "lingüístico.adj",
+  "linguistic"
+ ],
+ "lingüísticas": [
+  "lingüístico.adj",
+  "linguistic"
+ ],
+ "lingüístico": [
+  "lingüístico.adj",
+  "linguistic"
+ ],
+ "lingüísticos": [
+  "lingüístico.adj",
+  "linguistic"
+ ],
+ "litros": [
+  "litro.n",
+  "liters"
+ ],
+ "llegaban": [
+  "llegar.v",
+  "came; used to arrive"
+ ],
+ "llena": [
+  "llenar.v",
+  "is filled"
+ ],
+ "llevó": [
+  "llevar.v",
+  "led (her)"
+ ],
+ "lo": [
+  "lo.det",
+  "the (neuter: lo ideal, lo que)"
+ ],
+ "lo#pron": [
+  "lo.pron",
+  "him; it"
+ ],
+ "logrado": [
+  "lograr.v",
+  "achieved (ha logrado = has achieved)"
+ ],
+ "los": [
+  "el.det",
+  "the"
+ ],
+ "los#pron": [
+  "lo.pron",
+  "them"
+ ],
+ "lugar": [
+  "lugar.n",
+  "place (en lugar de = instead of)"
+ ],
+ "líderes": [
+  "líder.n",
+  "leaders"
+ ],
+ "magia": [
+  "magia.n",
+  "magic"
+ ],
+ "mal": [
+  "mal.adv",
+  "badly (hacer mal = to be bad for you)"
+ ],
+ "mandaban": [
+  "mandar.v",
+  "they used to send; had (something done)"
+ ],
+ "manera": [
+  "manera.n",
+  "way; manner"
+ ],
+ "mano": [
+  "mano.n",
+  "hand"
+ ],
+ "mantiene": [
+  "mantenerse.v",
+  "remains"
+ ],
+ "marco": [
+  "marco.n",
+  "framework (en el marco de = on the occasion of)"
+ ],
+ "mate": [
+  "mate.n",
+  "mate (drink; gourd)"
+ ],
+ "materiales": [
+  "material.adj",
+  "material"
+ ],
+ "mates": [
+  "mate.n",
+  "mates (servings; gourds)"
+ ],
+ "mayor": [
+  "mayor.adj",
+  "greater"
+ ],
+ "mayores": [
+  "mayor.adj",
+  "older (people)"
+ ],
+ "mayoría": [
+  "mayoría.n",
+  "majority"
+ ],
+ "media": [
+  "medio.adj",
+  "middle"
+ ],
+ "medieval": [
+  "medieval.adj",
+  "medieval"
+ ],
+ "medio": [
+  "medio.adj",
+  "middle"
+ ],
+ "mejor": [
+  "mejor.adj",
+  "best (lo mejor = the best thing)"
+ ],
+ "mencionado": [
+  "mencionar.v",
+  "mentioned"
+ ],
+ "mención": [
+  "mención.n",
+  "mention"
+ ],
+ "menor": [
+  "menor.adj",
+  "lower; lesser"
+ ],
+ "menos": [
+  "menos.adv",
+  "less"
+ ],
+ "mensaje": [
+  "mensaje.n",
+  "message"
+ ],
+ "mentales": [
+  "mental.adj",
+  "mental"
+ ],
+ "merced": [
+  "merced.n",
+  "grace (Vuestra Merced = Your Grace)"
+ ],
+ "metida": [
+  "meter.v",
+  "put; stuffed (into)"
+ ],
+ "metodología": [
+  "metodología.n",
+  "methodology"
+ ],
+ "miembros": [
+  "miembro.n",
+  "members"
+ ],
+ "mientras": [
+  "mientras.conj",
+  "while"
+ ],
+ "migración": [
+  "migración.n",
+  "migration"
+ ],
+ "misiones": [
+  "misión.n",
+  "missions"
+ ],
+ "misma": [
+  "mismo.det",
+  "same"
+ ],
+ "moderno": [
+  "moderno.adj",
+  "modern"
+ ],
+ "modifiquen": [
+  "modificar.v",
+  "modify"
+ ],
+ "modo": [
+  "modo.n",
+  "way; manner"
+ ],
+ "moja": [
+  "mojar.v",
+  "gets wet"
+ ],
+ "mojar": [
+  "mojar.v",
+  "to wet"
+ ],
+ "moje": [
+  "mojar.v",
+  "gets wet"
+ ],
+ "moldean": [
+  "moldear.v",
+  "shape"
+ ],
+ "molida": [
+  "molido.adj",
+  "ground"
+ ],
+ "momentos": [
+  "momento.n",
+  "moments"
+ ],
+ "moneda": [
+  "moneda.n",
+  "currency (moneda de cambio = bargaining chip; medium of exchange)"
+ ],
+ "mostrar": [
+  "mostrar.v",
+  "to show"
+ ],
+ "motiva": [
+  "motivar.v",
+  "motivates"
+ ],
+ "mover": [
+  "mover.v",
+  "to move"
+ ],
+ "muchas": [
+  "mucho.det",
+  "many"
+ ],
+ "mucho": [
+  "mucho.det",
+  "much; a lot"
+ ],
+ "muchos": [
+  "mucho.det",
+  "many"
+ ],
+ "muestra": [
+  "mostrar.v",
+  "shows"
+ ],
+ "muestran": [
+  "mostrar.v",
+  "show"
+ ],
+ "muestre": [
+  "mostrar.v",
+  "(to) show (subj.)"
+ ],
+ "mujeres": [
+  "mujer.n",
+  "women"
+ ],
+ "mundo": [
+  "mundo.n",
+  "world"
+ ],
+ "muy": [
+  "muy.adv",
+  "very"
+ ],
+ "mágico": [
+  "mágico.adj",
+  "magical"
+ ],
+ "más": [
+  "más.adv",
+  "more (más que nada = above all)"
+ ],
+ "místico": [
+  "místico.adj",
+  "mystical"
+ ],
+ "múltiples": [
+  "múltiple.adj",
+  "multiple"
+ ],
+ "nacimiento": [
+  "nacimiento.n",
+  "birth"
+ ],
+ "nacional": [
+  "nacional.adj",
+  "national"
+ ],
+ "nación": [
+  "nación.n",
+  "nation"
+ ],
+ "nada": [
+  "nada.pron",
+  "nothing (más que nada = above all)"
+ ],
+ "nativos": [
+  "nativo.n",
+  "natives"
+ ],
+ "necesaria": [
+  "necesario.adj",
+  "necessary"
+ ],
+ "necesidad": [
+  "necesidad.n",
+  "need; necessity"
+ ],
+ "necesito": [
+  "necesitar.v",
+  "I need"
+ ],
+ "negativas": [
+  "negativo.adj",
+  "negative"
+ ],
+ "negativo": [
+  "negativo.adj",
+  "negative"
+ ],
+ "negativos": [
+  "negativo.adj",
+  "negative"
+ ],
+ "neutras": [
+  "neutro.adj",
+  "neutral"
+ ],
+ "neutro": [
+  "neutro.adj",
+  "neutral"
+ ],
+ "neutros": [
+  "neutro.adj",
+  "neutral"
+ ],
+ "ninguna": [
+  "ninguno.det",
+  "no; not any"
+ ],
+ "nivel": [
+  "nivel.n",
+  "level"
+ ],
+ "niños": [
+  "niño.n",
+  "children"
+ ],
+ "no": [
+  "no.adv",
+  "not; no"
+ ],
+ "nos": [
+  "nos.pron",
+  "us; (to) us"
+ ],
+ "nota": [
+  "nota.n",
+  "article; note"
+ ],
+ "notable": [
+  "notable.adj",
+  "notable; remarkable"
+ ],
+ "noviembre": [
+  "noviembre.n",
+  "November"
+ ],
+ "nuestro": [
+  "nuestro.det",
+  "our"
+ ],
+ "nueva": [
+  "nuevo.adj",
+  "new"
+ ],
+ "o": [
+  "o.conj",
+  "or"
+ ],
+ "objetivo": [
+  "objetivo.n",
+  "objective; aim"
+ ],
+ "objeto": [
+  "objeto.n",
+  "object"
+ ],
+ "objetos": [
+  "objeto.n",
+  "objects"
+ ],
+ "oblicua": [
+  "oblicuo.adj",
+  "slanted; oblique"
+ ],
+ "ocurriendo": [
+  "ocurrir.v",
+  "happening"
+ ],
+ "oficial": [
+  "oficial.adj",
+  "official"
+ ],
+ "ofrece": [
+  "ofrecer.v",
+  "is offered"
+ ],
+ "ofrecía": [
+  "ofrecer.v",
+  "was offered"
+ ],
+ "olor": [
+  "olor.n",
+  "smell (clavo de olor = clove)"
+ ],
+ "opciones": [
+  "opción.n",
+  "options; choices"
+ ],
+ "opiniones": [
+  "opinión.n",
+  "opinions"
+ ],
+ "opinión": [
+  "opinión.n",
+  "opinion"
+ ],
+ "orden": [
+  "orden.n",
+  "order"
+ ],
+ "ordenaban": [
+  "ordenar.v",
+  "they organized; they ordered"
+ ],
+ "origen": [
+  "origen.n",
+  "origin"
+ ],
+ "orígenes": [
+  "origen.n",
+  "origins"
+ ],
+ "ostentoso": [
+  "ostentoso.adj",
+  "showy; ostentatious"
+ ],
+ "otras": [
+  "otro.det",
+  "others"
+ ],
+ "otro": [
+  "otro.det",
+  "another; other"
+ ],
+ "otros": [
+  "otro.det",
+  "other"
+ ],
+ "output": [
+  "output.n",
+  "output"
+ ],
+ "oxígeno": [
+  "oxígeno.n",
+  "oxygen"
+ ],
+ "palabras": [
+  "palabra.n",
+  "words (palabras clave = keywords)"
+ ],
+ "palma": [
+  "palma.n",
+  "palm"
+ ],
+ "paquete": [
+  "paquete.n",
+  "package; packet"
+ ],
+ "para": [
+  "para.prep",
+  "for; in order to"
+ ],
+ "pararlo": [
+  "parar.v",
+  "standing it up"
+ ],
+ "parte": [
+  "parte.n",
+  "part"
+ ],
+ "partes": [
+  "parte.n",
+  "parts"
+ ],
+ "participación": [
+  "participación.n",
+  "participation; role"
+ ],
+ "participantes": [
+  "participante.n",
+  "participants"
+ ],
+ "participaron": [
+  "participar.v",
+  "took part"
+ ]
+}

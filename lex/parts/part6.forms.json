@@ -1,0 +1,714 @@
+{
+ "semánticos": [
+  "semántico.adj",
+  "semantic"
+ ],
+ "sentimientos": [
+  "sentimiento.n",
+  "feelings"
+ ],
+ "serie": [
+  "serie.n",
+  "series; set"
+ ],
+ "servir": [
+  "servir.v",
+  "to serve"
+ ],
+ "sesiones": [
+  "sesión.n",
+  "sessions"
+ ],
+ "señalado": [
+  "señalar.v",
+  "pointed out"
+ ],
+ "señalan": [
+  "señalar.v",
+  "they point out"
+ ],
+ "señalaron": [
+  "señalar.v",
+  "they reported; they pointed out"
+ ],
+ "si": [
+  "si.conj",
+  "if"
+ ],
+ "sido": [
+  "ser.v",
+  "been"
+ ],
+ "siempre": [
+  "siempre.adv",
+  "always"
+ ],
+ "siglo": [
+  "siglo.n",
+  "century"
+ ],
+ "siglos": [
+  "siglo.n",
+  "centuries"
+ ],
+ "significa": [
+  "significar.v",
+  "means"
+ ],
+ "significado": [
+  "significado.n",
+  "meaning"
+ ],
+ "significados": [
+  "significado.n",
+  "meanings"
+ ],
+ "signo": [
+  "signo.n",
+  "sign"
+ ],
+ "signos": [
+  "signo.n",
+  "signs"
+ ],
+ "siguen": [
+  "seguir.v",
+  "they continue (siguen dándose: keep happening)"
+ ],
+ "siguiendo": [
+  "seguir.v",
+  "following"
+ ],
+ "similar": [
+  "similar.adj",
+  "similar"
+ ],
+ "simplicidad": [
+  "simplicidad.n",
+  "simplicity"
+ ],
+ "sin": [
+  "sin.prep",
+  "without"
+ ],
+ "singular": [
+  "singular.n",
+  "singular"
+ ],
+ "sino": [
+  "sino.conj",
+  "but (rather)"
+ ],
+ "situacionales": [
+  "situacional.adj",
+  "situational"
+ ],
+ "situaciones": [
+  "situación.n",
+  "situations"
+ ],
+ "sobre": [
+  "sobre.prep",
+  "about"
+ ],
+ "social": [
+  "social.adj",
+  "social"
+ ],
+ "sociales": [
+  "social.adj",
+  "social"
+ ],
+ "socioeconómico": [
+  "socioeconómico.adj",
+  "socioeconomic"
+ ],
+ "socioeconómicos": [
+  "socioeconómico.adj",
+  "socioeconomic"
+ ],
+ "solidaridad": [
+  "solidaridad.n",
+  "solidarity"
+ ],
+ "solo": [
+  "solo.adv",
+  "only (no solo… sino: not only… but)"
+ ],
+ "solvencia": [
+  "solvencia.n",
+  "solvency (dissolving power)"
+ ],
+ "sommelier": [
+  "sommelier.n",
+  "sommelier"
+ ],
+ "somos": [
+  "ser.v",
+  "we are"
+ ],
+ "son": [
+  "ser.v",
+  "they are"
+ ],
+ "su": [
+  "su.det",
+  "its; his; her; their"
+ ],
+ "suavidad": [
+  "suavidad.n",
+  "smoothness"
+ ],
+ "sufre": [
+  "sufrir.v",
+  "suffers; undergoes"
+ ],
+ "sugiere": [
+  "sugerir.v",
+  "is suggested (se sugiere)"
+ ],
+ "sugieren": [
+  "sugerir.v",
+  "they suggest"
+ ],
+ "sumercé": [
+  "sumercé.pron",
+  "you (respectful, Bogotá; from 'su merced', your grace)"
+ ],
+ "sus": [
+  "su.det",
+  "its; their; his; her"
+ ],
+ "tabla": [
+  "tabla.n",
+  "table"
+ ],
+ "tal": [
+  "tal.det",
+  "such"
+ ],
+ "tales": [
+  "tal.det",
+  "such"
+ ],
+ "también": [
+  "también.adv",
+  "also; too"
+ ],
+ "tan": [
+  "tan.adv",
+  "so"
+ ],
+ "tantas": [
+  "tanto.det",
+  "many (las tantas cosas: one of the many things)"
+ ],
+ "tanto": [
+  "tanto.adv",
+  "so much; both (tanto… como); therefore (por lo tanto)"
+ ],
+ "tapando": [
+  "tapar.v",
+  "covering"
+ ],
+ "tape": [
+  "taparse.v",
+  "gets clogged"
+ ],
+ "tarde": [
+  "tarde.adv",
+  "later (años más tarde: years later)"
+ ],
+ "tardía": [
+  "tardío.adj",
+  "late"
+ ],
+ "tardío": [
+  "tardío.adj",
+  "late"
+ ],
+ "te": [
+  "te.pron",
+  "(to) you"
+ ],
+ "temperatura": [
+  "temperatura.n",
+  "temperature"
+ ],
+ "tener": [
+  "tener.v",
+  "to have"
+ ],
+ "tenga": [
+  "tener.v",
+  "(one) has (subjunctive)"
+ ],
+ "tenido": [
+  "tener.v",
+  "had"
+ ],
+ "teniendo": [
+  "tener.v",
+  "having"
+ ],
+ "tenía": [
+  "tener.v",
+  "had"
+ ],
+ "tenían": [
+  "tener.v",
+  "they had"
+ ],
+ "texto": [
+  "texto.n",
+  "text; book"
+ ],
+ "textos": [
+  "texto.n",
+  "texts; textbooks"
+ ],
+ "teórica": [
+  "teórico.adj",
+  "theoretical"
+ ],
+ "teórico": [
+  "teórico.adj",
+  "theoretical"
+ ],
+ "tibia": [
+  "tibio.adj",
+  "lukewarm"
+ ],
+ "tiempo": [
+  "tiempo.n",
+  "time"
+ ],
+ "tienden": [
+  "tender.v",
+  "they tend"
+ ],
+ "tiene": [
+  "tener.v",
+  "has"
+ ],
+ "tienen": [
+  "tener.v",
+  "they have"
+ ],
+ "tierras": [
+  "tierra.n",
+  "lands"
+ ],
+ "tipo": [
+  "tipo.n",
+  "type; kind"
+ ],
+ "toda": [
+  "todo.det",
+  "all (the); the whole"
+ ],
+ "todo": [
+  "todo.det",
+  "all (the); throughout"
+ ],
+ "todos": [
+  "todo.det",
+  "all; every"
+ ],
+ "tomaban": [
+  "tomar.v",
+  "they used to drink"
+ ],
+ "tomando": [
+  "tomar.v",
+  "drinking"
+ ],
+ "tomar": [
+  "tomar.v",
+  "to drink"
+ ],
+ "tomaron": [
+  "tomar.v",
+  "they made (a decision); they took"
+ ],
+ "tomarse": [
+  "tomar.v",
+  "to be taken (dejó de tomarse: stopped being taken)"
+ ],
+ "trabajaban": [
+  "trabajar.v",
+  "they worked"
+ ],
+ "tradicional": [
+  "tradicional.adj",
+  "traditional"
+ ],
+ "tradicionalmente": [
+  "tradicionalmente.adv",
+  "traditionally"
+ ],
+ "tradiciones": [
+  "tradición.n",
+  "traditions"
+ ],
+ "transformó": [
+  "transformarse.v",
+  "turned into; became (se transformó en)"
+ ],
+ "transversales": [
+  "transversal.adj",
+  "cross-cutting"
+ ],
+ "tratamiento": [
+  "tratamiento.n",
+  "address (formas de tratamiento: forms of address)"
+ ],
+ "tratar": [
+  "tratar.v",
+  "to address; to treat"
+ ],
+ "trato": [
+  "trato.n",
+  "form of address; treatment"
+ ],
+ "través": [
+  "través.n",
+  "a través de: through; across"
+ ],
+ "tres": [
+  "tres.num",
+  "three"
+ ],
+ "trueques": [
+  "trueque.n",
+  "barter trades"
+ ],
+ "tucumano": [
+  "tucumano.adj",
+  "of Tucumán"
+ ],
+ "tuteantes": [
+  "tuteante.n",
+  "people who use 'tú'"
+ ],
+ "tuteo": [
+  "tuteo.n",
+  "use of 'tú' (informal address)"
+ ],
+ "tuviera": [
+  "tener.v",
+  "had (subjunctive)"
+ ],
+ "tuvo": [
+  "tener.v",
+  "had"
+ ],
+ "té": [
+  "té.n",
+  "tea"
+ ],
+ "términos": [
+  "término.n",
+  "terms (en términos generales: in general terms)"
+ ],
+ "tú": [
+  "tú.pron",
+  "you (informal)"
+ ],
+ "u": [
+  "u.conj",
+  "or (before o-/ho-)"
+ ],
+ "ubicaba": [
+  "ubicarse.v",
+  "was placed; stood"
+ ],
+ "un": [
+  "un.det",
+  "a; an"
+ ],
+ "una": [
+  "un.det",
+  "a; an; one"
+ ],
+ "unidas": [
+  "unido.adj",
+  "united"
+ ],
+ "universales": [
+  "universal.adj",
+  "universal"
+ ],
+ "uno": [
+  "uno.pron",
+  "one"
+ ],
+ "unía": [
+  "unir.v",
+  "united; brought together"
+ ],
+ "usa": [
+  "usar.v",
+  "uses"
+ ],
+ "usaba": [
+  "usar.v",
+  "was used (se usaba)"
+ ],
+ "usada": [
+  "usar.v",
+  "used"
+ ],
+ "usadas": [
+  "usar.v",
+  "used"
+ ],
+ "usan": [
+  "usar.v",
+  "they use"
+ ],
+ "usar": [
+  "usar.v",
+  "to use"
+ ],
+ "usarlas": [
+  "usar.v",
+  "to use them"
+ ],
+ "usarse": [
+  "usar.v",
+  "to be used"
+ ],
+ "usen": [
+  "usar.v",
+  "(they) use (subjunctive)"
+ ],
+ "uso": [
+  "uso.n",
+  "use"
+ ],
+ "usted": [
+  "usted.pron",
+  "you (formal)"
+ ],
+ "ustedeantes": [
+  "ustedeante.n",
+  "people who use 'usted'"
+ ],
+ "ustedear": [
+  "ustedear.v",
+  "to address people as 'usted'"
+ ],
+ "ustedeo": [
+  "ustedeo.n",
+  "use of 'usted' (formal address)"
+ ],
+ "usuarios": [
+  "usuario.n",
+  "users"
+ ],
+ "utilizaban": [
+  "utilizar.v",
+  "they used"
+ ],
+ "utilizamos": [
+  "utilizar.v",
+  "we use"
+ ],
+ "utilizan": [
+  "utilizar.v",
+  "they use"
+ ],
+ "valiosas": [
+  "valioso.adj",
+  "valuable"
+ ],
+ "valor": [
+  "valor.n",
+  "value"
+ ],
+ "valores": [
+  "valor.n",
+  "values"
+ ],
+ "variación": [
+  "variación.n",
+  "variation"
+ ],
+ "varias": [
+  "varios.det",
+  "several; various"
+ ],
+ "variedad": [
+  "variedad.n",
+  "variety"
+ ],
+ "variedades": [
+  "variedad.n",
+  "varieties"
+ ],
+ "varios": [
+  "varios.det",
+  "several; various"
+ ],
+ "ve": [
+  "ver.v",
+  "is seen (se ve)"
+ ],
+ "veces": [
+  "vez.n",
+  "times (muchas veces: often)"
+ ],
+ "ver": [
+  "ver.v",
+  "to see (tener que ver con: to have to do with)"
+ ],
+ "verdadera": [
+  "verdadero.adj",
+  "true; real"
+ ],
+ "verdadero": [
+  "verdadero.adj",
+  "true; real"
+ ],
+ "vertiendo": [
+  "verter.v",
+  "pouring"
+ ],
+ "vez": [
+  "vez.n",
+  "time (la primera vez: the first time)"
+ ],
+ "vida": [
+  "vida.n",
+  "life"
+ ],
+ "vidas": [
+  "vida.n",
+  "lives"
+ ],
+ "viejos": [
+  "viejo.adj",
+  "old (people)"
+ ],
+ "vigentes": [
+  "vigente.adj",
+  "still current; in force"
+ ],
+ "vinculadas": [
+  "vincular.v",
+  "linked"
+ ],
+ "virreinato": [
+  "virreinato.n",
+  "viceroyalty"
+ ],
+ "virtudes": [
+  "virtud.n",
+  "virtues; benefits"
+ ],
+ "virtuosos": [
+  "virtuoso.adj",
+  "virtuous; beneficial"
+ ],
+ "vivían": [
+  "vivir.v",
+  "they lived"
+ ],
+ "volquemos": [
+  "volcar.v",
+  "we pour"
+ ],
+ "volverse": [
+  "volverse.v",
+  "to become"
+ ],
+ "volvían": [
+  "volver.v",
+  "they made (volver + adj: to make, turn)"
+ ],
+ "vos": [
+  "vos.pron",
+  "you (old 'vos' form)"
+ ],
+ "vuestra": [
+  "vuestro.det",
+  "your (Vuestra Merced: Your Grace)"
+ ],
+ "válida": [
+  "válido.adj",
+  "valid"
+ ],
+ "xvii": [
+  "xvii.num",
+  "17th (century)"
+ ],
+ "xviii": [
+  "xviii.num",
+  "18th (century)"
+ ],
+ "y": [
+  "y.conj",
+  "and"
+ ],
+ "ya": [
+  "ya.adv",
+  "already"
+ ],
+ "yerba": [
+  "yerba.n",
+  "yerba (mate); herb"
+ ],
+ "zonas": [
+  "zona.n",
+  "areas; zones"
+ ],
+ "árbol": [
+  "árbol.n",
+  "tree"
+ ],
+ "énfasis": [
+  "énfasis.n",
+  "emphasis"
+ ],
+ "época": [
+  "época.n",
+  "time; era"
+ ],
+ "éstas": [
+  "éste.pron",
+  "these; they"
+ ],
+ "éste": [
+  "éste.pron",
+  "this one; it"
+ ],
+ "éstos": [
+  "éste.pron",
+  "these; they"
+ ],
+ "índole": [
+  "índole.n",
+  "nature; kind"
+ ],
+ "óptica": [
+  "óptica.n",
+  "perspective; viewpoint"
+ ],
+ "última": [
+  "último.adj",
+  "last (esta última: the latter)"
+ ],
+ "últimas": [
+  "último.adj",
+  "last; recent"
+ ],
+ "último": [
+  "último.adj",
+  "last; final"
+ ],
+ "único": [
+  "único.adj",
+  "only; sole"
+ ]
+}

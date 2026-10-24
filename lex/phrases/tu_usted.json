@@ -1,0 +1,1821 @@
+[
+ {
+  "key": "de hecho",
+  "type": "idiom",
+  "en": "in fact; actually",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "de",
+     "hecho"
+    ]
+   },
+   {
+    "p": 20,
+    "words": [
+     "De",
+     "hecho"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "en gran parte",
+  "type": "idiom",
+  "en": "largely; to a great extent",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "en",
+     "gran",
+     "parte"
+    ]
+   },
+   {
+    "p": 22,
+    "words": [
+     "en",
+     "gran",
+     "parte"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "buena parte de",
+  "type": "idiom",
+  "en": "a good part of; much of",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "buena",
+     "parte",
+     "del"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "más o menos",
+  "type": "idiom",
+  "en": "more or less; roughly",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "más",
+     "o",
+     "menos"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "no del todo",
+  "type": "idiom",
+  "en": "not entirely; not completely",
+  "occ": [
+   {
+    "p": 20,
+    "words": [
+     "no",
+     "del",
+     "todo"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "por ende",
+  "type": "idiom",
+  "en": "therefore; hence (formal)",
+  "occ": [
+   {
+    "p": 22,
+    "words": [
+     "por",
+     "ende"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "de igual manera",
+  "type": "idiom",
+  "en": "likewise; in the same way",
+  "occ": [
+   {
+    "p": 19,
+    "words": [
+     "De",
+     "igual",
+     "manera"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tener que ver con",
+  "type": "idiom",
+  "en": "to have to do with; to be related to",
+  "occ": [
+   {
+    "p": 22,
+    "words": [
+     "tiene",
+     "que",
+     "ver",
+     "con"
+    ]
+   },
+   {
+    "p": 22,
+    "words": [
+     "tiene",
+     "que",
+     "ver",
+     "con"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "hasta el punto en que",
+  "type": "idiom",
+  "en": "to the point where",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "hasta",
+     "el",
+     "punto",
+     "en",
+     "que"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "con el pasar del tiempo",
+  "type": "idiom",
+  "en": "with the passing of time; over time",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "Con",
+     "el",
+     "pasar",
+     "del",
+     "tiempo"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "en términos generales",
+  "type": "idiom",
+  "en": "in general terms; generally speaking",
+  "occ": [
+   {
+    "p": 11,
+    "words": [
+     "En",
+     "términos",
+     "generales"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "entre otros",
+  "type": "idiom",
+  "en": "among others",
+  "occ": [
+   {
+    "p": 11,
+    "words": [
+     "entre",
+     "otros"
+    ]
+   },
+   {
+    "p": 11,
+    "words": [
+     "entre",
+     "otros"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "en nuestro caso",
+  "type": "idiom",
+  "en": "in our case",
+  "occ": [
+   {
+    "p": 22,
+    "words": [
+     "en",
+     "nuestro",
+     "caso"
+    ]
+   },
+   {
+    "p": 24,
+    "words": [
+     "en",
+     "nuestro",
+     "caso"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "de cierta manera",
+  "type": "idiom",
+  "en": "in a certain way",
+  "occ": [
+   {
+    "p": 22,
+    "words": [
+     "de",
+     "cierta",
+     "manera"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "una serie de",
+  "type": "idiom",
+  "en": "a series of; a number of",
+  "occ": [
+   {
+    "p": 34,
+    "words": [
+     "una",
+     "serie",
+     "de"
+    ]
+   },
+   {
+    "p": 34,
+    "words": [
+     "una",
+     "serie",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "un mismo / una misma",
+  "type": "idiom",
+  "en": "the same; one and the same",
+  "explain": "Placed before the noun, 'mismo' means 'the same (one)': 'una misma forma' = one and the same form.",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "una",
+     "misma"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "partir de",
+  "type": "idiom",
+  "en": "to start from; to take as a starting point",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "Partiendo",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "forma de tratamiento",
+  "type": "collocation",
+  "en": "form of address (tú, usted, vos…)",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "formas",
+     "de",
+     "tratamiento"
+    ]
+   },
+   {
+    "p": 2,
+    "words": [
+     "formas",
+     "de",
+     "tratamiento"
+    ]
+   },
+   {
+    "p": 2,
+    "words": [
+     "formas",
+     "de",
+     "tratamiento"
+    ]
+   },
+   {
+    "p": 5,
+    "words": [
+     "formas",
+     "de",
+     "tratamiento"
+    ]
+   },
+   {
+    "p": 5,
+    "words": [
+     "formas",
+     "de",
+     "tratamiento"
+    ]
+   },
+   {
+    "p": 5,
+    "words": [
+     "formas",
+     "de",
+     "tratamiento"
+    ]
+   },
+   {
+    "p": 7,
+    "words": [
+     "formas",
+     "de",
+     "tratamiento"
+    ]
+   },
+   {
+    "p": 8,
+    "words": [
+     "formas",
+     "de",
+     "tratamiento"
+    ]
+   },
+   {
+    "p": 10,
+    "words": [
+     "formas",
+     "de",
+     "tratamiento"
+    ]
+   },
+   {
+    "p": 11,
+    "words": [
+     "formas",
+     "de",
+     "tratamiento"
+    ]
+   },
+   {
+    "p": 11,
+    "words": [
+     "formas",
+     "de",
+     "tratamiento"
+    ]
+   },
+   {
+    "p": 13,
+    "words": [
+     "formas",
+     "de",
+     "tratamiento"
+    ]
+   },
+   {
+    "p": 19,
+    "words": [
+     "formas",
+     "de",
+     "tratamiento"
+    ]
+   },
+   {
+    "p": 22,
+    "words": [
+     "formas",
+     "de",
+     "tratamiento"
+    ]
+   },
+   {
+    "p": 22,
+    "words": [
+     "formas",
+     "de",
+     "tratamiento"
+    ]
+   },
+   {
+    "p": 24,
+    "words": [
+     "formas",
+     "de",
+     "tratamiento"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "español como lengua extranjera",
+  "type": "collocation",
+  "en": "Spanish as a foreign language",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "español",
+     "como",
+     "lengua",
+     "extranjera"
+    ]
+   },
+   {
+    "p": 3,
+    "words": [
+     "español",
+     "como",
+     "lengua",
+     "extranjera"
+    ]
+   },
+   {
+    "p": 5,
+    "words": [
+     "español",
+     "como",
+     "lengua",
+     "extranjera"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tener como objetivo",
+  "type": "collocation",
+  "en": "to aim to; to have as its goal",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "tuvo",
+     "como",
+     "objetivo"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "manera / forma de hablar",
+  "type": "collocation",
+  "en": "way of speaking",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "manera",
+     "de",
+     "hablar"
+    ]
+   },
+   {
+    "p": 8,
+    "words": [
+     "manera",
+     "de",
+     "hablar"
+    ]
+   },
+   {
+    "p": 16,
+    "words": [
+     "manera",
+     "de",
+     "hablar"
+    ]
+   },
+   {
+    "p": 19,
+    "words": [
+     "forma",
+     "de",
+     "hablar"
+    ]
+   },
+   {
+    "p": 23,
+    "words": [
+     "manera",
+     "de",
+     "hablar"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "la manera / forma en que",
+  "type": "collocation",
+  "en": "the way (in which)",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "forma",
+     "en",
+     "que"
+    ]
+   },
+   {
+    "p": 2,
+    "words": [
+     "manera",
+     "en",
+     "que"
+    ]
+   },
+   {
+    "p": 2,
+    "words": [
+     "manera",
+     "en",
+     "que"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "desde la óptica de",
+  "type": "collocation",
+  "en": "from the standpoint of",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "Desde",
+     "la",
+     "óptica",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "bajo la perspectiva de",
+  "type": "collocation",
+  "en": "from the perspective of",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "Bajo",
+     "esta",
+     "perspectiva"
+    ]
+   },
+   {
+    "p": 24,
+    "words": [
+     "Bajo",
+     "la",
+     "perspectiva",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "proveniente / procedente de",
+  "type": "collocation",
+  "en": "coming from; originating in",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "proveniente",
+     "del"
+    ]
+   },
+   {
+    "p": 11,
+    "words": [
+     "procedentes",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "referirse a",
+  "type": "collocation",
+  "en": "to refer to",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "referirse",
+     "al"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "dar origen a",
+  "type": "collocation",
+  "en": "to give rise to",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "da",
+     "origen",
+     "a"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "recurrir a",
+  "type": "collocation",
+  "en": "to resort to; to turn to",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "recurra",
+     "a"
+    ]
+   },
+   {
+    "p": 8,
+    "words": [
+     "recurre",
+     "a"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "entrada en escena",
+  "type": "collocation",
+  "en": "arrival on the scene; appearance",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "entrada",
+     "en",
+     "escena"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "deberse a",
+  "type": "collocation",
+  "en": "to be due to; to be caused by",
+  "occ": [
+   {
+    "p": 11,
+    "words": [
+     "se",
+     "debe",
+     "al"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "modo de vida",
+  "type": "collocation",
+  "en": "way of life",
+  "occ": [
+   {
+    "p": 11,
+    "words": [
+     "modo",
+     "de",
+     "vida"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "verse reflejado en",
+  "type": "collocation",
+  "en": "to be reflected in",
+  "occ": [
+   {
+    "p": 11,
+    "words": [
+     "se",
+     "ve",
+     "reflejada",
+     "en"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "estar expuesto a",
+  "type": "collocation",
+  "en": "to be exposed to",
+  "occ": [
+   {
+    "p": 11,
+    "words": [
+     "está",
+     "expuesto",
+     "a"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "segunda persona del singular",
+  "type": "collocation",
+  "en": "second person singular",
+  "occ": [
+   {
+    "p": 11,
+    "words": [
+     "segunda",
+     "persona",
+     "del",
+     "singular"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "preferencia por",
+  "type": "collocation",
+  "en": "preference for",
+  "occ": [
+   {
+    "p": 11,
+    "words": [
+     "preferencia",
+     "por"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "encargarse de",
+  "type": "collocation",
+  "en": "to take charge of; to deal with",
+  "occ": [
+   {
+    "p": 13,
+    "words": [
+     "encargado",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "hacer énfasis en",
+  "type": "collocation",
+  "en": "to emphasize; to put emphasis on",
+  "occ": [
+   {
+    "p": 13,
+    "words": [
+     "hacen",
+     "énfasis",
+     "en"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "de carácter + adjetivo",
+  "type": "collocation",
+  "en": "of a … nature (de carácter social = social in nature)",
+  "occ": [
+   {
+    "p": 13,
+    "words": [
+     "de",
+     "carácter",
+     "social"
+    ]
+   },
+   {
+    "p": 34,
+    "words": [
+     "de",
+     "carácter",
+     "positivo"
+    ]
+   },
+   {
+    "p": 34,
+    "words": [
+     "de",
+     "carácter",
+     "neutro"
+    ]
+   },
+   {
+    "p": 34,
+    "words": [
+     "de",
+     "carácter",
+     "negativo"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "de índole + adjetivo",
+  "type": "collocation",
+  "en": "of a … kind/nature",
+  "occ": [
+   {
+    "p": 20,
+    "words": [
+     "de",
+     "índole",
+     "social"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "grado de confianza / familiaridad",
+  "type": "collocation",
+  "en": "degree of closeness / familiarity",
+  "occ": [
+   {
+    "p": 16,
+    "words": [
+     "grado",
+     "de",
+     "familiaridad"
+    ]
+   },
+   {
+    "p": 16,
+    "words": [
+     "grado",
+     "de",
+     "confianza"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "dirigirse a",
+  "type": "collocation",
+  "en": "to address (someone); to speak to",
+  "occ": [
+   {
+    "p": 16,
+    "words": [
+     "dirigirse",
+     "a"
+    ]
+   },
+   {
+    "p": 16,
+    "words": [
+     "dirigirse",
+     "a"
+    ]
+   },
+   {
+    "p": 17,
+    "words": [
+     "se",
+     "dirigen",
+     "a"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "hacer parte de",
+  "type": "collocation",
+  "en": "to be part of",
+  "occ": [
+   {
+    "p": 17,
+    "words": [
+     "hace",
+     "parte",
+     "de"
+    ]
+   },
+   {
+    "p": 24,
+    "words": [
+     "hacen",
+     "parte",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "dividirse en",
+  "type": "collocation",
+  "en": "to be divided into",
+  "occ": [
+   {
+    "p": 19,
+    "words": [
+     "se",
+     "divide",
+     "en"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "hacer uso de",
+  "type": "collocation",
+  "en": "to make use of",
+  "occ": [
+   {
+    "p": 19,
+    "words": [
+     "hacen",
+     "uso",
+     "del"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "ser (un) signo de que",
+  "type": "collocation",
+  "en": "to be a sign that",
+  "occ": [
+   {
+    "p": 19,
+    "words": [
+     "es",
+     "signo",
+     "de",
+     "que"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "componerse de",
+  "type": "collocation",
+  "en": "to consist of; to be made up of",
+  "occ": [
+   {
+    "p": 22,
+    "words": [
+     "se",
+     "compone",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "ser consciente de",
+  "type": "collocation",
+  "en": "to be aware of",
+  "occ": [
+   {
+    "p": 22,
+    "words": [
+     "sean",
+     "conscientes",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "estar cargado de",
+  "type": "collocation",
+  "en": "to be loaded / charged with",
+  "occ": [
+   {
+    "p": 24,
+    "words": [
+     "están",
+     "cargadas",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "brindar información",
+  "type": "collocation",
+  "en": "to provide information",
+  "occ": [
+   {
+    "p": 24,
+    "words": [
+     "brindarán",
+     "información"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tomar el primer paso",
+  "type": "collocation",
+  "en": "to take the first step",
+  "occ": [
+   {
+    "p": 24,
+    "words": [
+     "tomando",
+     "primer",
+     "paso"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "pensar de",
+  "type": "collocation",
+  "en": "to think of; to have an opinion about",
+  "occ": [
+   {
+    "p": 26,
+    "words": [
+     "piensan",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "asociar con",
+  "type": "collocation",
+  "en": "to associate with",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "asociadas",
+     "con"
+    ]
+   },
+   {
+    "p": 5,
+    "words": [
+     "asocian",
+     "con"
+    ]
+   },
+   {
+    "p": 8,
+    "words": [
+     "asociaba",
+     "con"
+    ]
+   },
+   {
+    "p": 19,
+    "words": [
+     "asocian",
+     "con"
+    ]
+   },
+   {
+    "p": 26,
+    "words": [
+     "asocian",
+     "con"
+    ]
+   },
+   {
+    "p": 34,
+    "words": [
+     "asociaron",
+     "con"
+    ]
+   },
+   {
+    "p": 34,
+    "words": [
+     "asoció",
+     "con"
+    ]
+   },
+   {
+    "p": 34,
+    "words": [
+     "asoció",
+     "con"
+    ]
+   },
+   {
+    "p": 34,
+    "words": [
+     "asoció",
+     "con"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "sugerir que + subjuntivo",
+  "type": "grammar",
+  "en": "to suggest that someone (should) do …",
+  "explain": "After verbs of suggesting or advising, the following verb goes into the subjunctive: 'se sugiere que recurra' = it is suggested that he/she turn to.",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "sugiere",
+     "que",
+     "recurra"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "para que + subjuntivo",
+  "type": "grammar",
+  "en": "so that …; in order that …",
+  "explain": "Expresses purpose with a new subject; the verb after 'para que' is always in the subjunctive.",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "para",
+     "que",
+     "puedan"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "hacer que + subjuntivo",
+  "type": "grammar",
+  "en": "to make / cause something to happen",
+  "explain": "'Hacer que' + subjunctive says that one thing causes another: 'hacen que vos desaparezca' = they make 'vos' disappear.",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "hacen",
+     "que",
+     "desaparezca"
+    ]
+   },
+   {
+    "p": 11,
+    "words": [
+     "hacen",
+     "que",
+     "busquen"
+    ]
+   },
+   {
+    "p": 17,
+    "words": [
+     "hace",
+     "que",
+     "sea"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "esperar que + subjuntivo",
+  "type": "grammar",
+  "en": "to expect / hope that …",
+  "explain": "After 'esperar que' (hope/expect) the verb is in the subjunctive, because it describes something not yet real.",
+  "occ": [
+   {
+    "p": 22,
+    "words": [
+     "se",
+     "espera",
+     "que",
+     "sean"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "responsable de que + subjuntivo",
+  "type": "grammar",
+  "en": "responsible for (the fact) that …",
+  "explain": "'Ser responsable de que' introduces a caused result, so the verb goes into the subjunctive.",
+  "occ": [
+   {
+    "p": 24,
+    "words": [
+     "responsables",
+     "de",
+     "que",
+     "modifiquen"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "seguir + gerundio",
+  "type": "grammar",
+  "en": "to keep on doing …; to still be doing …",
+  "explain": "'Seguir' + gerund says an action continues: 'siguen dándose' = they are still taking place.",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "siguen",
+     "dándose"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "ir + gerundio",
+  "type": "grammar",
+  "en": "to gradually become / do …",
+  "explain": "'Ir' + gerund describes a gradual, progressive process: 'fue generalizándose' = it gradually became widespread.",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "fue",
+     "generalizándose"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "empezar / comenzar a + infinitivo",
+  "type": "grammar",
+  "en": "to start doing …",
+  "explain": "'Empezar a' or 'comenzar a' + infinitive marks the beginning of an action; the two verbs are interchangeable.",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "empezó",
+     "a",
+     "usarse"
+    ]
+   },
+   {
+    "p": 16,
+    "words": [
+     "comenzando",
+     "a",
+     "establecer"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "dejar de + infinitivo",
+  "type": "grammar",
+  "en": "to stop doing …",
+  "explain": "'Dejar de' + infinitive says that an action or state stopped: 'dejó de tomarse como…' = it stopped being taken as…",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "dejó",
+     "de",
+     "tomarse"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "deber + infinitivo",
+  "type": "grammar",
+  "en": "must …; should …; have to …",
+  "explain": "'Deber' + infinitive expresses obligation; with 'se' ('se debe conocer') it is impersonal: one must know.",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "debían",
+     "recibir"
+    ]
+   },
+   {
+    "p": 16,
+    "words": [
+     "deben",
+     "dirigirse"
+    ]
+   },
+   {
+    "p": 24,
+    "words": [
+     "se",
+     "debe",
+     "conocer"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tender a + infinitivo",
+  "type": "grammar",
+  "en": "to tend to …",
+  "explain": "'Tender a' + infinitive says what usually or typically happens.",
+  "occ": [
+   {
+    "p": 16,
+    "words": [
+     "tienden",
+     "a",
+     "usar"
+    ]
+   },
+   {
+    "p": 19,
+    "words": [
+     "tienden",
+     "a",
+     "desarrollarse"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "buscar + infinitivo",
+  "type": "grammar",
+  "en": "to seek to …; to try to …",
+  "explain": "'Buscar' + infinitive (no preposition) means to aim or try to do something — common in academic writing.",
+  "occ": [
+   {
+    "p": 17,
+    "words": [
+     "busca",
+     "determinar"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "el + infinitivo",
+  "type": "grammar",
+  "en": "(the act of) doing … — infinitive used as a noun",
+  "explain": "Adding 'el' turns an infinitive into a noun phrase: 'el estar informado' = being informed.",
+  "occ": [
+   {
+    "p": 22,
+    "words": [
+     "el",
+     "estar",
+     "informado"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "de forma / de manera + adjetivo",
+  "type": "grammar",
+  "en": "in a … way (= an adverb)",
+  "explain": "Formal alternative to an -mente adverb: 'de forma exclusiva' = exclusively, 'de manera intencional' = intentionally.",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "de",
+     "forma",
+     "exclusiva"
+    ]
+   },
+   {
+    "p": 9,
+    "words": [
+     "de",
+     "manera",
+     "lenta"
+    ]
+   },
+   {
+    "p": 22,
+    "words": [
+     "de",
+     "manera",
+     "intencional"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "desde hacía + tiempo",
+  "type": "grammar",
+  "en": "had been (doing) … for (a period)",
+  "explain": "With an imperfect verb, 'desde hacía + time' says how long a past situation had already lasted: 'vivían en Bogotá desde hacía cinco años' = had been living in Bogotá for five years.",
+  "occ": [
+   {
+    "p": 30,
+    "words": [
+     "desde",
+     "hacía"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "ya sea … o …",
+  "type": "grammar",
+  "en": "either … or …; whether … or …",
+  "explain": "Presents two alternatives, often to give examples: 'ya sea a usar cierta forma o a evitarla' = whether to use a certain form or to avoid it.",
+  "occ": [
+   {
+    "p": 22,
+    "words": [
+     "ya",
+     "sea",
+     "o"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "no solo … sino (que) también …",
+  "type": "grammar",
+  "en": "not only … but also …",
+  "explain": "Adds a second, stronger element; use 'sino que' when a full clause with a verb follows.",
+  "occ": [
+   {
+    "p": 23,
+    "words": [
+     "no",
+     "solo",
+     "sino",
+     "también"
+    ]
+   },
+   {
+    "p": 24,
+    "words": [
+     "sino",
+     "que",
+     "también"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tanto … como …",
+  "type": "grammar",
+  "en": "both … and …",
+  "explain": "'Tanto X como Y' links two items with equal weight: 'tanto en contextos formales como informales' = in both formal and informal contexts.",
+  "occ": [
+   {
+    "p": 20,
+    "words": [
+     "tanto",
+     "como"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "lo + hacer (= do so)",
+  "type": "grammar",
+  "en": "to do so (replacing a verb phrase already mentioned)",
+  "explain": "'Lo' + 'hacer' repeats a previously mentioned action without naming it again: 'otros lo hacen en…' = others do so in…",
+  "occ": [
+   {
+    "p": 13,
+    "words": [
+     "lo",
+     "hacen"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "lo que",
+  "type": "grammar",
+  "en": "what; that which",
+  "explain": "'Lo que' introduces a clause that works like a noun: 'lo que se sabe' = what is known.",
+  "occ": [
+   {
+    "p": 22,
+    "words": [
+     "lo",
+     "que"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "lo cual",
+  "type": "grammar",
+  "en": "which (referring to a whole idea)",
+  "explain": "'Lo cual' refers back to the entire previous statement, not to a single noun: '…, lo cual contrasta con…' = …, which contrasts with…",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "lo",
+     "cual"
+    ]
+   },
+   {
+    "p": 20,
+    "words": [
+     "lo",
+     "cual"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "el cual / la cual / los cuales",
+  "type": "grammar",
+  "en": "which; who (formal relative pronoun)",
+  "explain": "Formal relative pronoun that agrees with its noun; it is common after commas and prepositions ('por el cual', 'en los cuales').",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "los",
+     "cuales"
+    ]
+   },
+   {
+    "p": 8,
+    "words": [
+     "la",
+     "cual"
+    ]
+   },
+   {
+    "p": 11,
+    "words": [
+     "la",
+     "cual"
+    ]
+   },
+   {
+    "p": 19,
+    "words": [
+     "los",
+     "cuales"
+    ]
+   },
+   {
+    "p": 20,
+    "words": [
+     "el",
+     "cual"
+    ]
+   },
+   {
+    "p": 22,
+    "words": [
+     "el",
+     "cual"
+    ]
+   },
+   {
+    "p": 24,
+    "words": [
+     "los",
+     "cuales"
+    ]
+   },
+   {
+    "p": 24,
+    "words": [
+     "por",
+     "las",
+     "cuales"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "haber + participio",
+  "type": "grammar",
+  "en": "has / have done … (present perfect)",
+  "explain": "The present perfect links past actions to the present; 'han sido + participio' is its passive form (have been associated).",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "han",
+     "sido",
+     "asociadas"
+    ]
+   },
+   {
+    "p": 5,
+    "words": [
+     "han",
+     "asociado"
+    ]
+   },
+   {
+    "p": 8,
+    "words": [
+     "han",
+     "sido",
+     "influenciados"
+    ]
+   },
+   {
+    "p": 8,
+    "words": [
+     "han",
+     "tenido"
+    ]
+   },
+   {
+    "p": 11,
+    "words": [
+     "han",
+     "constatado"
+    ]
+   },
+   {
+    "p": 13,
+    "words": [
+     "ha",
+     "encargado"
+    ]
+   },
+   {
+    "p": 20,
+    "words": [
+     "ha",
+     "logrado"
+    ]
+   },
+   {
+    "p": 24,
+    "words": [
+     "han",
+     "tenido"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "ser + participio (pasiva)",
+  "type": "grammar",
+  "en": "is / are done (passive voice)",
+  "explain": "Passive voice: 'ser' + past participle, which agrees with the subject; the doer may follow with 'por'.",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "son",
+     "conceptualizadas"
+    ]
+   },
+   {
+    "p": 16,
+    "words": [
+     "es",
+     "percibido"
+    ]
+   },
+   {
+    "p": 16,
+    "words": [
+     "es",
+     "percibido"
+    ]
+   },
+   {
+    "p": 19,
+    "words": [
+     "es",
+     "usada"
+    ]
+   },
+   {
+    "p": 34,
+    "words": [
+     "fueron",
+     "clasificados"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "se impersonal / pasiva refleja",
+  "type": "grammar",
+  "en": "it is … / one … / … is done",
+  "explain": "'Se' + 3rd-person verb describes an action without saying who does it: 'se entiende' = is understood, 'se recogieron' = were collected.",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "se",
+     "sugiere"
+    ]
+   },
+   {
+    "p": 2,
+    "words": [
+     "se",
+     "discutan"
+    ]
+   },
+   {
+    "p": 5,
+    "words": [
+     "se",
+     "entiende"
+    ]
+   },
+   {
+    "p": 8,
+    "words": [
+     "se",
+     "usaba"
+    ]
+   },
+   {
+    "p": 9,
+    "words": [
+     "se",
+     "evidencia"
+    ]
+   },
+   {
+    "p": 11,
+    "words": [
+     "se",
+     "emplean"
+    ]
+   },
+   {
+    "p": 22,
+    "words": [
+     "se",
+     "sabe"
+    ]
+   },
+   {
+    "p": 30,
+    "words": [
+     "se",
+     "recogieron"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "estar + gerundio",
+  "type": "grammar",
+  "en": "to be doing … (in progress)",
+  "explain": "Progressive form: stresses that an action is in progress at that moment.",
+  "occ": [
+   {
+    "p": 16,
+    "words": [
+     "están",
+     "comenzando"
+    ]
+   },
+   {
+    "p": 19,
+    "words": [
+     "está",
+     "ocurriendo"
+    ]
+   },
+   {
+    "p": 24,
+    "words": [
+     "están",
+     "tomando"
+    ]
+   }
+  ]
+ }
+]

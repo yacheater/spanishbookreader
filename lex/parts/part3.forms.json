@@ -1,0 +1,704 @@
+{
+ "esclavos": [
+  "esclavo.n",
+  "slaves"
+ ],
+ "escogen": [
+  "escoger.v",
+  "they choose"
+ ],
+ "escogida": [
+  "escoger.v",
+  "chosen (fue escogida: was chosen)"
+ ],
+ "escribió": [
+  "escribir.v",
+  "was written (se escribió)"
+ ],
+ "ese": [
+  "ese.det",
+  "that"
+ ],
+ "eso": [
+  "eso.pron",
+  "that"
+ ],
+ "espacio": [
+  "espacio.n",
+  "space; occasion"
+ ],
+ "español": [
+  "español.n",
+  "Spanish (the language)"
+ ],
+ "españoles": [
+  "español.n",
+  "Spaniards"
+ ],
+ "especialista": [
+  "especialista.n",
+  "specialist; expert"
+ ],
+ "especialmente": [
+  "especialmente.adv",
+  "especially"
+ ],
+ "específico": [
+  "específico.adj",
+  "specific"
+ ],
+ "espera": [
+  "esperar.v",
+  "is expected (se espera que)"
+ ],
+ "espirituales": [
+  "espiritual.adj",
+  "spiritual"
+ ],
+ "espumosidad": [
+  "espumosidad.n",
+  "frothiness, foaminess"
+ ],
+ "espíritu": [
+  "espíritu.n",
+  "spirit"
+ ],
+ "esta": [
+  "este.det",
+  "this"
+ ],
+ "establecer": [
+  "establecer.v",
+  "to establish"
+ ],
+ "establecimiento": [
+  "establecimiento.n",
+  "establishment (part of a company name)"
+ ],
+ "estado": [
+  "estado.n",
+  "state, condition"
+ ],
+ "estar": [
+  "estar.v",
+  "being (el estar informado)"
+ ],
+ "estas": [
+  "este.det",
+  "these"
+ ],
+ "estatus": [
+  "estatus.n",
+  "status"
+ ],
+ "este": [
+  "este.det",
+  "this"
+ ],
+ "estereotipos": [
+  "estereotipo.n",
+  "stereotypes"
+ ],
+ "estos": [
+  "este.det",
+  "these"
+ ],
+ "estrato": [
+  "estrato.n",
+  "stratum, (social) class"
+ ],
+ "estratos": [
+  "estrato.n",
+  "strata, (social) classes"
+ ],
+ "estructura": [
+  "estructura.n",
+  "structure"
+ ],
+ "estructuras": [
+  "estructura.n",
+  "structures"
+ ],
+ "estudian": [
+  "estudiar.v",
+  "are studied (se estudian)"
+ ],
+ "estudiante": [
+  "estudiante.n",
+  "student, learner"
+ ],
+ "estudio": [
+  "estudio.n",
+  "study"
+ ],
+ "estudios": [
+  "estudio.n",
+  "studies"
+ ],
+ "está": [
+  "estar.v",
+  "is"
+ ],
+ "están": [
+  "estar.v",
+  "they are"
+ ],
+ "etnográfico": [
+  "etnográfico.adj",
+  "ethnographic"
+ ],
+ "evidencia": [
+  "evidenciar.v",
+  "is evident, is shown (se evidencia)"
+ ],
+ "evita": [
+  "evitar.v",
+  "is avoided (se evita)"
+ ],
+ "evitar": [
+  "evitar.v",
+  "to avoid"
+ ],
+ "evitarla": [
+  "evitar.v",
+  "to avoid it"
+ ],
+ "eviten": [
+  "evitar.v",
+  "(they) avoid (subj.)"
+ ],
+ "evolución": [
+  "evolución.n",
+  "evolution, development"
+ ],
+ "excepciones": [
+  "excepción.n",
+  "exceptions"
+ ],
+ "exclusiva": [
+  "exclusivo.adj",
+  "exclusive (de forma exclusiva: exclusively)"
+ ],
+ "existen": [
+  "existir.v",
+  "exist"
+ ],
+ "expandiéndose": [
+  "expandir.v",
+  "spreading (itself)"
+ ],
+ "experiencia": [
+  "experiencia.n",
+  "experience"
+ ],
+ "experimental": [
+  "experimental.adj",
+  "experiential, based on experience"
+ ],
+ "experta": [
+  "experto.adj",
+  "expert"
+ ],
+ "explica": [
+  "explicar.v",
+  "explains"
+ ],
+ "explorar": [
+  "explorar.v",
+  "to explore"
+ ],
+ "expresa": [
+  "expresar.v",
+  "is expressed (se expresa)"
+ ],
+ "expresar": [
+  "expresar.v",
+  "to express"
+ ],
+ "expuesta": [
+  "expuesto.adj",
+  "set out, presented"
+ ],
+ "expuesto": [
+  "expuesto.adj",
+  "exposed"
+ ],
+ "extranjera": [
+  "extranjero.adj",
+  "foreign"
+ ],
+ "extranjeras": [
+  "extranjero.adj",
+  "foreign"
+ ],
+ "extraños": [
+  "extraño.n",
+  "strangers"
+ ],
+ "factor": [
+  "factor.n",
+  "factor"
+ ],
+ "factores": [
+  "factor.n",
+  "factors"
+ ],
+ "falso": [
+  "falso.adj",
+  "false"
+ ],
+ "familiar": [
+  "familiar.adj",
+  "familiar, family (adj.)"
+ ],
+ "familiaridad": [
+  "familiaridad.n",
+  "familiarity"
+ ],
+ "favorece": [
+  "favorecer.v",
+  "favours"
+ ],
+ "favorecen": [
+  "favorecer.v",
+  "favour, prefer"
+ ],
+ "fecha": [
+  "fecha.n",
+  "date"
+ ],
+ "federales": [
+  "federal.adj",
+  "federal (federalist)"
+ ],
+ "figura": [
+  "figura.n",
+  "figure, role"
+ ],
+ "fijos": [
+  "fijo.adj",
+  "fixed"
+ ],
+ "finalizar": [
+  "finalizar.v",
+  "to finish, to conclude"
+ ],
+ "fomentó": [
+  "fomentar.v",
+  "promoted, encouraged"
+ ],
+ "forasteros": [
+  "forastero.n",
+  "outsiders, strangers"
+ ],
+ "forma": [
+  "forma.n",
+  "form; way; shape"
+ ],
+ "formal": [
+  "formal.adj",
+  "formal"
+ ],
+ "formales": [
+  "formal.adj",
+  "formal"
+ ],
+ "formalidad": [
+  "formalidad.n",
+  "formality"
+ ],
+ "formas": [
+  "forma.n",
+  "forms"
+ ],
+ "fortísimos": [
+  "fuerte.adj",
+  "very strong",
+  "m. pl., absolute superlative (-ísimo)"
+ ],
+ "frase": [
+  "frase.n",
+  "phrase, sentence"
+ ],
+ "frente": [
+  "frente.adv",
+  "in front (frente a: in front of, facing)"
+ ],
+ "frustración": [
+  "frustración.n",
+  "frustration"
+ ],
+ "fría": [
+  "frío.adj",
+  "cold"
+ ],
+ "fue": [
+  "ser.v",
+  "was"
+ ],
+ "fuego": [
+  "fuego.n",
+  "fire"
+ ],
+ "fuera": [
+  "ser.v",
+  "it was (subj.: however ... it was)"
+ ],
+ "fueron": [
+  "ser.v",
+  "were"
+ ],
+ "funcionan": [
+  "funcionar.v",
+  "function, work"
+ ],
+ "funciones": [
+  "función.n",
+  "functions"
+ ],
+ "futuro": [
+  "futuro.n",
+  "future"
+ ],
+ "fórmula": [
+  "fórmula.n",
+  "formula, form (of address)"
+ ],
+ "genera": [
+  "generar.v",
+  "generates, causes"
+ ],
+ "generacionales": [
+  "generacional.adj",
+  "generational"
+ ],
+ "generaciones": [
+  "generación.n",
+  "generations"
+ ],
+ "general": [
+  "general.adj",
+  "general (Comandante General: Commander General)"
+ ],
+ "generales": [
+  "general.adj",
+  "general (en términos generales: in general terms)"
+ ],
+ "generalidad": [
+  "generalidad.n",
+  "generality"
+ ],
+ "generalizadores": [
+  "generalizador.adj",
+  "generalizing"
+ ],
+ "generalizándose": [
+  "generalizar.v",
+  "becoming widespread"
+ ],
+ "generan": [
+  "generar.v",
+  "generate, cause"
+ ],
+ "geográfica": [
+  "geográfico.adj",
+  "geographical"
+ ],
+ "gesto": [
+  "gesto.n",
+  "gesture"
+ ],
+ "gobernador": [
+  "gobernador.n",
+  "governor"
+ ],
+ "gobernó": [
+  "gobernar.v",
+  "governed"
+ ],
+ "gracias": [
+  "gracia.n",
+  "thanks (gracias a: thanks to)"
+ ],
+ "grado": [
+  "grado.n",
+  "degree"
+ ],
+ "grados": [
+  "grado.n",
+  "degrees"
+ ],
+ "gradualmente": [
+  "gradualmente.adv",
+  "gradually"
+ ],
+ "gramaticales": [
+  "gramatical.adj",
+  "grammatical"
+ ],
+ "gran": [
+  "grande.adj",
+  "great, large (en gran parte: largely)",
+  "apocopated form before a noun (sg.)"
+ ],
+ "grande": [
+  "grande.adj",
+  "big, great"
+ ],
+ "grupo": [
+  "grupo.n",
+  "group"
+ ],
+ "grupos": [
+  "grupo.n",
+  "groups"
+ ],
+ "guaraní": [
+  "guaraní.n",
+  "Guarani (people; language)"
+ ],
+ "guaraníes": [
+  "guaraní.n",
+  "the Guarani (people)"
+ ],
+ "género": [
+  "género.n",
+  "gender"
+ ],
+ "ha": [
+  "haber.v",
+  "has"
+ ],
+ "haber": [
+  "haber.v",
+  "to have (debe haber tenido: must have had)"
+ ],
+ "habitante": [
+  "habitante.n",
+  "inhabitant, resident"
+ ],
+ "habitantes": [
+  "habitante.n",
+  "inhabitants"
+ ],
+ "habla": [
+  "habla.n",
+  "speech"
+ ],
+ "hablado": [
+  "hablado.adj",
+  "spoken"
+ ],
+ "hablante": [
+  "hablante.n",
+  "speaker"
+ ],
+ "hablantes": [
+  "hablante.n",
+  "speakers"
+ ],
+ "hablar": [
+  "hablar.v",
+  "to speak, speaking"
+ ],
+ "había": [
+  "haber.v",
+  "had (había sido: had been)"
+ ],
+ "hace": [
+  "hacer.v",
+  "makes; (desde hace) for"
+ ],
+ "hacemos": [
+  "hacer.v",
+  "we make, we do"
+ ],
+ "hacen": [
+  "hacer.v",
+  "make, cause (hacen que)"
+ ],
+ "hacer": [
+  "hacer.v",
+  "to do"
+ ],
+ "hacerlo": [
+  "hacer.v",
+  "doing it, to do it"
+ ],
+ "hacia": [
+  "hacia.prep",
+  "towards"
+ ],
+ "hacía": [
+  "hacer.v",
+  "(desde hacía) for, had been (for)"
+ ],
+ "hacían": [
+  "hacer.v",
+  "they did"
+ ],
+ "han": [
+  "haber.v",
+  "have"
+ ],
+ "hasta": [
+  "hasta.prep",
+  "until, up to"
+ ],
+ "hay": [
+  "haber.v",
+  "there is, there are"
+ ],
+ "hecho": [
+  "hecho.n",
+  "fact (de hecho: in fact)"
+ ],
+ "heredamos": [
+  "heredar.v",
+  "we inherited"
+ ],
+ "hicieron": [
+  "hacer.v",
+  "they made"
+ ],
+ "hierve": [
+  "hervir.v",
+  "is boiled (se hierve)"
+ ],
+ "hincha": [
+  "hinchar.v",
+  "swells (se hincha)"
+ ],
+ "historia": [
+  "historia.n",
+  "history"
+ ],
+ "histórica": [
+  "histórico.adj",
+  "historical"
+ ],
+ "histórico": [
+  "histórico.adj",
+  "historical"
+ ],
+ "hoja": [
+  "hoja.n",
+  "leaf"
+ ],
+ "hojas": [
+  "hoja.n",
+  "leaves"
+ ],
+ "hombres": [
+  "hombre.n",
+  "men"
+ ],
+ "hoy": [
+  "hoy.adv",
+  "today (hoy por hoy: nowadays)"
+ ],
+ "ibérico": [
+  "ibérico.adj",
+  "Iberian"
+ ],
+ "idea": [
+  "idea.n",
+  "idea"
+ ],
+ "identidad": [
+  "identidad.n",
+  "identity"
+ ],
+ "ignora": [
+  "ignorar.v",
+  "ignores, overlooks"
+ ],
+ "igual": [
+  "igual.adj",
+  "equal, same"
+ ],
+ "igualaba": [
+  "igualar.v",
+  "made (people) equal"
+ ],
+ "iguales": [
+  "igual.adj",
+  "equal"
+ ],
+ "igualmente": [
+  "igualmente.adv",
+  "equally"
+ ],
+ "ilustración": [
+  "ilustración.n",
+  "illustration"
+ ],
+ "importante": [
+  "importante.adj",
+  "important"
+ ],
+ "importantes": [
+  "importante.adj",
+  "important"
+ ],
+ "imágenes": [
+  "imagen.n",
+  "images"
+ ],
+ "inalterada": [
+  "inalterado.adj",
+  "unchanged"
+ ],
+ "inclinación": [
+  "inclinación.n",
+  "slope, incline"
+ ],
+ "inclusivo": [
+  "inclusivo.adj",
+  "inclusive"
+ ],
+ "incluso": [
+  "incluso.adv",
+  "even"
+ ],
+ "incluían": [
+  "incluir.v",
+  "were included (se incluían)"
+ ],
+ "incremento": [
+  "incremento.n",
+  "increase"
+ ],
+ "independencia": [
+  "independencia.n",
+  "independence"
+ ],
+ "indexicalidad": [
+  "indexicalidad.n",
+  "indexicality"
+ ],
+ "indican": [
+  "indicar.v",
+  "indicate"
+ ],
+ "individuo": [
+  "individuo.n",
+  "individual"
+ ],
+ "individuos": [
+  "individuo.n",
+  "individuals"
+ ],
+ "indígena": [
+  "indígena.adj",
+  "indigenous"
+ ],
+ "influencia": [
+  "influencia.n",
+  "influence"
+ ],
+ "influenciados": [
+  "influenciar.v",
+  "influenced"
+ ]
+}

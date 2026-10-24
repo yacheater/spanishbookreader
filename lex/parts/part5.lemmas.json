@@ -1,0 +1,511 @@
+{
+ "particularidad.n": {
+  "en": "particularity; peculiarity",
+  "g": "f"
+ },
+ "partir.v": {
+  "en": "to start (from); to leave; to split"
+ },
+ "pasar.v": {
+  "en": "to pass; to happen; to spend (time)"
+ },
+ "paso.n": {
+  "en": "step; pass; passage",
+  "g": "m"
+ },
+ "patrón.n": {
+  "en": "master; boss; pattern",
+  "g": "m",
+  "pl": "patrones"
+ },
+ "país.n": {
+  "en": "country",
+  "g": "m",
+  "pl": "países"
+ },
+ "pedagógico.adj": {
+  "en": "pedagogical"
+ },
+ "peninsular.adj": {
+  "en": "peninsular"
+ },
+ "pensar.v": {
+  "en": "to think",
+  "m": "e>ie"
+ },
+ "pequeño.adj": {
+  "en": "small; little"
+ },
+ "percepción.n": {
+  "en": "perception",
+  "g": "f"
+ },
+ "percibir.v": {
+  "en": "to perceive"
+ },
+ "perder.v": {
+  "en": "to lose",
+  "m": "e>ie"
+ },
+ "performativo.adj": {
+  "en": "performative"
+ },
+ "periodo.n": {
+  "en": "period",
+  "g": "m"
+ },
+ "permitir.v": {
+  "en": "to allow; to permit"
+ },
+ "pero.conj": {
+  "en": "but"
+ },
+ "persistir.v": {
+  "en": "to persist"
+ },
+ "persona.n": {
+  "en": "person",
+  "g": "f"
+ },
+ "perspectiva.n": {
+  "en": "perspective",
+  "g": "f"
+ },
+ "pertenecer.v": {
+  "en": "to belong"
+ },
+ "planta.n": {
+  "en": "plant; floor",
+  "g": "f"
+ },
+ "plata.n": {
+  "en": "silver; money (colloquial)",
+  "g": "f"
+ },
+ "plural.n": {
+  "en": "plural",
+  "g": "m"
+ },
+ "población.n": {
+  "en": "population; town",
+  "g": "f"
+ },
+ "pobre.adj": {
+  "en": "poor"
+ },
+ "poco.det": {
+  "en": "little; few"
+ },
+ "poder.v": {
+  "en": "can; to be able to"
+ },
+ "poder.n": {
+  "en": "power",
+  "g": "m"
+ },
+ "polvo.n": {
+  "en": "dust; powder",
+  "g": "m"
+ },
+ "poncho.n": {
+  "en": "poncho",
+  "g": "m"
+ },
+ "poner.v": {
+  "en": "to put; to place"
+ },
+ "popular.adj": {
+  "en": "popular; of the people"
+ },
+ "popularizar.v": {
+  "en": "to popularize"
+ },
+ "por.prep": {
+  "en": "by; for; through; because of"
+ },
+ "porque.conj": {
+  "en": "because"
+ },
+ "poseer.v": {
+  "en": "to possess; to have"
+ },
+ "posibilitar.v": {
+  "en": "to make possible; to enable"
+ },
+ "posible.adj": {
+  "en": "possible"
+ },
+ "posición.n": {
+  "en": "position",
+  "g": "f"
+ },
+ "positivo.adj": {
+  "en": "positive"
+ },
+ "posterior.adj": {
+  "en": "later; subsequent; rear"
+ },
+ "posteriormente.adv": {
+  "en": "later; subsequently"
+ },
+ "postura.n": {
+  "en": "stance; posture",
+  "g": "f"
+ },
+ "pragmático.adj": {
+  "en": "pragmatic"
+ },
+ "preferencia.n": {
+  "en": "preference",
+  "g": "f"
+ },
+ "preferir.v": {
+  "en": "to prefer",
+  "m": "e>ie,i"
+ },
+ "pregunta.n": {
+  "en": "question",
+  "g": "f"
+ },
+ "prejuicio.n": {
+  "en": "prejudice",
+  "g": "m"
+ },
+ "presentar.v": {
+  "en": "to present; to show"
+ },
+ "presente.adj": {
+  "en": "present; current"
+ },
+ "previo.adj": {
+  "en": "previous; prior"
+ },
+ "primar.v": {
+  "en": "to prevail; to take precedence"
+ },
+ "primero.adj": {
+  "en": "first"
+ },
+ "primero.adv": {
+  "en": "first; firstly"
+ },
+ "principal.adj": {
+  "en": "main; principal"
+ },
+ "principio.n": {
+  "en": "beginning; principle",
+  "g": "m"
+ },
+ "privado.adj": {
+  "en": "private"
+ },
+ "problemática.n": {
+  "en": "problem; set of problems; issue",
+  "g": "f"
+ },
+ "procedencia.n": {
+  "en": "origin; provenance",
+  "g": "f"
+ },
+ "procedente.adj": {
+  "en": "coming from; originating"
+ },
+ "producción.n": {
+  "en": "production",
+  "g": "f"
+ },
+ "profesional.n": {
+  "en": "professional",
+  "g": "m/f"
+ },
+ "profundamente.adv": {
+  "en": "deeply; profoundly"
+ },
+ "propio.adj": {
+  "en": "own; proper; typical"
+ },
+ "proveniente.adj": {
+  "en": "coming from; originating"
+ },
+ "provincia.n": {
+  "en": "province",
+  "g": "f"
+ },
+ "provocar.v": {
+  "en": "to cause; to provoke"
+ },
+ "psicológico.adj": {
+  "en": "psychological"
+ },
+ "publicar.v": {
+  "en": "to publish"
+ },
+ "pueblo.n": {
+  "en": "people; nation; village",
+  "g": "m"
+ },
+ "punto.n": {
+  "en": "point; dot",
+  "g": "m"
+ },
+ "pócima.n": {
+  "en": "potion; brew",
+  "g": "f"
+ },
+ "público.adj": {
+  "en": "public"
+ },
+ "que.conj": {
+  "en": "that; which; who"
+ },
+ "quedar.v": {
+  "en": "to remain; to be left; to end up"
+ },
+ "quien.pron": {
+  "en": "who; whom"
+ },
+ "querer.v": {
+  "en": "to want; to love"
+ },
+ "quitar.v": {
+  "en": "to remove; to take away"
+ },
+ "qué.pron": {
+  "en": "what; which"
+ },
+ "racionalización.n": {
+  "en": "rationalization",
+  "g": "f"
+ },
+ "racionalizar.v": {
+  "en": "to rationalize"
+ },
+ "raspar.v": {
+  "en": "to scrape"
+ },
+ "razón.n": {
+  "en": "reason",
+  "g": "f",
+  "pl": "razones"
+ },
+ "reacción.n": {
+  "en": "reaction",
+  "g": "f"
+ },
+ "recalcar.v": {
+  "en": "to emphasize; to stress"
+ },
+ "receta.n": {
+  "en": "recipe; prescription",
+  "g": "f"
+ },
+ "recibir.v": {
+  "en": "to receive"
+ },
+ "reciente.adj": {
+  "en": "recent"
+ },
+ "recipiente.n": {
+  "en": "container; vessel",
+  "g": "m"
+ },
+ "reciprocidad.n": {
+  "en": "reciprocity",
+  "g": "f"
+ },
+ "recoger.v": {
+  "en": "to collect; to pick up"
+ },
+ "recomendar.v": {
+  "en": "to recommend",
+  "m": "e>ie"
+ },
+ "reconstruir.v": {
+  "en": "to reconstruct; to rebuild"
+ },
+ "recorrer.v": {
+  "en": "to travel around; to go through"
+ },
+ "recorrido.n": {
+  "en": "journey; tour; route",
+  "g": "m"
+ },
+ "recurrir.v": {
+  "en": "to resort to; to turn to"
+ },
+ "reducción.n": {
+  "en": "reduction; (Jesuit) mission settlement",
+  "g": "f"
+ },
+ "referirse.v": {
+  "en": "to refer to",
+  "m": "e>ie,i"
+ },
+ "refinado.adj": {
+  "en": "refined"
+ },
+ "reflejar.v": {
+  "en": "to reflect"
+ },
+ "reflexionar.v": {
+  "en": "to reflect; to think over"
+ },
+ "regalo.n": {
+  "en": "gift; present",
+  "g": "m"
+ },
+ "regionalismo.n": {
+  "en": "regionalism",
+  "g": "m"
+ },
+ "relacionado.adj": {
+  "en": "related"
+ },
+ "relacionar.v": {
+  "en": "to relate; to associate"
+ },
+ "relación.n": {
+  "en": "relationship; relation",
+  "g": "f"
+ },
+ "relato.n": {
+  "en": "story; account",
+  "g": "m"
+ },
+ "rendidor.adj": {
+  "en": "long-lasting; good value; productive"
+ },
+ "repartir.v": {
+  "en": "to distribute; to share out"
+ },
+ "repentino.adj": {
+  "en": "sudden"
+ },
+ "representativo.adj": {
+  "en": "representative"
+ },
+ "resaltar.v": {
+  "en": "to highlight; to stand out"
+ },
+ "reseña.n": {
+  "en": "review; overview",
+  "g": "f"
+ },
+ "respeto.n": {
+  "en": "respect",
+  "g": "m"
+ },
+ "respetuoso.adj": {
+  "en": "respectful"
+ },
+ "responsable.adj": {
+  "en": "responsible"
+ },
+ "respuesta.n": {
+  "en": "answer; response",
+  "g": "f"
+ },
+ "resultado.n": {
+  "en": "result",
+  "g": "m"
+ },
+ "resumen.n": {
+  "en": "summary; abstract",
+  "g": "m",
+  "pl": "resúmenes"
+ },
+ "reunión.n": {
+  "en": "meeting; gathering",
+  "g": "f"
+ },
+ "revelar.v": {
+  "en": "to reveal"
+ },
+ "rico.adj": {
+  "en": "rich; tasty"
+ },
+ "regir.v": {
+  "en": "to govern; to rule",
+  "m": "e>i"
+ },
+ "ritual.adj": {
+  "en": "ritual"
+ },
+ "rol.n": {
+  "en": "role",
+  "g": "m"
+ },
+ "ronda.n": {
+  "en": "round; circle",
+  "g": "f"
+ },
+ "rural.adj": {
+  "en": "rural"
+ },
+ "rápido.adv": {
+  "en": "quickly; fast"
+ },
+ "río.n": {
+  "en": "river",
+  "g": "m"
+ },
+ "saber.v": {
+  "en": "to know"
+ },
+ "sabor.n": {
+  "en": "flavour; taste",
+  "g": "m"
+ },
+ "sacudir.v": {
+  "en": "to shake"
+ },
+ "sagrado.adj": {
+  "en": "sacred; holy"
+ },
+ "sala.n": {
+  "en": "living room; hall; room",
+  "g": "f"
+ },
+ "sancionar.v": {
+  "en": "to enact (a law); to sanction"
+ },
+ "se.pron": {
+  "en": "oneself; himself; herself; itself; themselves; (impersonal/passive)"
+ },
+ "ser.v": {
+  "en": "to be"
+ },
+ "seco.adj": {
+  "en": "dry"
+ },
+ "sección.n": {
+  "en": "section",
+  "g": "f"
+ },
+ "secreto.n": {
+  "en": "secret",
+  "g": "m"
+ },
+ "segundo.adj": {
+  "en": "second"
+ },
+ "seguramente.adv": {
+  "en": "surely; probably"
+ },
+ "según.prep": {
+  "en": "according to"
+ },
+ "seis.num": {
+  "en": "six"
+ },
+ "selecto.adj": {
+  "en": "select; choice; exclusive"
+ },
+ "selva.n": {
+  "en": "jungle; forest",
+  "g": "f"
+ },
+ "semiestructurado.adj": {
+  "en": "semi-structured"
+ }
+}

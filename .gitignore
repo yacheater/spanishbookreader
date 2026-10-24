@@ -1,0 +1,9 @@
+# Full texts are copyrighted articles — they live only on this computer and in the private Supabase table.
+inputs/
+texts/*.json
+app/data/
+lex/missing_*.tsv
+# secrets
+.env
+.DS_Store
+__pycache__/

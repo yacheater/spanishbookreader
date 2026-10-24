@@ -1,0 +1,1226 @@
+[
+ {
+  "key": "en el marco de",
+  "type": "idiom",
+  "en": "as part of; on the occasion of",
+  "explain": "Literally 'in the frame of': used for the event or context something happens within.",
+  "occ": [
+   {
+    "p": 1,
+    "words": [
+     "en",
+     "el",
+     "marco",
+     "del"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "de hecho",
+  "type": "idiom",
+  "en": "in fact; actually",
+  "occ": [
+   {
+    "p": 10,
+    "words": [
+     "de",
+     "hecho"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "más que nada",
+  "type": "idiom",
+  "en": "above all; more than anything",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "más",
+     "que",
+     "nada"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "de esta manera",
+  "type": "idiom",
+  "en": "in this way; this is how",
+  "occ": [
+   {
+    "p": 7,
+    "words": [
+     "de",
+     "esta",
+     "manera"
+    ]
+   },
+   {
+    "p": 31,
+    "words": [
+     "de",
+     "esta",
+     "manera"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "como pocos / como pocas",
+  "type": "idiom",
+  "en": "like few others",
+  "occ": [
+   {
+    "p": 7,
+    "words": [
+     "como",
+     "pocas"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "desde hace + tiempo",
+  "type": "idiom",
+  "en": "for (a period of time, still ongoing)",
+  "explain": "Used with the present tense for something that started in the past and still continues: 'se mantiene desde hace siglos' = has stayed so for centuries.",
+  "occ": [
+   {
+    "p": 7,
+    "words": [
+     "desde",
+     "hace",
+     "siglos"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tanto que",
+  "type": "idiom",
+  "en": "so much so that",
+  "occ": [
+   {
+    "p": 7,
+    "words": [
+     "tanto",
+     "que"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "hoy por hoy",
+  "type": "idiom",
+  "en": "nowadays; at present",
+  "occ": [
+   {
+    "p": 7,
+    "words": [
+     "hoy",
+     "por",
+     "hoy"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "ser de los primeros",
+  "type": "idiom",
+  "en": "to be among the first",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "fue",
+     "de",
+     "los",
+     "primeros"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "el / la entonces + sustantivo",
+  "type": "idiom",
+  "en": "the then-… (what it was called/was at that time)",
+  "explain": "'Entonces' here works like an adjective: 'el entonces Virreinato' = the viceroyalty as it existed back then.",
+  "occ": [
+   {
+    "p": 3,
+    "words": [
+     "la",
+     "entonces",
+     "provincia"
+    ]
+   },
+   {
+    "p": 6,
+    "words": [
+     "el",
+     "entonces",
+     "virreinato"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "en aquel entonces",
+  "type": "idiom",
+  "en": "back then; at that time",
+  "occ": [
+   {
+    "p": 14,
+    "words": [
+     "en",
+     "aquel",
+     "entonces"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "uno de los tantos / una de las tantas",
+  "type": "idiom",
+  "en": "one of the many",
+  "occ": [
+   {
+    "p": 17,
+    "words": [
+     "una",
+     "de",
+     "las",
+     "tantas"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "hacer mal",
+  "type": "idiom",
+  "en": "to be bad for you; to do harm",
+  "occ": [
+   {
+    "p": 21,
+    "words": [
+     "hace",
+     "mal"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "por ende",
+  "type": "idiom",
+  "en": "therefore; consequently",
+  "occ": [
+   {
+    "p": 23,
+    "words": [
+     "por",
+     "ende"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "pasar por",
+  "type": "idiom",
+  "en": "to be a matter of; to lie in; to depend on",
+  "explain": "Figurative: 'la diferencia no pasaba por consumir mate' = the difference did not lie in drinking mate.",
+  "occ": [
+   {
+    "p": 14,
+    "words": [
+     "pasaba",
+     "por"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "hacer un recorrido por",
+  "type": "collocation",
+  "en": "to take a tour through; to go over",
+  "occ": [
+   {
+    "p": 1,
+    "words": [
+     "hacemos",
+     "recorrido",
+     "por"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "moneda de cambio",
+  "type": "collocation",
+  "en": "currency; bargaining chip; medium of exchange",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "moneda",
+     "de",
+     "cambio"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "encargarse de + infinitivo",
+  "type": "collocation",
+  "en": "to take care of; to be the ones who …",
+  "occ": [
+   {
+    "p": 6,
+    "words": [
+     "se",
+     "encargaron",
+     "de",
+     "difundir"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "años más tarde",
+  "type": "collocation",
+  "en": "years later",
+  "occ": [
+   {
+    "p": 6,
+    "words": [
+     "años",
+     "más",
+     "tarde"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tomar mate",
+  "type": "collocation",
+  "en": "to drink mate",
+  "occ": [
+   {
+    "p": 7,
+    "words": [
+     "tomar",
+     "mate"
+    ]
+   },
+   {
+    "p": 9,
+    "words": [
+     "tomar",
+     "mate"
+    ]
+   },
+   {
+    "p": 10,
+    "words": [
+     "tomaban",
+     "mate"
+    ]
+   },
+   {
+    "p": 11,
+    "words": [
+     "tomando",
+     "mate"
+    ]
+   },
+   {
+    "p": 23,
+    "words": [
+     "tomar",
+     "el",
+     "mate"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "cebar mate",
+  "type": "collocation",
+  "en": "to prepare and serve mate (pour hot water into the gourd)",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "cebarse",
+     "mates"
+    ]
+   },
+   {
+    "p": 31,
+    "words": [
+     "ceba",
+     "el",
+     "mate"
+    ]
+   },
+   {
+    "p": 35,
+    "words": [
+     "cebar",
+     "mates"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "transformarse en",
+  "type": "collocation",
+  "en": "to turn into; to become",
+  "occ": [
+   {
+    "p": 7,
+    "words": [
+     "se",
+     "transformó",
+     "en"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "la vida cotidiana",
+  "type": "collocation",
+  "en": "everyday life",
+  "occ": [
+   {
+    "p": 10,
+    "words": [
+     "vida",
+     "cotidiana"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tener un rol",
+  "type": "collocation",
+  "en": "to play a role",
+  "occ": [
+   {
+    "p": 11,
+    "words": [
+     "tenido",
+     "rol"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "aprovechar (algo) para + infinitivo",
+  "type": "collocation",
+  "en": "to use (an occasion) to …; to take the opportunity to …",
+  "occ": [
+   {
+    "p": 19,
+    "words": [
+     "aprovecha",
+     "espacio",
+     "para"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "echar un chorro (de agua)",
+  "type": "collocation",
+  "en": "to pour a splash (of water)",
+  "occ": [
+   {
+    "p": 22,
+    "words": [
+     "echar",
+     "chorrito",
+     "de",
+     "agua"
+    ]
+   },
+   {
+    "p": 23,
+    "words": [
+     "chorro",
+     "de",
+     "agua"
+    ]
+   },
+   {
+    "p": 30,
+    "words": [
+     "echa",
+     "chorro",
+     "de",
+     "agua"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tres cuartas partes",
+  "type": "collocation",
+  "en": "three quarters",
+  "occ": [
+   {
+    "p": 27,
+    "words": [
+     "tres",
+     "cuartas",
+     "partes"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "poner una cuota de (algo)",
+  "type": "collocation",
+  "en": "to put in a measure of (love, effort …)",
+  "occ": [
+   {
+    "p": 35,
+    "words": [
+     "poner",
+     "cuota",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "hacer (algo) parte de",
+  "type": "collocation",
+  "en": "to make something part of",
+  "occ": [
+   {
+    "p": 36,
+    "words": [
+     "hicieron",
+     "parte",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tomar una decisión",
+  "type": "collocation",
+  "en": "to make a decision",
+  "occ": [
+   {
+    "p": 36,
+    "words": [
+     "tomaron",
+     "decisión"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "de este modo",
+  "type": "idiom",
+  "en": "in this way; this way",
+  "occ": [
+   {
+    "p": 23,
+    "words": [
+     "de",
+     "este",
+     "modo"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "ser + participio (voz pasiva)",
+  "type": "grammar",
+  "en": "is/was done (passive)",
+  "explain": "Passive voice: 'ser' + past participle (agreeing with the subject); the doer, if named, comes with 'por'.",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "sido",
+     "declarado"
+    ]
+   },
+   {
+    "p": 2,
+    "words": [
+     "fue",
+     "escogida"
+    ]
+   },
+   {
+    "p": 13,
+    "words": [
+     "era",
+     "consumido"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "haber (imperfecto) + participio — pluscuamperfecto",
+  "type": "grammar",
+  "en": "had done / had been (pluperfect)",
+  "explain": "Pluperfect: 'había' + participle for something that happened before another past moment.",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "había",
+     "sido"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "volverse + adjetivo / sustantivo",
+  "type": "grammar",
+  "en": "to become …",
+  "explain": "'Volverse' expresses a change of state or identity, often lasting: 'volverse experta' = to become an expert.",
+  "occ": [
+   {
+    "p": 17,
+    "words": [
+     "volverse",
+     "experta"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "volver + objeto + adjetivo",
+  "type": "grammar",
+  "en": "to make something (become) …",
+  "explain": "Without 'a + infinitive', 'volver' means 'to make/turn': 'volvían la infusión más selecta' = they made the drink more exclusive. Not 'volver a + inf.' (= to do again).",
+  "occ": [
+   {
+    "p": 14,
+    "words": [
+     "volvían",
+     "selecta"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "llevar a alguien a + infinitivo",
+  "type": "grammar",
+  "en": "to lead someone to …",
+  "explain": "Says what caused or pushed someone to do something.",
+  "occ": [
+   {
+    "p": 17,
+    "words": [
+     "llevó",
+     "a",
+     "volverse"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "quedar + participio",
+  "type": "grammar",
+  "en": "to end up / be left (in a state)",
+  "explain": "'Quedar' + participle describes the resulting state after an action: 'quede colocada en forma oblicua' = ends up placed at an angle.",
+  "occ": [
+   {
+    "p": 29,
+    "words": [
+     "quede",
+     "colocada"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "para que + subjuntivo",
+  "type": "grammar",
+  "en": "so that …",
+  "explain": "Purpose with a different subject (or a general one) takes the subjunctive: 'para que la bombilla no se tape'.",
+  "occ": [
+   {
+    "p": 22,
+    "words": [
+     "para",
+     "que",
+     "tape"
+    ]
+   },
+   {
+    "p": 29,
+    "words": [
+     "para",
+     "que",
+     "quede"
+    ]
+   },
+   {
+    "p": 32,
+    "words": [
+     "para",
+     "que",
+     "tape"
+    ]
+   },
+   {
+    "p": 32,
+    "words": [
+     "para",
+     "que",
+     "moje"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "empezar a + infinitivo",
+  "type": "grammar",
+  "en": "to start doing …",
+  "explain": "Marks the beginning of an action.",
+  "occ": [
+   {
+    "p": 35,
+    "words": [
+     "empecemos",
+     "a",
+     "cebar"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "la idea es que + subjuntivo",
+  "type": "grammar",
+  "en": "the idea is that (we/you) …",
+  "explain": "A wish or goal introduced by 'la idea es que' takes the subjunctive.",
+  "occ": [
+   {
+    "p": 35,
+    "words": [
+     "idea",
+     "es",
+     "que",
+     "empecemos"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "deber (de) haber + participio",
+  "type": "grammar",
+  "en": "must have …; probably …",
+  "explain": "Expresses a guess about the past, not an obligation: 'debe haber tenido un rol' = it must have played a role.",
+  "occ": [
+   {
+    "p": 11,
+    "words": [
+     "debe",
+     "haber",
+     "tenido"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "deber + infinitivo",
+  "type": "grammar",
+  "en": "must …; have to … (here: surely …)",
+  "explain": "'Deber' + infinitive usually means obligation; in a past narration like this it can also express a confident supposition.",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "debían",
+     "cebarse"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tener que + infinitivo",
+  "type": "grammar",
+  "en": "to have to …",
+  "explain": "Personal obligation: someone has to do something.",
+  "occ": [
+   {
+    "p": 36,
+    "words": [
+     "tenían",
+     "que",
+     "compartir"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "mandar (a) + infinitivo",
+  "type": "grammar",
+  "en": "to have something done; to send something to be …",
+  "explain": "The subject doesn't do the action but orders it: 'mandaban a labrar sus mates' = they had their gourds carved.",
+  "occ": [
+   {
+    "p": 14,
+    "words": [
+     "mandaban",
+     "a",
+     "labrar"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "después de que + subjuntivo",
+  "type": "grammar",
+  "en": "after …",
+  "explain": "In past narration 'después de que' is often followed by the imperfect subjunctive (publicara).",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "después",
+     "de",
+     "que",
+     "publicara"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "hacer que + subjuntivo",
+  "type": "grammar",
+  "en": "to make (something) be/happen",
+  "explain": "Causation: 'hace que los mates sean ricos' = makes the mate taste good; the second verb is subjunctive.",
+  "occ": [
+   {
+    "p": 21,
+    "words": [
+     "hace",
+     "que",
+     "sean"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "permitir que + subjuntivo",
+  "type": "grammar",
+  "en": "to allow … to …",
+  "explain": "After 'permitir que' the verb goes in the subjunctive.",
+  "occ": [
+   {
+    "p": 23,
+    "words": [
+     "permite",
+     "que",
+     "muestre"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "una vez que + subjuntivo",
+  "type": "grammar",
+  "en": "once …",
+  "explain": "For a future or general moment, 'una vez que' takes the subjunctive.",
+  "occ": [
+   {
+    "p": 32,
+    "words": [
+     "una",
+     "vez",
+     "que",
+     "inicie"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "cada vez que + subjuntivo",
+  "type": "grammar",
+  "en": "every time (that) …",
+  "explain": "With present indicative it describes habits; with subjunctive (volquemos) it refers to future occasions.",
+  "occ": [
+   {
+    "p": 31,
+    "words": [
+     "cada",
+     "vez",
+     "que",
+     "volquemos"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "cuanto más … más",
+  "type": "grammar",
+  "en": "the more …, the more …",
+  "explain": "Proportional comparison; here in the past with imperfect subjunctive (fuera).",
+  "occ": [
+   {
+    "p": 14,
+    "words": [
+     "cuanto",
+     "más",
+     "fuera",
+     "más"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tanto … como …",
+  "type": "grammar",
+  "en": "both … and …",
+  "explain": "Joins two parallel elements: 'tanto en la receta como en los objetos' = both in the recipe and in the objects.",
+  "occ": [
+   {
+    "p": 14,
+    "words": [
+     "tanto",
+     "como"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "no … sino …",
+  "type": "grammar",
+  "en": "not … but (rather) …",
+  "explain": "Corrects a negated idea and replaces it: 'no pasaba por X, sino por Y'.",
+  "occ": [
+   {
+    "p": 14,
+    "words": [
+     "no",
+     "hacerlo",
+     "sino"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "lo + adjetivo",
+  "type": "grammar",
+  "en": "the … thing; what is …",
+  "explain": "'Lo' + adjective turns the adjective into an abstract noun: 'lo mejor' = the best thing.",
+  "occ": [
+   {
+    "p": 22,
+    "words": [
+     "lo",
+     "mejor"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "lo más … posible",
+  "type": "grammar",
+  "en": "as … as possible",
+  "explain": "Fixed frame with an adjective or adverb: 'lo más cerca posible' = as close as possible.",
+  "occ": [
+   {
+    "p": 31,
+    "words": [
+     "lo",
+     "más",
+     "cerca",
+     "posible"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "al + infinitivo",
+  "type": "grammar",
+  "en": "when / on …ing",
+  "explain": "'Al' + infinitive marks the moment something happens: 'al comenzar el mate' = when starting the mate.",
+  "occ": [
+   {
+    "p": 22,
+    "words": [
+     "al",
+     "comenzar"
+    ]
+   },
+   {
+    "p": 29,
+    "words": [
+     "al",
+     "pararlo"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "ir + gerundio",
+  "type": "grammar",
+  "en": "to gradually …; to keep …ing",
+  "explain": "Shows a process developing little by little over time.",
+  "occ": [
+   {
+    "p": 31,
+    "words": [
+     "irá",
+     "alimentando"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "gerundio de modo",
+  "type": "grammar",
+  "en": "by …ing (the way something is done)",
+  "explain": "A gerund after the main verb tells how the action is done: 'se ceba vertiendo el agua' = you prepare it by pouring the water.",
+  "occ": [
+   {
+    "p": 14,
+    "words": [
+     "agregándole",
+     "leche"
+    ]
+   },
+   {
+    "p": 28,
+    "words": [
+     "tapando",
+     "la",
+     "boca"
+    ]
+   },
+   {
+    "p": 31,
+    "words": [
+     "vertiendo",
+     "el",
+     "agua"
+    ]
+   },
+   {
+    "p": 35,
+    "words": [
+     "repartir",
+     "alimentando"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "objeto adelantado + pronombre",
+  "type": "grammar",
+  "en": "fronting the object for emphasis",
+  "explain": "When the direct object comes before the verb, Spanish repeats it with lo/la: 'La frase la dijo Valeria' = The phrase was said by Valeria.",
+  "occ": [
+   {
+    "p": 17,
+    "words": [
+     "frase",
+     "la",
+     "dijo"
+    ]
+   },
+   {
+    "p": 36,
+    "words": [
+     "mate",
+     "la",
+     "heredamos"
+    ]
+   },
+   {
+    "p": 36,
+    "words": [
+     "al",
+     "mate",
+     "lo",
+     "compartimos"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "se impersonal / pasiva refleja",
+  "type": "grammar",
+  "en": "it is done; one does; people do",
+  "explain": "'Se' + verb in 3rd person states what is done without naming who does it; very common in instructions and recipes ('se llena', 'se echa').",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "se",
+     "celebró"
+    ]
+   },
+   {
+    "p": 2,
+    "words": [
+     "se",
+     "publicara"
+    ]
+   },
+   {
+    "p": 7,
+    "words": [
+     "se",
+     "consumen"
+    ]
+   },
+   {
+    "p": 10,
+    "words": [
+     "se",
+     "escribió"
+    ]
+   },
+   {
+    "p": 10,
+    "words": [
+     "se",
+     "perdieron"
+    ]
+   },
+   {
+    "p": 13,
+    "words": [
+     "se",
+     "pudo",
+     "reconstruir"
+    ]
+   },
+   {
+    "p": 13,
+    "words": [
+     "se",
+     "compartía"
+    ]
+   },
+   {
+    "p": 14,
+    "words": [
+     "se",
+     "incluían"
+    ]
+   },
+   {
+    "p": 14,
+    "words": [
+     "se",
+     "lo",
+     "consideraba"
+    ]
+   },
+   {
+    "p": 14,
+    "words": [
+     "se",
+     "ofrecía"
+    ]
+   },
+   {
+    "p": 14,
+    "words": [
+     "se",
+     "ofrece"
+    ]
+   },
+   {
+    "p": 23,
+    "words": [
+     "se",
+     "puede"
+    ]
+   },
+   {
+    "p": 23,
+    "words": [
+     "se",
+     "hierve"
+    ]
+   },
+   {
+    "p": 23,
+    "words": [
+     "se",
+     "arruina"
+    ]
+   },
+   {
+    "p": 27,
+    "words": [
+     "se",
+     "llena"
+    ]
+   },
+   {
+    "p": 28,
+    "words": [
+     "se",
+     "lo",
+     "sacude"
+    ]
+   },
+   {
+    "p": 29,
+    "words": [
+     "se",
+     "deja"
+    ]
+   },
+   {
+    "p": 30,
+    "words": [
+     "se",
+     "echa"
+    ]
+   },
+   {
+    "p": 30,
+    "words": [
+     "se",
+     "coloca"
+    ]
+   },
+   {
+    "p": 31,
+    "words": [
+     "se",
+     "ceba"
+    ]
+   },
+   {
+    "p": 31,
+    "words": [
+     "se",
+     "moja"
+    ]
+   },
+   {
+    "p": 32,
+    "words": [
+     "se",
+     "recomienda"
+    ]
+   },
+   {
+    "p": 32,
+    "words": [
+     "se",
+     "inicie"
+    ]
+   }
+  ]
+ }
+]
