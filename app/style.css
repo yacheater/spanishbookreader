@@ -255,3 +255,16 @@ h2.sec { font-size: .95rem; margin: 1.4rem 0 .5rem; }
 .settings .acct { color: var(--text); overflow: hidden; text-overflow: ellipsis; max-width: 12rem; }
 .signin { background: var(--surface); border: 1px solid var(--line); border-radius: .9rem; padding: 1rem 1.1rem; font-size: .9rem; }
 .signin p { margin: .2rem 0 .7rem; }
+
+/* ---- suggest a text ---- */
+.suggest { margin-top: 2rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+.sg-head { display: flex; justify-content: space-between; align-items: center; }
+.sg-head h2 { margin: 0; font-size: 1.05rem; }
+.sg-rows { list-style: none; padding: 0; margin: .6rem 0 0; }
+.sg-rows li { display: flex; justify-content: space-between; align-items: center; gap: .6rem; padding: .5rem 0; border-bottom: 1px solid var(--line); font-size: .9rem; }
+.pill.sg-done { border-color: var(--ok); color: var(--ok); background: var(--ok-soft); }
+.pill.sg-processing { border-color: var(--learn-line); color: var(--text); background: var(--learn); }
+.pill.sg-rejected { border-color: var(--bad); color: var(--bad); }
+.sg-form label { display: block; font-size: .8rem; color: var(--muted); margin-top: .6rem; }
+.sg-form .answer { margin-top: .2rem; font-size: .95rem; }
+textarea.answer { resize: vertical; font-family: inherit; line-height: 1.4; }

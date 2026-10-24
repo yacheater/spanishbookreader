@@ -1,0 +1,665 @@
+[
+ {
+  "key": "de verdad",
+  "type": "idiom",
+  "en": "really; for real; genuinely",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "de",
+     "verdad"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "al principio",
+  "type": "idiom",
+  "en": "at first; in the beginning",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "al",
+     "principio"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "aquí tienes",
+  "type": "idiom",
+  "en": "here you are; here is …",
+  "explain": "Literally 'here you have': the usual way to present or hand something to someone (aquí tiene with usted).",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "Aquí",
+     "tienes"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "lo más + adjetivo",
+  "type": "grammar",
+  "en": "the most … thing / part",
+  "explain": "Neuter 'lo' + más + adjective turns the adjective into an abstract noun: 'lo más importante' = the most important thing(s).",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "lo",
+     "más",
+     "importante"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "se + verbo (pasiva refleja / se impersonal)",
+  "type": "grammar",
+  "en": "is done / one does / people do",
+  "explain": "Se + 3rd-person verb describes what is generally done without naming who does it: 'se pronuncia' = it is pronounced, 'se dice' = people say. The verb agrees with the thing (se mezclan los idiomas).",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "se",
+     "habla"
+    ]
+   },
+   {
+    "p": 4,
+    "words": [
+     "se",
+     "pronuncia"
+    ]
+   },
+   {
+    "p": 4,
+    "words": [
+     "se",
+     "escribe"
+    ]
+   },
+   {
+    "p": 4,
+    "words": [
+     "se",
+     "reduce"
+    ]
+   },
+   {
+    "p": 5,
+    "words": [
+     "se",
+     "pierde"
+    ]
+   },
+   {
+    "p": 7,
+    "words": [
+     "se",
+     "usa"
+    ]
+   },
+   {
+    "p": 7,
+    "words": [
+     "se",
+     "usa"
+    ]
+   },
+   {
+    "p": 10,
+    "words": [
+     "se",
+     "dice"
+    ]
+   },
+   {
+    "p": 15,
+    "words": [
+     "se",
+     "mezclan"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "convertirse en",
+  "type": "collocation",
+  "en": "to become; to turn into",
+  "occ": [
+   {
+    "p": 4,
+    "words": [
+     "se",
+     "convierte",
+     "en"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "lo mismo pasa con",
+  "type": "idiom",
+  "en": "the same goes for; the same happens with",
+  "occ": [
+   {
+    "p": 4,
+    "words": [
+     "Lo",
+     "mismo",
+     "pasa",
+     "con"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "muchas veces",
+  "type": "idiom",
+  "en": "often; many times",
+  "occ": [
+   {
+    "p": 4,
+    "words": [
+     "muchas",
+     "veces"
+    ]
+   },
+   {
+    "p": 12,
+    "words": [
+     "muchas",
+     "veces"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "¿para qué? (¿pa' qué?)",
+  "type": "idiom",
+  "en": "what for?; why? (for what purpose)",
+  "explain": "Asks about the purpose, not the cause (that is ¿por qué?). In the colloquial Caribbean form, para is shortened to pa'.",
+  "occ": [
+   {
+    "p": 4,
+    "words": [
+     "pa'",
+     "qué"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "no … sino …",
+  "type": "grammar",
+  "en": "not … but (rather) …",
+  "explain": "After a negative, 'sino' (not 'pero') introduces the correct alternative that replaces the denied one: 'No es un error, sino una manera natural' = it isn't a mistake but a natural way.",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "No",
+     "sino"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "escuchar con atención",
+  "type": "collocation",
+  "en": "to listen carefully",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "escuchas",
+     "con",
+     "atención"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "ir a + infinitivo",
+  "type": "grammar",
+  "en": "going to … (near future)",
+  "explain": "Ir in the present + a + infinitive expresses a future plan or prediction: 'vas a notar' = you are going to notice / you will notice.",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "vas",
+     "a",
+     "notar"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "cambiar de + sustantivo",
+  "type": "collocation",
+  "en": "to change (one's) … (meaning, mind, place …)",
+  "explain": "Without an article, 'cambiar de' means to switch to a different one: 'cambiar de sentido' = to take on a different meaning.",
+  "occ": [
+   {
+    "p": 7,
+    "words": [
+     "cambian",
+     "de",
+     "sentido"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "estar tragado/a (por alguien)",
+  "type": "idiom",
+  "en": "to be head over heels; to have a huge crush (colloquial)",
+  "explain": "Literally 'to be swallowed': colloquial Latin American Spanish (esp. Colombia) for being totally in love.",
+  "occ": [
+   {
+    "p": 7,
+    "words": [
+     "está",
+     "tragado"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "querer decir",
+  "type": "idiom",
+  "en": "to mean",
+  "explain": "Literally 'to want to say'; used like significar: '¿Qué quiere decir esta palabra?' = what does this word mean?",
+  "occ": [
+   {
+    "p": 7,
+    "words": [
+     "quiere",
+     "decir"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "igual que",
+  "type": "idiom",
+  "en": "just like; the same as",
+  "occ": [
+   {
+    "p": 7,
+    "words": [
+     "igual",
+     "que"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "estar pendiente de",
+  "type": "idiom",
+  "en": "to keep an eye on; to be attentive to; to look out for",
+  "explain": "Said of someone who constantly checks on another person or thing: 'está pendiente de ti' = he/she is always looking out for you.",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "está",
+     "pendiente",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "preocuparse por",
+  "type": "collocation",
+  "en": "to worry about; to care about",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "se",
+     "preocupa",
+     "por"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "darse otro chance",
+  "type": "idiom",
+  "en": "to give each other another chance (Latin America)",
+  "explain": "Reciprocal se ('each other') with the anglicism chance; in Spain one says 'darse otra oportunidad'.",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "darse",
+     "otro",
+     "chance"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "otra vez",
+  "type": "idiom",
+  "en": "again; once more",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "otra",
+     "vez"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "de casualidad",
+  "type": "idiom",
+  "en": "by chance; by coincidence",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "de",
+     "casualidad"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "sin + infinitivo",
+  "type": "grammar",
+  "en": "without …-ing",
+  "explain": "Spanish uses the infinitive after prepositions where English uses the -ing form: 'sin planearlo' = without planning it.",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "sin",
+     "planearlo"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "volver a + infinitivo",
+  "type": "grammar",
+  "en": "to … again",
+  "explain": "Volver a + infinitive means doing something again: 'volver a empezar' = to start again. It is more natural than adding 'otra vez'.",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "volver",
+     "a",
+     "empezar"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "de nuevo",
+  "type": "idiom",
+  "en": "again; anew",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "de",
+     "nuevo"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "desde el principio",
+  "type": "idiom",
+  "en": "from the beginning; from scratch",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "desde",
+     "el",
+     "principio"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "pasarla bien / pasarlo bien",
+  "type": "idiom",
+  "en": "to have a good time",
+  "explain": "Pasar + an object pronoun + bien/mal = to have a good/bad time. Latin America uses 'la' (la pasamos bien), Spain uses 'lo' (lo pasamos bien).",
+  "occ": [
+   {
+    "p": 10,
+    "words": [
+     "pasarla",
+     "bien"
+    ]
+   },
+   {
+    "p": 10,
+    "words": [
+     "la",
+     "pasamos",
+     "bien"
+    ]
+   },
+   {
+    "p": 10,
+    "words": [
+     "pasarlo",
+     "bien"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "en cambio",
+  "type": "idiom",
+  "en": "on the other hand; whereas",
+  "occ": [
+   {
+    "p": 10,
+    "words": [
+     "en",
+     "cambio"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "por último",
+  "type": "idiom",
+  "en": "finally; lastly",
+  "occ": [
+   {
+    "p": 10,
+    "words": [
+     "Por",
+     "último"
+    ]
+   },
+   {
+    "p": 15,
+    "words": [
+     "Por",
+     "último"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "sacarse algo del pecho",
+  "type": "idiom",
+  "en": "to get something off one's chest",
+  "occ": [
+   {
+    "p": 10,
+    "words": [
+     "sacarse",
+     "algo",
+     "del",
+     "pecho"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "gustar (me gusta / me gustan)",
+  "type": "grammar",
+  "en": "to like (lit. to be pleasing to)",
+  "explain": "Inverted construction: the person who likes is the indirect-object pronoun (me, te, le…) and the thing or person liked is the subject, so the verb agrees with it: 'me gusta la canción', 'me gustan las canciones', 'me gustas' (= you please me = I like you).",
+  "occ": [
+   {
+    "p": 12,
+    "words": [
+     "me",
+     "gustas"
+    ]
+   },
+   {
+    "p": 12,
+    "words": [
+     "me",
+     "gustas"
+    ]
+   },
+   {
+    "p": 12,
+    "words": [
+     "te",
+     "gustan"
+    ]
+   },
+   {
+    "p": 12,
+    "words": [
+     "me",
+     "gustan"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "poco a poco",
+  "type": "idiom",
+  "en": "little by little; gradually",
+  "occ": [
+   {
+    "p": 13,
+    "words": [
+     "poco",
+     "a",
+     "poco"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "ir + gerundio",
+  "type": "grammar",
+  "en": "to be gradually …-ing",
+  "explain": "Ir + gerund describes an action that develops step by step over time: 'voy aprendiendo español' = I'm gradually learning Spanish.",
+  "occ": [
+   {
+    "p": 13,
+    "words": [
+     "Voy",
+     "aprendiendo"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "pensar en",
+  "type": "collocation",
+  "en": "to think about / of",
+  "explain": "Spanish uses 'en' (not 'de' or 'sobre') for thinking about someone or something: 'pienso en ti' = I think about you.",
+  "occ": [
+   {
+    "p": 13,
+    "words": [
+     "pensando",
+     "en"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "seguir + gerundio",
+  "type": "grammar",
+  "en": "to keep (on) …-ing; to still be …-ing",
+  "explain": "Seguir + gerund says that an action is still going on: 'sigo pensando en ti' = I keep thinking about you / I'm still thinking about you.",
+  "occ": [
+   {
+    "p": 13,
+    "words": [
+     "Sigo",
+     "pensando"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "puede que + subjuntivo",
+  "type": "grammar",
+  "en": "maybe …; it may be that …",
+  "explain": "Impersonal 'puede que' expresses possibility and is always followed by the subjunctive: 'puede que llueva mañana' = it may rain tomorrow.",
+  "occ": [
+   {
+    "p": 13,
+    "words": [
+     "puede",
+     "que",
+     "llueva"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "todos los días",
+  "type": "idiom",
+  "en": "every day",
+  "occ": [
+   {
+    "p": 15,
+    "words": [
+     "todos",
+     "los",
+     "días"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tocarle a alguien (te toca a ti)",
+  "type": "idiom",
+  "en": "to be someone's turn",
+  "explain": "Tocar with an indirect-object pronoun means 'to be someone's turn': 'ahora te toca a ti' = now it's your turn; 'a ti' only adds emphasis.",
+  "occ": [
+   {
+    "p": 16,
+    "words": [
+     "te",
+     "toca",
+     "a",
+     "ti"
+    ]
+   }
+  ]
+ }
+]

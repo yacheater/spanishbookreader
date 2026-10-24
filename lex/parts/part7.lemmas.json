@@ -1,0 +1,522 @@
+{
+ "canción.n": {
+  "en": "song",
+  "g": "f"
+ },
+ "dos.num": {
+  "en": "two"
+ },
+ "me.pron": {
+  "en": "me; (to) me; myself"
+ },
+ "ti.pron": {
+  "en": "you (after a preposition: para ti, de ti)"
+ },
+ "reguetón.n": {
+  "en": "reggaeton",
+  "g": "m"
+ },
+ "casi.adv": {
+  "en": "almost; nearly"
+ },
+ "expresión.n": {
+  "en": "expression",
+  "g": "f"
+ },
+ "inglés.n": {
+  "en": "English (language)",
+  "g": "m"
+ },
+ "inglés.adj": {
+  "en": "English",
+  "f": "inglesa"
+ },
+ "alguien.pron": {
+  "en": "someone; somebody; anyone"
+ },
+ "bien.adv": {
+  "en": "well; fine; good"
+ },
+ "poco.det": {
+  "en": "little; few"
+ },
+ "aprender.v": {
+  "en": "to learn"
+ },
+ "mezclar.v": {
+  "en": "to mix"
+ },
+ "wow.other": {
+  "en": "wow (English exclamation of amazement)"
+ },
+ "letra.n": {
+  "en": "letter (of the alphabet); lyrics (of a song)",
+  "g": "f"
+ },
+ "sonar.v": {
+  "en": "to sound; to ring",
+  "m": "o>ue"
+ },
+ "esto.pron": {
+  "en": "this (neuter: this thing, this matter)"
+ },
+ "para.prep": {
+  "en": "for; to; in order to"
+ },
+ "comida.n": {
+  "en": "food; meal",
+  "g": "f"
+ },
+ "baby.other": {
+  "en": "baby (English; in songs: darling, babe)"
+ },
+ "chance.n": {
+  "en": "chance; opportunity (anglicism, common in Latin America)",
+  "g": "m"
+ },
+ "gustar.v": {
+  "en": "to please; to be liked (me gusta = I like)"
+ },
+ "verbo.n": {
+  "en": "verb",
+  "g": "m"
+ },
+ "gerundio.n": {
+  "en": "gerund (-ando / -iendo form)",
+  "g": "m"
+ },
+ "idioma.n": {
+  "en": "language",
+  "g": "m"
+ },
+ "escuchar.v": {
+  "en": "to listen (to); to hear"
+ },
+ "excelente.adj": {
+  "en": "excellent"
+ },
+ "cómo.adv": {
+  "en": "how (question / indirect question)"
+ },
+ "verdad.n": {
+  "en": "truth (de verdad = really)",
+  "g": "f"
+ },
+ "pop.n": {
+  "en": "pop (music)",
+  "g": "m"
+ },
+ "latino.adj": {
+  "en": "Latin; Latin American"
+ },
+ "nadie.pron": {
+  "en": "nobody; no one"
+ },
+ "cantante.n": {
+  "en": "singer",
+  "g": "m/f"
+ },
+ "acortar.v": {
+  "en": "to shorten"
+ },
+ "calle.n": {
+  "en": "street",
+  "g": "f"
+ },
+ "entender.v": {
+  "en": "to understand",
+  "m": "e>ie"
+ },
+ "parecer.v": {
+  "en": "to seem; to look"
+ },
+ "difícil.adj": {
+  "en": "difficult; hard"
+ },
+ "aquí.adv": {
+  "en": "here"
+ },
+ "tener.v": {
+  "en": "to have"
+ },
+ "guía.n": {
+  "en": "guide",
+  "g": "f"
+ },
+ "perder.v": {
+  "en": "to lose",
+  "m": "e>ie"
+ },
+ "vocal.n": {
+  "en": "vowel",
+  "g": "f"
+ },
+ "desaparecer.v": {
+  "en": "to disappear"
+ },
+ "demasiado.adv": {
+  "en": "too; too much"
+ },
+ "pronunciar.v": {
+  "en": "to pronounce"
+ },
+ "convertirse.v": {
+  "en": "to become; to turn into",
+  "m": "e>ie,i"
+ },
+ "lado.n": {
+  "en": "side",
+  "g": "m"
+ },
+ "complicado.adj": {
+  "en": "complicated"
+ },
+ "escribir.v": {
+  "en": "to write"
+ },
+ "apóstrofo.n": {
+  "en": "apostrophe",
+  "g": "m"
+ },
+ "mismo.det": {
+  "en": "same; -self"
+ },
+ "pasar.v": {
+  "en": "to pass; to happen; to spend (time)"
+ },
+ "preposición.n": {
+  "en": "preposition",
+  "g": "f"
+ },
+ "reducir.v": {
+  "en": "to reduce; to shorten"
+ },
+ "ejemplo.n": {
+  "en": "example",
+  "g": "m"
+ },
+ "amigo.n": {
+  "en": "friend",
+  "g": "m"
+ },
+ "preguntar.v": {
+  "en": "to ask"
+ },
+ "querer.v": {
+  "en": "to want; to love"
+ },
+ "fenómeno.n": {
+  "en": "phenomenon",
+  "g": "m"
+ },
+ "típico.adj": {
+  "en": "typical"
+ },
+ "final.adj": {
+  "en": "final; at the end"
+ },
+ "estar.v": {
+  "en": "to be (state, location)"
+ },
+ "ser.v": {
+  "en": "to be"
+ },
+ "natural.adj": {
+  "en": "natural"
+ },
+ "región.n": {
+  "en": "region",
+  "g": "f"
+ },
+ "atención.n": {
+  "en": "attention",
+  "g": "f"
+ },
+ "ir.v": {
+  "en": "to go"
+ },
+ "notar.v": {
+  "en": "to notice"
+ },
+ "todo.det": {
+  "en": "all; every; whole"
+ },
+ "conocido.adj": {
+  "en": "known; familiar; well-known"
+ },
+ "cambiar.v": {
+  "en": "to change"
+ },
+ "sentido.n": {
+  "en": "meaning; sense",
+  "g": "m"
+ },
+ "lenguaje.n": {
+  "en": "language (way of speaking)",
+  "g": "m"
+ },
+ "coloquial.adj": {
+  "en": "colloquial; informal"
+ },
+ "dinero.n": {
+  "en": "money",
+  "g": "m"
+ },
+ "agradable.adj": {
+  "en": "pleasant; nice"
+ },
+ "beso.n": {
+  "en": "kiss",
+  "g": "m"
+ },
+ "momento.n": {
+  "en": "moment",
+  "g": "m"
+ },
+ "bonito.adj": {
+  "en": "pretty; nice; lovely"
+ },
+ "tragado.adj": {
+  "en": "(colloquial) head over heels, madly in love (estar tragado/a)"
+ },
+ "totalmente.adv": {
+  "en": "totally; completely"
+ },
+ "enamorado.adj": {
+  "en": "in love"
+ },
+ "además.adv": {
+  "en": "besides; in addition; moreover"
+ },
+ "bebé.n": {
+  "en": "baby; (affectionate) darling",
+  "g": "m/f"
+ },
+ "pequeño.adj": {
+  "en": "small; little"
+ },
+ "hablar.v": {
+  "en": "to speak; to talk"
+ },
+ "pareja.n": {
+  "en": "partner; couple",
+  "g": "f"
+ },
+ "útil.adj": {
+  "en": "useful"
+ },
+ "relación.n": {
+  "en": "relationship; relation",
+  "g": "f"
+ },
+ "pendiente.adj": {
+  "en": "attentive (estar pendiente de = to keep an eye on); pending"
+ },
+ "preocuparse.v": {
+  "en": "to worry (about); to care (about)"
+ },
+ "saber.v": {
+  "en": "to know"
+ },
+ "hacer.v": {
+  "en": "to do; to make"
+ },
+ "decidir.v": {
+  "en": "to decide"
+ },
+ "dar.v": {
+  "en": "to give"
+ },
+ "intentar.v": {
+  "en": "to try"
+ },
+ "otro.det": {
+  "en": "other; another"
+ },
+ "palabra.n": {
+  "en": "word",
+  "g": "f"
+ },
+ "encontrarse.v": {
+  "en": "to meet; to run into; to find oneself",
+  "m": "o>ue"
+ },
+ "casualidad.n": {
+  "en": "chance; coincidence (de casualidad = by chance)",
+  "g": "f"
+ },
+ "planear.v": {
+  "en": "to plan"
+ },
+ "volver.v": {
+  "en": "to return; to turn; to make (+ adj)",
+  "m": "o>ue"
+ },
+ "empezar.v": {
+  "en": "to begin; to start",
+  "m": "e>ie"
+ },
+ "comenzar.v": {
+  "en": "to begin; to start",
+  "m": "e>ie"
+ },
+ "nuevo.adj": {
+  "en": "new"
+ },
+ "divertirse.v": {
+  "en": "to have fun; to enjoy oneself",
+  "m": "e>ie,i"
+ },
+ "anoche.adv": {
+  "en": "last night"
+ },
+ "fiesta.n": {
+  "en": "party; holiday",
+  "g": "f"
+ },
+ "sacar.v": {
+  "en": "to take out; to get out"
+ },
+ "pecho.n": {
+  "en": "chest; breast",
+  "g": "m"
+ },
+ "contar.v": {
+  "en": "to tell; to count",
+  "m": "o>ue"
+ },
+ "molestar.v": {
+  "en": "to bother; to annoy"
+ },
+ "sentirse.v": {
+  "en": "to feel (+ adjective / adverb)",
+  "m": "e>ie,i"
+ },
+ "gramática.n": {
+  "en": "grammar",
+  "g": "f"
+ },
+ "repetir.v": {
+  "en": "to repeat",
+  "m": "e>i"
+ },
+ "sentir.v": {
+  "en": "to feel; to be sorry",
+  "m": "e>ie,i"
+ },
+ "gusto.n": {
+  "en": "pleasure; liking; taste",
+  "g": "m"
+ },
+ "aparecer.v": {
+  "en": "to appear"
+ },
+ "pronombre.n": {
+  "en": "pronoun",
+  "g": "m"
+ },
+ "cosa.n": {
+  "en": "thing",
+  "g": "f"
+ },
+ "sujeto.n": {
+  "en": "subject",
+  "g": "m"
+ },
+ "literalmente.adv": {
+  "en": "literally"
+ },
+ "producir.v": {
+  "en": "to produce; to cause"
+ },
+ "placer.n": {
+  "en": "pleasure",
+  "g": "m"
+ },
+ "i.other": {
+  "en": "I (English pronoun)"
+ },
+ "like.other": {
+  "en": "like (English verb)"
+ },
+ "you.other": {
+  "en": "you (English pronoun)"
+ },
+ "avanzar.v": {
+  "en": "to advance; to progress; to move forward"
+ },
+ "lentamente.adv": {
+  "en": "slowly"
+ },
+ "seguir.v": {
+  "en": "to follow; to continue",
+  "m": "e>i"
+ },
+ "pensar.v": {
+  "en": "to think",
+  "m": "e>ie"
+ },
+ "indicar.v": {
+  "en": "to indicate; to point out"
+ },
+ "continuar.v": {
+  "en": "to continue; to go on",
+  "m": "ú"
+ },
+ "llover.v": {
+  "en": "to rain",
+  "m": "o>ue"
+ },
+ "mañana.adv": {
+  "en": "tomorrow"
+ },
+ "subjuntivo.n": {
+  "en": "subjunctive",
+  "g": "m"
+ },
+ "posibilidad.n": {
+  "en": "possibility",
+  "g": "f"
+ },
+ "frase.n": {
+  "en": "phrase; sentence",
+  "g": "f"
+ },
+ "entero.adj": {
+  "en": "whole; entire"
+ },
+ "normal.adj": {
+  "en": "normal; usual"
+ },
+ "artista.n": {
+  "en": "artist",
+  "g": "m/f"
+ },
+ "vivir.v": {
+  "en": "to live"
+ },
+ "cultura.n": {
+  "en": "culture",
+  "g": "f"
+ },
+ "día.n": {
+  "en": "day",
+  "g": "m"
+ },
+ "tocar.v": {
+  "en": "to touch; to play (music); to be someone's turn (me toca)"
+ },
+ "abierto.adj": {
+  "en": "open"
+ },
+ "practicar.v": {
+  "en": "to practise"
+ },
+ "tu.det": {
+  "en": "your (informal)"
+ },
+ "tarjeta.n": {
+  "en": "card",
+  "g": "f"
+ }
+}

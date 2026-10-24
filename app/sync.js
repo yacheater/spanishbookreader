@@ -157,6 +157,15 @@ const Cloud = {
     if (error) throw error;
     return data.map((r) => ({ id: r.id, title: r.title, ...(r.meta || {}) }));
   },
+  async suggest(row) {
+    const { error } = await this.client.from("submissions").insert(row);
+    return error;
+  },
+  async mySuggestions() {
+    const { data, error } = await this.client.from("submissions").select("id,title,source_url,status,reply,created_at")
+      .order("created_at", { ascending: false }).limit(20);
+    return error ? [] : data;
+  },
   async loadText(id) {
     const { data, error } = await this.client.from("texts").select("data").eq("id", id).maybeSingle();
     if (error) throw error;

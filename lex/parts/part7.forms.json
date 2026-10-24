@@ -1,0 +1,706 @@
+{
+ "canciones": [
+  "canción.n",
+  "songs"
+ ],
+ "canción": [
+  "canción.n",
+  "song"
+ ],
+ "dos": [
+  "dos.num",
+  "two"
+ ],
+ "me": [
+  "me.pron",
+  "me; (to) me"
+ ],
+ "ti": [
+  "ti.pron",
+  "you (after a preposition)"
+ ],
+ "reguetón": [
+  "reguetón.n",
+  "reggaeton"
+ ],
+ "casi": [
+  "casi.adv",
+  "almost"
+ ],
+ "expresiones": [
+  "expresión.n",
+  "expressions"
+ ],
+ "inglés": [
+  "inglés.n",
+  "English (the language)"
+ ],
+ "inglesa": [
+  "inglés.adj",
+  "English"
+ ],
+ "alguien": [
+  "alguien.pron",
+  "someone"
+ ],
+ "bien": [
+  "bien.adv",
+  "well; a good time (pasarla bien)"
+ ],
+ "poco": [
+  "poco.det",
+  "a little (un poco); little (poco a poco)"
+ ],
+ "aprender": [
+  "aprender.v",
+  "to learn"
+ ],
+ "aprendiendo": [
+  "aprender.v",
+  "learning"
+ ],
+ "mezclan": [
+  "mezclar.v",
+  "they mix (se mezclan: are mixed)"
+ ],
+ "wow": [
+  "wow.other",
+  "wow"
+ ],
+ "letras": [
+  "letra.n",
+  "letters; lyrics"
+ ],
+ "letra": [
+  "letra.n",
+  "lyrics"
+ ],
+ "suena": [
+  "sonar.v",
+  "sounds"
+ ],
+ "esto": [
+  "esto.pron",
+  "this"
+ ],
+ "pa'": [
+  "para.prep",
+  "for (colloquial: para)",
+  "colloquial form of «para» (shortened, final syllable dropped)"
+ ],
+ "comida": [
+  "comida.n",
+  "food; a meal"
+ ],
+ "baby": [
+  "baby.other",
+  "baby (English; here: darling)"
+ ],
+ "chance": [
+  "chance.n",
+  "chance (darse otro chance: give each other another chance)"
+ ],
+ "gustas": [
+  "gustar.v",
+  "you please (me gustas: I like you)"
+ ],
+ "gustan": [
+  "gustar.v",
+  "are pleasing (te gustan: you like)"
+ ],
+ "gusta": [
+  "gustar.v",
+  "pleases; is liked"
+ ],
+ "gustar": [
+  "gustar.v",
+  "to like (lit. to please)"
+ ],
+ "verbo": [
+  "verbo.n",
+  "verb"
+ ],
+ "gerundio": [
+  "gerundio.n",
+  "gerund (-ando/-iendo form)"
+ ],
+ "idiomas": [
+  "idioma.n",
+  "languages"
+ ],
+ "escuchar": [
+  "escuchar.v",
+  "to listen to"
+ ],
+ "escuchas": [
+  "escuchar.v",
+  "you listen"
+ ],
+ "escucha": [
+  "escuchar.v",
+  "listen (to)!",
+  "imperativo afirmativo · tú"
+ ],
+ "excelente": [
+  "excelente.adj",
+  "excellent"
+ ],
+ "cómo": [
+  "cómo.adv",
+  "how"
+ ],
+ "verdad": [
+  "verdad.n",
+  "truth (de verdad: really)"
+ ],
+ "pop": [
+  "pop.n",
+  "pop (music)"
+ ],
+ "latino": [
+  "latino.adj",
+  "Latin (American)"
+ ],
+ "nadie": [
+  "nadie.pron",
+  "nobody"
+ ],
+ "cantantes": [
+  "cantante.n",
+  "singers"
+ ],
+ "acortan": [
+  "acortar.v",
+  "they shorten"
+ ],
+ "calle": [
+  "calle.n",
+  "street (de la calle: street, informal)"
+ ],
+ "entender": [
+  "entender.v",
+  "to understand"
+ ],
+ "parecer": [
+  "parecer.v",
+  "to seem"
+ ],
+ "difícil": [
+  "difícil.adj",
+  "difficult"
+ ],
+ "aquí": [
+  "aquí.adv",
+  "here"
+ ],
+ "tienes": [
+  "tener.v",
+  "you have (aquí tienes: here is)"
+ ],
+ "guía": [
+  "guía.n",
+  "guide"
+ ],
+ "pierden": [
+  "perder.v",
+  "they lose"
+ ],
+ "pierde": [
+  "perder.v",
+  "is lost (se pierde)"
+ ],
+ "vocales": [
+  "vocal.n",
+  "vowels"
+ ],
+ "desaparece": [
+  "desaparecer.v",
+  "disappears"
+ ],
+ "demasiado": [
+  "demasiado.adv",
+  "too much; too"
+ ],
+ "demasia'o": [
+  "demasiado.adv",
+  "too much (colloquial: demasiado)",
+  "colloquial form of «demasiado» (dropped -d-)"
+ ],
+ "pronuncia": [
+  "pronunciar.v",
+  "is pronounced (se pronuncia)"
+ ],
+ "convierte": [
+  "convertirse.v",
+  "becomes (se convierte en: turns into)"
+ ],
+ "la'o": [
+  "lado.n",
+  "side (colloquial: lado)",
+  "colloquial form of «lado» (dropped -d-) · sg."
+ ],
+ "complicado": [
+  "complicado.adj",
+  "complicated"
+ ],
+ "complica'o": [
+  "complicado.adj",
+  "complicated (colloquial: complicado)",
+  "colloquial form of «complicado» (dropped -d-) · m. sg."
+ ],
+ "escribe": [
+  "escribir.v",
+  "is written (se escribe)"
+ ],
+ "apóstrofo": [
+  "apóstrofo.n",
+  "apostrophe"
+ ],
+ "mismo": [
+  "mismo.det",
+  "same (lo mismo: the same thing)"
+ ],
+ "pasa": [
+  "pasar.v",
+  "happens"
+ ],
+ "preposición": [
+  "preposición.n",
+  "preposition"
+ ],
+ "reduce": [
+  "reducir.v",
+  "is reduced (se reduce a: gets shortened to)"
+ ],
+ "ejemplo": [
+  "ejemplo.n",
+  "example (por ejemplo: for example)"
+ ],
+ "amigo": [
+  "amigo.n",
+  "friend"
+ ],
+ "preguntar": [
+  "preguntar.v",
+  "to ask"
+ ],
+ "quieres": [
+  "querer.v",
+  "you want"
+ ],
+ "quieren": [
+  "querer.v",
+  "they want"
+ ],
+ "fenómeno": [
+  "fenómeno.n",
+  "phenomenon"
+ ],
+ "típico": [
+  "típico.adj",
+  "typical"
+ ],
+ "final": [
+  "final.adj",
+  "final"
+ ],
+ "estamos": [
+  "estar.v",
+  "we are"
+ ],
+ "estamo'": [
+  "estar.v",
+  "we are (colloquial: estamos)",
+  "colloquial «estamos» (final -s dropped) · presente · nosotros/as"
+ ],
+ "somo'": [
+  "ser.v",
+  "we are (colloquial: somos)",
+  "colloquial «somos» (final -s dropped) · presente · nosotros/as"
+ ],
+ "natural": [
+  "natural.adj",
+  "natural"
+ ],
+ "regiones": [
+  "región.n",
+  "regions"
+ ],
+ "atención": [
+  "atención.n",
+  "attention (con atención: carefully)"
+ ],
+ "vas": [
+  "ir.v",
+  "you are going (vas a notar: you will notice)"
+ ],
+ "notar": [
+  "notar.v",
+  "to notice"
+ ],
+ "todas": [
+  "todo.det",
+  "all"
+ ],
+ "conocidas": [
+  "conocido.adj",
+  "familiar; well-known"
+ ],
+ "cambian": [
+  "cambiar.v",
+  "they change"
+ ],
+ "sentido": [
+  "sentido.n",
+  "meaning (cambiar de sentido: change meaning)"
+ ],
+ "lenguaje": [
+  "lenguaje.n",
+  "language (speech)"
+ ],
+ "coloquial": [
+  "coloquial.adj",
+  "colloquial"
+ ],
+ "dinero": [
+  "dinero.n",
+  "money"
+ ],
+ "agradable": [
+  "agradable.adj",
+  "pleasant"
+ ],
+ "beso": [
+  "beso.n",
+  "kiss"
+ ],
+ "momento": [
+  "momento.n",
+  "moment"
+ ],
+ "bonito": [
+  "bonito.adj",
+  "lovely; nice"
+ ],
+ "tragado": [
+  "tragado.adj",
+  "(colloquial) head over heels, madly in love"
+ ],
+ "totalmente": [
+  "totalmente.adv",
+  "totally"
+ ],
+ "enamorado": [
+  "enamorado.adj",
+  "in love"
+ ],
+ "además": [
+  "además.adv",
+  "besides; also"
+ ],
+ "bebé": [
+  "bebé.n",
+  "baby; (affectionate) darling"
+ ],
+ "pequeños": [
+  "pequeño.adj",
+  "small; little"
+ ],
+ "hablarle": [
+  "hablar.v",
+  "to talk to (someone)"
+ ],
+ "pareja": [
+  "pareja.n",
+  "partner (in a couple)"
+ ],
+ "útiles": [
+  "útil.adj",
+  "useful"
+ ],
+ "relaciones": [
+  "relación.n",
+  "relationships"
+ ],
+ "pendiente": [
+  "pendiente.adj",
+  "attentive (estar pendiente de: to keep an eye on)"
+ ],
+ "preocupa": [
+  "preocuparse.v",
+  "worries (se preocupa por: cares about)"
+ ],
+ "saber": [
+  "saber.v",
+  "to know"
+ ],
+ "haces": [
+  "hacer.v",
+  "you do"
+ ],
+ "deciden": [
+  "decidir.v",
+  "they decide"
+ ],
+ "darse": [
+  "dar.v",
+  "to give each other (darse otro chance)"
+ ],
+ "intentan": [
+  "intentar.v",
+  "they try"
+ ],
+ "otra": [
+  "otro.det",
+  "another (otra vez: again)"
+ ],
+ "palabra": [
+  "palabra.n",
+  "word"
+ ],
+ "encuentran": [
+  "encontrarse.v",
+  "they meet; they run into each other"
+ ],
+ "casualidad": [
+  "casualidad.n",
+  "chance (de casualidad: by chance)"
+ ],
+ "planearlo": [
+  "planear.v",
+  "planning it (sin planearlo: without planning it)"
+ ],
+ "volver": [
+  "volver.v",
+  "to (do) again (volver a + infinitive)"
+ ],
+ "empezar": [
+  "empezar.v",
+  "to start"
+ ],
+ "comienzan": [
+  "comenzar.v",
+  "they start"
+ ],
+ "nuevo": [
+  "nuevo.adj",
+  "new (de nuevo: again)"
+ ],
+ "pasarla": [
+  "pasar.v",
+  "to have (a good time) (pasarla bien)"
+ ],
+ "divertirse": [
+  "divertirse.v",
+  "to have fun"
+ ],
+ "anoche": [
+  "anoche.adv",
+  "last night"
+ ],
+ "pasamos": [
+  "pasar.v",
+  "we had (la pasamos bien: we had a good time)"
+ ],
+ "fiesta": [
+  "fiesta.n",
+  "party"
+ ],
+ "pasarlo": [
+  "pasar.v",
+  "to have (a good time) (pasarlo bien)"
+ ],
+ "sacarse": [
+  "sacar.v",
+  "to get (something) off (one's chest) (sacarse algo del pecho)"
+ ],
+ "pecho": [
+  "pecho.n",
+  "chest"
+ ],
+ "contar": [
+  "contar.v",
+  "to tell"
+ ],
+ "molesta": [
+  "molestar.v",
+  "bothers"
+ ],
+ "sentirte": [
+  "sentirse.v",
+  "to feel (sentirte mejor: to feel better)"
+ ],
+ "gramática": [
+  "gramática.n",
+  "grammar"
+ ],
+ "repite": [
+  "repetir.v",
+  "repeats"
+ ],
+ "siente": [
+  "sentir.v",
+  "feels"
+ ],
+ "gusto": [
+  "gusto.n",
+  "pleasure; liking"
+ ],
+ "aparece": [
+  "aparecer.v",
+  "appears"
+ ],
+ "aparecen": [
+  "aparecer.v",
+  "appear"
+ ],
+ "pronombre": [
+  "pronombre.n",
+  "pronoun"
+ ],
+ "cosa": [
+  "cosa.n",
+  "thing"
+ ],
+ "sujeto": [
+  "sujeto.n",
+  "subject"
+ ],
+ "literalmente": [
+  "literalmente.adv",
+  "literally"
+ ],
+ "produces": [
+  "producir.v",
+  "you give; you cause"
+ ],
+ "placer": [
+  "placer.n",
+  "pleasure"
+ ],
+ "i": [
+  "i.other",
+  "I (English)"
+ ],
+ "like": [
+  "like.other",
+  "like (English)"
+ ],
+ "you": [
+  "you.other",
+  "you (English)"
+ ],
+ "va": [
+  "ir.v",
+  "goes (va en plural: is in the plural)"
+ ],
+ "voy": [
+  "ir.v",
+  "I am (+ gerund: voy aprendiendo = I'm gradually learning)"
+ ],
+ "ir": [
+  "ir.v",
+  "to go"
+ ],
+ "avanza": [
+  "avanzar.v",
+  "progresses; moves forward"
+ ],
+ "lentamente": [
+  "lentamente.adv",
+  "slowly"
+ ],
+ "sigo": [
+  "seguir.v",
+  "I keep (on) (sigo pensando: I keep thinking)"
+ ],
+ "pensando": [
+  "pensar.v",
+  "thinking"
+ ],
+ "seguir": [
+  "seguir.v",
+  "to keep (on); to continue"
+ ],
+ "indica": [
+  "indicar.v",
+  "indicates"
+ ],
+ "continúa": [
+  "continuar.v",
+  "continues"
+ ],
+ "llueva": [
+  "llover.v",
+  "it rains (puede que llueva: it may rain)"
+ ],
+ "mañana": [
+  "mañana.adv",
+  "tomorrow"
+ ],
+ "subjuntivo": [
+  "subjuntivo.n",
+  "subjunctive"
+ ],
+ "posibilidad": [
+  "posibilidad.n",
+  "possibility"
+ ],
+ "frases": [
+  "frase.n",
+  "sentences; phrases"
+ ],
+ "enteras": [
+  "entero.adj",
+  "whole; entire"
+ ],
+ "normal": [
+  "normal.adj",
+  "normal"
+ ],
+ "artistas": [
+  "artista.n",
+  "artists"
+ ],
+ "viven": [
+  "vivir.v",
+  "they live"
+ ],
+ "culturas": [
+  "cultura.n",
+  "cultures"
+ ],
+ "hablan": [
+  "hablar.v",
+  "they speak"
+ ],
+ "días": [
+  "día.n",
+  "days (todos los días: every day)"
+ ],
+ "toca": [
+  "tocar.v",
+  "it's (your) turn (te toca a ti: it's your turn)"
+ ],
+ "abierta": [
+  "abierto.adj",
+  "open"
+ ],
+ "practica": [
+  "practicar.v",
+  "practise!",
+  "imperativo afirmativo · tú"
+ ],
+ "nuevas": [
+  "nuevo.adj",
+  "new"
+ ],
+ "tus": [
+  "tu.det",
+  "your (informal)"
+ ],
+ "tarjetas": [
+  "tarjeta.n",
+  "cards (flashcards)"
+ ]
+}

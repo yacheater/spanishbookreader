@@ -3,7 +3,7 @@
 (function () {
   const load = (k, d) => { try { return JSON.parse(sessionStorage.getItem(k)) || d; } catch (e) { return d; } };
   const FAKE = window.FAKE = {
-    db: load("fake_db", { texts: [], progress: [] }),
+    db: load("fake_db", { texts: [], progress: [], submissions: [] }),
     session: load("fake_session", null), listeners: [], calls: [],
     persist() { sessionStorage.setItem("fake_db", JSON.stringify(this.db)); sessionStorage.setItem("fake_session", JSON.stringify(this.session)); },
   };
@@ -11,11 +11,19 @@
   const pick = (row, cols) => copy(cols === "*" ? row : Object.fromEntries(cols.split(",").map((c) => [c, row[c]])));
   function query(table) {
     const q = { cols: "*", filters: [] };
+    FAKE.db[table] = FAKE.db[table] || [];
     const rows = () => FAKE.db[table].filter((r) => q.filters.every(([c, v]) => r[c] === v)).map((r) => pick(r, q.cols));
     Object.assign(q, {
       select(cols) { q.cols = cols; FAKE.calls.push("select " + table); return q; },
       eq(c, v) { q.filters.push([c, v]); return q; },
       order() { return q; },
+      limit() { return q; },
+      insert(row) {
+        FAKE.calls.push("insert " + table);
+        FAKE.db[table].push({ id: FAKE.db[table].length + 1, user_id: FAKE.session.user.id, status: "new", reply: "",
+          created_at: new Date().toISOString(), ...copy(row) });
+        FAKE.persist(); return Promise.resolve({ error: null });
+      },
       maybeSingle() { return Promise.resolve({ data: rows()[0] || null, error: null }); },
       then(ok, bad) { return Promise.resolve({ data: rows(), error: null }).then(ok, bad); },
       upsert(obj) {

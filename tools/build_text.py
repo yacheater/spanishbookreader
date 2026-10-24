@@ -21,7 +21,8 @@ from conjugate import conjugate, analyse, TENSES, strip_acc  # noqa: E402
 import validate_text  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-WORD = re.compile(r"[^\W\d_]+")
+# a word may carry a colloquial elision apostrophe (ASCII '): la'o, demasia'o, pa', estamo'
+WORD = re.compile(r"[^\W\d_]+(?:'[^\W\d_]+)*'?")
 PRON_VARIANT = {"la", "las", "lo", "los", "le", "les"}
 POS_LABEL = {"v": "verbo", "n": "sustantivo", "adj": "adjetivo", "adv": "adverbio", "prep": "preposición",
              "conj": "conjunción", "pron": "pronombre", "det": "determinante", "num": "numeral",
@@ -178,11 +179,20 @@ def locate_phrases(tid, paragraphs, line_to_par, problems):
     return phrases, occs
 
 
+def input_path(tid):
+    """inputs/<user>/<id>.txt (one subfolder per account, see inputs/users.json) or legacy inputs/<id>.txt."""
+    hits = sorted(ROOT.glob(f"inputs/*/{tid}.txt")) + ([ROOT / f"inputs/{tid}.txt"] if (ROOT / f"inputs/{tid}.txt").exists() else [])
+    if len(hits) != 1:
+        sys.exit(f"text id {tid!r}: expected exactly one inputs/<user>/{tid}.txt, found {len(hits)}")
+    return hits[0]
+
+
 def build(tid):
     lemmas, forms_lex, conflicts = load_lex()
     known_names = load_names()
-    meta = json.loads((ROOT / f"inputs/{tid}.meta.json").read_text(encoding="utf-8"))
-    src_rel = f"inputs/{tid}.txt"
+    src = input_path(tid)
+    meta = json.loads(src.with_suffix(".meta.json").read_text(encoding="utf-8"))
+    src_rel = str(src.relative_to(ROOT))
     lines = [ln.rstrip() for ln in (ROOT / src_rel).read_text(encoding="utf-8").split("\n")]
     paras_txt = [ln for ln in lines if ln.strip()]
     line_no = [i + 1 for i, ln in enumerate(lines) if ln.strip()]     # paragraph index -> line in inputs/<id>.txt
@@ -300,7 +310,7 @@ def write_index():
 
 
 if __name__ == "__main__":
-    ids = sys.argv[1:] or [Path(p).stem for p in sorted(glob.glob(str(ROOT / "inputs/*.txt")))]
+    ids = sys.argv[1:] or [Path(p).stem for p in sorted(glob.glob(str(ROOT / "inputs/*.txt")) + glob.glob(str(ROOT / "inputs/*/*.txt")))]
     ok = True
     for tid in ids:
         ok = build(tid) and ok
