@@ -237,7 +237,46 @@ async function renderLibrary() {
       <div><b>${esc(t.title)}</b></div>
       <div class="meta">${t.words} words · ${counts["t:" + t.id] || 0} saved${t.source ? " · " + esc(t.source.replace(/^https?:\/\/(www\.)?/, "").split("/")[0]) : ""}</div>
     </a>`).join("") || `<div class="empty">No texts yet.</div>`}</div>
-    <p class="howto">To add a text, drop a PDF or .txt into <code>inputs/</code> and ask Claude Code to process it.</p></div>`;
+    ${Cloud.user ? `<div class="suggest ui"><div class="sg-head"><h2>Suggest a text</h2>
+        <button class="btn primary" id="sg-new">+ Suggest</button></div>
+      <p class="muted small">Paste an article or a link. It will be processed — words, translations and phrases —
+        and appear here when it's ready.</p><div id="sg-list"></div></div>`
+      : `<p class="howto">To add a text, drop a PDF or .txt into <code>inputs/</code> and ask Claude Code to process it.</p>`}</div>`;
+  if (Cloud.user) {
+    $("#sg-new").onclick = openSuggestDialog;
+    renderSuggestions();
+  }
+}
+const SG_STATUS = { new: "Waiting", processing: "In progress", done: "Ready", rejected: "Not added" };
+async function renderSuggestions() {
+  const box = $("#sg-list"); if (!box) return;
+  const rows = await Cloud.mySuggestions();
+  box.innerHTML = rows.length ? `<ul class="sg-rows">${rows.map((r) => `<li>
+      <div><b>${esc(r.title || r.source_url || "Untitled")}</b>
+        <div class="muted small">${new Date(r.created_at).toLocaleDateString("en-US", { month: "short", day: "numeric" })}${r.reply ? " · " + esc(r.reply) : ""}</div></div>
+      <span class="pill sg-${r.status}">${SG_STATUS[r.status] || r.status}</span></li>`).join("")}</ul>` : "";
+}
+function openSuggestDialog() {
+  openModal(`<button class="x" data-close aria-label="Close">×</button><b>Suggest a text</b>
+    <form id="sg-form" class="sg-form">
+      <label>Title<input class="answer" id="sg-title" maxlength="200" placeholder="e.g. Historia del mate"></label>
+      <label>Link (optional)<input class="answer" id="sg-url" type="url" placeholder="https://…"></label>
+      <label>Text<textarea class="answer" id="sg-body" rows="8" placeholder="Paste the full text here (recommended — many sites block automatic download)"></textarea></label>
+      <label>Note (optional)<input class="answer" id="sg-note" maxlength="300" placeholder="e.g. only the first chapter"></label>
+    </form>
+    <div id="sg-msg" class="muted small"></div>
+    <div class="row-btns"><button class="btn" data-close>Cancel</button><button class="btn primary" id="sg-send">Send</button></div>`);
+  $("#sg-title").focus();
+  $("#sg-send").onclick = async () => {
+    const row = { title: $("#sg-title").value.trim(), source_url: $("#sg-url").value.trim(),
+      body: $("#sg-body").value.trim(), note: $("#sg-note").value.trim() };
+    if (!row.body && !row.source_url) { $("#sg-msg").textContent = "Paste the text or a link."; return; }
+    if (row.body.length > 400000) { $("#sg-msg").textContent = "That's too long — send one chapter at a time."; return; }
+    $("#sg-send").disabled = true; $("#sg-msg").textContent = "Sending…";
+    const err = await Cloud.suggest(row);
+    if (err) { $("#sg-send").disabled = false; $("#sg-msg").textContent = "Couldn't send: " + err.message; return; }
+    closeModal(); renderSuggestions();
+  };
 }
 
 // ---------- reader ----------
