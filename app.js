@@ -307,17 +307,58 @@ async function renderSuggestions() {
         <div class="muted small">${new Date(r.created_at).toLocaleDateString("en-US", { month: "short", day: "numeric" })}${r.reply ? " · " + esc(r.reply) : ""}</div></div>
       <span class="pill sg-${r.status}">${SG_STATUS[r.status] || r.status}</span></li>`).join("")}</ul>` : "";
 }
+/** Markdown → plain text the reader can use: one paragraph per line, headings on their own line, no markup. */
+function markdownToText(md) {
+  let t = md.replace(/\r\n?/g, "\n").replace(/^---\n[\s\S]*?\n---\n/, "");          // front matter
+  t = t.replace(/^```[^\n]*\n[\s\S]*?^```[^\n]*$/gm, "").replace(/<[^>]+>/g, "");          // code blocks, html tags
+  const lines = t.split("\n").map((ln) => ln
+    .replace(/!\[([^\]]*)\]\([^)]*\)/g, "$1")                                         // images → alt text
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")                                          // links → link text
+    .replace(/(\*\*|__)(.+?)\1/g, "$2").replace(/\*(?=\S)(.+?)(?<=\S)\*/g, "$1")
+    .replace(/(?<![\p{L}\d])_(?=\S)(.+?)(?<=\S)_(?![\p{L}\d])/gu, "$1")                     // bold / italics (not snake_case)
+    .replace(/`([^`]+)`/g, "$1").replace(/~~(.+?)~~/g, "$1")
+    .replace(/^\s{0,3}>\s?/, "").replace(/^\s*([-*+]|\d+[.)])\s+/, "• ")                  // quotes, list markers
+    .replace(/^\s*\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)*\|?\s*$/, "")                        // table separator row
+    .replace(/^\s*\|?(.*?)\|?\s*$/, (m, x) => (m.includes("|") ? "• " + x.split("|").map((c) => c.trim()).join(" — ") : m))
+    .replace(/^\s*([-*_]\s*){3,}$/, "").replace(/\s+$/, ""));
+  const out = []; let para = [], title = "";
+  const flush = () => { if (para.length) { out.push(para.join(" ")); para = []; } };
+  for (const ln of lines) {
+    const h = ln.match(/^\s*#{1,6}\s+(.*?)\s*#*$/);
+    if (h) { flush(); out.push(h[1]); if (!title) title = h[1]; continue; }
+    if (/^\s*-{3,}\s*$|^\s*={3,}\s*$/.test(ln)) { continue; }
+    if (!ln.trim()) { flush(); continue; }
+    if (ln.startsWith("• ")) { flush(); out.push(ln.slice(2)); continue; }                // each list item = own line
+    para.push(ln.trim());
+  }
+  flush();
+  return { title, body: out.filter((x) => x && !/^[-—|\s]+$/.test(x)).join("\n") };
+}
 function openSuggestDialog() {
   openModal(`<button class="x" data-close aria-label="Close">×</button><b>Suggest a text</b>
     <form id="sg-form" class="sg-form">
       <label>Title<input class="answer" id="sg-title" maxlength="200" placeholder="e.g. Historia del mate"></label>
       <label>Link (optional)<input class="answer" id="sg-url" type="url" placeholder="https://…"></label>
-      <label>Text<textarea class="answer" id="sg-body" rows="8" placeholder="Paste the full text here (recommended — many sites block automatic download)"></textarea></label>
+      <div class="sg-text-head"><span>Text</span>
+        <label class="attach"><input type="file" id="sg-file" accept=".md,.markdown,.txt,text/markdown,text/plain" hidden>
+          <span class="btn small-btn">📎 Attach .md / .txt</span></label></div>
+      <textarea class="answer" id="sg-body" rows="8" placeholder="Paste the full text here, or attach a .md / .txt file"></textarea>
+      <div id="sg-file-msg" class="muted small"></div>
       <label>Note (optional)<input class="answer" id="sg-note" maxlength="300" placeholder="e.g. only the first chapter"></label>
     </form>
     <div id="sg-msg" class="muted small"></div>
     <div class="row-btns"><button class="btn" data-close>Cancel</button><button class="btn primary" id="sg-send">Send</button></div>`);
   $("#sg-title").focus();
+  $("#sg-file").onchange = async (e) => {
+    const f = e.target.files[0]; if (!f) return;
+    if (f.size > 1_000_000) { $("#sg-file-msg").textContent = "That file is too big — send one chapter at a time."; return; }
+    const raw = await f.text();
+    const isMd = /\.(md|markdown)$/i.test(f.name) || f.type === "text/markdown";
+    const { title, body } = isMd ? markdownToText(raw) : { title: "", body: raw.trim() };
+    $("#sg-body").value = body;
+    if (!$("#sg-title").value.trim()) $("#sg-title").value = title || f.name.replace(/\.[^.]+$/, "");
+    $("#sg-file-msg").textContent = `Loaded ${f.name} — ${body.length.toLocaleString("en-US")} characters${isMd ? ", Markdown converted to plain text" : ""}. You can edit it before sending.`;
+  };
   $("#sg-send").onclick = async () => {
     const row = { title: $("#sg-title").value.trim(), source_url: $("#sg-url").value.trim(),
       body: $("#sg-body").value.trim(), note: $("#sg-note").value.trim() };
