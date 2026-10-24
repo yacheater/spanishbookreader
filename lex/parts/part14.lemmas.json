@@ -1,0 +1,831 @@
+{
+ "presentar.v": {
+  "en": "to present; to show"
+ },
+ "presente.adj": {
+  "en": "present; current"
+ },
+ "preservar.v": {
+  "en": "to preserve"
+ },
+ "prestar.v": {
+  "en": "to lend; to give (prestar atención: to pay attention)"
+ },
+ "prestigio.n": {
+  "en": "prestige",
+  "g": "m"
+ },
+ "presto.adj": {
+  "en": "ready; prompt; open (to)"
+ },
+ "presupuestario.adj": {
+  "en": "budgetary; budget"
+ },
+ "pretender.v": {
+  "en": "to aim to; to seek; to claim"
+ },
+ "previo.adj": {
+  "en": "previous; prior"
+ },
+ "primeramente.adv": {
+  "en": "first; in the first place"
+ },
+ "primordial.adj": {
+  "en": "primordial; fundamental"
+ },
+ "principal.adj": {
+  "en": "main; principal"
+ },
+ "principalmente.adv": {
+  "en": "mainly; principally"
+ },
+ "principio.n": {
+  "en": "beginning; principle",
+  "g": "m"
+ },
+ "prioridad.n": {
+  "en": "priority",
+  "g": "f"
+ },
+ "privilegiadamente.adv": {
+  "en": "in a privileged way; above all"
+ },
+ "privilegiado.adj": {
+  "en": "privileged"
+ },
+ "probable.adj": {
+  "en": "probable; likely"
+ },
+ "problema.n": {
+  "en": "problem",
+  "g": "m"
+ },
+ "procedencia.n": {
+  "en": "origin; provenance",
+  "g": "f"
+ },
+ "proceder.v": {
+  "en": "to proceed; to act"
+ },
+ "proceso.n": {
+  "en": "process",
+  "g": "m"
+ },
+ "procurar.v": {
+  "en": "to try; to make sure; to seek"
+ },
+ "producir.v": {
+  "en": "to produce; to cause"
+ },
+ "producto.n": {
+  "en": "product; result (producto de: resulting from)",
+  "g": "m"
+ },
+ "profano.adj": {
+  "en": "profane; secular"
+ },
+ "profesional.n": {
+  "en": "professional",
+  "g": "m/f"
+ },
+ "profundo.adj": {
+  "en": "deep; profound"
+ },
+ "profundizar.v": {
+  "en": "to go deeper (into); to examine in depth"
+ },
+ "programa.n": {
+  "en": "programme; program",
+  "g": "m"
+ },
+ "prohibir.v": {
+  "en": "to ban; to prohibit",
+  "m": "í"
+ },
+ "prolongado.adj": {
+  "en": "prolonged; lengthy"
+ },
+ "promocionar.v": {
+  "en": "to promote; to advertise (promocionarse: to promote oneself)"
+ },
+ "promover.v": {
+  "en": "to promote; to encourage",
+  "m": "o>ue"
+ },
+ "promulgar.v": {
+  "en": "to promulgate; to proclaim officially"
+ },
+ "propio.adj": {
+  "en": "own; proper; typical"
+ },
+ "propiciar.v": {
+  "en": "to foster; to bring about; to make possible"
+ },
+ "propiedad.n": {
+  "en": "property; ownership",
+  "g": "f"
+ },
+ "proponer.v": {
+  "en": "to propose; to put forward"
+ },
+ "propósito.n": {
+  "en": "purpose; aim",
+  "g": "m"
+ },
+ "proseguir.v": {
+  "en": "to continue; to go on",
+  "m": "e>i"
+ },
+ "protección.n": {
+  "en": "protection",
+  "g": "f"
+ },
+ "protector.n": {
+  "en": "protector; guardian",
+  "g": "m"
+ },
+ "protector.adj": {
+  "en": "protective; guardian",
+  "f": "protectora"
+ },
+ "proteger.v": {
+  "en": "to protect"
+ },
+ "prototípico.adj": {
+  "en": "prototypical; stereotypical"
+ },
+ "proveedor.n": {
+  "en": "provider; supplier",
+  "g": "m"
+ },
+ "proveniente.adj": {
+  "en": "coming from; originating"
+ },
+ "provenir.v": {
+  "en": "to come from; to originate"
+ },
+ "provisión.n": {
+  "en": "provision; supply",
+  "g": "f"
+ },
+ "proximidad.n": {
+  "en": "closeness; proximity",
+  "g": "f"
+ },
+ "proyecto.n": {
+  "en": "project; plan",
+  "g": "m"
+ },
+ "prueba.n": {
+  "en": "proof; test",
+  "g": "f"
+ },
+ "práctica.n": {
+  "en": "practice",
+  "g": "f"
+ },
+ "próximo.adj": {
+  "en": "next; upcoming; near"
+ },
+ "psicotrópico.adj": {
+  "en": "psychotropic; mind-altering"
+ },
+ "psiquiatra.n": {
+  "en": "psychiatrist",
+  "g": "m/f"
+ },
+ "publicación.n": {
+  "en": "publication",
+  "g": "f"
+ },
+ "publicar.v": {
+  "en": "to publish"
+ },
+ "poder.v": {
+  "en": "can; to be able to"
+ },
+ "pues.conj": {
+  "en": "since; because; so; then"
+ },
+ "puerta.n": {
+  "en": "door",
+  "g": "f"
+ },
+ "puesta.n": {
+  "en": "putting; setting (puesta en …: bringing into …)",
+  "g": "f"
+ },
+ "poner.v": {
+  "en": "to put; to place"
+ },
+ "puna.n": {
+  "en": "puna: high Andean plateau",
+  "g": "f"
+ },
+ "puntería.n": {
+  "en": "aim; marksmanship",
+  "g": "f"
+ },
+ "puntiagudo.adj": {
+  "en": "pointed; sharp-peaked"
+ },
+ "punto.n": {
+  "en": "point; dot",
+  "g": "m"
+ },
+ "pureza.n": {
+  "en": "purity",
+  "g": "f"
+ },
+ "purismo.n": {
+  "en": "purism",
+  "g": "m"
+ },
+ "puro.adj": {
+  "en": "pure"
+ },
+ "pájaro.n": {
+  "en": "bird",
+  "g": "m"
+ },
+ "público.adj": {
+  "en": "public"
+ },
+ "quebrar.v": {
+  "en": "to break; to shatter",
+  "m": "e>ie"
+ },
+ "quechua.adj": {
+  "en": "Quechua"
+ },
+ "quedar.v": {
+  "en": "to remain; to be left; to end up"
+ },
+ "querer.v": {
+  "en": "to want; to love"
+ },
+ "quien.pron": {
+  "en": "who; whom"
+ },
+ "quimérico.adj": {
+  "en": "chimerical; fantastic"
+ },
+ "quince.num": {
+  "en": "fifteen"
+ },
+ "quién.pron": {
+  "en": "who? (question)"
+ },
+ "qullu.other": {
+  "en": "qullu: hill, mountain (Aymara)"
+ },
+ "radicalmente.adv": {
+  "en": "radically; fundamentally"
+ },
+ "ramificarse.v": {
+  "en": "to branch out; to ramify"
+ },
+ "rao.other": {
+  "en": "rao: Shipibo-Konibo 'plants with power' (medicinal and visionary plants)"
+ },
+ "raro.adj": {
+  "en": "strange; rare (nada de raro: nothing unusual)"
+ },
+ "rayar.v": {
+  "en": "to scratch; to score; to line"
+ },
+ "raíz.n": {
+  "en": "root (a raíz de: as a result of)",
+  "g": "f"
+ },
+ "reaccionar.v": {
+  "en": "to react"
+ },
+ "real.adj": {
+  "en": "real; royal"
+ },
+ "realidad.n": {
+  "en": "reality (en realidad: actually)",
+  "g": "f"
+ },
+ "realista.adj": {
+  "en": "realistic; realist"
+ },
+ "realizar.v": {
+  "en": "to carry out; to perform; to make"
+ },
+ "rebasar.v": {
+  "en": "to go beyond; to exceed"
+ },
+ "recepción.n": {
+  "en": "reception; receiving",
+  "g": "f"
+ },
+ "recibir.v": {
+  "en": "to receive"
+ },
+ "reclamar.v": {
+  "en": "to claim; to demand"
+ },
+ "reclamo.n": {
+  "en": "claim; demand; complaint",
+  "g": "m"
+ },
+ "recluir.v": {
+  "en": "to seclude; to confine"
+ },
+ "recobrar.v": {
+  "en": "to regain; to recover"
+ },
+ "recoger.v": {
+  "en": "to collect; to pick up"
+ },
+ "reconocer.v": {
+  "en": "to recognize; to acknowledge"
+ },
+ "reconocible.adj": {
+  "en": "recognizable"
+ },
+ "reconocido.adj": {
+  "en": "renowned; recognized"
+ },
+ "reconocimiento.n": {
+  "en": "recognition",
+  "g": "m"
+ },
+ "recordar.v": {
+  "en": "to remember; to recall; to remind",
+  "m": "o>ue"
+ },
+ "recordatorio.n": {
+  "en": "reminder",
+  "g": "m"
+ },
+ "recorte.n": {
+  "en": "cut; cutback",
+  "g": "m"
+ },
+ "rectilíneo.adj": {
+  "en": "rectilinear; straight-lined"
+ },
+ "recto.adj": {
+  "en": "straight; right (ángulo recto: right angle)"
+ },
+ "recubrir.v": {
+  "en": "to cover; to coat"
+ },
+ "recurrente.adj": {
+  "en": "recurrent; recurring"
+ },
+ "recurso.n": {
+  "en": "resource; means",
+  "g": "m"
+ },
+ "recíproco.adj": {
+  "en": "reciprocal; mutual"
+ },
+ "red.n": {
+  "en": "network; net",
+  "g": "f"
+ },
+ "redacción.n": {
+  "en": "writing; drafting",
+  "g": "f"
+ },
+ "redactar.v": {
+  "en": "to write; to draft"
+ },
+ "reemplazar.v": {
+  "en": "to replace"
+ },
+ "referencia.n": {
+  "en": "reference",
+  "g": "f"
+ },
+ "referir.v": {
+  "en": "to refer to; to mention; to call (as)",
+  "m": "e>ie,i"
+ },
+ "referirse.v": {
+  "en": "to refer to",
+  "m": "e>ie,i"
+ },
+ "refinamiento.n": {
+  "en": "refinement",
+  "g": "m"
+ },
+ "reforzar.v": {
+  "en": "to reinforce; to strengthen",
+  "m": "o>ue"
+ },
+ "refutar.v": {
+  "en": "to refute"
+ },
+ "regional.adj": {
+  "en": "regional"
+ },
+ "registrar.v": {
+  "en": "to record; to register; to document"
+ },
+ "registro.n": {
+  "en": "record; documentation; register",
+  "g": "m"
+ },
+ "región.n": {
+  "en": "region",
+  "g": "f"
+ },
+ "reglamentar.v": {
+  "en": "to regulate (by rules)"
+ },
+ "regular.adj": {
+  "en": "regular"
+ },
+ "rehabilitación.n": {
+  "en": "rehabilitation",
+  "g": "f"
+ },
+ "reificación.n": {
+  "en": "reification (treating something as a fixed thing)",
+  "g": "f"
+ },
+ "reificar.v": {
+  "en": "to reify (to turn into a fixed thing)"
+ },
+ "reinterpretar.v": {
+  "en": "to reinterpret"
+ },
+ "reiterativamente.adv": {
+  "en": "repeatedly"
+ },
+ "relacionar.v": {
+  "en": "to relate; to associate"
+ },
+ "relacionarse.v": {
+  "en": "to relate (to); to interact (with)"
+ },
+ "relacionador.adj": {
+  "en": "relating; that creates relations",
+  "f": "relacionadora"
+ },
+ "relacional.adj": {
+  "en": "relational"
+ },
+ "relacionalmente.adv": {
+  "en": "relationally; through relations"
+ },
+ "relacionamiento.n": {
+  "en": "relationship; way of relating",
+  "g": "m"
+ },
+ "relatar.v": {
+  "en": "to tell; to recount"
+ },
+ "relativo.adj": {
+  "en": "relative; relating (to)"
+ },
+ "relativamente.adv": {
+  "en": "relatively"
+ },
+ "relevancia.n": {
+  "en": "relevance; importance",
+  "g": "f"
+ },
+ "relevante.adj": {
+  "en": "relevant; important"
+ },
+ "religiosidad.n": {
+  "en": "religiosity; religious life",
+  "g": "f"
+ },
+ "religioso.adj": {
+  "en": "religious"
+ },
+ "relleno.adj": {
+  "en": "filled; filled-in; stuffed"
+ },
+ "reluciente.adj": {
+  "en": "shiny; gleaming"
+ },
+ "relucir.v": {
+  "en": "to shine; to gleam (hacer relucir: to bring out, make shine)"
+ },
+ "rememorar.v": {
+  "en": "to recall; to remember"
+ },
+ "remunerado.adj": {
+  "en": "paid; remunerated"
+ },
+ "renombrado.adj": {
+  "en": "renowned; famous"
+ },
+ "renombre.n": {
+  "en": "renown; fame",
+  "g": "m"
+ },
+ "reparar.v": {
+  "en": "to repair; to make amends for"
+ },
+ "repartir.v": {
+  "en": "to distribute; to share out"
+ },
+ "repentinamente.adv": {
+  "en": "suddenly"
+ },
+ "repercusión.n": {
+  "en": "repercussion; impact",
+  "g": "f"
+ },
+ "repertorio.n": {
+  "en": "repertoire; range",
+  "g": "m"
+ },
+ "replicar.v": {
+  "en": "to replicate; to reproduce; to reply"
+ },
+ "representación.n": {
+  "en": "representation; depiction",
+  "g": "f"
+ },
+ "representar.v": {
+  "en": "to represent; to depict"
+ },
+ "reproducir.v": {
+  "en": "to reproduce; to repeat"
+ },
+ "requisito.n": {
+  "en": "requirement",
+  "g": "m"
+ },
+ "residir.v": {
+  "en": "to reside; to lie (in)"
+ },
+ "residencia.n": {
+  "en": "residence",
+  "g": "f"
+ },
+ "resistencia.n": {
+  "en": "resistance",
+  "g": "f"
+ },
+ "resolución.n": {
+  "en": "resolution; decree",
+  "g": "f"
+ },
+ "respaldar.v": {
+  "en": "to back; to support"
+ },
+ "respectivamente.adv": {
+  "en": "respectively"
+ },
+ "respectivo.adj": {
+  "en": "respective"
+ },
+ "respecto.n": {
+  "en": "respect, regard (respecto a: with regard to)",
+  "g": "m"
+ },
+ "respetar.v": {
+  "en": "to respect; to observe"
+ },
+ "respetuoso.adj": {
+  "en": "respectful"
+ },
+ "responder.v": {
+  "en": "to answer; to respond"
+ },
+ "resto.n": {
+  "en": "rest; remainder",
+  "g": "m"
+ },
+ "restricción.n": {
+  "en": "restriction",
+  "g": "f"
+ },
+ "restringir.v": {
+  "en": "to restrict; to limit"
+ },
+ "resonar.v": {
+  "en": "to resonate; to echo",
+  "m": "o>ue"
+ },
+ "resultar.v": {
+  "en": "to turn out (to be); to prove"
+ },
+ "resultado.n": {
+  "en": "result",
+  "g": "m"
+ },
+ "retirar.v": {
+  "en": "to withdraw; to remove"
+ },
+ "retiro.n": {
+  "en": "withdrawal; retreat",
+  "g": "m"
+ },
+ "retomar.v": {
+  "en": "to take up; to borrow (an idea); to resume"
+ },
+ "retorno.n": {
+  "en": "return",
+  "g": "m"
+ },
+ "retoñar.v": {
+  "en": "to sprout; to shoot again"
+ },
+ "retoño.n": {
+  "en": "shoot; sprout",
+  "g": "m"
+ },
+ "reunir.v": {
+  "en": "to bring together; to gather (reunirse: to meet)",
+  "m": "ú"
+ },
+ "revisión.n": {
+  "en": "review; revision",
+  "g": "f"
+ },
+ "ribereño.n": {
+  "en": "riverside dweller",
+  "g": "m"
+ },
+ "riesgo.n": {
+  "en": "risk",
+  "g": "m"
+ },
+ "rigurosamente.adv": {
+  "en": "rigorously; strictly"
+ },
+ "rito.n": {
+  "en": "rite",
+  "g": "m"
+ },
+ "ritual.adj": {
+  "en": "ritual"
+ },
+ "ritualmente.adv": {
+  "en": "ritually"
+ },
+ "rojizo.adj": {
+  "en": "reddish"
+ },
+ "ropa.n": {
+  "en": "clothes; clothing",
+  "g": "f"
+ },
+ "rostro.n": {
+  "en": "face",
+  "g": "m"
+ },
+ "rural.adj": {
+  "en": "rural"
+ },
+ "río.n": {
+  "en": "river",
+  "g": "m"
+ },
+ "saber.v": {
+  "en": "to know"
+ },
+ "saber.n": {
+  "en": "knowledge (saberes: bodies of knowledge)",
+  "g": "m"
+ },
+ "sabio.adj": {
+  "en": "wise"
+ },
+ "sabio.n": {
+  "en": "wise person; sage",
+  "g": "m"
+ },
+ "saciar.v": {
+  "en": "to satisfy; to satiate"
+ },
+ "sacralidad.n": {
+  "en": "sacredness; sacred character",
+  "g": "f"
+ },
+ "sagrado.adj": {
+  "en": "sacred; holy"
+ },
+ "sal.n": {
+  "en": "salt",
+  "g": "f"
+ },
+ "salir.v": {
+  "en": "to go out; to come out; to be issued"
+ },
+ "salud.n": {
+  "en": "health",
+  "g": "f"
+ },
+ "saludar.v": {
+  "en": "to greet"
+ },
+ "salvaguarda.n": {
+  "en": "safeguarding; protection",
+  "g": "f"
+ },
+ "salvaguardar.v": {
+  "en": "to safeguard"
+ },
+ "salvaje.adj": {
+  "en": "wild; savage"
+ },
+ "salvajismo.n": {
+  "en": "savagery",
+  "g": "m"
+ },
+ "sami.other": {
+  "en": "sami: Shipibo-Konibo ritual diet (seclusion and food restrictions)"
+ },
+ "sanar.v": {
+  "en": "to heal; to cure"
+ },
+ "sangre.n": {
+  "en": "blood",
+  "g": "f"
+ },
+ "savia.n": {
+  "en": "sap",
+  "g": "f"
+ },
+ "secreto.adj": {
+  "en": "secret"
+ },
+ "sector.n": {
+  "en": "sector; area",
+  "g": "m"
+ },
+ "secundario.adj": {
+  "en": "secondary"
+ },
+ "sed.n": {
+  "en": "thirst",
+  "g": "f"
+ },
+ "seguidor.n": {
+  "en": "follower",
+  "g": "m"
+ },
+ "segundo.adj": {
+  "en": "second"
+ },
+ "seguro.adj": {
+  "en": "safe; sure; secure"
+ },
+ "sello.n": {
+  "en": "seal; stamp; hallmark",
+  "g": "m"
+ },
+ "sembrío.n": {
+  "en": "sown field; crop",
+  "g": "m"
+ },
+ "semejante.adj": {
+  "en": "similar; such"
+ },
+ "semilla.n": {
+  "en": "seed",
+  "g": "f"
+ },
+ "sentarse.v": {
+  "en": "to sit down",
+  "m": "e>ie"
+ },
+ "sentido.n": {
+  "en": "meaning; sense",
+  "g": "m"
+ },
+ "sentimiento.n": {
+  "en": "feeling; sentiment",
+  "g": "m"
+ },
+ "sentir.v": {
+  "en": "to feel; to be sorry",
+  "m": "e>ie,i"
+ },
+ "separadamente.adv": {
+  "en": "separately"
+ },
+ "separado.adj": {
+  "en": "separate"
+ },
+ "septiembre.n": {
+  "en": "September",
+  "g": "m"
+ },
+ "ser.v": {
+  "en": "to be"
+ },
+ "ser.n": {
+  "en": "being",
+  "g": "m"
+ },
+ "seriamente.adv": {
+  "en": "seriously"
+ },
+ "serpenteante.adj": {
+  "en": "winding; meandering"
+ }
+}

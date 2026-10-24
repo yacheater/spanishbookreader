@@ -1,0 +1,691 @@
+{
+ "abarcar.v": {
+  "en": "to cover; to include; to take in"
+ },
+ "abertura.n": {
+  "en": "opening; aperture",
+  "g": "f"
+ },
+ "abierto.adj": {
+  "en": "open"
+ },
+ "abogado.n": {
+  "en": "lawyer",
+  "g": "m"
+ },
+ "abordar.v": {
+  "en": "to address; to deal with; to board"
+ },
+ "abril.n": {
+  "en": "April",
+  "g": "m"
+ },
+ "abrir.v": {
+  "en": "to open"
+ },
+ "abstracto.adj": {
+  "en": "abstract"
+ },
+ "abundar.v": {
+  "en": "to abound; to be plentiful"
+ },
+ "abundante.adj": {
+  "en": "abundant; plentiful"
+ },
+ "acarrear.v": {
+  "en": "to bring about; to cause; to carry"
+ },
+ "acceder.v": {
+  "en": "to access; to gain access (to); to agree"
+ },
+ "accesorio.n": {
+  "en": "accessory",
+  "g": "m"
+ },
+ "acción.n": {
+  "en": "action; act",
+  "g": "f"
+ },
+ "acentuar.v": {
+  "en": "to stress; to emphasize; to accentuate",
+  "m": "ú"
+ },
+ "acepción.n": {
+  "en": "sense; meaning (of a word)",
+  "g": "f"
+ },
+ "aceptación.n": {
+  "en": "acceptance; approval; popularity",
+  "g": "f"
+ },
+ "aceptar.v": {
+  "en": "to accept"
+ },
+ "acervo.n": {
+  "en": "heritage; body (of knowledge); store",
+  "g": "m"
+ },
+ "acoger.v": {
+  "en": "to welcome; to take in; (acogerse a) to embrace, adhere to"
+ },
+ "acompañar.v": {
+  "en": "to accompany; to keep company"
+ },
+ "acrílico.adj": {
+  "en": "acrylic"
+ },
+ "activamente.adv": {
+  "en": "actively"
+ },
+ "actividad.n": {
+  "en": "activity",
+  "g": "f"
+ },
+ "activista.n": {
+  "en": "activist",
+  "g": "m/f"
+ },
+ "actor.n": {
+  "en": "actor; agent; stakeholder",
+  "g": "m"
+ },
+ "actual.adj": {
+  "en": "current; present"
+ },
+ "actualidad.n": {
+  "en": "present; present time (en la actualidad = nowadays)",
+  "g": "f"
+ },
+ "actualmente.adv": {
+  "en": "currently; nowadays"
+ },
+ "aculturado.adj": {
+  "en": "acculturated"
+ },
+ "acusación.n": {
+  "en": "accusation",
+  "g": "f"
+ },
+ "adecuado.adj": {
+  "en": "appropriate; suitable; adequate"
+ },
+ "adherir.v": {
+  "en": "to adhere; to stick; (adherirse a) to follow, join",
+  "m": "e>ie,i"
+ },
+ "admirar.v": {
+  "en": "to admire"
+ },
+ "adoptar.v": {
+  "en": "to adopt"
+ },
+ "adornar.v": {
+  "en": "to adorn; to decorate"
+ },
+ "adorno.n": {
+  "en": "decoration; ornament",
+  "g": "m"
+ },
+ "adquirir.v": {
+  "en": "to acquire; to gain; to take on"
+ },
+ "adquisición.n": {
+  "en": "acquisition",
+  "g": "f"
+ },
+ "advertir.v": {
+  "en": "to notice; to observe; to warn",
+  "m": "e>ie,i"
+ },
+ "afectar.v": {
+  "en": "to affect"
+ },
+ "afectivo.adj": {
+  "en": "affective; emotional"
+ },
+ "afecto.n": {
+  "en": "affection",
+  "g": "m"
+ },
+ "afectividad.n": {
+  "en": "affectivity; emotional life",
+  "g": "f"
+ },
+ "afirmación.n": {
+  "en": "statement; claim; affirmation",
+  "g": "f"
+ },
+ "agosto.n": {
+  "en": "August",
+  "g": "m"
+ },
+ "agradable.adj": {
+  "en": "pleasant; nice"
+ },
+ "agradecer.v": {
+  "en": "to thank; to be grateful for"
+ },
+ "agradecimiento.n": {
+  "en": "gratitude; thanks",
+  "g": "m"
+ },
+ "agrado.n": {
+  "en": "liking; pleasure (ser de su agrado = to be to one's liking)",
+  "g": "m"
+ },
+ "agrícola.adj": {
+  "en": "agricultural; farming"
+ },
+ "agua.n": {
+  "en": "water",
+  "g": "f",
+  "art": "el"
+ },
+ "agudizar.v": {
+  "en": "to sharpen; to intensify"
+ },
+ "aire.n": {
+  "en": "air",
+  "g": "m"
+ },
+ "aislado.adj": {
+  "en": "isolated"
+ },
+ "alcanzar.v": {
+  "en": "to reach; to achieve; to attain"
+ },
+ "alcohol.n": {
+  "en": "alcohol",
+  "g": "m"
+ },
+ "alcohólico.adj": {
+  "en": "alcoholic"
+ },
+ "alfalfa.n": {
+  "en": "alfalfa",
+  "g": "f"
+ },
+ "alférez.n": {
+  "en": "alférez: sponsor of a village fiesta (Andes); ensign",
+  "g": "m",
+  "pl": "alféreces"
+ },
+ "algodón.n": {
+  "en": "cotton",
+  "g": "m"
+ },
+ "alguno.det": {
+  "en": "some; any"
+ },
+ "alimentación.n": {
+  "en": "feeding; diet; nutrition",
+  "g": "f"
+ },
+ "alimentar.v": {
+  "en": "to feed; to nourish"
+ },
+ "alimenticio.adj": {
+  "en": "food (adj.); nutritional"
+ },
+ "alimento.n": {
+  "en": "food; nourishment",
+  "g": "m"
+ },
+ "t´alla.other": {
+  "en": "t´alla: Aymara 'lady, queen'; female counterpart of a mallku (mountain lord), used as an honorific"
+ },
+ "alma.n": {
+  "en": "soul",
+  "g": "f",
+  "art": "el"
+ },
+ "almita.n": {
+  "en": "little soul; (Andes) soul of a dead ancestor",
+  "g": "f"
+ },
+ "alto.adj": {
+  "en": "high; tall; upper"
+ },
+ "alteridad.n": {
+  "en": "otherness; alterity",
+  "g": "f"
+ },
+ "alterno.adj": {
+  "en": "alternative; alternate"
+ },
+ "alternado.adj": {
+  "en": "alternate; alternating"
+ },
+ "alternadamente.adv": {
+  "en": "alternately; in turn"
+ },
+ "alternar.v": {
+  "en": "to alternate"
+ },
+ "altura.n": {
+  "en": "height; altitude",
+  "g": "f"
+ },
+ "alucinógeno.n": {
+  "en": "hallucinogen",
+  "g": "m"
+ },
+ "aludir.v": {
+  "en": "to allude (to); to refer (to)"
+ },
+ "amar.v": {
+  "en": "to love"
+ },
+ "amante.n": {
+  "en": "lover",
+  "g": "m/f"
+ },
+ "amazónico.adj": {
+  "en": "Amazonian"
+ },
+ "ambos.det": {
+  "en": "both"
+ },
+ "ambiental.adj": {
+  "en": "environmental"
+ },
+ "ambigüedad.n": {
+  "en": "ambiguity",
+  "g": "f"
+ },
+ "amigo.n": {
+  "en": "friend",
+  "g": "m"
+ },
+ "aminorar.v": {
+  "en": "to reduce; to lessen"
+ },
+ "amoroso.adj": {
+  "en": "loving; of love; amorous"
+ },
+ "amplio.adj": {
+  "en": "broad; wide; extensive"
+ },
+ "ampliamente.adv": {
+  "en": "widely; extensively"
+ },
+ "amputar.v": {
+  "en": "to amputate; to cut off"
+ },
+ "anaconda.n": {
+  "en": "anaconda",
+  "g": "f"
+ },
+ "analizar.v": {
+  "en": "to analyse"
+ },
+ "anaranjado.adj": {
+  "en": "orange; orangey"
+ },
+ "ancestral.adj": {
+  "en": "ancestral"
+ },
+ "ancestro.n": {
+  "en": "ancestor",
+  "g": "m"
+ },
+ "andino.adj": {
+  "en": "Andean"
+ },
+ "animal.n": {
+  "en": "animal",
+  "g": "m"
+ },
+ "ante.prep": {
+  "en": "before; in front of; in the face of"
+ },
+ "anterior.adj": {
+  "en": "previous; earlier; former"
+ },
+ "anteriormente.adv": {
+  "en": "previously; earlier"
+ },
+ "antiguo.adj": {
+  "en": "old; ancient; long-standing"
+ },
+ "antropología.n": {
+  "en": "anthropology",
+  "g": "f"
+ },
+ "antropológico.adj": {
+  "en": "anthropological"
+ },
+ "antropólogo.n": {
+  "en": "anthropologist",
+  "g": "m"
+ },
+ "anual.adj": {
+  "en": "annual; yearly"
+ },
+ "anualmente.adv": {
+  "en": "annually; every year"
+ },
+ "anular.v": {
+  "en": "to cancel; to annul; to cancel out"
+ },
+ "aparecer.v": {
+  "en": "to appear"
+ },
+ "aparición.n": {
+  "en": "appearance; emergence",
+  "g": "f"
+ },
+ "apelativo.n": {
+  "en": "name; form of address; epithet",
+  "g": "m"
+ },
+ "apertura.n": {
+  "en": "opening",
+  "g": "f"
+ },
+ "aplicar.v": {
+  "en": "to apply"
+ },
+ "aplicación.n": {
+  "en": "application; implementation",
+  "g": "f"
+ },
+ "apoyo.n": {
+  "en": "support",
+  "g": "m"
+ },
+ "apreciable.adj": {
+  "en": "considerable; appreciable"
+ },
+ "aprender.v": {
+  "en": "to learn"
+ },
+ "aprendizaje.n": {
+  "en": "learning",
+  "g": "m"
+ },
+ "apropiación.n": {
+  "en": "appropriation",
+  "g": "f"
+ },
+ "apropiado.adj": {
+  "en": "appropriate; suitable"
+ },
+ "apropiar.v": {
+  "en": "to appropriate; (apropiarse de) to take over"
+ },
+ "aproximación.n": {
+  "en": "approach; approximation",
+  "g": "f"
+ },
+ "apthapi.other": {
+  "en": "apthapi: Aymara custom of everyone bringing food to share at a communal meal (apthapiña = to do apthapi)"
+ },
+ "apuntar.v": {
+  "en": "to point (to); to aim; to note"
+ },
+ "apu.other": {
+  "en": "apu: Andean (Quechua) mountain lord; spirit of a sacred mountain"
+ },
+ "aquel.det": {
+  "en": "that (over there); those"
+ },
+ "aquello.pron": {
+  "en": "that (neuter: that thing, what)"
+ },
+ "arabesco.n": {
+  "en": "arabesque",
+  "g": "m"
+ },
+ "arbitrariamente.adv": {
+  "en": "arbitrarily"
+ },
+ "arbusto.n": {
+  "en": "shrub; bush",
+  "g": "m"
+ },
+ "argumentar.v": {
+  "en": "to argue"
+ },
+ "argumento.n": {
+  "en": "argument",
+  "g": "m"
+ },
+ "arma.n": {
+  "en": "weapon; arm",
+  "g": "f",
+  "art": "el"
+ },
+ "armazón.n": {
+  "en": "framework; frame",
+  "g": "f"
+ },
+ "aromático.adj": {
+  "en": "aromatic"
+ },
+ "arquetípico.adj": {
+  "en": "archetypal"
+ },
+ "arrodillarse.v": {
+  "en": "to kneel (down)"
+ },
+ "arte.n": {
+  "en": "art (pl. las artes)",
+  "g": "m"
+ },
+ "artesano.n": {
+  "en": "artisan; craftsman / craftswoman",
+  "g": "m"
+ },
+ "articular.v": {
+  "en": "to articulate; to link; to combine"
+ },
+ "artista.n": {
+  "en": "artist",
+  "g": "m/f"
+ },
+ "artículo.n": {
+  "en": "article",
+  "g": "m"
+ },
+ "asegurar.v": {
+  "en": "to assure; to state; to secure"
+ },
+ "asemejarse.v": {
+  "en": "to resemble; to be similar (to)"
+ },
+ "asesorar.v": {
+  "en": "to advise"
+ },
+ "aseverar.v": {
+  "en": "to assert; to affirm"
+ },
+ "asistir.v": {
+  "en": "to attend; to assist"
+ },
+ "asociación.n": {
+  "en": "association; link",
+  "g": "f"
+ },
+ "asociar.v": {
+  "en": "to associate"
+ },
+ "asomar.v": {
+  "en": "to appear; to show; to emerge"
+ },
+ "asombrar.v": {
+  "en": "to amaze; to astonish"
+ },
+ "asumir.v": {
+  "en": "to assume; to take on"
+ },
+ "asunto.n": {
+  "en": "matter; issue; subject",
+  "g": "m"
+ },
+ "atacameño.adj": {
+  "en": "Atacameño: of the Atacama people (Likan Antay) of northern Chile"
+ },
+ "atar.v": {
+  "en": "to tie; to bind"
+ },
+ "atardecer.n": {
+  "en": "dusk; late afternoon",
+  "g": "m"
+ },
+ "atmosférico.adj": {
+  "en": "atmospheric"
+ },
+ "atraer.v": {
+  "en": "to attract"
+ },
+ "atribuir.v": {
+  "en": "to attribute"
+ },
+ "audición.n": {
+  "en": "hearing; audition",
+  "g": "f"
+ },
+ "aumentar.v": {
+  "en": "to increase; to grow"
+ },
+ "aura.n": {
+  "en": "aura",
+  "g": "f",
+  "art": "el"
+ },
+ "autenticidad.n": {
+  "en": "authenticity",
+  "g": "f"
+ },
+ "autodefinirse.v": {
+  "en": "to define oneself"
+ },
+ "autor.n": {
+  "en": "author",
+  "g": "m"
+ },
+ "autoral.adj": {
+  "en": "author's; authorial (derechos autorales = copyright)"
+ },
+ "autoridad.n": {
+  "en": "authority; (local) official",
+  "g": "f"
+ },
+ "auténtico.adj": {
+  "en": "authentic; genuine"
+ },
+ "autónomamente.adv": {
+  "en": "autonomously; independently"
+ },
+ "ave.n": {
+  "en": "bird",
+  "g": "f",
+  "art": "el"
+ },
+ "aviador.adj": {
+  "en": "(Andes) provider, supplier of livelihood; aviator"
+ },
+ "avistar.v": {
+  "en": "to sight; to see from afar"
+ },
+ "awilitu.other": {
+  "en": "awilitu: Aymara 'grandparent' (from Spanish abuelito); respectful name for the mountains and snow peaks"
+ },
+ "ayahuasca.n": {
+  "en": "ayahuasca: psychoactive Amazonian brew made from the Banisteriopsis caapi vine",
+  "g": "f"
+ },
+ "ayahuasquero.adj": {
+  "en": "ayahuasca (adj.); (as a noun) ayahuasquero/a: healer who works with ayahuasca"
+ },
+ "ayllu.other": {
+  "en": "ayllu: Andean kin-based community, including its land and the other-than-human beings in it"
+ },
+ "aymara.adj": {
+  "en": "Aymara"
+ },
+ "ayudar.v": {
+  "en": "to help"
+ },
+ "aún.adv": {
+  "en": "still; yet; even (menos aún = even less)"
+ },
+ "bailar.v": {
+  "en": "to dance"
+ },
+ "baile.n": {
+  "en": "dance",
+  "g": "m"
+ },
+ "bala.n": {
+  "en": "bullet",
+  "g": "f"
+ },
+ "banquete.n": {
+  "en": "banquet; feast",
+  "g": "m"
+ },
+ "basar.v": {
+  "en": "to base; (basarse en) to be based on"
+ },
+ "base.n": {
+  "en": "basis; base",
+  "g": "f"
+ },
+ "beber.v": {
+  "en": "to drink"
+ },
+ "bebida.n": {
+  "en": "drink; beverage",
+  "g": "f"
+ },
+ "belleza.n": {
+  "en": "beauty",
+  "g": "f"
+ },
+ "beneficio.n": {
+  "en": "benefit",
+  "g": "m"
+ },
+ "benéfico.adj": {
+  "en": "beneficial; charitable"
+ },
+ "bewa.other": {
+  "en": "bewa: Shipibo-Konibo songs / healing chants"
+ },
+ "blanco.adj": {
+  "en": "white; (los blancos) white people, non-indigenous people"
+ },
+ "boca.n": {
+  "en": "mouth; opening",
+  "g": "f"
+ },
+ "bolsa.n": {
+  "en": "bag",
+  "g": "f"
+ },
+ "bolso.n": {
+  "en": "handbag; bag",
+  "g": "m"
+ },
+ "bordar.v": {
+  "en": "to embroider"
+ },
+ "bordado.n": {
+  "en": "embroidery",
+  "g": "m"
+ },
+ "borde.n": {
+  "en": "edge; border",
+  "g": "m"
+ },
+ "bosque.n": {
+  "en": "forest; woods",
+  "g": "m"
+ },
+ "botellita.n": {
+  "en": "small bottle",
+  "g": "f"
+ }
+}

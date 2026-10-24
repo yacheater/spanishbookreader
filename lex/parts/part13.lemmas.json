@@ -1,0 +1,782 @@
+{
+ "mineral.n": {
+  "en": "mineral",
+  "g": "m",
+  "pl": "minerales"
+ },
+ "minero.adj": {
+  "en": "mining; mineral"
+ },
+ "minería.n": {
+  "en": "mining",
+  "g": "f"
+ },
+ "ministerial.adj": {
+  "en": "ministerial"
+ },
+ "mirada.n": {
+  "en": "gaze; look",
+  "g": "f"
+ },
+ "mirar.v": {
+  "en": "to look (at); to watch"
+ },
+ "mira.n": {
+  "en": "aim; sight (con miras a = with a view to)",
+  "g": "f"
+ },
+ "mismo.det": {
+  "en": "same; -self"
+ },
+ "moda.n": {
+  "en": "fashion; trend",
+  "g": "f"
+ },
+ "modalidad.n": {
+  "en": "mode; form; type",
+  "g": "f"
+ },
+ "modelo.n": {
+  "en": "model",
+  "g": "m"
+ },
+ "mojón.n": {
+  "en": "boundary marker; landmark",
+  "g": "m",
+  "pl": "mojones"
+ },
+ "molestar.v": {
+  "en": "to bother; to annoy"
+ },
+ "monetario.adj": {
+  "en": "monetary"
+ },
+ "monetizado.adj": {
+  "en": "monetized"
+ },
+ "montaña.n": {
+  "en": "mountain",
+  "g": "f"
+ },
+ "montañoso.adj": {
+  "en": "mountainous; mountain"
+ },
+ "morada.n": {
+  "en": "dwelling; abode",
+  "g": "f"
+ },
+ "moral.adj": {
+  "en": "moral"
+ },
+ "motivación.n": {
+  "en": "motivation",
+  "g": "f"
+ },
+ "motivo.n": {
+  "en": "reason; motive; motif (design)",
+  "g": "m"
+ },
+ "movilizar.v": {
+  "en": "to mobilize; (movilizarse) to move about"
+ },
+ "msnm.other": {
+  "en": "m a.s.l. (metros sobre el nivel del mar, metres above sea level)"
+ },
+ "mucho.det": {
+  "en": "much; many; a lot (of)"
+ },
+ "mueble.adj": {
+  "en": "movable (bienes muebles = movable property)"
+ },
+ "muerto.adj": {
+  "en": "dead"
+ },
+ "muerte.n": {
+  "en": "death",
+  "g": "f"
+ },
+ "multiplicidad.n": {
+  "en": "multiplicity",
+  "g": "f"
+ },
+ "museo.n": {
+  "en": "museum",
+  "g": "m"
+ },
+ "musical.adj": {
+  "en": "musical"
+ },
+ "mutación.n": {
+  "en": "change; mutation",
+  "g": "f"
+ },
+ "mutuo.adj": {
+  "en": "mutual"
+ },
+ "mutuamente.adv": {
+  "en": "mutually; each other"
+ },
+ "máximo.adj": {
+  "en": "maximum; highest; supreme"
+ },
+ "médico.n": {
+  "en": "doctor; physician",
+  "g": "m/f"
+ },
+ "método.n": {
+  "en": "method",
+  "g": "m"
+ },
+ "nacer.v": {
+  "en": "to be born"
+ },
+ "nacional.adj": {
+  "en": "national"
+ },
+ "narración.n": {
+  "en": "narrative; story; telling",
+  "g": "f"
+ },
+ "natural.adj": {
+  "en": "natural"
+ },
+ "naturaleza.n": {
+  "en": "nature",
+  "g": "f"
+ },
+ "nawa.other": {
+  "en": "nawa: (Pano) outsiders; foreign or enemy peoples, desirable yet dangerous others"
+ },
+ "necesariamente.adv": {
+  "en": "necessarily"
+ },
+ "necesario.adj": {
+  "en": "necessary"
+ },
+ "necesidad.n": {
+  "en": "need; necessity",
+  "g": "f"
+ },
+ "necesitar.v": {
+  "en": "to need"
+ },
+ "nefasto.adj": {
+  "en": "harmful; ill-fated; malicious"
+ },
+ "negativamente.adv": {
+  "en": "negatively"
+ },
+ "negro.adj": {
+  "en": "black"
+ },
+ "nervadura.n": {
+  "en": "vein (of a leaf); ribbing",
+  "g": "f"
+ },
+ "nete.other": {
+  "en": "nete: (Shipibo) the colourful luminous aura that surrounds a person"
+ },
+ "neurálgico.adj": {
+  "en": "crucial; key (lit. neuralgic)"
+ },
+ "nevado.n": {
+  "en": "snow-capped peak",
+  "g": "m"
+ },
+ "ni.conj": {
+  "en": "nor; neither; not even"
+ },
+ "negar.v": {
+  "en": "to deny",
+  "m": "e>ie"
+ },
+ "nivel.n": {
+  "en": "level",
+  "g": "m"
+ },
+ "noción.n": {
+  "en": "notion; idea",
+  "g": "f"
+ },
+ "nombrar.v": {
+  "en": "to name; to call; to appoint"
+ },
+ "nombre.n": {
+  "en": "name",
+  "g": "m"
+ },
+ "nomenclatura.n": {
+  "en": "nomenclature; naming system",
+  "g": "f"
+ },
+ "normalmente.adv": {
+  "en": "normally; usually"
+ },
+ "norte.n": {
+  "en": "north",
+  "g": "m"
+ },
+ "nosotros.pron": {
+  "en": "we; us"
+ },
+ "novedad.n": {
+  "en": "novelty; something new; news",
+  "g": "f"
+ },
+ "novedoso.adj": {
+  "en": "novel; innovative; new"
+ },
+ "nuestro.det": {
+  "en": "our; ours"
+ },
+ "nueve.num": {
+  "en": "nine"
+ },
+ "nuevo.adj": {
+  "en": "new"
+ },
+ "nunca.adv": {
+  "en": "never"
+ },
+ "nutrir.v": {
+  "en": "to nourish; to feed; (nutrirse de) to feed on"
+ },
+ "objetivar.v": {
+  "en": "to objectify; to make into an object"
+ },
+ "obrar.v": {
+  "en": "to act; to work; to operate"
+ },
+ "obra.n": {
+  "en": "work (of art); work",
+  "g": "f"
+ },
+ "observar.v": {
+  "en": "to observe; to notice"
+ },
+ "observación.n": {
+  "en": "observation",
+  "g": "f"
+ },
+ "obstante.adv": {
+  "en": "(no obstante) nevertheless; however"
+ },
+ "obstinadamente.adv": {
+  "en": "stubbornly; obstinately"
+ },
+ "obtener.v": {
+  "en": "to obtain; to get"
+ },
+ "ocasión.n": {
+  "en": "occasion; opportunity",
+  "g": "f"
+ },
+ "occidental.adj": {
+  "en": "Western; western"
+ },
+ "ocho.num": {
+  "en": "eight"
+ },
+ "ocupación.n": {
+  "en": "occupation",
+  "g": "f"
+ },
+ "ocupar.v": {
+  "en": "to occupy; to take up"
+ },
+ "ocurrir.v": {
+  "en": "to happen; to occur"
+ },
+ "oferente.adj": {
+  "en": "offering; who makes the offering"
+ },
+ "oficial.adj": {
+  "en": "official"
+ },
+ "oficialmente.adv": {
+  "en": "officially"
+ },
+ "oficiante.adj": {
+  "en": "officiating; leading a ritual"
+ },
+ "ofrecer.v": {
+  "en": "to offer"
+ },
+ "ofrecimiento.n": {
+  "en": "offering; offer",
+  "g": "m"
+ },
+ "ofrenda.n": {
+  "en": "offering (ritual)",
+  "g": "f"
+ },
+ "ojo.n": {
+  "en": "eye",
+  "g": "m"
+ },
+ "olfato.n": {
+  "en": "sense of smell",
+  "g": "m"
+ },
+ "olfatorio.adj": {
+  "en": "olfactory; of smell"
+ },
+ "ontología.n": {
+  "en": "ontology (theory of what exists)",
+  "g": "f"
+ },
+ "ontológico.adj": {
+  "en": "ontological"
+ },
+ "opacar.v": {
+  "en": "to overshadow; to dim"
+ },
+ "opaco.adj": {
+  "en": "dull; dim; opaque"
+ },
+ "oponer.v": {
+  "en": "to oppose; (oponerse a) to be against"
+ },
+ "oportunidad.n": {
+  "en": "opportunity; occasion",
+  "g": "f"
+ },
+ "oquedad.n": {
+  "en": "hollow; cavity",
+  "g": "f"
+ },
+ "ordenar.v": {
+  "en": "to arrange; to put in order; to order"
+ },
+ "organización.n": {
+  "en": "organization",
+  "g": "f"
+ },
+ "organizar.v": {
+  "en": "to organize"
+ },
+ "originar.v": {
+  "en": "to give rise to; (originarse) to originate"
+ },
+ "original.adj": {
+  "en": "original"
+ },
+ "originalmente.adv": {
+  "en": "originally"
+ },
+ "otorgar.v": {
+  "en": "to grant; to award"
+ },
+ "oír.v": {
+  "en": "to hear"
+ },
+ "pachero.other": {
+  "en": "pachero: (Andes) stone cavity where food offerings to the earth (Pacha) are buried"
+ },
+ "paciente.n": {
+  "en": "patient",
+  "g": "m/f"
+ },
+ "pacto.n": {
+  "en": "pact; agreement",
+  "g": "m"
+ },
+ "padecer.v": {
+  "en": "to suffer (from)"
+ },
+ "padre.n": {
+  "en": "father; (pl.) parents",
+  "g": "m"
+ },
+ "pago.n": {
+  "en": "payment (animal de pago = sacrificial animal)",
+  "g": "m"
+ },
+ "paisaje.n": {
+  "en": "landscape",
+  "g": "m"
+ },
+ "panecillo.n": {
+  "en": "bread roll",
+  "g": "m"
+ },
+ "papel.n": {
+  "en": "role; paper",
+  "g": "m"
+ },
+ "par.n": {
+  "en": "pair; (sin par) matchless, unequalled",
+  "g": "m"
+ },
+ "paralelamente.adv": {
+  "en": "in parallel; at the same time"
+ },
+ "paralelo.n": {
+  "en": "parallel (en paralelo = in parallel)",
+  "g": "m"
+ },
+ "paralización.n": {
+  "en": "halt; suspension; stoppage",
+  "g": "f"
+ },
+ "parcelado.adj": {
+  "en": "divided into plots; fragmented"
+ },
+ "parecer.v": {
+  "en": "to seem; to look"
+ },
+ "parentesco.n": {
+  "en": "kinship",
+  "g": "m"
+ },
+ "pariente.n": {
+  "en": "relative; kin",
+  "g": "m/f"
+ },
+ "participar.v": {
+  "en": "to participate; to take part"
+ },
+ "particular.adj": {
+  "en": "particular; private (en particular = in particular)"
+ },
+ "particularmente.adv": {
+  "en": "particularly"
+ },
+ "partir.v": {
+  "en": "to start (from); to leave; to split"
+ },
+ "pasado.n": {
+  "en": "past",
+  "g": "m"
+ },
+ "pasante.n": {
+  "en": "passer-by",
+  "g": "m/f"
+ },
+ "pastor.n": {
+  "en": "herder; shepherd",
+  "g": "m/f"
+ },
+ "pastoreo.n": {
+  "en": "grazing; herding",
+  "g": "m"
+ },
+ "patente.n": {
+  "en": "patent",
+  "g": "f"
+ },
+ "patrimonialización.n": {
+  "en": "heritage designation; making something official heritage",
+  "g": "f"
+ },
+ "patrimonio.n": {
+  "en": "heritage; patrimony",
+  "g": "m"
+ },
+ "patrón.n": {
+  "en": "master; boss; pattern",
+  "g": "m",
+  "pl": "patrones"
+ },
+ "patrono.n": {
+  "en": "patron (santo patrono = patron saint)",
+  "g": "m"
+ },
+ "país.n": {
+  "en": "country",
+  "g": "m",
+  "pl": "países"
+ },
+ "pedido.n": {
+  "en": "request; order",
+  "g": "m"
+ },
+ "pedir.v": {
+  "en": "to ask for; to request; (pedirse) to pledge oneself",
+  "m": "e>i"
+ },
+ "peligroso.adj": {
+  "en": "dangerous"
+ },
+ "pensamiento.n": {
+  "en": "thought; thinking",
+  "g": "m"
+ },
+ "pensar.v": {
+  "en": "to think",
+  "m": "e>ie"
+ },
+ "pequeño.adj": {
+  "en": "small; little"
+ },
+ "percepción.n": {
+  "en": "perception",
+  "g": "f"
+ },
+ "percibir.v": {
+  "en": "to perceive"
+ },
+ "perfumado.adj": {
+  "en": "fragrant; perfumed"
+ },
+ "periodo.n": {
+  "en": "period",
+  "g": "m"
+ },
+ "periódico.n": {
+  "en": "newspaper",
+  "g": "m"
+ },
+ "permanecer.v": {
+  "en": "to remain; to stay"
+ },
+ "permanente.adj": {
+  "en": "permanent; constant"
+ },
+ "permanentemente.adv": {
+  "en": "permanently"
+ },
+ "permitir.v": {
+  "en": "to allow; to permit"
+ },
+ "pernoctar.v": {
+  "en": "to spend the night"
+ },
+ "personal.adj": {
+  "en": "personal"
+ },
+ "personalmente.adv": {
+  "en": "personally; in person"
+ },
+ "perspectiva.n": {
+  "en": "perspective",
+  "g": "f"
+ },
+ "perteneciente.adj": {
+  "en": "belonging (to)"
+ },
+ "peruano.adj": {
+  "en": "Peruvian"
+ },
+ "pesar.n": {
+  "en": "sorrow (a pesar de = despite)",
+  "g": "m"
+ },
+ "pesca.n": {
+  "en": "fishing",
+  "g": "f"
+ },
+ "piedemonte.n": {
+  "en": "foothills; piedmont",
+  "g": "m"
+ },
+ "piedra.n": {
+  "en": "stone",
+  "g": "f"
+ },
+ "piel.n": {
+  "en": "skin",
+  "g": "f"
+ },
+ "pieza.n": {
+  "en": "piece",
+  "g": "f"
+ },
+ "pilar.n": {
+  "en": "pillar",
+  "g": "m"
+ },
+ "pintar.v": {
+  "en": "to paint"
+ },
+ "pintor.n": {
+  "en": "painter",
+  "g": "m/f"
+ },
+ "pintura.n": {
+  "en": "painting; paint",
+  "g": "f"
+ },
+ "piratería.n": {
+  "en": "piracy",
+  "g": "f"
+ },
+ "piri.other": {
+  "en": "piri piri: a sedge (Cyperus) the Shipibo use as a medicine plant, e.g. to see designs"
+ },
+ "planta.n": {
+  "en": "plant; floor",
+  "g": "f"
+ },
+ "plantear.v": {
+  "en": "to put forward; to propose; to raise"
+ },
+ "plasmar.v": {
+  "en": "to give shape to; to render; to set down"
+ },
+ "plataforma.n": {
+  "en": "platform; (mining) drilling pad",
+  "g": "f"
+ },
+ "plato.n": {
+  "en": "dish; plate",
+  "g": "m"
+ },
+ "plenamente.adv": {
+  "en": "fully"
+ },
+ "pluralidad.n": {
+  "en": "plurality",
+  "g": "f"
+ },
+ "plásticamente.adv": {
+  "en": "in visual art form; plastically"
+ },
+ "plástico.adj": {
+  "en": "plastic (artes plásticas = visual arts)"
+ },
+ "poblador.n": {
+  "en": "inhabitant; settler",
+  "g": "m/f"
+ },
+ "poco.det": {
+  "en": "little; few"
+ },
+ "poder.n": {
+  "en": "power",
+  "g": "m"
+ },
+ "poderoso.adj": {
+  "en": "powerful"
+ },
+ "poder.v": {
+  "en": "can; to be able to"
+ },
+ "polisemia.n": {
+  "en": "polysemy; having many meanings",
+  "g": "f"
+ },
+ "polisémico.adj": {
+  "en": "polysemous; with many meanings"
+ },
+ "política.n": {
+  "en": "policy; politics",
+  "g": "f"
+ },
+ "poner.v": {
+  "en": "to put; to place"
+ },
+ "popular.adj": {
+  "en": "popular; of the people"
+ },
+ "portada.n": {
+  "en": "front page; cover",
+  "g": "f"
+ },
+ "portador.n": {
+  "en": "bearer; carrier",
+  "g": "m/f"
+ },
+ "poseer.v": {
+  "en": "to possess; to have"
+ },
+ "posibilitar.v": {
+  "en": "to make possible; to enable"
+ },
+ "posible.adj": {
+  "en": "possible"
+ },
+ "posicionamiento.n": {
+  "en": "stance; positioning",
+  "g": "m"
+ },
+ "posicionar.v": {
+  "en": "to position; to place; (posicionarse) to take a position"
+ },
+ "positivo.adj": {
+  "en": "positive"
+ },
+ "positivamente.adv": {
+  "en": "positively; favourably"
+ },
+ "potencia.n": {
+  "en": "power; potency",
+  "g": "f"
+ },
+ "potencializar.v": {
+  "en": "to strengthen; to enhance"
+ },
+ "potencialmente.adv": {
+  "en": "potentially"
+ },
+ "potestad.n": {
+  "en": "authority; power (legal)",
+  "g": "f"
+ },
+ "practicar.v": {
+  "en": "to practise"
+ },
+ "practicante.n": {
+  "en": "practitioner",
+  "g": "m/f"
+ },
+ "praxis.n": {
+  "en": "practice; praxis",
+  "g": "f",
+  "pl": "praxis"
+ },
+ "preceder.v": {
+  "en": "to precede"
+ },
+ "precisamente.adv": {
+  "en": "precisely; exactly"
+ },
+ "preciso.adj": {
+  "en": "precise; necessary"
+ },
+ "precordillera.n": {
+  "en": "Andean foothills (precordillera)",
+  "g": "f"
+ },
+ "predominantemente.adv": {
+  "en": "predominantly"
+ },
+ "preferir.v": {
+  "en": "to prefer",
+  "m": "e>ie,i"
+ },
+ "pregunta.n": {
+  "en": "question",
+  "g": "f"
+ },
+ "prehispánico.adj": {
+  "en": "pre-Hispanic"
+ },
+ "premisa.n": {
+  "en": "premise; assumption",
+  "g": "f"
+ },
+ "premura.n": {
+  "en": "haste; urgency",
+  "g": "f"
+ },
+ "prenda.n": {
+  "en": "garment (prenda de vestir)",
+  "g": "f"
+ },
+ "preocupación.n": {
+  "en": "concern; worry",
+  "g": "f"
+ },
+ "preparar.v": {
+  "en": "to prepare"
+ },
+ "presencia.n": {
+  "en": "presence",
+  "g": "f"
+ },
+ "presentación.n": {
+  "en": "presentation; appearance",
+  "g": "f"
+ }
+}

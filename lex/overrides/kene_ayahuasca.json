@@ -1,0 +1,38 @@
+[
+ {
+  "p": 2,
+  "w": "puesto",
+  "n": 1,
+  "form": [
+   "poner.v",
+   "placed (énfasis puesto = emphasis placed)"
+  ]
+ },
+ {
+  "p": 13,
+  "w": "personal",
+  "n": 1,
+  "form": [
+   "personal.n",
+   "staff (el personal del inc = the INC staff)"
+  ]
+ },
+ {
+  "p": 43,
+  "w": "duda",
+  "n": 1,
+  "form": [
+   "dudar.v",
+   "doubts (nadie duda = nobody doubts)"
+  ]
+ },
+ {
+  "p": 44,
+  "w": "llama",
+  "n": 1,
+  "form": [
+   "llamar.v",
+   "calls (llama la atención = it is striking)"
+  ]
+ }
+]

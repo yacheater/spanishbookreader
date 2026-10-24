@@ -1,0 +1,722 @@
+{
+ "creación.n": {
+  "en": "creation",
+  "g": "f"
+ },
+ "creativamente.adv": {
+  "en": "creatively"
+ },
+ "creatividad.n": {
+  "en": "creativity",
+  "g": "f"
+ },
+ "creciente.adj": {
+  "en": "growing; increasing"
+ },
+ "crecimiento.n": {
+  "en": "growth",
+  "g": "m"
+ },
+ "criar.v": {
+  "en": "to raise; to bring up (children, animals)",
+  "m": "í"
+ },
+ "criminalización.n": {
+  "en": "criminalization",
+  "g": "f"
+ },
+ "criollo.adj": {
+  "en": "Creole; (Peru) traditional coastal (comida criolla: traditional Peruvian food)"
+ },
+ "criterio.n": {
+  "en": "criterion; judgement",
+  "g": "m"
+ },
+ "cromáticamente.adv": {
+  "en": "chromatically; in colour"
+ },
+ "cruce.n": {
+  "en": "crossing; intersection",
+  "g": "m"
+ },
+ "cruz.n": {
+  "en": "cross",
+  "g": "f"
+ },
+ "cruzar.v": {
+  "en": "to cross; to bring together"
+ },
+ "cuadro.n": {
+  "en": "painting; picture; table (chart)",
+  "g": "m"
+ },
+ "cualidad.n": {
+  "en": "quality; property",
+  "g": "f"
+ },
+ "cualquiera.det": {
+  "en": "any; whatever (cualquier before a noun)"
+ },
+ "cubrecama.n": {
+  "en": "bedspread",
+  "g": "m"
+ },
+ "cubrir.v": {
+  "en": "to cover"
+ },
+ "cuenta.n": {
+  "en": "account; bill; bead; darse cuenta: to realize",
+  "g": "f"
+ },
+ "cuerpo.n": {
+  "en": "body",
+  "g": "m"
+ },
+ "cuestionar.v": {
+  "en": "to question; to challenge"
+ },
+ "cuestión.n": {
+  "en": "question; issue; matter",
+  "g": "f"
+ },
+ "cuidado.n": {
+  "en": "care",
+  "g": "m"
+ },
+ "cuidadosamente.adv": {
+  "en": "carefully"
+ },
+ "cuidadoso.adj": {
+  "en": "careful"
+ },
+ "cuidar.v": {
+  "en": "to take care of; to look after"
+ },
+ "culinario.adj": {
+  "en": "culinary; food-related"
+ },
+ "cultura.n": {
+  "en": "culture",
+  "g": "f"
+ },
+ "cultural.adj": {
+  "en": "cultural"
+ },
+ "cumbre.n": {
+  "en": "summit; peak",
+  "g": "f"
+ },
+ "cumplir.v": {
+  "en": "to fulfil; to carry out; to comply with"
+ },
+ "curación.n": {
+  "en": "healing; cure",
+  "g": "f"
+ },
+ "curandero.n": {
+  "en": "healer; folk healer",
+  "g": "m"
+ },
+ "curar.v": {
+  "en": "to cure; to heal; to treat (with plant medicine)"
+ },
+ "curso.n": {
+  "en": "course; flow",
+  "g": "m"
+ },
+ "curva.n": {
+  "en": "curve",
+  "g": "f"
+ },
+ "curvo.adj": {
+  "en": "curved"
+ },
+ "cuyo.det": {
+  "en": "whose; of which"
+ },
+ "cuál.pron": {
+  "en": "which; what (in questions)"
+ },
+ "cuándo.adv": {
+  "en": "when (in questions)"
+ },
+ "cánoa.other": {
+  "en": "cánoa: Shipibo-Konibo term for kené designs made of straight, thick lines"
+ },
+ "céntrico.adj": {
+  "en": "central; (in compounds) -centric"
+ },
+ "círculo.n": {
+  "en": "circle; circuit",
+  "g": "m"
+ },
+ "código.n": {
+  "en": "code",
+  "g": "m"
+ },
+ "dar.v": {
+  "en": "to give"
+ },
+ "dañar.v": {
+  "en": "to damage; to harm"
+ },
+ "daño.n": {
+  "en": "damage; harm",
+  "g": "m"
+ },
+ "debate.n": {
+  "en": "debate",
+  "g": "m"
+ },
+ "deber.v": {
+  "en": "must; to have to; to owe"
+ },
+ "decidir.v": {
+  "en": "to decide"
+ },
+ "decir.v": {
+  "en": "to say; to tell"
+ },
+ "declaración.n": {
+  "en": "declaration; statement",
+  "g": "f"
+ },
+ "declarar.v": {
+  "en": "to declare"
+ },
+ "decorativo.adj": {
+  "en": "decorative"
+ },
+ "decretar.v": {
+  "en": "to decree"
+ },
+ "dedicar.v": {
+  "en": "to dedicate; to devote"
+ },
+ "dedo.n": {
+  "en": "finger",
+  "g": "m"
+ },
+ "defender.v": {
+  "en": "to defend; defenderse: to defend oneself; to stand up for oneself",
+  "m": "e>ie"
+ },
+ "defensa.n": {
+  "en": "defence; protection",
+  "g": "f"
+ },
+ "definición.n": {
+  "en": "definition",
+  "g": "f"
+ },
+ "definir.v": {
+  "en": "to define"
+ },
+ "dejar.v": {
+  "en": "to leave; to let; dejar de: to stop"
+ },
+ "delimitar.v": {
+  "en": "to delimit; to set the bounds of"
+ },
+ "demanda.n": {
+  "en": "demand; lawsuit",
+  "g": "f"
+ },
+ "demonio.n": {
+  "en": "demon; devil",
+  "g": "m"
+ },
+ "demora.n": {
+  "en": "delay",
+  "g": "f"
+ },
+ "demorar.v": {
+  "en": "to delay; to take (time)"
+ },
+ "demostrar.v": {
+  "en": "to show; to demonstrate; to prove",
+  "m": "o>ue"
+ },
+ "denominar.v": {
+  "en": "to name; to call"
+ },
+ "densidad.n": {
+  "en": "density",
+  "g": "f"
+ },
+ "depender.v": {
+  "en": "to depend"
+ },
+ "depositar.v": {
+  "en": "to deposit; to place"
+ },
+ "derecho.n": {
+  "en": "right; law",
+  "g": "m"
+ },
+ "derivar.v": {
+  "en": "to derive; to stem (from)"
+ },
+ "desagregado.adj": {
+  "en": "separate; disaggregated"
+ },
+ "desarrollar.v": {
+  "en": "to develop; desarrollarse: to take place"
+ },
+ "descontextualizado.adj": {
+  "en": "decontextualized; taken out of context"
+ },
+ "deseable.adj": {
+  "en": "desirable"
+ },
+ "desear.v": {
+  "en": "to wish; to want; to desire"
+ },
+ "desempeñar.v": {
+  "en": "to perform; to carry out; to hold (a job, role)"
+ },
+ "deseo.n": {
+  "en": "desire; wish",
+  "g": "m"
+ },
+ "desetnicizar.v": {
+  "en": "to de-ethnicize; to strip of ethnic identity"
+ },
+ "designar.v": {
+  "en": "to appoint; to designate"
+ },
+ "designativo.adj": {
+  "en": "designative; denotative (that names or designates)"
+ },
+ "desinterés.n": {
+  "en": "lack of interest; indifference",
+  "g": "m"
+ },
+ "desplazar.v": {
+  "en": "to displace; to move; to push aside"
+ },
+ "desprenderse.v": {
+  "en": "to follow (from); to be inferred; to come off"
+ },
+ "desprovisto.adj": {
+  "en": "devoid (of); lacking"
+ },
+ "destacado.adj": {
+  "en": "prominent; outstanding"
+ },
+ "destacar.v": {
+  "en": "to stand out; to highlight"
+ },
+ "desterritorializar.v": {
+  "en": "to deterritorialize; to detach from a place"
+ },
+ "destinar.v": {
+  "en": "to assign; to intend (for)"
+ },
+ "destruir.v": {
+  "en": "to destroy"
+ },
+ "detentar.v": {
+  "en": "to hold (power, rank, a position)"
+ },
+ "determinado.adj": {
+  "en": "certain; particular; specific"
+ },
+ "determinante.adj": {
+  "en": "decisive; determining"
+ },
+ "determinar.v": {
+  "en": "to determine"
+ },
+ "devenir.v": {
+  "en": "to become"
+ },
+ "devolver.v": {
+  "en": "to return; to give back",
+  "m": "o>ue"
+ },
+ "devorador.adj": {
+  "en": "devouring; voracious",
+  "f": "devoradora"
+ },
+ "devorar.v": {
+  "en": "to devour"
+ },
+ "dibujo.n": {
+  "en": "drawing",
+  "g": "m"
+ },
+ "dicho.adj": {
+  "en": "said; aforementioned; this"
+ },
+ "dieta.n": {
+  "en": "diet; (Amazonian) ritual diet",
+  "g": "f"
+ },
+ "diferencia.n": {
+  "en": "difference; a diferencia de: unlike",
+  "g": "f"
+ },
+ "diferente.adj": {
+  "en": "different"
+ },
+ "difuminar.v": {
+  "en": "to blur"
+ },
+ "diminuto.adj": {
+  "en": "tiny; minute"
+ },
+ "dinamismo.n": {
+  "en": "dynamism",
+  "g": "m"
+ },
+ "dirección.n": {
+  "en": "direction; address; management",
+  "g": "f"
+ },
+ "directamente.adv": {
+  "en": "directly"
+ },
+ "directo.adj": {
+  "en": "direct"
+ },
+ "dirigenta.n": {
+  "en": "(female) community leader",
+  "g": "f"
+ },
+ "dirigente.n": {
+  "en": "leader (of a community or organisation)",
+  "g": "m/f"
+ },
+ "dirigir.v": {
+  "en": "to direct; to lead; dirigirse a: to address; to be aimed at"
+ },
+ "discordar.v": {
+  "en": "to disagree; to be at odds (with)",
+  "m": "o>ue"
+ },
+ "discrepancia.n": {
+  "en": "disagreement; discrepancy",
+  "g": "f"
+ },
+ "discreto.adj": {
+  "en": "discrete; separate; discreet"
+ },
+ "discurso.n": {
+  "en": "discourse; speech",
+  "g": "m"
+ },
+ "discusión.n": {
+  "en": "discussion; argument",
+  "g": "f"
+ },
+ "discutir.v": {
+  "en": "to discuss; to argue"
+ },
+ "diseñadora.n": {
+  "en": "(woman) designer",
+  "g": "f"
+ },
+ "diseño.n": {
+  "en": "design; pattern",
+  "g": "m"
+ },
+ "disociar.v": {
+  "en": "to dissociate; to separate"
+ },
+ "dispensador.n": {
+  "en": "dispenser; provider",
+  "g": "m"
+ },
+ "disponer.v": {
+  "en": "to arrange; to place; disponer de: to have available"
+ },
+ "disponible.adj": {
+  "en": "available"
+ },
+ "disposición.n": {
+  "en": "disposition; arrangement; disposal",
+  "g": "f"
+ },
+ "disputa.n": {
+  "en": "dispute",
+  "g": "f"
+ },
+ "distancia.n": {
+  "en": "distance",
+  "g": "f"
+ },
+ "distinción.n": {
+  "en": "distinction",
+  "g": "f"
+ },
+ "distinguido.adj": {
+  "en": "distinguished; distinctive"
+ },
+ "distinguir.v": {
+  "en": "to distinguish"
+ },
+ "distinto.adj": {
+  "en": "different; distinct"
+ },
+ "distribuir.v": {
+  "en": "to distribute; to arrange"
+ },
+ "divergencia.n": {
+  "en": "divergence",
+  "g": "f"
+ },
+ "diversificación.n": {
+  "en": "diversification",
+  "g": "f"
+ },
+ "diverso.adj": {
+  "en": "diverse; various"
+ },
+ "divinidad.n": {
+  "en": "deity; divinity",
+  "g": "f"
+ },
+ "divulgación.n": {
+  "en": "dissemination; publicizing",
+  "g": "f"
+ },
+ "diálogo.n": {
+  "en": "dialogue",
+  "g": "m"
+ },
+ "doctora.n": {
+  "en": "(woman) doctor; Dr.",
+  "g": "f"
+ },
+ "documento.n": {
+  "en": "document",
+  "g": "m"
+ },
+ "dominar.v": {
+  "en": "to dominate; to master"
+ },
+ "dominio.n": {
+  "en": "domain; field; command",
+  "g": "m"
+ },
+ "don.n": {
+  "en": "gift; talent",
+  "g": "m"
+ },
+ "donar.v": {
+  "en": "to donate; to give"
+ },
+ "dotar.v": {
+  "en": "to provide; to endow (with)"
+ },
+ "duda.n": {
+  "en": "doubt; poner en duda: to call into question",
+  "g": "f"
+ },
+ "dudar.v": {
+  "en": "to doubt; no dudar en: not to hesitate to"
+ },
+ "dulce.n": {
+  "en": "sweet; candy",
+  "g": "m"
+ },
+ "durante.prep": {
+  "en": "during"
+ },
+ "dureza.n": {
+  "en": "harshness; hardness",
+  "g": "f"
+ },
+ "económico.adj": {
+  "en": "economic; financial; cheap"
+ },
+ "efecto.n": {
+  "en": "effect",
+  "g": "m"
+ },
+ "efectuar.v": {
+  "en": "to carry out; to effect",
+  "m": "ú"
+ },
+ "eficacia.n": {
+  "en": "effectiveness; efficacy",
+  "g": "f"
+ },
+ "ejecución.n": {
+  "en": "execution; making; performance",
+  "g": "f"
+ },
+ "ejemplo.n": {
+  "en": "example",
+  "g": "m"
+ },
+ "ejercicio.n": {
+  "en": "exercise; practice",
+  "g": "m"
+ },
+ "elaboración.n": {
+  "en": "making; production; preparation",
+  "g": "f"
+ },
+ "elaborar.v": {
+  "en": "to make; to produce; to draw up"
+ },
+ "elegancia.n": {
+  "en": "elegance",
+  "g": "f"
+ },
+ "elegir.v": {
+  "en": "to choose; to elect",
+  "m": "e>i"
+ },
+ "emblemático.adj": {
+  "en": "emblematic; symbolic"
+ },
+ "emergencia.n": {
+  "en": "emergence; emergency",
+  "g": "f"
+ },
+ "emerger.v": {
+  "en": "to emerge"
+ },
+ "emplazamiento.n": {
+  "en": "location; siting",
+  "g": "m"
+ },
+ "emplazar.v": {
+  "en": "to place; to site; to locate"
+ },
+ "empobrecido.adj": {
+  "en": "impoverished"
+ },
+ "empresa.n": {
+  "en": "company; firm",
+  "g": "f"
+ },
+ "enamorar.v": {
+  "en": "to make someone fall in love; to charm"
+ },
+ "encarar.v": {
+  "en": "to face; to tackle; to address"
+ },
+ "encargado.n": {
+  "en": "person in charge",
+  "g": "m"
+ },
+ "encarnar.v": {
+  "en": "to embody; to incarnate"
+ },
+ "encontrar.v": {
+  "en": "to find; encontrarse: to be (located)",
+  "m": "o>ue"
+ },
+ "encuentro.n": {
+  "en": "meeting; encounter",
+  "g": "m"
+ },
+ "enemigo.n": {
+  "en": "enemy",
+  "g": "m"
+ },
+ "energético.adj": {
+  "en": "energetic; energy (relating to energy)"
+ },
+ "energía.n": {
+  "en": "energy",
+  "g": "f"
+ },
+ "enfatizar.v": {
+  "en": "to emphasize"
+ },
+ "enfermar.v": {
+  "en": "to make ill; to fall ill"
+ },
+ "enfermedad.n": {
+  "en": "illness; disease",
+  "g": "f"
+ },
+ "enfrascar.v": {
+  "en": "to bottle; (fig.) to encapsulate; enfrascarse: to become absorbed"
+ },
+ "enfáticamente.adv": {
+  "en": "emphatically"
+ },
+ "englobar.v": {
+  "en": "to encompass; to include"
+ },
+ "enmarcar.v": {
+  "en": "to frame; enmarcarse en: to be part of; to fit within"
+ },
+ "ensayo.n": {
+  "en": "essay; rehearsal; trial",
+  "g": "m"
+ },
+ "enser.n": {
+  "en": "utensil; household item (usually pl.)",
+  "g": "m"
+ },
+ "enseñar.v": {
+  "en": "to teach; to show"
+ },
+ "entender.v": {
+  "en": "to understand",
+  "m": "e>ie"
+ },
+ "enteramente.adv": {
+  "en": "entirely; completely"
+ },
+ "enterarse.v": {
+  "en": "to find out; to learn (about)"
+ },
+ "entero.adj": {
+  "en": "whole; entire"
+ },
+ "enterramiento.n": {
+  "en": "burial",
+  "g": "m"
+ },
+ "enterrar.v": {
+  "en": "to bury",
+  "m": "e>ie"
+ },
+ "entidad.n": {
+  "en": "entity; being",
+  "g": "f"
+ },
+ "entrar.v": {
+  "en": "to enter; to come in; to go in"
+ },
+ "entrelazar.v": {
+  "en": "to intertwine; to interlace"
+ },
+ "entrevista.n": {
+  "en": "interview",
+  "g": "f"
+ },
+ "enunciación.n": {
+  "en": "enunciation; utterance; expression",
+  "g": "f"
+ },
+ "envoltura.n": {
+  "en": "wrapping; envelope; covering",
+  "g": "f"
+ },
+ "envolvente.adj": {
+  "en": "enveloping; surrounding"
+ },
+ "envolver.v": {
+  "en": "to wrap; to envelop",
+  "m": "o>ue"
+ },
+ "epistemología.n": {
+  "en": "epistemology",
+  "g": "f"
+ },
+ "equívocamente.adv": {
+  "en": "mistakenly; wrongly"
+ },
+ "él.pron": {
+  "en": "he; him; (pl.) they; them"
+ }
+}

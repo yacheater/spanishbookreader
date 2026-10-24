@@ -1,0 +1,2093 @@
+[
+ {
+  "key": "a raíz de",
+  "type": "idiom",
+  "en": "as a result of; following",
+  "occ": [
+   {
+    "p": 3,
+    "words": [
+     "a",
+     "raíz",
+     "del"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "estar a cargo de alguien",
+  "type": "idiom",
+  "en": "to be someone's responsibility; to be in charge of",
+  "occ": [
+   {
+    "p": 3,
+    "words": [
+     "estuvo",
+     "a",
+     "mi",
+     "cargo"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "a seguir",
+  "type": "idiom",
+  "en": "next; below (= a continuación)",
+  "occ": [
+   {
+    "p": 3,
+    "words": [
+     "A",
+     "seguir"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "cada vez más",
+  "type": "idiom",
+  "en": "more and more; increasingly",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "cada",
+     "vez",
+     "más"
+    ]
+   },
+   {
+    "p": 17,
+    "words": [
+     "cada",
+     "vez",
+     "más"
+    ]
+   },
+   {
+    "p": 57,
+    "words": [
+     "cada",
+     "vez",
+     "más"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "dejar de lado",
+  "type": "idiom",
+  "en": "to set aside; to abandon",
+  "occ": [
+   {
+    "p": 6,
+    "words": [
+     "dejadas",
+     "de",
+     "lado"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tal es el caso de / es el caso de",
+  "type": "idiom",
+  "en": "such is the case of; this is the case with",
+  "occ": [
+   {
+    "p": 6,
+    "words": [
+     "Tal",
+     "es",
+     "el",
+     "caso",
+     "de"
+    ]
+   },
+   {
+    "p": 27,
+    "words": [
+     "es",
+     "el",
+     "caso",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tratarse de",
+  "type": "idiom",
+  "en": "to be a matter of; to be about; it is (a question of)",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "se",
+     "trata",
+     "de"
+    ]
+   },
+   {
+    "p": 10,
+    "words": [
+     "se",
+     "trate",
+     "de"
+    ]
+   },
+   {
+    "p": 25,
+    "words": [
+     "se",
+     "trate",
+     "de"
+    ]
+   },
+   {
+    "p": 27,
+    "words": [
+     "se",
+     "trata",
+     "solamente",
+     "de"
+    ]
+   },
+   {
+    "p": 32,
+    "words": [
+     "tratarse",
+     "de"
+    ]
+   },
+   {
+    "p": 37,
+    "words": [
+     "se",
+     "trata",
+     "pues",
+     "de"
+    ]
+   },
+   {
+    "p": 50,
+    "words": [
+     "se",
+     "trataría",
+     "de"
+    ]
+   },
+   {
+    "p": 55,
+    "words": [
+     "se",
+     "trata",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "a su vez",
+  "type": "idiom",
+  "en": "in turn",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "a",
+     "su",
+     "vez"
+    ]
+   },
+   {
+    "p": 38,
+    "words": [
+     "a",
+     "su",
+     "vez"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "a caballo entre",
+  "type": "idiom",
+  "en": "halfway between; straddling",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "A",
+     "caballo",
+     "entre"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "en materia de",
+  "type": "idiom",
+  "en": "in matters of; when it comes to",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "en",
+     "materia",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "querer decir",
+  "type": "idiom",
+  "en": "to mean",
+  "occ": [
+   {
+    "p": 10,
+    "words": [
+     "quiere",
+     "decir"
+    ]
+   },
+   {
+    "p": 32,
+    "words": [
+     "quiere",
+     "decir"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "a lo largo de",
+  "type": "idiom",
+  "en": "throughout; over the course of",
+  "occ": [
+   {
+    "p": 10,
+    "words": [
+     "a",
+     "lo",
+     "largo",
+     "de"
+    ]
+   },
+   {
+    "p": 15,
+    "words": [
+     "a",
+     "lo",
+     "largo",
+     "de"
+    ]
+   },
+   {
+    "p": 41,
+    "words": [
+     "A",
+     "lo",
+     "largo",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "a modo de / a manera de",
+  "type": "idiom",
+  "en": "by way of; as a kind of",
+  "occ": [
+   {
+    "p": 11,
+    "words": [
+     "a",
+     "modo",
+     "de"
+    ]
+   },
+   {
+    "p": 16,
+    "words": [
+     "a",
+     "manera",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "darse cuenta de",
+  "type": "idiom",
+  "en": "to realise",
+  "occ": [
+   {
+    "p": 13,
+    "words": [
+     "darme",
+     "cuenta",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "a medida que",
+  "type": "idiom",
+  "en": "as (gradually, in step with)",
+  "occ": [
+   {
+    "p": 17,
+    "words": [
+     "a",
+     "medida",
+     "que"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "de fuera / desde fuera",
+  "type": "idiom",
+  "en": "from outside; outsiders",
+  "occ": [
+   {
+    "p": 17,
+    "words": [
+     "de",
+     "fuera"
+    ]
+   },
+   {
+    "p": 38,
+    "words": [
+     "desde",
+     "fuera"
+    ]
+   },
+   {
+    "p": 57,
+    "words": [
+     "de",
+     "fuera"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "dejar en la sombra",
+  "type": "idiom",
+  "en": "to leave in the shadows; to overshadow",
+  "occ": [
+   {
+    "p": 17,
+    "words": [
+     "dejando",
+     "al",
+     "piri",
+     "en",
+     "la",
+     "sombra"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "en virtud de",
+  "type": "idiom",
+  "en": "by virtue of; because of",
+  "occ": [
+   {
+    "p": 24,
+    "words": [
+     "en",
+     "virtud",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "de X se desprende que",
+  "type": "idiom",
+  "en": "it follows from X that",
+  "occ": [
+   {
+    "p": 26,
+    "words": [
+     "se",
+     "desprende",
+     "que"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "sentar / establecer los cimientos",
+  "type": "idiom",
+  "en": "to lay the foundations",
+  "occ": [
+   {
+    "p": 27,
+    "words": [
+     "se",
+     "establecen",
+     "los",
+     "cimientos"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "lejos de + infinitivo",
+  "type": "idiom",
+  "en": "far from (doing)",
+  "occ": [
+   {
+    "p": 30,
+    "words": [
+     "Lejos",
+     "de",
+     "pretender"
+    ]
+   },
+   {
+    "p": 41,
+    "words": [
+     "Lejos",
+     "de",
+     "delimitar"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "en calidad de",
+  "type": "idiom",
+  "en": "in its capacity as; as",
+  "occ": [
+   {
+    "p": 32,
+    "words": [
+     "En",
+     "su",
+     "calidad",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "no es de sorprenderse que",
+  "type": "idiom",
+  "en": "it is not surprising that",
+  "occ": [
+   {
+    "p": 37,
+    "words": [
+     "no",
+     "es",
+     "de",
+     "sorprenderse",
+     "que"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "llamar la atención",
+  "type": "idiom",
+  "en": "to be striking; to catch one's attention",
+  "occ": [
+   {
+    "p": 44,
+    "words": [
+     "Llama",
+     "la",
+     "atención"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "es de observar que",
+  "type": "idiom",
+  "en": "it should be noted that",
+  "occ": [
+   {
+    "p": 44,
+    "words": [
+     "Es",
+     "de",
+     "observar",
+     "que"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "a mi parecer",
+  "type": "idiom",
+  "en": "in my opinion",
+  "occ": [
+   {
+    "p": 45,
+    "words": [
+     "A",
+     "mi",
+     "parecer"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "por así decir",
+  "type": "idiom",
+  "en": "so to speak",
+  "occ": [
+   {
+    "p": 45,
+    "words": [
+     "por",
+     "así",
+     "decir"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "hacerse sentir",
+  "type": "idiom",
+  "en": "to make itself felt",
+  "occ": [
+   {
+    "p": 47,
+    "words": [
+     "se",
+     "han",
+     "hecho",
+     "sentir"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "marcar un hito",
+  "type": "idiom",
+  "en": "to mark a milestone",
+  "occ": [
+   {
+    "p": 48,
+    "words": [
+     "marcó",
+     "un",
+     "hito"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "de espaldas a",
+  "type": "idiom",
+  "en": "with one's back to; ignoring",
+  "occ": [
+   {
+    "p": 48,
+    "words": [
+     "de",
+     "espaldas",
+     "a"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "a cabalidad",
+  "type": "idiom",
+  "en": "fully; thoroughly",
+  "occ": [
+   {
+    "p": 49,
+    "words": [
+     "a",
+     "cabalidad"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "llevar a cabo",
+  "type": "idiom",
+  "en": "to carry out",
+  "occ": [
+   {
+    "p": 49,
+    "words": [
+     "llevaron",
+     "a",
+     "cabo"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "no entrar en cuestión",
+  "type": "idiom",
+  "en": "not to be at issue; to be beside the point",
+  "occ": [
+   {
+    "p": 54,
+    "words": [
+     "no",
+     "entra",
+     "en",
+     "cuestión"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "abrir las puertas a",
+  "type": "idiom",
+  "en": "to open the doors to",
+  "occ": [
+   {
+    "p": 59,
+    "words": [
+     "abriendo",
+     "las",
+     "puertas",
+     "a"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "patrimonio (cultural) inmaterial",
+  "type": "collocation",
+  "en": "intangible (cultural) heritage",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "patrimonio",
+     "inmaterial"
+    ]
+   },
+   {
+    "p": 3,
+    "words": [
+     "Patrimonio",
+     "Cultural",
+     "Inmaterial"
+    ]
+   },
+   {
+    "p": 23,
+    "words": [
+     "Patrimonio",
+     "Cultural",
+     "Inmaterial"
+    ]
+   },
+   {
+    "p": 27,
+    "words": [
+     "patrimonio",
+     "inmaterial"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "poner énfasis en / sobre",
+  "type": "collocation",
+  "en": "to place emphasis on",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "énfasis",
+     "puesto",
+     "sobre"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "caer en (la trampa de)",
+  "type": "collocation",
+  "en": "to fall into (the trap of)",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "caer",
+     "en"
+    ]
+   },
+   {
+    "p": 31,
+    "words": [
+     "caer",
+     "en",
+     "la",
+     "trampa",
+     "de"
+    ]
+   },
+   {
+    "p": 59,
+    "words": [
+     "caer",
+     "en"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tener (gran) demanda",
+  "type": "collocation",
+  "en": "to be in (great) demand",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "tienen",
+     "gran",
+     "demanda"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "suscitar fascinación",
+  "type": "collocation",
+  "en": "to arouse fascination",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "fascinación",
+     "que",
+     "suscitan"
+    ]
+   },
+   {
+    "p": 17,
+    "words": [
+     "suscita",
+     "tanta",
+     "fascinación"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "valerse de",
+  "type": "collocation",
+  "en": "to make use of; to avail oneself of",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "se",
+     "valen",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tener / jugar un papel",
+  "type": "collocation",
+  "en": "to play a role",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "tienen",
+     "un",
+     "papel"
+    ]
+   },
+   {
+    "p": 42,
+    "words": [
+     "jugado",
+     "un",
+     "papel"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "contribuir a",
+  "type": "collocation",
+  "en": "to contribute to",
+  "occ": [
+   {
+    "p": 10,
+    "words": [
+     "contribuido",
+     "a"
+    ]
+   },
+   {
+    "p": 41,
+    "words": [
+     "contribuido",
+     "a"
+    ]
+   },
+   {
+    "p": 48,
+    "words": [
+     "contribuyó",
+     "a"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "surgir de",
+  "type": "collocation",
+  "en": "to arise from; to stem from",
+  "occ": [
+   {
+    "p": 11,
+    "words": [
+     "surgió",
+     "justamente",
+     "de"
+    ]
+   },
+   {
+    "p": 45,
+    "words": [
+     "surge",
+     "de"
+    ]
+   },
+   {
+    "p": 59,
+    "words": [
+     "surgió",
+     "del"
+    ]
+   },
+   {
+    "p": 59,
+    "words": [
+     "surgió",
+     "del"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "fuente de financiamiento / de ingresos",
+  "type": "collocation",
+  "en": "source of funding / of income",
+  "occ": [
+   {
+    "p": 11,
+    "words": [
+     "fuentes",
+     "de",
+     "financiamiento"
+    ]
+   },
+   {
+    "p": 55,
+    "words": [
+     "fuente",
+     "de",
+     "ingresos"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "apuntar a / hacia",
+  "type": "collocation",
+  "en": "to aim at; to point towards",
+  "occ": [
+   {
+    "p": 27,
+    "words": [
+     "apunta",
+     "hacia"
+    ]
+   },
+   {
+    "p": 30,
+    "words": [
+     "apuntaba",
+     "a"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tener (clara) conciencia de",
+  "type": "collocation",
+  "en": "to be (clearly) aware of",
+  "occ": [
+   {
+    "p": 37,
+    "words": [
+     "tienen",
+     "clara",
+     "consciencia",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "ser objeto de",
+  "type": "collocation",
+  "en": "to be the object / subject of",
+  "occ": [
+   {
+    "p": 42,
+    "words": [
+     "siendo",
+     "objeto",
+     "de"
+    ]
+   },
+   {
+    "p": 52,
+    "words": [
+     "sido",
+     "objeto",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "ser susceptible de",
+  "type": "collocation",
+  "en": "to be liable to; to be capable of",
+  "occ": [
+   {
+    "p": 42,
+    "words": [
+     "son",
+     "susceptibles",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "servir de",
+  "type": "collocation",
+  "en": "to serve as",
+  "occ": [
+   {
+    "p": 42,
+    "words": [
+     "servir",
+     "de"
+    ]
+   },
+   {
+    "p": 59,
+    "words": [
+     "sirvieron",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "ser materia de (controversia / discusión)",
+  "type": "collocation",
+  "en": "to be a matter of (controversy / debate)",
+  "occ": [
+   {
+    "p": 43,
+    "words": [
+     "es",
+     "materia",
+     "de",
+     "controversia"
+    ]
+   },
+   {
+    "p": 44,
+    "words": [
+     "permanece",
+     "materia",
+     "de",
+     "discusión"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "poner en duda",
+  "type": "collocation",
+  "en": "to call into question",
+  "occ": [
+   {
+    "p": 43,
+    "words": [
+     "puestas",
+     "en",
+     "duda"
+    ]
+   },
+   {
+    "p": 44,
+    "words": [
+     "puestas",
+     "en",
+     "duda"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "inducir a alguien al error",
+  "type": "collocation",
+  "en": "to mislead someone",
+  "occ": [
+   {
+    "p": 44,
+    "words": [
+     "inducido",
+     "al",
+     "error"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "hacer parte de",
+  "type": "collocation",
+  "en": "to be part of (= formar parte de)",
+  "occ": [
+   {
+    "p": 45,
+    "words": [
+     "hace",
+     "parte",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "dejar espacio a",
+  "type": "collocation",
+  "en": "to leave room for",
+  "occ": [
+   {
+    "p": 45,
+    "words": [
+     "dejar",
+     "espacio",
+     "a"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "consulta previa",
+  "type": "collocation",
+  "en": "prior consultation (of indigenous peoples)",
+  "occ": [
+   {
+    "p": 49,
+    "words": [
+     "consulta",
+     "previa"
+    ]
+   },
+   {
+    "p": 49,
+    "words": [
+     "consulta",
+     "previa"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "juicio de valor",
+  "type": "collocation",
+  "en": "value judgement",
+  "occ": [
+   {
+    "p": 55,
+    "words": [
+     "juicio",
+     "de",
+     "valor"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "hacer (un) uso de",
+  "type": "collocation",
+  "en": "to make use of",
+  "occ": [
+   {
+    "p": 55,
+    "words": [
+     "hacen",
+     "un",
+     "uso",
+     "terapéutico",
+     "de"
+    ]
+   },
+   {
+    "p": 56,
+    "words": [
+     "hacen",
+     "más",
+     "un",
+     "uso"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tener la potestad de",
+  "type": "collocation",
+  "en": "to have the authority to",
+  "occ": [
+   {
+    "p": 56,
+    "words": [
+     "tienen",
+     "la",
+     "potestad",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "colocar / poner en riesgo",
+  "type": "collocation",
+  "en": "to put at risk",
+  "occ": [
+   {
+    "p": 57,
+    "words": [
+     "colocando",
+     "en",
+     "riesgo"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "se impersonal / pasiva refleja",
+  "type": "grammar",
+  "en": "it is … / one … / … is done",
+  "explain": "'Se' + 3rd-person verb describes an action without naming who does it: 'se asumió' = was assumed, 'no se consultaron' = were not consulted.",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "se",
+     "asumió"
+    ]
+   },
+   {
+    "p": 2,
+    "words": [
+     "se",
+     "evitó"
+    ]
+   },
+   {
+    "p": 7,
+    "words": [
+     "se",
+     "habla"
+    ]
+   },
+   {
+    "p": 15,
+    "words": [
+     "Se",
+     "considera"
+    ]
+   },
+   {
+    "p": 22,
+    "words": [
+     "se",
+     "ha",
+     "atribuido"
+    ]
+   },
+   {
+    "p": 47,
+    "words": [
+     "se",
+     "ha",
+     "distribuido"
+    ]
+   },
+   {
+    "p": 49,
+    "words": [
+     "se",
+     "consultaron"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "ser + participio (pasiva)",
+  "type": "grammar",
+  "en": "is / are done (passive voice)",
+  "explain": "Passive voice: 'ser' + past participle, which agrees with the subject; the doer may follow with 'por'.",
+  "occ": [
+   {
+    "p": 6,
+    "words": [
+     "ser",
+     "admirados"
+    ]
+   },
+   {
+    "p": 14,
+    "words": [
+     "son",
+     "usadas"
+    ]
+   },
+   {
+    "p": 16,
+    "words": [
+     "son",
+     "consideradas"
+    ]
+   },
+   {
+    "p": 19,
+    "words": [
+     "fueron",
+     "presentados"
+    ]
+   },
+   {
+    "p": 34,
+    "words": [
+     "son",
+     "asociados"
+    ]
+   },
+   {
+    "p": 37,
+    "words": [
+     "son",
+     "concebidas"
+    ]
+   },
+   {
+    "p": 53,
+    "words": [
+     "ser",
+     "subestimada"
+    ]
+   },
+   {
+    "p": 54,
+    "words": [
+     "es",
+     "desetnicizado"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "haber + participio",
+  "type": "grammar",
+  "en": "has / have done …; had done …",
+  "explain": "Compound tenses: present perfect ('han adquirido' = have acquired) and pluperfect ('había sido curada' = had been cured); 'ha sido + participio' is the passive form.",
+  "occ": [
+   {
+    "p": 6,
+    "words": [
+     "ha",
+     "sido",
+     "desplazada"
+    ]
+   },
+   {
+    "p": 10,
+    "words": [
+     "han",
+     "adquirido"
+    ]
+   },
+   {
+    "p": 10,
+    "words": [
+     "ha",
+     "fomentado"
+    ]
+   },
+   {
+    "p": 14,
+    "words": [
+     "han",
+     "sido",
+     "curadas"
+    ]
+   },
+   {
+    "p": 41,
+    "words": [
+     "ha",
+     "sido",
+     "puro"
+    ]
+   },
+   {
+    "p": 45,
+    "words": [
+     "había",
+     "sido",
+     "curada"
+    ]
+   },
+   {
+    "p": 53,
+    "words": [
+     "ha",
+     "concluido"
+    ]
+   },
+   {
+    "p": 54,
+    "words": [
+     "han",
+     "apropiado"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "estar + gerundio",
+  "type": "grammar",
+  "en": "to be doing … (in progress)",
+  "explain": "Progressive form: stresses an action in progress; 'están siendo dejadas' is a progressive passive = are being left.",
+  "occ": [
+   {
+    "p": 6,
+    "words": [
+     "están",
+     "siendo",
+     "dejadas"
+    ]
+   },
+   {
+    "p": 9,
+    "words": [
+     "están",
+     "generando"
+    ]
+   },
+   {
+    "p": 13,
+    "words": [
+     "estaba",
+     "preparando"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "soler + infinitivo",
+  "type": "grammar",
+  "en": "to usually do …; used to do …",
+  "explain": "'Soler' + infinitive expresses habit: present 'suelen vender' = they usually sell; imperfect 'solía ser' = used to be.",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "suelen",
+     "vender"
+    ]
+   },
+   {
+    "p": 6,
+    "words": [
+     "solía",
+     "ser"
+    ]
+   },
+   {
+    "p": 7,
+    "words": [
+     "suele",
+     "pensar"
+    ]
+   },
+   {
+    "p": 9,
+    "words": [
+     "suelen",
+     "tener"
+    ]
+   },
+   {
+    "p": 33,
+    "words": [
+     "suelen",
+     "designar"
+    ]
+   },
+   {
+    "p": 42,
+    "words": [
+     "suelen",
+     "decir"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "continuar + gerundio",
+  "type": "grammar",
+  "en": "to keep on doing …; to still be doing …",
+  "explain": "'Continuar' (like 'seguir') + gerund says an action is still going on: 'continúa aumentando' = keeps growing.",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "continúan",
+     "siendo"
+    ]
+   },
+   {
+    "p": 48,
+    "words": [
+     "continúa",
+     "aumentando"
+    ]
+   },
+   {
+    "p": 49,
+    "words": [
+     "continúa",
+     "esquivando"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "terminar + gerundio",
+  "type": "grammar",
+  "en": "to end up doing …",
+  "explain": "'Terminar' + gerund says what one finally ended up doing, often unplanned: 'terminé escribiendo un ensayo' = I ended up writing an essay.",
+  "occ": [
+   {
+    "p": 13,
+    "words": [
+     "terminé",
+     "escribiendo"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "volverse + sustantivo / adjetivo",
+  "type": "grammar",
+  "en": "to become …",
+  "explain": "'Volverse' expresses a change of state (to become); without 'se', 'volver algo X' means to turn something into X.",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "se",
+     "ha",
+     "vuelto"
+    ]
+   },
+   {
+    "p": 31,
+    "words": [
+     "volverlos",
+     "objetos"
+    ]
+   },
+   {
+    "p": 55,
+    "words": [
+     "se",
+     "ha",
+     "vuelto"
+    ]
+   },
+   {
+    "p": 57,
+    "words": [
+     "volverse",
+     "chamanes"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "lo + adjetivo",
+  "type": "grammar",
+  "en": "the … (thing / aspect)",
+  "explain": "Neuter 'lo' + adjective turns the adjective into an abstract noun: 'lo sagrado' = the sacred, 'lo exótico' = the exotic.",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "lo",
+     "sagrado"
+    ]
+   },
+   {
+    "p": 10,
+    "words": [
+     "lo",
+     "exótico"
+    ]
+   },
+   {
+    "p": 34,
+    "words": [
+     "lo",
+     "macro"
+    ]
+   },
+   {
+    "p": 34,
+    "words": [
+     "lo",
+     "micro"
+    ]
+   },
+   {
+    "p": 51,
+    "words": [
+     "Lo",
+     "cultural"
+    ]
+   },
+   {
+    "p": 51,
+    "words": [
+     "lo",
+     "sagrado"
+    ]
+   },
+   {
+    "p": 55,
+    "words": [
+     "lo",
+     "profano"
+    ]
+   },
+   {
+    "p": 55,
+    "words": [
+     "lo",
+     "sagrado"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "el cual / la cual / los cuales",
+  "type": "grammar",
+  "en": "which; who (formal relative pronoun)",
+  "explain": "Formal relative pronoun that agrees with its noun; typical after prepositions: 'según la cual' = according to which, 'gracias a las cuales' = thanks to which.",
+  "occ": [
+   {
+    "p": 15,
+    "words": [
+     "los",
+     "cuales"
+    ]
+   },
+   {
+    "p": 27,
+    "words": [
+     "la",
+     "cual"
+    ]
+   },
+   {
+    "p": 27,
+    "words": [
+     "las",
+     "cuales"
+    ]
+   },
+   {
+    "p": 36,
+    "words": [
+     "al",
+     "cual"
+    ]
+   },
+   {
+    "p": 38,
+    "words": [
+     "los",
+     "cuales"
+    ]
+   },
+   {
+    "p": 45,
+    "words": [
+     "las",
+     "cuales"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "dicho / dicha + sustantivo",
+  "type": "grammar",
+  "en": "the said …; this / these …",
+  "explain": "Formal determiner meaning 'the aforementioned'; it agrees with the noun and points back to something just mentioned.",
+  "occ": [
+   {
+    "p": 10,
+    "words": [
+     "dichas",
+     "relaciones"
+    ]
+   },
+   {
+    "p": 10,
+    "words": [
+     "dichas",
+     "transformaciones"
+    ]
+   },
+   {
+    "p": 25,
+    "words": [
+     "dicha",
+     "planta"
+    ]
+   },
+   {
+    "p": 27,
+    "words": [
+     "Dicho",
+     "énfasis"
+    ]
+   },
+   {
+    "p": 50,
+    "words": [
+     "Dicha",
+     "intervención"
+    ]
+   },
+   {
+    "p": 55,
+    "words": [
+     "dichos",
+     "rituales"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "el propio + sustantivo",
+  "type": "grammar",
+  "en": "… themselves; one's own …",
+  "explain": "Before a noun with an article, 'propio' stresses identity: 'los propios conocedores' = the experts themselves; after a possessive it means 'own'.",
+  "occ": [
+   {
+    "p": 17,
+    "words": [
+     "propios",
+     "diseños"
+    ]
+   },
+   {
+    "p": 28,
+    "words": [
+     "propios",
+     "conocedores"
+    ]
+   },
+   {
+    "p": 40,
+    "words": [
+     "propias",
+     "artistas"
+    ]
+   },
+   {
+    "p": 47,
+    "words": [
+     "propios",
+     "pobladores"
+    ]
+   },
+   {
+    "p": 55,
+    "words": [
+     "propios",
+     "profesionales"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "sin que + subjuntivo",
+  "type": "grammar",
+  "en": "without (something happening)",
+  "explain": "'Sin que' introduces a clause with a different subject and always takes the subjunctive.",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "sin",
+     "que",
+     "éstos",
+     "estén"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "aunque + subjuntivo",
+  "type": "grammar",
+  "en": "even if …; although (possibly) …",
+  "explain": "With the subjunctive, 'aunque' concedes something hypothetical or not asserted as fact: 'aunque este fuese el caso' = even if this were the case.",
+  "occ": [
+   {
+    "p": 40,
+    "words": [
+     "Aunque",
+     "el",
+     "exotismo",
+     "parezca"
+    ]
+   },
+   {
+    "p": 44,
+    "words": [
+     "Aunque",
+     "este",
+     "fuese"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "como si + imperfecto de subjuntivo",
+  "type": "grammar",
+  "en": "as if …",
+  "explain": "'Como si' is always followed by the imperfect (or pluperfect) subjunctive; the -se forms ('fuesen', 'tuviese') equal the -ra forms.",
+  "occ": [
+   {
+    "p": 32,
+    "words": [
+     "como",
+     "si",
+     "se",
+     "tratase"
+    ]
+   },
+   {
+    "p": 32,
+    "words": [
+     "como",
+     "si"
+    ]
+   },
+   {
+    "p": 38,
+    "words": [
+     "como",
+     "si",
+     "fuesen"
+    ]
+   },
+   {
+    "p": 45,
+    "words": [
+     "como",
+     "si",
+     "ella",
+     "tuviese"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tanto … como …",
+  "type": "grammar",
+  "en": "both … and …; … as well as …",
+  "explain": "'Tanto X como Y' links two items with equal weight: 'tanto de manera inmaterial como material' = both immaterially and materially.",
+  "occ": [
+   {
+    "p": 13,
+    "words": [
+     "tanto",
+     "como"
+    ]
+   },
+   {
+    "p": 14,
+    "words": [
+     "tanto",
+     "como"
+    ]
+   },
+   {
+    "p": 30,
+    "words": [
+     "tanto",
+     "como"
+    ]
+   },
+   {
+    "p": 40,
+    "words": [
+     "tanto",
+     "como"
+    ]
+   },
+   {
+    "p": 55,
+    "words": [
+     "tanto",
+     "como"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "no sólo … sino (también) …",
+  "type": "grammar",
+  "en": "not only … but (also) …",
+  "explain": "Adds a second, stronger element; 'sino que' is used when a full clause with a verb follows.",
+  "occ": [
+   {
+    "p": 6,
+    "words": [
+     "no",
+     "sólo",
+     "sino",
+     "también"
+    ]
+   },
+   {
+    "p": 14,
+    "words": [
+     "no",
+     "sólo"
+    ]
+   },
+   {
+    "p": 27,
+    "words": [
+     "no",
+     "sólo"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "no … sino …",
+  "type": "grammar",
+  "en": "not … but (rather) …",
+  "explain": "'Sino' (not 'pero') replaces a denied element with the correct one: 'no provino de un pueblo indígena sino de profesionales' = it came not from … but from …",
+  "occ": [
+   {
+    "p": 27,
+    "words": [
+     "no",
+     "son",
+     "sino"
+    ]
+   },
+   {
+    "p": 31,
+    "words": [
+     "no",
+     "existen",
+     "sino"
+    ]
+   },
+   {
+    "p": 54,
+    "words": [
+     "no",
+     "provino",
+     "sino"
+    ]
+   },
+   {
+    "p": 54,
+    "words": [
+     "no",
+     "es",
+     "caracterizada",
+     "sino"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "por + haber + participio",
+  "type": "grammar",
+  "en": "for having done …",
+  "explain": "'Por' + perfect infinitive gives the reason for something already done: 'se le condena por haber inventado' = she is condemned for having invented.",
+  "occ": [
+   {
+    "p": 44,
+    "words": [
+     "por",
+     "haber",
+     "inventado"
+    ]
+   },
+   {
+    "p": 44,
+    "words": [
+     "por",
+     "haber",
+     "exitosamente",
+     "atraído"
+    ]
+   },
+   {
+    "p": 44,
+    "words": [
+     "por",
+     "supuestamente",
+     "haber",
+     "inducido"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "si + imperfecto de subjuntivo → condicional",
+  "type": "grammar",
+  "en": "if … were to …, … would …",
+  "explain": "Hypothetical condition: imperfect subjunctive after 'si' ('decidiese') and conditional in the main clause ('sucedería' = would happen).",
+  "occ": [
+   {
+    "p": 50,
+    "words": [
+     "sucedería",
+     "si",
+     "Estado",
+     "decidiese"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "desde hace + tiempo",
+  "type": "grammar",
+  "en": "for (a period, up to now)",
+  "explain": "With a present-tense verb, 'desde hace + time' says how long a situation has lasted: 'comparten desde hace generaciones' = they have been sharing for generations.",
+  "occ": [
+   {
+    "p": 55,
+    "words": [
+     "desde",
+     "hace",
+     "generaciones"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "infinitivo como sujeto",
+  "type": "grammar",
+  "en": "(to do / doing) … is …",
+  "explain": "An infinitive can be the subject of a sentence, with no article: 'Pretender inventariar los diseños sería…' = Trying to inventory the designs would be… (note: 'pretender' = to aim / try, not 'to pretend').",
+  "occ": [
+   {
+    "p": 38,
+    "words": [
+     "Pretender",
+     "inventariar"
+    ]
+   },
+   {
+    "p": 42,
+    "words": [
+     "Pretender",
+     "salvaguardar"
+    ]
+   },
+   {
+    "p": 50,
+    "words": [
+     "Ver",
+     "y",
+     "hacer",
+     "kené",
+     "es"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "encontrarse (= estar)",
+  "type": "grammar",
+  "en": "to be (found / located)",
+  "explain": "In formal writing 'encontrarse' often just means 'estar' (to be, to be located): 'se encuentra en el corazón de una disputa' = is at the heart of a dispute.",
+  "occ": [
+   {
+    "p": 28,
+    "words": [
+     "se",
+     "encuentra",
+     "materializado"
+    ]
+   },
+   {
+    "p": 36,
+    "words": [
+     "se",
+     "encuentran",
+     "en"
+    ]
+   },
+   {
+    "p": 41,
+    "words": [
+     "se",
+     "encuentra",
+     "una"
+    ]
+   },
+   {
+    "p": 43,
+    "words": [
+     "se",
+     "encuentra",
+     "en"
+    ]
+   }
+  ]
+ }
+]

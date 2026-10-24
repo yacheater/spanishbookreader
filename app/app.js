@@ -18,7 +18,7 @@ const Store = {
     try { s = JSON.parse(localStorage.getItem(KEY)); } catch (e) { s = null; }
     this.state = Object.assign({
       settings: { fs: { mobile: 18, desktop: 20 }, lh: "normal", width: "narrow", theme: "auto" },
-      cards: {}, known: {}, folders: {}, positions: {}, hidden: {}, selected: [], statusFilter: "all",
+      cards: {}, known: {}, folders: {}, positions: {}, hidden: {}, titles: {}, selected: [], statusFilter: "all",
     }, s || {});
     if (!Array.isArray(this.state.selected)) this.state.selected = [];
     Sync.init(this.state);
@@ -80,9 +80,11 @@ function loadText(id) {
 }
 
 // ---------- cards, status, SRS ----------
+/** Your own name for a text (renamed in the library), else the original title. */
+const titleOf = (t) => (S.titles && S.titles[t.id]) || t.title;
 function folderForText(t) {
   const id = "t:" + t.id;
-  if (!S.folders[id]) S.folders[id] = { id, name: t.title, auto: true };
+  if (!S.folders[id]) S.folders[id] = { id, name: titleOf(t), auto: true };
   return id;
 }
 const displayLemma = (L) => (L.pos === "n" && L.article ? `${L.article} ${L.lemma}` : L.lemma);
@@ -230,6 +232,7 @@ function route() {
 window.addEventListener("hashchange", route);
 
 // ---------- library ----------
+const ICON_PEN = `<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16v4zM14 6l4 4"/></svg>`;
 const ICON_TRASH = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4h6v3"/></svg>`;
 /** Texts of this account (cloud) or of this computer (local), minus the ones you deleted / hid. */
 async function libraryTexts() {
@@ -253,16 +256,20 @@ async function renderLibrary() {
     return `<div class="item-wrap"><a class="item" href="#/read/${encodeURIComponent(t.id)}">
       <div class="item-top"><span class="lang-badge ${t.lang === "en" ? "en" : "es"}">${t.lang === "en" ? "EN" : "ES"}</span>
         <span class="item-src">${esc(host(t.source) || "study text")}</span></div>
-      <div class="item-title">${esc(t.title)}</div>
+      <div class="item-title">${esc(titleOf(t))}</div>
       <div class="item-bar" title="${done} of ${saved} saved words learned"><div style="width:${saved ? Math.round((done / saved) * 100) : 0}%"></div></div>
       <div class="meta">${Number(t.words).toLocaleString("en-US")} words · ${saved} saved · ${done} learned</div>
-    </a><button class="del-text" data-del-text="${esc(t.id)}" aria-label="Delete text" title="Delete text">${ICON_TRASH}</button></div>`;
+    </a><div class="item-tools"><button class="tool-btn" data-rename-text="${esc(t.id)}" aria-label="Rename" title="Rename">${ICON_PEN}</button>
+      <button class="tool-btn del-text" data-del-text="${esc(t.id)}" aria-label="Delete text" title="Delete text">${ICON_TRASH}</button></div></div>`;
   }).join("") || `<div class="empty">No texts yet.</div>`}</div>
     ${Cloud.user ? `<div class="suggest ui"><div class="sg-head"><h2>Suggest a text</h2>
         <button class="btn primary" id="sg-new">+ Suggest</button></div>
       <p class="muted small">Paste an article or a link. It will be processed — words, translations and phrases —
         and appear here when it's ready.</p><div id="sg-list"></div></div>`
       : `<p class="howto">To add a text, drop a PDF or .txt into <code>inputs/</code> and ask Claude Code to process it.</p>`}</div>`;
+  view.querySelectorAll("[data-rename-text]").forEach((b) => (b.onclick = (e) => {
+    e.preventDefault(); e.stopPropagation(); renameText(items.find((t) => t.id === b.dataset.renameText));
+  }));
   view.querySelectorAll("[data-del-text]").forEach((b) => (b.onclick = (e) => {
     e.preventDefault(); e.stopPropagation(); confirmDeleteText(items.find((t) => t.id === b.dataset.delText));
   }));
@@ -271,11 +278,26 @@ async function renderLibrary() {
     renderSuggestions();
   }
 }
+function renameText(t) {
+  openModal(`<b>Rename text</b><form id="rn-form"><input class="answer" id="rn-title" maxlength="200" style="margin-top:.6rem"></form>
+    <p class="muted small">Only for you — leave it empty to go back to the original title:<br>${esc(t.title)}</p>
+    <div class="row-btns"><button class="btn" data-close>Cancel</button><button class="btn primary" id="rn-ok">Save</button></div>`);
+  const inp = $("#rn-title"); inp.value = titleOf(t); inp.focus(); inp.select();
+  const save = () => {
+    const v = inp.value.trim();
+    if (!v || v === t.title) delete S.titles[t.id]; else S.titles[t.id] = v;
+    const f = S.folders["t:" + t.id]; if (f) f.name = titleOf(t);            // the text's folder follows the name
+    if (window.LECTOR_TEXTS[t.id]) current = window.LECTOR_TEXTS[t.id];
+    Store.save(); modal._onClose = renderLibrary; closeModal();
+  };
+  $("#rn-form").onsubmit = (e) => { e.preventDefault(); save(); };
+  $("#rn-ok").onclick = save;
+}
 // two-step delete: 1) are you sure  2) can't be undone + optionally remove the saved words of this text
 function confirmDeleteText(t) {
   const folder = "t:" + t.id;
   const cards = Object.values(S.cards).filter((c) => c.folders.includes(folder));
-  openModal(`<b>Delete “${esc(t.title)}”?</b><p class="muted small">It disappears from Texts on all your devices.</p>
+  openModal(`<b>Delete “${esc(titleOf(t))}”?</b><p class="muted small">It disappears from Texts on all your devices.</p>
     <div class="row-btns"><button class="btn" data-close>Cancel</button><button class="btn bad" id="dt-1">Delete…</button></div>`);
   $("#dt-1").onclick = () => {
     openModal(`<b>Are you sure?</b><p class="muted small">This can't be undone — to read it again, the text has to be processed again.</p>
@@ -415,7 +437,7 @@ async function renderReader(id) {
     if (contiguous) for (let ti = o.t[0] + 1; ti < o.t[o.t.length - 1]; ti++) if (typeof para[ti] === "string") gapAt[o.p + ":" + ti] = oi;
   });
   t._occAt = occAt;
-  let html = `<article class="col reader"><h1>${esc(t.title)}</h1>`;
+  let html = `<article class="col reader"><h1>${esc(titleOf(t))}</h1>`;
   ch.paragraphs.forEach((para, pi) => {
     const inner = para.map((tok, ti) => {
       const g = gapAt[pi + ":" + ti];
@@ -1045,7 +1067,7 @@ async function startTranslate() {
   const byKey = {};
   for (const t of texts) {
     if (only.length && !only.includes(t.id)) continue;
-    for (const p of t.phrases || []) if (translatable(p) && !byKey[p.key]) byKey[p.key] = { ...p, lang: t.lang || "es", textId: t.id, textTitle: t.title };
+    for (const p of t.phrases || []) if (translatable(p) && !byKey[p.key]) byKey[p.key] = { ...p, lang: t.lang || "es", textId: t.id, textTitle: titleOf(t) };
   }
   for (const c of Object.values(S.cards)) {              // saved phrases count even if their text is gone
     if (c.L.pos === "phrase" && c.L.type !== "grammar" && translatable({ key: c.L.lemma }) && !byKey[c.L.lemma])

@@ -16,6 +16,7 @@ TENSE_LABEL = {
     "preterito_imperfecto": "pretérito imperfecto", "futuro": "futuro",
     "condicional": "condicional", "subjuntivo_presente": "subjuntivo presente",
     "subjuntivo_imperfecto": "subjuntivo imperfecto",
+    "subjuntivo_imperfecto_se": "subjuntivo imperfecto (-se)",
 }
 
 END = {
@@ -53,6 +54,7 @@ STEM.update({m: "e>i" for m in (
     "servir pedir repetir medir seguir conseguir perseguir vestir competir elegir corregir "
     "despedir impedir rendir gemir").split()})
 STEM.update({m: "u>ue" for m in ["jugar"]})
+STEM.update({m: "i>ie" for m in "adquirir inquirir".split()})
 STEM.update({m: "í" for m in "enviar enfriar confiar fiar guiar variar ampliar desviar criar".split()})
 STEM.update({m: "ú" for m in "continuar actuar evaluar situar graduar habituar insinuar".split()})
 
@@ -132,7 +134,7 @@ def _change(stem, model, kind):
     if i < 0:
         return stem
     if kind == "strong":
-        rep = {"e>ie": "ie", "e>ie,i": "ie", "o>ue": "ue", "o>ue,u": "ue", "e>i": "i", "u>ue": "ue"}[model]
+        rep = {"e>ie": "ie", "e>ie,i": "ie", "o>ue": "ue", "o>ue,u": "ue", "e>i": "i", "u>ue": "ue", "i>ie": "ie"}[model]
         if model == "o>ue" and i == 0:   # oler -> huelo
             rep = "hue"
     else:
@@ -277,6 +279,8 @@ def conjugate(inf, model=None):
     st = pret[5][:-3]
     out["subjuntivo_imperfecto"] = [st + "ra", st + "ras", st + "ra",
                                     st[:-1] + acc(st[-1]) + "ramos", st + "rais", st + "ran"]
+    out["subjuntivo_imperfecto_se"] = [st + "se", st + "ses", st + "se",                     # fuese, decidiese
+                                       st[:-1] + acc(st[-1]) + "semos", st + "seis", st + "sen"]
 
     # gerundio / participio
     if "ger" in irr:
@@ -321,7 +325,7 @@ def analyse(surface, inf, model=None):
     c = conjugate(inf, model)
     plain = conjugate(inf[:-2], model) if inf.endswith("se") and inf[-4:-2] in ("ar", "er", "ir", "ír") else c
     hits = []
-    for t in TENSES + ["subjuntivo_imperfecto"]:
+    for t in TENSES + ["subjuntivo_imperfecto", "subjuntivo_imperfecto_se"]:
         ps = [PERSONS[i] for i, f in enumerate(plain[t]) if f == s]
         if ps:
             hits.append(f"{TENSE_LABEL[t]} · {' / '.join(ps)}")
@@ -410,7 +414,8 @@ if __name__ == "__main__":
         if (got["presente"], got["imperativo"]) != (pres, imp):
             bad += 1
             print(f"FAIL vos {v}: got {got}, exp {pres} / {imp}")
-    for s_, v, exp in [("querés", "querer", "presente · vos"), ("vivís", "vivir", "presente · vosotros/as / vos"),
+    for s_, v, exp in [("adquiere", "adquirir", "presente · él/ella/usted"), ("fuese", "ser", "subjuntivo imperfecto (-se) · yo / él/ella/usted"),
+                       ("querés", "querer", "presente · vos"), ("vivís", "vivir", "presente · vosotros/as / vos"),
                        ("tomá", "tomar", "imperativo · vos")]:
         if analyse(s_, v) != exp:
             bad += 1

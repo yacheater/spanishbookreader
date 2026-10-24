@@ -1,0 +1,790 @@
+{
+ "brazalete.n": {
+  "en": "bracelet",
+  "g": "m"
+ },
+ "brebaje.n": {
+  "en": "brew; potion",
+  "g": "m"
+ },
+ "breve.adj": {
+  "en": "brief; short (en breve = in short; soon)"
+ },
+ "brillante.adj": {
+  "en": "shining; bright; brilliant"
+ },
+ "buscar.v": {
+  "en": "to look for; to seek"
+ },
+ "búsqueda.n": {
+  "en": "search; quest",
+  "g": "f"
+ },
+ "cabalidad.n": {
+  "en": "completeness (a cabalidad = fully, thoroughly)",
+  "g": "f"
+ },
+ "caballo.n": {
+  "en": "horse (a caballo entre = straddling; halfway between)",
+  "g": "m"
+ },
+ "caber.v": {
+  "en": "to fit (cabe + inf. = it is worth/fitting to …)"
+ },
+ "cabeza.n": {
+  "en": "head",
+  "g": "f"
+ },
+ "cabildo.n": {
+  "en": "town council; council",
+  "g": "m"
+ },
+ "cabo.n": {
+  "en": "end; cape (llevar a cabo = to carry out)",
+  "g": "m"
+ },
+ "cacería.n": {
+  "en": "hunting; hunt",
+  "g": "f"
+ },
+ "caer.v": {
+  "en": "to fall"
+ },
+ "caja.n": {
+  "en": "box; case",
+  "g": "f"
+ },
+ "calidad.n": {
+  "en": "quality (en calidad de = as, in the capacity of)",
+  "g": "f"
+ },
+ "calle.n": {
+  "en": "street",
+  "g": "f"
+ },
+ "calzar.v": {
+  "en": "to put on (shoes); to fit snugly"
+ },
+ "cambiante.adj": {
+  "en": "changing; changeable"
+ },
+ "camino.n": {
+  "en": "path; road; way",
+  "g": "m"
+ },
+ "camisa.n": {
+  "en": "shirt",
+  "g": "f"
+ },
+ "camiseta.n": {
+  "en": "T-shirt",
+  "g": "f"
+ },
+ "camión.n": {
+  "en": "truck; lorry",
+  "g": "m"
+ },
+ "campaña.n": {
+  "en": "campaign",
+  "g": "f"
+ },
+ "campo.n": {
+  "en": "field; countryside (trabajo de campo = fieldwork)",
+  "g": "m"
+ },
+ "canal.n": {
+  "en": "channel; canal",
+  "g": "m"
+ },
+ "cano.other": {
+  "en": "cano: Shipibo-Konibo word for 'path', the paths traced by kené lines"
+ },
+ "cantar.v": {
+  "en": "to sing"
+ },
+ "cantidad.n": {
+  "en": "quantity; amount",
+  "g": "f"
+ },
+ "canto.n": {
+  "en": "song; chant; singing",
+  "g": "m"
+ },
+ "caracterizar.v": {
+  "en": "to characterise; to describe"
+ },
+ "característico.adj": {
+  "en": "characteristic; typical"
+ },
+ "caramelo.n": {
+  "en": "sweet; candy; caramel",
+  "g": "m"
+ },
+ "cardinal.adj": {
+  "en": "cardinal; fundamental"
+ },
+ "carga.n": {
+  "en": "load; cargo; freight; burden",
+  "g": "f"
+ },
+ "cargar.v": {
+  "en": "to load; to carry; to charge"
+ },
+ "cargo.n": {
+  "en": "post; responsibility (a cargo de = in charge of)",
+  "g": "m"
+ },
+ "carne.n": {
+  "en": "meat; flesh",
+  "g": "f"
+ },
+ "carnero.n": {
+  "en": "ram; sheep",
+  "g": "m"
+ },
+ "cashinahua.other": {
+  "en": "Cashinahua (Huni Kuin): Indigenous Amazonian people of Peru and Brazil"
+ },
+ "caso.n": {
+  "en": "case",
+  "g": "m"
+ },
+ "catastrar.v": {
+  "en": "to survey and register (in a land registry)"
+ },
+ "categorizar.v": {
+  "en": "to categorise"
+ },
+ "categoría.n": {
+  "en": "category",
+  "g": "f"
+ },
+ "causar.v": {
+  "en": "to cause"
+ },
+ "cautivar.v": {
+  "en": "to captivate; to charm"
+ },
+ "cavidad.n": {
+  "en": "cavity; hollow",
+  "g": "f"
+ },
+ "celebración.n": {
+  "en": "celebration",
+  "g": "f"
+ },
+ "celebrar.v": {
+  "en": "to celebrate"
+ },
+ "ceniza.n": {
+  "en": "ash",
+  "g": "f"
+ },
+ "central.adj": {
+  "en": "central"
+ },
+ "centro.n": {
+  "en": "centre; center",
+  "g": "m"
+ },
+ "cercanamente.adv": {
+  "en": "closely"
+ },
+ "cercano.adj": {
+  "en": "close; near; friendly"
+ },
+ "cercanía.n": {
+  "en": "closeness (cercanías = surroundings, vicinity)",
+  "g": "f"
+ },
+ "ceremonia.n": {
+  "en": "ceremony",
+  "g": "f"
+ },
+ "cerrar.v": {
+  "en": "to close",
+  "m": "e>ie"
+ },
+ "cerrito.n": {
+  "en": "little hill (diminutive of cerro)",
+  "g": "m"
+ },
+ "cerro.n": {
+  "en": "hill; mountain",
+  "g": "m"
+ },
+ "cerámica.n": {
+  "en": "ceramics; pottery; piece of pottery",
+  "g": "f"
+ },
+ "chacra.n": {
+  "en": "small farm; cultivated plot (Andes, Amazonia)",
+  "g": "f"
+ },
+ "chakruna.other": {
+  "en": "chakruna: Psychotria viridis, the leaf added to the ayahuasca brew"
+ },
+ "chamanismo.n": {
+  "en": "shamanism",
+  "g": "m"
+ },
+ "chamán.n": {
+  "en": "shaman",
+  "g": "m/f"
+ },
+ "chamánico.adj": {
+  "en": "shamanic"
+ },
+ "cielo.n": {
+  "en": "sky; heaven",
+  "g": "m"
+ },
+ "científico.adj": {
+  "en": "scientific"
+ },
+ "cierre.n": {
+  "en": "closing; closure",
+  "g": "m"
+ },
+ "ciertamente.adv": {
+  "en": "certainly"
+ },
+ "cierto.det": {
+  "en": "certain; a certain"
+ },
+ "cima.n": {
+  "en": "summit; top",
+  "g": "f"
+ },
+ "cimiento.n": {
+  "en": "foundation (usually pl.)",
+  "g": "m"
+ },
+ "cineasta.n": {
+  "en": "filmmaker",
+  "g": "m/f"
+ },
+ "circuito.n": {
+  "en": "circuit; route",
+  "g": "m"
+ },
+ "circulación.n": {
+  "en": "circulation",
+  "g": "f"
+ },
+ "circular.adj": {
+  "en": "circular; round"
+ },
+ "circular.v": {
+  "en": "to circulate; to go round"
+ },
+ "circunscribir.v": {
+  "en": "to confine; to restrict; to limit"
+ },
+ "circunstancia.n": {
+  "en": "circumstance",
+  "g": "f"
+ },
+ "ciudad.n": {
+  "en": "city",
+  "g": "f"
+ },
+ "ciudadano.adj": {
+  "en": "civic; citizens'; of citizens"
+ },
+ "ciudadanía.n": {
+  "en": "citizenship",
+  "g": "f"
+ },
+ "claramente.adv": {
+  "en": "clearly"
+ },
+ "claro.adj": {
+  "en": "clear; light (colour)"
+ },
+ "clasificación.n": {
+  "en": "classification",
+  "g": "f"
+ },
+ "cliente.n": {
+  "en": "customer; client",
+  "g": "m/f"
+ },
+ "clásico.adj": {
+  "en": "classic; classical"
+ },
+ "cobijeño.adj": {
+  "en": "from Cobija (Aymara community in northern Chile); person from Cobija"
+ },
+ "cobrar.v": {
+  "en": "to charge (money); to collect (cobrarse vidas = to claim lives)"
+ },
+ "coca.n": {
+  "en": "coca (plant and leaves)",
+  "g": "f"
+ },
+ "cocama.other": {
+  "en": "Cocama: Indigenous Amazonian people of Peru (Tupi-Guarani language)"
+ },
+ "coger.v": {
+  "en": "to take; to grasp; to catch"
+ },
+ "cohabitación.n": {
+  "en": "cohabitation; living together",
+  "g": "f"
+ },
+ "coincidencia.n": {
+  "en": "coincidence (por coincidencia = by coincidence)",
+  "g": "f"
+ },
+ "coincidente.adj": {
+  "en": "coinciding; matching; consistent"
+ },
+ "coincidir.v": {
+  "en": "to coincide; to match; to agree"
+ },
+ "colaborar.v": {
+  "en": "to collaborate; to contribute"
+ },
+ "colectivo.adj": {
+  "en": "collective"
+ },
+ "colectivo.n": {
+  "en": "collective; group",
+  "g": "m"
+ },
+ "colmar.v": {
+  "en": "to fill (to the brim); to fulfil"
+ },
+ "colocar.v": {
+  "en": "to place; to put"
+ },
+ "colonización.n": {
+  "en": "colonisation",
+  "g": "f"
+ },
+ "colono.n": {
+  "en": "settler; colonist",
+  "g": "m"
+ },
+ "color.n": {
+  "en": "colour",
+  "g": "m"
+ },
+ "coloración.n": {
+  "en": "colouring; colouration",
+  "g": "f"
+ },
+ "colorido.adj": {
+  "en": "colourful"
+ },
+ "comadre.n": {
+  "en": "comadre: godmother of one's child; close female friend",
+  "g": "f"
+ },
+ "combate.n": {
+  "en": "combat; fight; battle",
+  "g": "m"
+ },
+ "combinación.n": {
+  "en": "combination",
+  "g": "f"
+ },
+ "combinar.v": {
+  "en": "to combine"
+ },
+ "comensalidad.n": {
+  "en": "commensality (eating together as a social bond)",
+  "g": "f"
+ },
+ "comentar.v": {
+  "en": "to comment; to remark (se comentaba = people said)"
+ },
+ "comenzar.v": {
+  "en": "to begin; to start",
+  "m": "e>ie"
+ },
+ "comer.v": {
+  "en": "to eat"
+ },
+ "comercial.adj": {
+  "en": "commercial"
+ },
+ "comercialización.n": {
+  "en": "marketing; commercialisation",
+  "g": "f"
+ },
+ "comercio.n": {
+  "en": "trade; commerce; shop",
+  "g": "m"
+ },
+ "compadre.n": {
+  "en": "compadre: godfather of one's child; close friend",
+  "g": "m"
+ },
+ "comparación.n": {
+  "en": "comparison (en comparación con = compared with)",
+  "g": "f"
+ },
+ "comparar.v": {
+  "en": "to compare"
+ },
+ "compartir.v": {
+  "en": "to share"
+ },
+ "compañía.n": {
+  "en": "company; companionship (en compañía de = together with)",
+  "g": "f"
+ },
+ "complejidad.n": {
+  "en": "complexity",
+  "g": "f"
+ },
+ "complejo.adj": {
+  "en": "complex"
+ },
+ "completar.v": {
+  "en": "to complete; to supplement"
+ },
+ "completo.adj": {
+  "en": "complete; whole; full"
+ },
+ "componente.n": {
+  "en": "component",
+  "g": "m"
+ },
+ "componer.v": {
+  "en": "to make up; to compose"
+ },
+ "comportamiento.n": {
+  "en": "behaviour",
+  "g": "m"
+ },
+ "composición.n": {
+  "en": "composition",
+  "g": "f"
+ },
+ "comprador.n": {
+  "en": "buyer; customer",
+  "g": "m"
+ },
+ "comprensión.n": {
+  "en": "understanding; comprehension",
+  "g": "f"
+ },
+ "comprometer.v": {
+  "en": "to commit; to involve; to compromise (comprometerse = to commit oneself)"
+ },
+ "comunero.n": {
+  "en": "member of a (peasant/indigenous) community",
+  "g": "m"
+ },
+ "comunicación.n": {
+  "en": "communication",
+  "g": "f"
+ },
+ "comunicar.v": {
+  "en": "to communicate (comunicarse = to communicate with each other)"
+ },
+ "comunidad.n": {
+  "en": "community",
+  "g": "f"
+ },
+ "común.adj": {
+  "en": "common; shared",
+  "f": "común",
+  "pl": "comunes"
+ },
+ "concebir.v": {
+  "en": "to conceive; to understand",
+  "m": "e>i"
+ },
+ "concentrar.v": {
+  "en": "to concentrate (concentrarse = to be concentrated)"
+ },
+ "concepción.n": {
+  "en": "conception; design; idea",
+  "g": "f"
+ },
+ "concernir.v": {
+  "en": "to concern; to involve",
+  "m": "e>ie"
+ },
+ "concluir.v": {
+  "en": "to conclude; to finish"
+ },
+ "conclusión.n": {
+  "en": "conclusion",
+  "g": "f"
+ },
+ "concordar.v": {
+  "en": "to agree; to match",
+  "m": "o>ue"
+ },
+ "concreto.adj": {
+  "en": "concrete; specific; tangible"
+ },
+ "condenar.v": {
+  "en": "to condemn; to sentence"
+ },
+ "condición.n": {
+  "en": "condition",
+  "g": "f"
+ },
+ "conducir.v": {
+  "en": "to lead; to conduct; to drive"
+ },
+ "conectar.v": {
+  "en": "to connect"
+ },
+ "conexión.n": {
+  "en": "connection",
+  "g": "f"
+ },
+ "confeccionar.v": {
+  "en": "to make; to make up (clothes, objects)"
+ },
+ "confección.n": {
+  "en": "making; manufacture; dressmaking",
+  "g": "f"
+ },
+ "conferir.v": {
+  "en": "to confer; to give; to grant",
+  "m": "e>ie,i"
+ },
+ "configuración.n": {
+  "en": "configuration; shaping",
+  "g": "f"
+ },
+ "configurar.v": {
+  "en": "to shape; to configure; to make up"
+ },
+ "confirmación.n": {
+  "en": "confirmation",
+  "g": "f"
+ },
+ "confluencia.n": {
+  "en": "confluence; coming together",
+  "g": "f"
+ },
+ "conformar.v": {
+  "en": "to make up; to form; to shape"
+ },
+ "confusión.n": {
+  "en": "confusion",
+  "g": "f"
+ },
+ "conjugar.v": {
+  "en": "to combine; to conjugate (conjugarse = to come together)"
+ },
+ "conjunto.n": {
+  "en": "set; group; whole (en conjunto = as a whole)",
+  "g": "m"
+ },
+ "conocedor.n": {
+  "en": "expert; connoisseur; person who knows",
+  "g": "m"
+ },
+ "conocer.v": {
+  "en": "to know; to get to know; to meet"
+ },
+ "conquistar.v": {
+  "en": "to conquer; to win over"
+ },
+ "consciencia.n": {
+  "en": "awareness; consciousness",
+  "g": "f"
+ },
+ "consecuencia.n": {
+  "en": "consequence",
+  "g": "f"
+ },
+ "consecuente.adj": {
+  "en": "consistent; consequent"
+ },
+ "consideración.n": {
+  "en": "consideration (consideraciones finales = final remarks)",
+  "g": "f"
+ },
+ "considerar.v": {
+  "en": "to consider"
+ },
+ "constatar.v": {
+  "en": "to confirm; to verify; to note"
+ },
+ "constituir.v": {
+  "en": "to constitute; to make up; to be (constituirse como = to establish oneself as)"
+ },
+ "constitutivamente.adv": {
+  "en": "constitutively; by its very nature"
+ },
+ "construir.v": {
+  "en": "to build; to construct"
+ },
+ "consulta.n": {
+  "en": "consultation (consulta previa = prior consultation of Indigenous peoples)",
+  "g": "f"
+ },
+ "consultar.v": {
+  "en": "to consult"
+ },
+ "consultorio.n": {
+  "en": "doctor's office; surgery; clinic",
+  "g": "m"
+ },
+ "consumidor.n": {
+  "en": "consumer",
+  "g": "m"
+ },
+ "consumista.adj": {
+  "en": "consumerist"
+ },
+ "consumo.n": {
+  "en": "consumption",
+  "g": "m"
+ },
+ "contacto.n": {
+  "en": "contact",
+  "g": "m"
+ },
+ "contemporáneo.adj": {
+  "en": "contemporary"
+ },
+ "contener.v": {
+  "en": "to contain; to hold"
+ },
+ "contestar.v": {
+  "en": "to answer; to reply"
+ },
+ "contingencia.n": {
+  "en": "contingency; dependence on circumstances",
+  "g": "f"
+ },
+ "continuar.v": {
+  "en": "to continue; to go on",
+  "m": "ú"
+ },
+ "continuidad.n": {
+  "en": "continuity",
+  "g": "f"
+ },
+ "contra.prep": {
+  "en": "against"
+ },
+ "contrario.adj": {
+  "en": "contrary; opposite (al contrario = on the contrary; de lo contrario = otherwise)"
+ },
+ "contraste.n": {
+  "en": "contrast (en contraste con = in contrast to)",
+  "g": "m"
+ },
+ "contribución.n": {
+  "en": "contribution",
+  "g": "f"
+ },
+ "contribuir.v": {
+  "en": "to contribute"
+ },
+ "control.n": {
+  "en": "control",
+  "g": "m"
+ },
+ "controlar.v": {
+  "en": "to control"
+ },
+ "controversia.n": {
+  "en": "controversy",
+  "g": "f"
+ },
+ "contundente.adj": {
+  "en": "forceful; hefty; substantial; convincing"
+ },
+ "convenio.n": {
+  "en": "agreement; convention (treaty)",
+  "g": "m"
+ },
+ "convergencia.n": {
+  "en": "convergence",
+  "g": "f"
+ },
+ "conversación.n": {
+  "en": "conversation",
+  "g": "f"
+ },
+ "conversar.v": {
+  "en": "to talk; to converse"
+ },
+ "convidar.v": {
+  "en": "to invite; to treat (someone to food or drink)"
+ },
+ "convite.n": {
+  "en": "feast; banquet; treat",
+  "g": "m"
+ },
+ "copal.n": {
+  "en": "copal (aromatic tree resin burnt as incense)",
+  "g": "m"
+ },
+ "copiar.v": {
+  "en": "to copy"
+ },
+ "copita.n": {
+  "en": "small glass (diminutive of copa)",
+  "g": "f"
+ },
+ "corazón.n": {
+  "en": "heart",
+  "g": "m"
+ },
+ "cordón.n": {
+  "en": "cord; string (cordón montañoso = mountain range)",
+  "g": "m"
+ },
+ "corona.n": {
+  "en": "crown; headdress",
+  "g": "f"
+ },
+ "corporal.adj": {
+  "en": "bodily; body (pintura corporal = body painting)"
+ },
+ "corral.n": {
+  "en": "corral; livestock pen; yard",
+  "g": "m"
+ },
+ "corresponder.v": {
+  "en": "to correspond (to); to belong (to)"
+ },
+ "corroborar.v": {
+  "en": "to corroborate; to confirm"
+ },
+ "cortar.v": {
+  "en": "to cut"
+ },
+ "corte.n": {
+  "en": "court (of law); royal court",
+  "g": "f"
+ },
+ "corto.adj": {
+  "en": "short; brief"
+ },
+ "cosmogonía.n": {
+  "en": "cosmogony; myth of the origin of the universe",
+  "g": "f"
+ },
+ "cosmología.n": {
+  "en": "cosmology",
+  "g": "f"
+ },
+ "cosmos.n": {
+  "en": "cosmos",
+  "g": "m",
+  "pl": "cosmos"
+ },
+ "cosmovisión.n": {
+  "en": "worldview; cosmovision",
+  "g": "f"
+ },
+ "costero.adj": {
+  "en": "coastal"
+ }
+}

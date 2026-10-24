@@ -41,7 +41,7 @@ for k, lm in lemmas.items():
         problems.append(f"lemma {k}: no en")
     if LANG == "es" and pos == "n" and lm.get("g") not in ("m", "f", "m/f"):
         problems.append(f"lemma {k}: g must be m / f / m/f")
-    if LANG == "es" and pos == "v" and lm.get("m") not in (None, "e>ie", "e>ie,i", "o>ue", "o>ue,u", "e>i", "u>ue", "í", "ú"):
+    if LANG == "es" and pos == "v" and lm.get("m") not in (None, "e>ie", "e>ie,i", "o>ue", "o>ue,u", "e>i", "u>ue", "i>ie", "í", "ú"):
         problems.append(f"lemma {k}: bad model {lm.get('m')!r}")
 for surf, e in forms.items():
     if not isinstance(e, list) or len(e) not in (2, 3) or not e[1]:

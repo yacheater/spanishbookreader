@@ -1,0 +1,713 @@
+{
+ "equívoco.n": {
+  "en": "misunderstanding; equivocation (talking at cross-purposes)",
+  "g": "m"
+ },
+ "ser.v": {
+  "en": "to be"
+ },
+ "erróneamente.adv": {
+  "en": "erroneously; mistakenly"
+ },
+ "ese.det": {
+  "en": "that"
+ },
+ "escala.n": {
+  "en": "scale; level",
+  "g": "f"
+ },
+ "escamado.adj": {
+  "en": "scaly"
+ },
+ "escaso.adj": {
+  "en": "scarce; little; limited"
+ },
+ "escenario.n": {
+  "en": "stage; setting; scenario",
+  "g": "m"
+ },
+ "escindir.v": {
+  "en": "to split; to separate"
+ },
+ "escolarizado.adj": {
+  "en": "schooled; enrolled in school"
+ },
+ "escribir.v": {
+  "en": "to write"
+ },
+ "escrito.adj": {
+  "en": "written"
+ },
+ "escritura.n": {
+  "en": "writing; script (writing system)",
+  "g": "f"
+ },
+ "escuchar.v": {
+  "en": "to listen (to); to hear"
+ },
+ "escuela.n": {
+  "en": "school",
+  "g": "f"
+ },
+ "esfuerzo.n": {
+  "en": "effort",
+  "g": "m"
+ },
+ "espacio.n": {
+  "en": "space; room; slot",
+  "g": "m"
+ },
+ "espalda.n": {
+  "en": "back (of the body)",
+  "g": "f"
+ },
+ "esparcir.v": {
+  "en": "to spread; to scatter"
+ },
+ "especial.adj": {
+  "en": "special; particular"
+ },
+ "especializado.adj": {
+  "en": "specialized"
+ },
+ "especie.n": {
+  "en": "species; kind",
+  "g": "f"
+ },
+ "especificidad.n": {
+  "en": "specificity",
+  "g": "f"
+ },
+ "específico.adj": {
+  "en": "specific"
+ },
+ "espetar.v": {
+  "en": "to blurt out; to snap (at someone)"
+ },
+ "espiritual.adj": {
+  "en": "spiritual"
+ },
+ "espontáneo.adj": {
+  "en": "spontaneous"
+ },
+ "esposo.n": {
+  "en": "husband / wife; spouse",
+  "g": "m/f"
+ },
+ "espíritu.n": {
+  "en": "spirit",
+  "g": "m"
+ },
+ "esquivar.v": {
+  "en": "to dodge; to avoid; to evade"
+ },
+ "estar.v": {
+  "en": "to be (state, location)"
+ },
+ "establecer.v": {
+  "en": "to establish; to set up"
+ },
+ "estallido.n": {
+  "en": "outbreak; explosion; outburst",
+  "g": "m"
+ },
+ "estatal.adj": {
+  "en": "state (adj.); state-run"
+ },
+ "estilo.n": {
+  "en": "style",
+  "g": "m"
+ },
+ "estrategia.n": {
+  "en": "strategy",
+  "g": "f"
+ },
+ "estrella.n": {
+  "en": "star",
+  "g": "f"
+ },
+ "estructurar.v": {
+  "en": "to structure; to organize"
+ },
+ "estuche.n": {
+  "en": "case; pouch (small container)",
+  "g": "m"
+ },
+ "estudiar.v": {
+  "en": "to study"
+ },
+ "estudioso.n": {
+  "en": "scholar; researcher",
+  "g": "m/f"
+ },
+ "estético.adj": {
+  "en": "aesthetic"
+ },
+ "etapa.n": {
+  "en": "stage; phase",
+  "g": "f"
+ },
+ "etc.other": {
+  "en": "etc. (et cetera)"
+ },
+ "etnicizante.adj": {
+  "en": "ethnicizing (framing something in terms of ethnic identity)"
+ },
+ "etnobotánico.adj": {
+  "en": "ethnobotanical"
+ },
+ "etnografía.n": {
+  "en": "ethnography",
+  "g": "f"
+ },
+ "etnográfico.adj": {
+  "en": "ethnographic"
+ },
+ "etnohistórico.adj": {
+  "en": "ethnohistorical"
+ },
+ "etótropo.adj": {
+  "en": "ethotropic: (of plants) used to affect behaviour"
+ },
+ "europeo.adj": {
+  "en": "European"
+ },
+ "evaluación.n": {
+  "en": "assessment; evaluation",
+  "g": "f"
+ },
+ "evento.n": {
+  "en": "event",
+  "g": "m"
+ },
+ "evidenciar.v": {
+  "en": "to show; to make evident"
+ },
+ "evidencia.n": {
+  "en": "evidence (often plural in Spanish)",
+  "g": "f"
+ },
+ "evidente.adj": {
+  "en": "evident; obvious"
+ },
+ "evitar.v": {
+  "en": "to avoid"
+ },
+ "exacto.adj": {
+  "en": "exact; precise"
+ },
+ "examinar.v": {
+  "en": "to examine"
+ },
+ "exceder.v": {
+  "en": "to exceed; to go beyond"
+ },
+ "exclusivamente.adv": {
+  "en": "exclusively"
+ },
+ "exclusión.n": {
+  "en": "exclusion",
+  "g": "f"
+ },
+ "exento.adj": {
+  "en": "exempt; free (from)"
+ },
+ "exigente.adj": {
+  "en": "demanding"
+ },
+ "exigir.v": {
+  "en": "to demand; to require"
+ },
+ "existir.v": {
+  "en": "to exist"
+ },
+ "existencia.n": {
+  "en": "existence",
+  "g": "f"
+ },
+ "exitosamente.adv": {
+  "en": "successfully"
+ },
+ "exitoso.adj": {
+  "en": "successful"
+ },
+ "exotismo.n": {
+  "en": "exoticism",
+  "g": "m"
+ },
+ "expansión.n": {
+  "en": "expansion; spread",
+  "g": "f"
+ },
+ "expectativa.n": {
+  "en": "expectation",
+  "g": "f"
+ },
+ "expediente.n": {
+  "en": "dossier; (official) file",
+  "g": "m"
+ },
+ "experiencia.n": {
+  "en": "experience",
+  "g": "f"
+ },
+ "experimentar.v": {
+  "en": "to experience"
+ },
+ "experto.adj": {
+  "en": "expert; skilled"
+ },
+ "explicar.v": {
+  "en": "to explain"
+ },
+ "exponer.v": {
+  "en": "to set out; to expose; to exhibit"
+ },
+ "exposición.n": {
+  "en": "exhibition; exposition",
+  "g": "f"
+ },
+ "expresar.v": {
+  "en": "to express"
+ },
+ "expresión.n": {
+  "en": "expression",
+  "g": "f"
+ },
+ "extendido.adj": {
+  "en": "spread out; extended; widespread"
+ },
+ "extender.v": {
+  "en": "to extend; to spread; to last",
+  "m": "e>ie"
+ },
+ "extenso.adj": {
+  "en": "extensive; vast"
+ },
+ "exterior.n": {
+  "en": "outside; (el exterior) abroad",
+  "g": "m"
+ },
+ "externo.adj": {
+  "en": "external; outside"
+ },
+ "extractivismo.n": {
+  "en": "extractivism: large-scale extraction of natural resources (mining, oil)",
+  "g": "m"
+ },
+ "extranjero.n": {
+  "en": "foreigner; (el extranjero) abroad",
+  "g": "m/f"
+ },
+ "extranjero.adj": {
+  "en": "foreign"
+ },
+ "extraordinario.adj": {
+  "en": "extraordinary"
+ },
+ "extraer.v": {
+  "en": "to extract; to take out"
+ },
+ "extremidad.n": {
+  "en": "extremity; tip (of a limb or branch)",
+  "g": "f"
+ },
+ "exógeno.adj": {
+  "en": "exogenous; coming from outside"
+ },
+ "exótico.adj": {
+  "en": "exotic"
+ },
+ "faceta.n": {
+  "en": "facet; side",
+  "g": "f"
+ },
+ "facial.adj": {
+  "en": "facial"
+ },
+ "faena.n": {
+  "en": "task; work; (mining) operation",
+  "g": "f"
+ },
+ "faldeo.n": {
+  "en": "mountain slope; foothills (Southern Cone)",
+  "g": "m"
+ },
+ "fallar.v": {
+  "en": "to fail; (of a court) to rule"
+ },
+ "falta.n": {
+  "en": "lack; absence; mistake",
+  "g": "f"
+ },
+ "faltar.v": {
+  "en": "to be missing; to be lacking"
+ },
+ "fama.n": {
+  "en": "fame; reputation",
+  "g": "f"
+ },
+ "familia.n": {
+  "en": "family",
+  "g": "f"
+ },
+ "familiar.adj": {
+  "en": "family; familiar"
+ },
+ "fascinación.n": {
+  "en": "fascination",
+  "g": "f"
+ },
+ "fascinar.v": {
+  "en": "to fascinate"
+ },
+ "fecha.n": {
+  "en": "date",
+  "g": "f"
+ },
+ "federación.n": {
+  "en": "federation",
+  "g": "f"
+ },
+ "femenino.adj": {
+  "en": "female; feminine"
+ },
+ "fertilidad.n": {
+  "en": "fertility",
+  "g": "f"
+ },
+ "festejo.n": {
+  "en": "celebration; festivity",
+  "g": "m"
+ },
+ "festivo.adj": {
+  "en": "festive; holiday (adj.)"
+ },
+ "fiel.adj": {
+  "en": "faithful; loyal; accurate"
+ },
+ "fiesta.n": {
+  "en": "party; holiday",
+  "g": "f"
+ },
+ "figurar.v": {
+  "en": "to appear; to feature; to be among"
+ },
+ "figura.n": {
+  "en": "figure; role",
+  "g": "f"
+ },
+ "figurativo.adj": {
+  "en": "figurative (depicting recognizable things)"
+ },
+ "fijo.adj": {
+  "en": "fixed; set"
+ },
+ "final.adj": {
+  "en": "final; at the end"
+ },
+ "finalizar.v": {
+  "en": "to finish; to conclude"
+ },
+ "finalmente.adv": {
+  "en": "finally; lastly"
+ },
+ "finamente.adv": {
+  "en": "finely; delicately"
+ },
+ "financiar.v": {
+  "en": "to finance; to fund"
+ },
+ "financiamiento.n": {
+  "en": "funding; financing",
+  "g": "m"
+ },
+ "financiero.adj": {
+  "en": "financial"
+ },
+ "fino.adj": {
+  "en": "fine; thin; delicate"
+ },
+ "firmar.v": {
+  "en": "to sign"
+ },
+ "flagrante.adj": {
+  "en": "blatant; flagrant"
+ },
+ "flexible.adj": {
+  "en": "flexible"
+ },
+ "flora.n": {
+  "en": "flora; plant life",
+  "g": "f"
+ },
+ "florecimiento.n": {
+  "en": "flourishing; flowering",
+  "g": "m"
+ },
+ "flor.n": {
+  "en": "flower",
+  "g": "f"
+ },
+ "fluidez.n": {
+  "en": "fluidity",
+  "g": "f"
+ },
+ "fluir.v": {
+  "en": "to flow"
+ },
+ "fomentar.v": {
+  "en": "to promote; to encourage"
+ },
+ "fomento.n": {
+  "en": "promotion; support (of an activity)",
+  "g": "m"
+ },
+ "formar.v": {
+  "en": "to form; to make up"
+ },
+ "formular.v": {
+  "en": "to formulate; to devise"
+ },
+ "fortalecer.v": {
+  "en": "to strengthen"
+ },
+ "forzoso.adj": {
+  "en": "forced; obligatory"
+ },
+ "foráneo.n": {
+  "en": "outsider; stranger",
+  "g": "m/f"
+ },
+ "fosilización.n": {
+  "en": "fossilization",
+  "g": "f"
+ },
+ "foto.n": {
+  "en": "photo",
+  "g": "f"
+ },
+ "frecuencia.n": {
+  "en": "frequency",
+  "g": "f"
+ },
+ "frecuente.adj": {
+  "en": "frequent; common"
+ },
+ "fruta.n": {
+  "en": "fruit",
+  "g": "f"
+ },
+ "fuente.n": {
+  "en": "source; fountain",
+  "g": "f"
+ },
+ "fuerte.adj": {
+  "en": "strong"
+ },
+ "fuerza.n": {
+  "en": "strength; force",
+  "g": "f"
+ },
+ "función.n": {
+  "en": "function",
+  "g": "f"
+ },
+ "fundador.adj": {
+  "en": "founding",
+  "f": "fundadora"
+ },
+ "fundamental.adj": {
+  "en": "fundamental; essential"
+ },
+ "fundamentalmente.adv": {
+  "en": "fundamentally; essentially"
+ },
+ "fundamento.n": {
+  "en": "foundation; basis; (pl.) fundamentals",
+  "g": "m"
+ },
+ "fundante.adj": {
+  "en": "founding; foundational"
+ },
+ "futuro.adj": {
+  "en": "future"
+ },
+ "físico.adj": {
+  "en": "physical"
+ },
+ "físicamente.adv": {
+  "en": "physically"
+ },
+ "ganadero.adj": {
+  "en": "livestock (adj.); cattle-raising"
+ },
+ "ganadero.n": {
+  "en": "livestock farmer; herder",
+  "g": "m/f"
+ },
+ "ganado.n": {
+  "en": "livestock; cattle",
+  "g": "m"
+ },
+ "ganancioso.adj": {
+  "en": "profit-seeking; profit-oriented"
+ },
+ "ganar.v": {
+  "en": "to earn; to win"
+ },
+ "garantizar.v": {
+  "en": "to guarantee; to ensure"
+ },
+ "generar.v": {
+  "en": "to generate; to cause"
+ },
+ "generación.n": {
+  "en": "generation",
+  "g": "f"
+ },
+ "generalizado.adj": {
+  "en": "generalized; widespread"
+ },
+ "gente.n": {
+  "en": "people",
+  "g": "f"
+ },
+ "geométrico.adj": {
+  "en": "geometric"
+ },
+ "gestión.n": {
+  "en": "management; (pl.) steps taken, efforts",
+  "g": "f"
+ },
+ "giro.n": {
+  "en": "turn; shift",
+  "g": "m"
+ },
+ "gozar.v": {
+  "en": "to enjoy"
+ },
+ "grafismo.n": {
+  "en": "graphic design; graphic pattern",
+  "g": "m"
+ },
+ "grande.adj": {
+  "en": "big; large; great"
+ },
+ "grasa.n": {
+  "en": "fat; grease",
+  "g": "f"
+ },
+ "grasoso.adj": {
+  "en": "greasy; fatty"
+ },
+ "grueso.adj": {
+  "en": "thick; bold (lines)"
+ },
+ "gráfico.adj": {
+  "en": "graphic"
+ },
+ "haber.v": {
+  "en": "to have (auxiliary); there is/are (hay)"
+ },
+ "habilidad.n": {
+  "en": "skill; ability",
+  "g": "f"
+ },
+ "habitar.v": {
+  "en": "to inhabit; to live in"
+ },
+ "hacedor.n": {
+  "en": "maker; creator",
+  "g": "m/f"
+ },
+ "hacer.v": {
+  "en": "to do; to make"
+ },
+ "hallar.v": {
+  "en": "to find; (hallarse) to be (located)"
+ },
+ "hambre.n": {
+  "en": "hunger",
+  "g": "f",
+  "art": "el"
+ },
+ "herencia.n": {
+  "en": "heritage; inheritance",
+  "g": "f"
+ },
+ "herir.v": {
+  "en": "to wound; to injure",
+  "m": "e>ie,i"
+ },
+ "hermoso.adj": {
+  "en": "beautiful"
+ },
+ "hierba.n": {
+  "en": "herb; grass",
+  "g": "f"
+ },
+ "hijo.n": {
+  "en": "son / daughter; (pl.) children",
+  "g": "m/f"
+ },
+ "hilo.n": {
+  "en": "thread",
+  "g": "m"
+ },
+ "hipótesis.n": {
+  "en": "hypothesis",
+  "g": "f",
+  "pl": "hipótesis"
+ },
+ "histórico.adj": {
+  "en": "historical; historic"
+ },
+ "hito.n": {
+  "en": "milestone; landmark",
+  "g": "m"
+ },
+ "hombre.n": {
+  "en": "man",
+  "g": "m"
+ },
+ "homologar.v": {
+  "en": "to equate; to treat as equivalent; to standardize"
+ },
+ "homónimo.adj": {
+  "en": "of the same name; namesake"
+ },
+ "honrar.v": {
+  "en": "to honour"
+ },
+ "humano.adj": {
+  "en": "human"
+ },
+ "hundir.v": {
+  "en": "to sink; to bury"
+ },
+ "híbrido.adj": {
+  "en": "hybrid"
+ },
+ "idear.v": {
+  "en": "to devise; to come up with"
+ },
+ "ideal.n": {
+  "en": "ideal",
+  "g": "m"
+ },
+ "idea.n": {
+  "en": "idea",
+  "g": "f"
+ },
+ "identificar.v": {
+  "en": "to identify"
+ },
+ "ideograma.n": {
+  "en": "ideogram",
+  "g": "m"
+ },
+ "ilegal.adj": {
+  "en": "illegal"
+ }
+}

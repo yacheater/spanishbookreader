@@ -1,0 +1,744 @@
+{
+ "imagen.n": {
+  "en": "image; picture",
+  "g": "f",
+  "pl": "imágenes"
+ },
+ "imaginación.n": {
+  "en": "imagination",
+  "g": "f"
+ },
+ "imaginario.n": {
+  "en": "imaginary (collective set of images and ideas a society holds about something)",
+  "g": "m"
+ },
+ "imbricar.v": {
+  "en": "to overlap; to interweave (imbricarse con = to be bound up with)"
+ },
+ "impacto.n": {
+  "en": "impact",
+  "g": "m"
+ },
+ "imperecedero.adj": {
+  "en": "imperishable; everlasting"
+ },
+ "implementación.n": {
+  "en": "implementation",
+  "g": "f"
+ },
+ "implicar.v": {
+  "en": "to imply; to involve; to entail"
+ },
+ "importancia.n": {
+  "en": "importance",
+  "g": "f"
+ },
+ "imposibilidad.n": {
+  "en": "impossibility",
+  "g": "f"
+ },
+ "imposible.adj": {
+  "en": "impossible"
+ },
+ "imprescindible.adj": {
+  "en": "essential; indispensable"
+ },
+ "imprevisto.adj": {
+  "en": "unexpected; unforeseen"
+ },
+ "inadecuado.adj": {
+  "en": "inappropriate; unsuitable"
+ },
+ "inaudible.adj": {
+  "en": "inaudible"
+ },
+ "inaugurar.v": {
+  "en": "to inaugurate; to open (an exhibition, a building)"
+ },
+ "inclaudicable.adj": {
+  "en": "unyielding; unwavering; non-negotiable"
+ },
+ "inclinar.v": {
+  "en": "to tilt; to bend (inclinarse = to lean over, to bow)"
+ },
+ "incluir.v": {
+  "en": "to include"
+ },
+ "inclusive.adv": {
+  "en": "even; inclusive; including"
+ },
+ "incorporar.v": {
+  "en": "to incorporate; to take in; to add"
+ },
+ "incorporación.n": {
+  "en": "incorporation; inclusion",
+  "g": "f"
+ },
+ "independientemente.adv": {
+  "en": "independently; separately (independientemente de = regardless of)"
+ },
+ "indeterminado.adj": {
+  "en": "undetermined; indefinite"
+ },
+ "indicar.v": {
+  "en": "to indicate; to point out"
+ },
+ "indispensable.adj": {
+  "en": "indispensable; essential"
+ },
+ "indistintamente.adv": {
+  "en": "interchangeably; without distinction"
+ },
+ "individual.adj": {
+  "en": "individual"
+ },
+ "inducir.v": {
+  "en": "to induce; to bring on; to lead (inducir al error = to mislead)"
+ },
+ "indudablemente.adv": {
+  "en": "undoubtedly; unquestionably"
+ },
+ "industrial.adj": {
+  "en": "industrial; manufactured"
+ },
+ "indígena.adj": {
+  "en": "indigenous"
+ },
+ "inevitable.adj": {
+  "en": "inevitable; unavoidable"
+ },
+ "inevitablemente.adv": {
+  "en": "inevitably"
+ },
+ "informe.n": {
+  "en": "report",
+  "g": "m"
+ },
+ "ingerir.v": {
+  "en": "to ingest; to consume (by mouth)",
+  "m": "e>ie,i"
+ },
+ "ingresar.v": {
+  "en": "to enter; to get in; to be admitted"
+ },
+ "ingreso.n": {
+  "en": "income (usually plural: ingresos); entry; admission",
+  "g": "m"
+ },
+ "inherentemente.adv": {
+  "en": "inherently"
+ },
+ "inherente.adj": {
+  "en": "inherent"
+ },
+ "iniciar.v": {
+  "en": "to start; to begin"
+ },
+ "iniciado.n": {
+  "en": "initiate (person initiated into a practice or knowledge)",
+  "g": "m"
+ },
+ "iniciativa.n": {
+  "en": "initiative (por iniciativa propia = on one's own initiative)",
+  "g": "f"
+ },
+ "inmaterial.adj": {
+  "en": "immaterial; intangible (patrimonio inmaterial = intangible heritage)"
+ },
+ "inminente.adj": {
+  "en": "imminent; impending"
+ },
+ "inmueble.adj": {
+  "en": "immovable (bienes inmuebles = real estate, immovable property)"
+ },
+ "innovación.n": {
+  "en": "innovation",
+  "g": "f"
+ },
+ "inscribir.v": {
+  "en": "to inscribe; to register (inscribirse en = to be part of, to be set within)"
+ },
+ "insertar.v": {
+  "en": "to insert (insertarse en = to find a place in, to integrate into)"
+ },
+ "insistentemente.adv": {
+  "en": "insistently; repeatedly"
+ },
+ "insistir.v": {
+  "en": "to insist; to stress"
+ },
+ "instancia.n": {
+  "en": "instance; occasion; level (en última instancia = ultimately)",
+  "g": "f"
+ },
+ "institucionalizar.v": {
+  "en": "to institutionalize"
+ },
+ "institución.n": {
+  "en": "institution",
+  "g": "f"
+ },
+ "instituto.n": {
+  "en": "institute",
+  "g": "m"
+ },
+ "instrumento.n": {
+  "en": "instrument; tool",
+  "g": "m"
+ },
+ "insuflar.v": {
+  "en": "to breathe into; to instil"
+ },
+ "intangible.adj": {
+  "en": "intangible"
+ },
+ "integración.n": {
+  "en": "integration",
+  "g": "f"
+ },
+ "integrante.adj": {
+  "en": "integral; forming part of (as noun: member)"
+ },
+ "integrar.v": {
+  "en": "to integrate; to incorporate; to make up"
+ },
+ "integridad.n": {
+  "en": "integrity; wholeness",
+  "g": "f"
+ },
+ "intelectual.adj": {
+  "en": "intellectual"
+ },
+ "intención.n": {
+  "en": "intention; aim",
+  "g": "f"
+ },
+ "intenso.adj": {
+  "en": "intense"
+ },
+ "intentar.v": {
+  "en": "to try"
+ },
+ "intento.n": {
+  "en": "attempt",
+  "g": "m"
+ },
+ "interactuar.v": {
+  "en": "to interact",
+  "m": "ú"
+ },
+ "intercalar.v": {
+  "en": "to intersperse; to alternate"
+ },
+ "intercambiar.v": {
+  "en": "to exchange; to swap"
+ },
+ "intercambio.n": {
+  "en": "exchange",
+  "g": "m"
+ },
+ "interconectar.v": {
+  "en": "to interconnect"
+ },
+ "interesar.v": {
+  "en": "to interest (me interesa = I am interested in)"
+ },
+ "interesante.adj": {
+  "en": "interesting"
+ },
+ "interés.n": {
+  "en": "interest",
+  "g": "m",
+  "pl": "intereses"
+ },
+ "interior.n": {
+  "en": "interior; inside (al interior de = inside, within)",
+  "g": "m"
+ },
+ "interno.adj": {
+  "en": "internal; domestic"
+ },
+ "internacional.adj": {
+  "en": "international"
+ },
+ "interpretar.v": {
+  "en": "to interpret; to perform"
+ },
+ "interrelación.n": {
+  "en": "interrelation; interconnection",
+  "g": "f"
+ },
+ "interrupción.n": {
+  "en": "interruption",
+  "g": "f"
+ },
+ "intervención.n": {
+  "en": "intervention",
+  "g": "f"
+ },
+ "intervenir.v": {
+  "en": "to intervene; to step in; (Latin America) to alter, to work on (a site)"
+ },
+ "introspección.n": {
+  "en": "introspection",
+  "g": "f"
+ },
+ "inventar.v": {
+  "en": "to invent; to make up"
+ },
+ "inventariar.v": {
+  "en": "to inventory; to catalogue",
+  "m": "í"
+ },
+ "inventario.n": {
+  "en": "inventory; catalogue",
+  "g": "m"
+ },
+ "investigar.v": {
+  "en": "to investigate; to research"
+ },
+ "investigador.n": {
+  "en": "researcher",
+  "g": "m"
+ },
+ "invisibilidad.n": {
+  "en": "invisibility",
+  "g": "f"
+ },
+ "invocación.n": {
+  "en": "invocation",
+  "g": "f"
+ },
+ "involucrar.v": {
+  "en": "to involve"
+ },
+ "iquiteño.adj": {
+  "en": "from Iquitos (city in the Peruvian Amazon)"
+ },
+ "irrelevancia.n": {
+  "en": "irrelevance",
+  "g": "f"
+ },
+ "irónicamente.adv": {
+  "en": "ironically"
+ },
+ "jerarquía.n": {
+  "en": "hierarchy; rank",
+  "g": "f"
+ },
+ "joni.other": {
+  "en": "joni (Shipibo-Konibo: person, people; joxo joni = white people)"
+ },
+ "jornada.n": {
+  "en": "day (of activity); working day; session",
+  "g": "f"
+ },
+ "joxo.other": {
+  "en": "joxo (Shipibo-Konibo: white; joxo joni kené = \"design of the whites\", i.e. writing)"
+ },
+ "jugar.v": {
+  "en": "to play (jugar un papel = to play a role)",
+  "m": "u>ue"
+ },
+ "juicio.n": {
+  "en": "judgement; trial (juicio de valor = value judgement)",
+  "g": "m"
+ },
+ "junio.n": {
+  "en": "June",
+  "g": "m"
+ },
+ "junto.adj": {
+  "en": "together (junto con / junto a = together with; next to)"
+ },
+ "jurídico.adj": {
+  "en": "legal; juridical"
+ },
+ "justamente.adv": {
+  "en": "precisely; exactly; just"
+ },
+ "justicia.n": {
+  "en": "justice",
+  "g": "f"
+ },
+ "juzgar.v": {
+  "en": "to judge"
+ },
+ "kancha.other": {
+  "en": "kancha (Andean word: corral, walled enclosure for animals)"
+ },
+ "kené.other": {
+  "en": "kené: Shipibo-Konibo geometric designs"
+ },
+ "korós.other": {
+  "en": "korós (Shipibo-Konibo design term meaning \"cross\")"
+ },
+ "koshi.other": {
+  "en": "koshi (Shipibo-Konibo: energetic force, spiritual power of a being)"
+ },
+ "laguna.n": {
+  "en": "lagoon; (mountain) lake",
+  "g": "f"
+ },
+ "lana.n": {
+  "en": "wool",
+  "g": "f"
+ },
+ "largo.adj": {
+  "en": "long (a lo largo de = throughout; along)"
+ },
+ "lazo.n": {
+  "en": "tie; bond; bow",
+  "g": "m"
+ },
+ "lectura.n": {
+  "en": "reading; interpretation",
+  "g": "f"
+ },
+ "legal.adj": {
+  "en": "legal"
+ },
+ "legalidad.n": {
+  "en": "legality",
+  "g": "f"
+ },
+ "legislar.v": {
+  "en": "to legislate"
+ },
+ "legitimar.v": {
+  "en": "to legitimize"
+ },
+ "legitimidad.n": {
+  "en": "legitimacy",
+  "g": "f"
+ },
+ "legítimo.adj": {
+  "en": "legitimate"
+ },
+ "lejos.adv": {
+  "en": "far; far away (lejos de = far from)"
+ },
+ "le.pron": {
+  "en": "(to) him; (to) her; (to) it; (to) you (formal)"
+ },
+ "levantar.v": {
+  "en": "to raise; to lift (levantar argumentos = to put forward arguments)"
+ },
+ "liana.n": {
+  "en": "liana; vine",
+  "g": "f"
+ },
+ "libertad.n": {
+  "en": "freedom; liberty",
+  "g": "f"
+ },
+ "libre.adj": {
+  "en": "free"
+ },
+ "licor.n": {
+  "en": "liqueur; spirits",
+  "g": "m"
+ },
+ "lienzo.n": {
+  "en": "canvas",
+  "g": "m"
+ },
+ "liminal.adj": {
+  "en": "liminal (on the threshold between two states)"
+ },
+ "limitación.n": {
+  "en": "limitation",
+  "g": "f"
+ },
+ "limitar.v": {
+  "en": "to limit (limitarse a = to be limited to)"
+ },
+ "lineal.adj": {
+  "en": "linear"
+ },
+ "lista.n": {
+  "en": "list",
+  "g": "f"
+ },
+ "literatura.n": {
+  "en": "literature",
+  "g": "f"
+ },
+ "llama.n": {
+  "en": "llama (Andean animal)",
+  "g": "f"
+ },
+ "llamar.v": {
+  "en": "to call; to name (llamar la atención = to be striking)"
+ },
+ "llegada.n": {
+  "en": "arrival; coming",
+  "g": "f"
+ },
+ "llegar.v": {
+  "en": "to arrive; to come; to reach"
+ },
+ "lleno.adj": {
+  "en": "full (de lleno = fully, wholeheartedly)"
+ },
+ "llevar.v": {
+  "en": "to take; to carry; to lead"
+ },
+ "lluvia.n": {
+  "en": "rain",
+  "g": "f"
+ },
+ "local.adj": {
+  "en": "local"
+ },
+ "localidad.n": {
+  "en": "locality; town; place",
+  "g": "f"
+ },
+ "localizable.adj": {
+  "en": "locatable; that can be located"
+ },
+ "localmente.adv": {
+  "en": "locally"
+ },
+ "lograr.v": {
+  "en": "to achieve; to manage to"
+ },
+ "lucir.v": {
+  "en": "to wear; to show off; to shine"
+ },
+ "lucrar.v": {
+  "en": "to profit; to make money"
+ },
+ "luego.adv": {
+  "en": "then; next; later"
+ },
+ "luminosidad.n": {
+  "en": "luminosity; brightness",
+  "g": "f"
+ },
+ "lácteo.adj": {
+  "en": "milk; dairy (Vía Láctea = Milky Way)"
+ },
+ "lícito.adj": {
+  "en": "lawful; permitted"
+ },
+ "línea.n": {
+  "en": "line (en línea con = in line with)",
+  "g": "f"
+ },
+ "macizo.n": {
+  "en": "massif (mountain mass)",
+  "g": "m"
+ },
+ "macro.adj": {
+  "en": "macro; large-scale"
+ },
+ "madera.n": {
+  "en": "wood",
+  "g": "f"
+ },
+ "madre.n": {
+  "en": "mother",
+  "g": "f"
+ },
+ "maestro.adj": {
+  "en": "master; teacher (planta maestra = teacher plant; as noun: teacher, master)"
+ },
+ "maestría.n": {
+  "en": "mastery; skill; master's degree",
+  "g": "f"
+ },
+ "majestuoso.adj": {
+  "en": "majestic"
+ },
+ "malentendido.n": {
+  "en": "misunderstanding",
+  "g": "m"
+ },
+ "mallku.other": {
+  "en": "mallku: Aymara term for a powerful sacred mountain, guardian of a place (also an Aymara leader)"
+ },
+ "mancha.n": {
+  "en": "spot; marking; stain",
+  "g": "f"
+ },
+ "manejar.v": {
+  "en": "to manage; to handle; to drive"
+ },
+ "manejo.n": {
+  "en": "handling; management; use",
+  "g": "m"
+ },
+ "manera.n": {
+  "en": "way; manner",
+  "g": "f"
+ },
+ "manifestación.n": {
+  "en": "manifestation; expression; demonstration",
+  "g": "f"
+ },
+ "manifestar.v": {
+  "en": "to show; to express; to reveal",
+  "m": "e>ie"
+ },
+ "mano.n": {
+  "en": "hand",
+  "g": "f"
+ },
+ "mantener.v": {
+  "en": "to maintain; to keep; to support"
+ },
+ "manufacturar.v": {
+  "en": "to manufacture; to make"
+ },
+ "mapo.other": {
+  "en": "mapo (Shipibo-Konibo design term meaning \"head\")"
+ },
+ "marcar.v": {
+  "en": "to mark (marcar un hito = to be a milestone)"
+ },
+ "margen.n": {
+  "en": "margin; room (for manoeuvre)",
+  "g": "m",
+  "pl": "márgenes"
+ },
+ "marginalización.n": {
+  "en": "marginalization",
+  "g": "f"
+ },
+ "marido.n": {
+  "en": "husband",
+  "g": "m"
+ },
+ "marinera.n": {
+  "en": "marinera (Peruvian coastal couple dance)",
+  "g": "f"
+ },
+ "masculino.adj": {
+  "en": "male; masculine"
+ },
+ "materia.n": {
+  "en": "matter; subject (en materia de = regarding)",
+  "g": "f"
+ },
+ "material.adj": {
+  "en": "material"
+ },
+ "materialidad.n": {
+  "en": "materiality (physical, material nature of something)",
+  "g": "f"
+ },
+ "materialización.n": {
+  "en": "materialization; giving physical form",
+  "g": "f"
+ },
+ "materializar.v": {
+  "en": "to materialize; to give physical form to"
+ },
+ "materialmente.adv": {
+  "en": "materially; physically"
+ },
+ "matrilocal.adj": {
+  "en": "matrilocal (a married couple living with the wife's family)"
+ },
+ "mayo.n": {
+  "en": "May",
+  "g": "m"
+ },
+ "mayá.other": {
+  "en": "mayá (Shipibo-Konibo design term: curved designs)"
+ },
+ "mecanismo.n": {
+  "en": "mechanism",
+  "g": "m"
+ },
+ "mediación.n": {
+  "en": "mediation",
+  "g": "f"
+ },
+ "mediante.prep": {
+  "en": "through; by means of"
+ },
+ "medicina.n": {
+  "en": "medicine",
+  "g": "f"
+ },
+ "medida.n": {
+  "en": "measure; extent (a medida que = as; en qué medida = to what extent)",
+  "g": "f"
+ },
+ "medioambiente.n": {
+  "en": "environment",
+  "g": "m"
+ },
+ "mediocre.adj": {
+  "en": "mediocre"
+ },
+ "medio.n": {
+  "en": "means; medium; environment (medio de vida = livelihood)",
+  "g": "m"
+ },
+ "mencionar.v": {
+  "en": "to mention"
+ },
+ "mención.n": {
+  "en": "mention",
+  "g": "f"
+ },
+ "mental.adj": {
+  "en": "mental"
+ },
+ "menudo.adj": {
+  "en": "small; fine (a menudo = often)"
+ },
+ "mero.adj": {
+  "en": "mere"
+ },
+ "meramente.adv": {
+  "en": "merely; purely"
+ },
+ "mercado.n": {
+  "en": "market",
+  "g": "m"
+ },
+ "mercancía.n": {
+  "en": "commodity; goods; merchandise",
+  "g": "f"
+ },
+ "meridional.adj": {
+  "en": "southern"
+ },
+ "mes.n": {
+  "en": "month",
+  "g": "m",
+  "pl": "meses"
+ },
+ "mesa.n": {
+  "en": "table; mesa (Andean ritual offering place where gifts are given to the mountain)",
+  "g": "f"
+ },
+ "mesita.n": {
+  "en": "little table; little mesa (diminutive of mesa)",
+  "g": "f"
+ },
+ "mestizo.adj": {
+  "en": "mestizo; of mixed Indigenous and European descent"
+ },
+ "mi.det": {
+  "en": "my"
+ },
+ "micro.adj": {
+  "en": "micro; small-scale"
+ },
+ "mimetizarse.v": {
+  "en": "to blend in; to merge (with); to camouflage oneself"
+ },
+ "mina.n": {
+  "en": "mine",
+  "g": "f"
+ },
+ "minero.adj": {
+  "en": "mining; mineral"
+ }
+}
