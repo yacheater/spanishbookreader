@@ -291,3 +291,15 @@ textarea.answer { display: block; width: 100%; min-height: 9rem; padding: .6rem 
 .dw.missing, .dw.wrong { background: var(--bad-soft); color: var(--bad); text-decoration: underline; }
 .dw-notes { margin: .3rem 0 0; padding-left: 1.1rem; font-size: .85rem; }
 .feedback .ex { margin-top: .5rem; color: var(--muted); font-family: Georgia, serif; }
+
+/* ---- in context: meaning always visible, grammar in a drawer ---- */
+.cz-meaning { margin: .9rem 0 .5rem; font-size: 1rem; }
+.cz-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin-right: .3rem; }
+.drawer { margin: 0 0 .8rem; border: 1px solid var(--line); border-radius: .6rem; background: var(--bg); }
+.drawer summary { cursor: pointer; list-style: none; padding: .45rem .75rem; font-size: .8rem; color: var(--muted);
+  display: flex; align-items: center; gap: .4rem; user-select: none; }
+.drawer summary::-webkit-details-marker { display: none; }
+.drawer summary::before { content: "▸"; display: inline-block; transition: transform .15s; }
+.drawer[open] summary::before { transform: rotate(90deg); }
+.drawer summary:hover { color: var(--text); }
+.drawer-body { padding: 0 .75rem .6rem; font-size: .88rem; line-height: 1.55; }
