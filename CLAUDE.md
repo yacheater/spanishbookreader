@@ -17,7 +17,7 @@ in the same task (rewrite the section + dated line under «История изм
 | `tools/` | `build_text.py` (build + validate), `supa.py` (Supabase helpers + users registry), `suggestions.py` (the in-app «Suggest a text» queue), `conjugate.py` (verb engine, self-test), `validate_text.py`, `check_part.py`, `publish_texts.py` (upload texts to Supabase), `test_sync.js` (two-device merge test), `cloud_test.html` + `fake_supabase.js` (the app against an in-memory fake Supabase; generated from `app/index.html`) |
 | `supabase/` | `schema.sql` — full current schema (`texts` with owner + readers, `progress`, `submissions`), row-level security; `migrations/` — incremental files for the existing project, the user runs them in SQL Editor |
 
-Root: `CLAUDE.md`, `SPEC.md`, `SETUP.md` (owner's setup guide, incl. adding friends), `FRIENDS.md` (guide for friends, Russian), `.env.example`, `.gitignore`.
+Root: `CLAUDE.md`, `SPEC.md`, `SETUP.md` (owner's setup guide, incl. adding friends), `FRIENDS.md` / `FRIENDS_EN.md` (guides for friends), `MONETIZATION_PROMPT.md` (product summary prompt for business discussions — keep in sync with SPEC), `.env.example`, `.gitignore`.
 
 ## Git & publishing
 Local git repo, branch `main`; remote `origin` = github.com/yacheater/spanishbookreader (the user's **personal**
