@@ -1,0 +1,9 @@
+{
+  "name": "Lector — Spanish reader",
+  "short_name": "Lector",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#161618",
+  "theme_color": "#c2410c",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
