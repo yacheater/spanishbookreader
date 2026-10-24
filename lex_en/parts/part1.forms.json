@@ -1,0 +1,931 @@
+{
+ "the": [
+  "the.det",
+  "el, la, los, las"
+ ],
+ "it": [
+  "it.pron",
+  "eso; lo, la (muchas veces no se traduce: it is = es)"
+ ],
+ "is": [
+  "be.v",
+  "es; está"
+ ],
+ "that": [
+  "that.conj",
+  "que; ese, esa; eso"
+ ],
+ "you": [
+  "you.pron",
+  "vos; te; (uno, en general)"
+ ],
+ "a": [
+  "a.det",
+  "un, una"
+ ],
+ "we": [
+  "we.pron",
+  "nosotros"
+ ],
+ "to": [
+  "to.prep",
+  "a; para; (marca del infinitivo: to write = escribir)"
+ ],
+ "of": [
+  "of.prep",
+  "de"
+ ],
+ "not": [
+  "not.adv",
+  "no"
+ ],
+ "and": [
+  "and.conj",
+  "y"
+ ],
+ "do": [
+  "do.v",
+  "hacer; (auxiliar: do not = no)"
+ ],
+ "will": [
+  "will.other",
+  "(auxiliar de futuro: it will take = va a llevar)"
+ ],
+ "your": [
+  "your.det",
+  "tu, tus"
+ ],
+ "for": [
+  "for.prep",
+  "para; por; durante"
+ ],
+ "time": [
+  "time.n",
+  "vez; tiempo (next time = la próxima vez)"
+ ],
+ "are": [
+  "be.v",
+  "son; están"
+ ],
+ "task": [
+  "task.n",
+  "tarea"
+ ],
+ "but": [
+  "but.conj",
+  "pero; sino"
+ ],
+ "tasks": [
+  "task.n",
+  "tareas"
+ ],
+ "feel": [
+  "feel.v",
+  "sentir(se)"
+ ],
+ "in": [
+  "in.prep",
+  "en"
+ ],
+ "get": [
+  "get.v",
+  "(get rid of = sacarse de encima; get started = arrancar; get things done = sacar las cosas adelante)"
+ ],
+ "why": [
+  "why.adv",
+  "por qué (that is why = por eso)"
+ ],
+ "put": [
+  "put.v",
+  "poner (put off = postergar)"
+ ],
+ "things": [
+  "thing.n",
+  "cosas"
+ ],
+ "report": [
+  "report.n",
+  "informe"
+ ],
+ "write": [
+  "write.v",
+  "escribir"
+ ],
+ "take": [
+  "take.v",
+  "llevar (tiempo); tomar; dar (un paso)"
+ ],
+ "about": [
+  "about.prep",
+  "unos, más o menos; de, sobre"
+ ],
+ "phone": [
+  "phone.n",
+  "celular"
+ ],
+ "again": [
+  "again.adv",
+  "otra vez; de nuevo"
+ ],
+ "does": [
+  "do.v",
+  "hace; (auxiliar: does not = no)"
+ ],
+ "lazy": [
+  "lazy.adj",
+  "vago, haragán"
+ ],
+ "people": [
+  "person.n",
+  "gente; personas"
+ ],
+ "on": [
+  "on.prep",
+  "en; sobre (work on = trabajar en)"
+ ],
+ "very": [
+  "very.adv",
+  "muy"
+ ],
+ "problem": [
+  "problem.n",
+  "problema"
+ ],
+ "good": [
+  "good.adj",
+  "bueno (good at = bueno para; good news = buena noticia)"
+ ],
+ "when": [
+  "when.conj",
+  "cuando"
+ ],
+ "feeling": [
+  "feeling.n",
+  "sensación (Feeling guilty = sentirse culpable)"
+ ],
+ "so": [
+  "so.adv",
+  "así que, entonces; tan (so easy = tan fácil)"
+ ],
+ "our": [
+  "our.det",
+  "nuestro, nuestra"
+ ],
+ "brain": [
+  "brain.n",
+  "cerebro"
+ ],
+ "tomorrow": [
+  "tomorrow.adv",
+  "mañana"
+ ],
+ "first": [
+  "first.num",
+  "primero; primera"
+ ],
+ "yourself": [
+  "yourself.pron",
+  "vos mismo; te (promise yourself = prometete)"
+ ],
+ "off": [
+  "off.adv",
+  "(put off = postergar, dejar para después)"
+ ],
+ "instead": [
+  "instead.adv",
+  "(instead of = en vez de)"
+ ],
+ "check": [
+  "check.v",
+  "mirar, revisar"
+ ],
+ "make": [
+  "make.v",
+  "hacer (make a cup of coffee = hacerse un café)"
+ ],
+ "procrastination": [
+  "procrastination.n",
+  "procrastinación (dejar todo para después)"
+ ],
+ "almost": [
+  "almost.adv",
+  "casi"
+ ],
+ "many": [
+  "many.det",
+  "muchos, muchas"
+ ],
+ "procrastinators": [
+  "procrastinator.n",
+  "los que dejan todo para después"
+ ],
+ "want": [
+  "want.v",
+  "querer"
+ ],
+ "at": [
+  "at.prep",
+  "en (good at = bueno para; at all = para nada)"
+ ],
+ "other": [
+  "other.det",
+  "otro, otra"
+ ],
+ "busy": [
+  "busy.adj",
+  "ocupado"
+ ],
+ "keep": [
+  "keep.v",
+  "mantener (keep busy = mantenerse ocupado; keep going = seguir adelante)"
+ ],
+ "themselves": [
+  "themselves.pron",
+  "a sí mismos (keep themselves busy = se mantienen ocupados)"
+ ],
+ "with": [
+  "with.prep",
+  "con"
+ ],
+ "us": [
+  "us.pron",
+  "nos; nosotros"
+ ],
+ "bad": [
+  "bad.adj",
+  "mal (feel bad = sentirse mal)"
+ ],
+ "show": [
+  "show.v",
+  "mostrar, demostrar"
+ ],
+ "avoid": [
+  "avoid.v",
+  "evitar"
+ ],
+ "rid": [
+  "rid.adj",
+  "(get rid of = sacarse de encima, deshacerse de)"
+ ],
+ "later": [
+  "later.adv",
+  "después, más tarde"
+ ],
+ "because": [
+  "because.conj",
+  "porque"
+ ],
+ "guilty": [
+  "guilty.adj",
+  "culpable"
+ ],
+ "up": [
+  "up.adv",
+  "(end up = terminar)"
+ ],
+ "even": [
+  "even.adv",
+  "todavía, aún (even worse = todavía peor)"
+ ],
+ "worse": [
+  "bad.adj",
+  "peor"
+ ],
+ "future": [
+  "future.n",
+  "futuro (future self = tu yo del futuro)"
+ ],
+ "reward": [
+  "reward.n",
+  "recompensa, premio"
+ ],
+ "much": [
+  "much.adv",
+  "mucho (much more = mucho más; much easier = mucho más fácil)"
+ ],
+ "next": [
+  "next.det",
+  "próximo; que viene (next month = el mes que viene)"
+ ],
+ "work": [
+  "work.n",
+  "trabajo (work on = trabajar en)"
+ ],
+ "be": [
+  "be.v",
+  "ser; estar"
+ ],
+ "somebody": [
+  "somebody.pron",
+  "alguien"
+ ],
+ "help": [
+  "help.v",
+  "ayudar"
+ ],
+ "sounds": [
+  "sound.v",
+  "suena"
+ ],
+ "started": [
+  "start.v",
+  "(get started = arrancar, empezar)"
+ ],
+ "five": [
+  "five.num",
+  "cinco"
+ ],
+ "only": [
+  "only.adv",
+  "solo, nada más"
+ ],
+ "makes": [
+  "make.v",
+  "hace; hace que"
+ ],
+ "sunday": [
+  "Sunday.n",
+  "domingo"
+ ],
+ "evening": [
+  "evening.n",
+  "tarde, noche (Sunday evening = domingo a la noche)"
+ ],
+ "have": [
+  "have.v",
+  "tener (you have a report to write = tenés que escribir un informe)"
+ ],
+ "know": [
+  "know.v",
+  "saber"
+ ],
+ "two": [
+  "two.num",
+  "dos"
+ ],
+ "hours": [
+  "hour.n",
+  "horas"
+ ],
+ "starting": [
+  "start.v",
+  "empezar, arrancar"
+ ],
+ "cup": [
+  "cup.n",
+  "taza"
+ ],
+ "coffee": [
+  "coffee.n",
+  "café"
+ ],
+ "tidy": [
+  "tidy.v",
+  "ordenar"
+ ],
+ "desk": [
+  "desk.n",
+  "escritorio"
+ ],
+ "then": [
+  "then.adv",
+  "después, luego"
+ ],
+ "suddenly": [
+  "suddenly.adv",
+  "de repente"
+ ],
+ "midnight": [
+  "midnight.n",
+  "medianoche"
+ ],
+ "still": [
+  "still.adv",
+  "todavía"
+ ],
+ "waiting": [
+  "wait.v",
+  "esperando"
+ ],
+ "sound": [
+  "sound.v",
+  "sonar (Sound familiar? = ¿Te suena?)"
+ ],
+ "familiar": [
+  "familiar.adj",
+  "conocido (Sound familiar? = ¿Te suena?)"
+ ],
+ "this": [
+  "this.det",
+  "este, esta; esto"
+ ],
+ "habit": [
+  "habit.n",
+  "hábito, costumbre"
+ ],
+ "called": [
+  "call.v",
+  "llamado (is called = se llama)"
+ ],
+ "everyone": [
+  "everyone.pron",
+  "todos, todo el mundo"
+ ],
+ "from": [
+  "from.prep",
+  "de; desde"
+ ],
+ "being": [
+  "be.v",
+  "ser (about being lazy = de ser vago)"
+ ],
+ "think": [
+  "think.v",
+  "pensar, creer"
+ ],
+ "simply": [
+  "simply.adv",
+  "simplemente"
+ ],
+ "psychologists": [
+  "psychologist.n",
+  "psicólogos"
+ ],
+ "disagree": [
+  "disagree.v",
+  "no estar de acuerdo"
+ ],
+ "anything": [
+  "anything.pron",
+  "nada (en frases negativas); algo"
+ ],
+ "all": [
+  "all.det",
+  "todo (at all = para nada)"
+ ],
+ "hand": [
+  "hand.n",
+  "mano (on the other hand = por otro lado)"
+ ],
+ "often": [
+  "often.adv",
+  "a menudo, muchas veces"
+ ],
+ "they": [
+  "they.pron",
+  "ellos, ellas"
+ ],
+ "just": [
+  "just.adv",
+  "simplemente, nomás"
+ ],
+ "wrong": [
+  "wrong.adj",
+  "equivocado (the wrong things = las cosas que no son)"
+ ],
+ "according": [
+  "according.prep",
+  "(according to = según)"
+ ],
+ "researchers": [
+  "researcher.n",
+  "investigadores"
+ ],
+ "management": [
+  "management.n",
+  "manejo, gestión (time management = manejo del tiempo)"
+ ],
+ "emotions": [
+  "emotion.n",
+  "emociones"
+ ],
+ "boring": [
+  "boring.adj",
+  "aburrido, embolante"
+ ],
+ "difficult": [
+  "difficult.adj",
+  "difícil"
+ ],
+ "or": [
+  "or.conj",
+  "o"
+ ],
+ "might": [
+  "might.other",
+  "podría, puede que"
+ ],
+ "enough": [
+  "enough.adv",
+  "lo suficiente (good enough = lo bastante bueno)"
+ ],
+ "words": [
+  "word.n",
+  "palabras (in other words = o sea)"
+ ],
+ "an": [
+  "an.det",
+  "un, una (antes de vocal)"
+ ],
+ "unpleasant": [
+  "unpleasant.adj",
+  "desagradable"
+ ],
+ "while": [
+  "while.n",
+  "rato (for a while = por un rato)"
+ ],
+ "comes": [
+  "come.v",
+  "viene (comes back = vuelve)"
+ ],
+ "back": [
+  "back.adv",
+  "(come back = volver)"
+ ],
+ "usually": [
+  "usually.adv",
+  "normalmente, por lo general"
+ ],
+ "stronger": [
+  "strong.adj",
+  "más fuerte"
+ ],
+ "now": [
+  "now.adv",
+  "ahora"
+ ],
+ "also": [
+  "also.adv",
+  "también"
+ ],
+ "end": [
+  "end.v",
+  "(end up = terminar)"
+ ],
+ "circle": [
+  "circle.n",
+  "círculo"
+ ],
+ "likes": [
+  "like.v",
+  "le gusta"
+ ],
+ "thinking": [
+  "think.v",
+  "pensar (good at thinking = bueno para pensar)"
+ ],
+ "today": [
+  "today.adv",
+  "hoy"
+ ],
+ "seems": [
+  "seem.v",
+  "parece"
+ ],
+ "more": [
+  "much.adv",
+  "más"
+ ],
+ "attractive": [
+  "attractive.adj",
+  "atractivo, tentador"
+ ],
+ "than": [
+  "than.conj",
+  "que (en comparaciones)"
+ ],
+ "bigger": [
+  "big.adj",
+  "más grande"
+ ],
+ "month": [
+  "month.n",
+  "mes"
+ ],
+ "imagine": [
+  "imagine.v",
+  "imaginar(se)"
+ ],
+ "self": [
+  "self.n",
+  "yo (future self = tu yo del futuro)"
+ ],
+ "treats": [
+  "treat.v",
+  "trata"
+ ],
+ "person": [
+  "person.n",
+  "persona"
+ ],
+ "like": [
+  "like.prep",
+  "como"
+ ],
+ "stranger": [
+  "stranger.n",
+  "desconocido, extraño"
+ ],
+ "easy": [
+  "easy.adj",
+  "fácil"
+ ],
+ "leave": [
+  "leave.v",
+  "dejar"
+ ],
+ "hard": [
+  "hard.adj",
+  "pesado, duro (the hard work = el trabajo pesado)"
+ ],
+ "else's": [
+  "else.adv",
+  "de otro (somebody else's = de otra persona)",
+  "possessive 's"
+ ],
+ "course": [
+  "course.n",
+  "(of course = obvio, por supuesto)"
+ ],
+ "arrives": [
+  "arrive.v",
+  "llega"
+ ],
+ "how": [
+  "how.adv",
+  "cómo"
+ ],
+ "deal": [
+  "deal.v",
+  "(deal with = lidiar con, manejar)"
+ ],
+ "news": [
+  "news.n",
+  "noticia (the good news = la buena noticia)"
+ ],
+ "there": [
+  "there.adv",
+  "(there are = hay)"
+ ],
+ "simple": [
+  "simple.adj",
+  "simple, sencillo"
+ ],
+ "tricks": [
+  "trick.n",
+  "trucos"
+ ],
+ "really": [
+  "really.adv",
+  "de verdad, realmente"
+ ],
+ "break": [
+  "break.v",
+  "(break down = dividir en partes)"
+ ],
+ "big": [
+  "big.adj",
+  "grande"
+ ],
+ "down": [
+  "down.adv",
+  "(break down = dividir en partes)"
+ ],
+ "into": [
+  "into.prep",
+  "en (break down into = dividir en)"
+ ],
+ "small": [
+  "small.adj",
+  "chico, pequeño"
+ ],
+ "steps": [
+  "step.n",
+  "pasos"
+ ],
+ "scary": [
+  "scary.adj",
+  "que da miedo"
+ ],
+ "sentence": [
+  "sentence.n",
+  "oración, frase"
+ ],
+ "once": [
+  "once.conj",
+  "una vez que, cuando"
+ ],
+ "easier": [
+  "easy.adj",
+  "más fácil"
+ ],
+ "going": [
+  "go.v",
+  "(keep going = seguir adelante)"
+ ],
+ "second": [
+  "second.num",
+  "segundo"
+ ],
+ "try": [
+  "try.v",
+  "probar, intentar"
+ ],
+ "minute": [
+  "minute.n",
+  "minuto (five-minute rule = regla de los cinco minutos)"
+ ],
+ "rule": [
+  "rule.n",
+  "regla"
+ ],
+ "promise": [
+  "promise.v",
+  "prometer"
+ ],
+ "minutes": [
+  "minute.n",
+  "minutos"
+ ],
+ "if": [
+  "if.conj",
+  "si"
+ ],
+ "give": [
+  "give.v",
+  "(give up = rendirse, largar)"
+ ],
+ "after": [
+  "after.prep",
+  "después de (after that = después de eso)"
+ ],
+ "can": [
+  "can.other",
+  "podés; poder"
+ ],
+ "most": [
+  "most.det",
+  "la mayor parte (most of the time = casi siempre)"
+ ],
+ "carry": [
+  "carry.v",
+  "(carry on = seguir, continuar)"
+ ],
+ "hardest": [
+  "hard.adj",
+  "lo más difícil (the hardest part = la parte más difícil)"
+ ],
+ "part": [
+  "part.n",
+  "parte"
+ ],
+ "getting": [
+  "get.v",
+  "(getting started = arrancar)"
+ ],
+ "third": [
+  "third.num",
+  "tercero"
+ ],
+ "distractions": [
+  "distraction.n",
+  "distracciones"
+ ],
+ "another": [
+  "another.det",
+  "otro, otra"
+ ],
+ "room": [
+  "room.n",
+  "cuarto, habitación"
+ ],
+ "close": [
+  "close.v",
+  "cerrar"
+ ],
+ "tabs": [
+  "tab.n",
+  "pestañas"
+ ],
+ "need": [
+  "need.v",
+  "necesitar"
+ ],
+ "obvious": [
+  "obvious.adj",
+  "obvio"
+ ],
+ "huge": [
+  "huge.adj",
+  "enorme"
+ ],
+ "difference": [
+  "difference.n",
+  "diferencia"
+ ],
+ "finally": [
+  "finally.adv",
+  "por último"
+ ],
+ "kind": [
+  "kind.adj",
+  "amable, bueno (be kind to yourself = tratate bien)"
+ ],
+ "studies": [
+  "study.n",
+  "estudios"
+ ],
+ "who": [
+  "who.pron",
+  "que, quienes"
+ ],
+ "forgive": [
+  "forgive.v",
+  "perdonar"
+ ],
+ "procrastinating": [
+  "procrastinate.v",
+  "postergar las cosas, procrastinar"
+ ],
+ "past": [
+  "past.n",
+  "pasado"
+ ],
+ "less": [
+  "little.adv",
+  "menos (less likely = menos probable)"
+ ],
+ "likely": [
+  "likely.adj",
+  "probable (be likely to = tener tendencia a)"
+ ],
+ "done": [
+  "do.v",
+  "hecho (get things done = sacar las cosas adelante)"
+ ],
+ "look": [
+  "look.v",
+  "parecer, verse"
+ ],
+ "catch": [
+  "catch.v",
+  "agarrar, pescar (catch yourself = darte cuenta de que estás…)"
+ ],
+ "cleaning": [
+  "clean.v",
+  "limpiando"
+ ],
+ "kitchen": [
+  "kitchen.n",
+  "cocina"
+ ],
+ "doing": [
+  "do.v",
+  "hacer (instead of doing = en vez de hacer)"
+ ],
+ "homework": [
+  "homework.n",
+  "tarea (de la escuela/facu)"
+ ],
+ "panic": [
+  "panic.v",
+  "entrar en pánico, desesperarse"
+ ],
+ "deep": [
+  "deep.adj",
+  "profundo (take a deep breath = respirar hondo)"
+ ],
+ "breath": [
+  "breath.n",
+  "respiración (take a deep breath = respirar hondo)"
+ ],
+ "figure": [
+  "figure.v",
+  "(figure out = descifrar, darse cuenta)"
+ ],
+ "out": [
+  "out.adv",
+  "(figure out = descifrar)"
+ ],
+ "smallest": [
+  "small.adj",
+  "más chico (the smallest = el más chico)"
+ ],
+ "possible": [
+  "possible.adj",
+  "posible"
+ ],
+ "step": [
+  "step.n",
+  "paso"
+ ],
+ "rest": [
+  "rest.n",
+  "resto (the rest = lo demás)"
+ ],
+ "follow": [
+  "follow.v",
+  "seguir, venir después"
+ ]
+}

@@ -95,6 +95,12 @@ def validate(path):
             errors.append(f"lemma {lk}: bad pos {pos!r}")
         if not lm.get("en"):
             errors.append(f"lemma {lk}: empty 'en'")
+        if lm.get("lang") == "en":                  # English lemma: forms come from tools/english.py
+            if pos == "v" and not all((lm.get("forms") or {}).get(k) for k in ("base", "s", "past", "pp", "ing")):
+                errors.append(f"lemma {lk}: English verb needs base/s/past/pp/ing forms")
+            if pos == "n" and not lm.get("plural"):
+                errors.append(f"lemma {lk}: English noun needs a plural")
+            continue
         if pos == "v":
             conj = lm.get("conjugation", {})
             for t in TENSES:

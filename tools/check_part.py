@@ -6,6 +6,7 @@ missing lemma fields, and forms that the grammar engine can't recognise for thei
 every verb with a stem-change model so it can be eyeballed.
 
 Usage: python3 tools/check_part.py 7 [lex/missing_<id>.tsv]   (default word list: lex/parts/chunk_7.tsv)
+       python3 tools/check_part.py 1 lex_en/missing_<id>.tsv --en     (English lexicon: lex_en/parts/)
 """
 import json
 import sys
@@ -16,13 +17,15 @@ from build_text import auto_analysis, split_key, POS_LABEL  # noqa: E402
 from conjugate import conjugate  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-n = sys.argv[1]
-P = ROOT / "lex/parts"
+args = [a for a in sys.argv[1:] if a != "--en"]
+LANG = "en" if "--en" in sys.argv else "es"
+n = args[0]
+P = ROOT / ("lex_en/parts" if LANG == "en" else "lex/parts")
 forms = json.loads((P / f"part{n}.forms.json").read_text(encoding="utf-8"))
 lemmas = json.loads((P / f"part{n}.lemmas.json").read_text(encoding="utf-8"))
 names_f = P / f"part{n}.names.json"
 names = set(json.loads(names_f.read_text(encoding="utf-8"))) if names_f.exists() else set()
-chunk_file = Path(sys.argv[2]) if len(sys.argv) > 2 else P / f"chunk_{n}.tsv"
+chunk_file = Path(args[1]) if len(args) > 1 else P / f"chunk_{n}.tsv"
 chunk = [ln.split("\t")[0] for ln in chunk_file.read_text(encoding="utf-8").splitlines()
          if ln and not ln.startswith("surface\t")]
 
@@ -36,9 +39,9 @@ for k, lm in lemmas.items():
         problems.append(f"lemma {k}: unknown pos {pos!r}")
     if not lm.get("en"):
         problems.append(f"lemma {k}: no en")
-    if pos == "n" and lm.get("g") not in ("m", "f", "m/f"):
+    if LANG == "es" and pos == "n" and lm.get("g") not in ("m", "f", "m/f"):
         problems.append(f"lemma {k}: g must be m / f / m/f")
-    if pos == "v" and lm.get("m") not in (None, "e>ie", "e>ie,i", "o>ue", "o>ue,u", "e>i", "u>ue", "í", "ú"):
+    if LANG == "es" and pos == "v" and lm.get("m") not in (None, "e>ie", "e>ie,i", "o>ue", "o>ue,u", "e>i", "u>ue", "í", "ú"):
         problems.append(f"lemma {k}: bad model {lm.get('m')!r}")
 for surf, e in forms.items():
     if not isinstance(e, list) or len(e) not in (2, 3) or not e[1]:
@@ -48,11 +51,11 @@ for surf, e in forms.items():
         problems.append(f"form {surf}: lemma {e[0]} not defined in part{n}.lemmas.json")
         continue
     if len(e) == 2:
-        a = auto_analysis(surf.split("#")[0], e[0], lemmas)
+        a = auto_analysis(surf.split("#")[0], e[0], lemmas, LANG)
         if a is None:
             problems.append(f"form {surf}: not recognised as a form of {e[0]} — fix lemma/model or add analysis")
 for k, lm in lemmas.items():
-    if k.endswith(".v") and lm.get("m"):
+    if LANG == "es" and k.endswith(".v") and lm.get("m"):
         c = conjugate(k[:-2], lm["m"])
         print(f"{k} [{lm['m']}]: pres {' '.join(c['presente'])} | subj {' '.join(c['subjuntivo_presente'])}")
 print(f"part{n}: {len(forms)} forms, {len(lemmas)} lemmas, {len(names)} names, chunk {len(chunk)}")

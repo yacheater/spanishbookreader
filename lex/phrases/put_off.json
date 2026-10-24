@@ -1,0 +1,1180 @@
+[
+ {
+  "key": "put off",
+  "type": "phrasal",
+  "en": "postergar, dejar para después",
+  "explain": "El objeto puede ir en el medio: put things off = put off things. Con pronombre va siempre en el medio: put it off.",
+  "occ": [
+   {
+    "p": 1,
+    "words": [
+     "put",
+     "off"
+    ]
+   },
+   {
+    "p": 4,
+    "words": [
+     "put",
+     "off"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "wait for",
+  "type": "phrasal",
+  "en": "esperar (a alguien / algo)",
+  "explain": "En inglés «esperar a alguien» lleva for: wait for you = esperarte.",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "waiting",
+     "for"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "get rid of",
+  "type": "phrasal",
+  "en": "sacarse de encima, deshacerse de",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "get",
+     "rid",
+     "of"
+    ]
+   },
+   {
+    "p": 11,
+    "words": [
+     "get",
+     "rid",
+     "of"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "come back",
+  "type": "phrasal",
+  "en": "volver",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "comes",
+     "back"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "end up",
+  "type": "phrasal",
+  "en": "terminar (en algún lugar o situación), acabar",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "end",
+     "up"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "deal with",
+  "type": "phrasal",
+  "en": "lidiar con, manejar, encarar",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "deal",
+     "with"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "break down",
+  "type": "phrasal",
+  "en": "dividir (en partes más chicas)",
+  "explain": "Break a task down into steps = dividir una tarea en pasos. El objeto puede ir en el medio.",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "break",
+     "down"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "get started",
+  "type": "phrasal",
+  "en": "arrancar, ponerse a hacer algo",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "get",
+     "started"
+    ]
+   },
+   {
+    "p": 10,
+    "words": [
+     "getting",
+     "started"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "keep going",
+  "type": "phrasal",
+  "en": "seguir adelante, no parar",
+  "explain": "keep + -ing = seguir haciendo algo: keep going = seguir, keep working = seguir trabajando.",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "keep",
+     "going"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "work on",
+  "type": "phrasal",
+  "en": "trabajar en (una tarea, un proyecto)",
+  "occ": [
+   {
+    "p": 10,
+    "words": [
+     "work",
+     "on"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "give up",
+  "type": "phrasal",
+  "en": "rendirse, largar, abandonar",
+  "occ": [
+   {
+    "p": 10,
+    "words": [
+     "give",
+     "up"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "carry on",
+  "type": "phrasal",
+  "en": "seguir, continuar",
+  "occ": [
+   {
+    "p": 10,
+    "words": [
+     "carry",
+     "on"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "figure out",
+  "type": "phrasal",
+  "en": "descifrar, darse cuenta de, resolver",
+  "occ": [
+   {
+    "p": 13,
+    "words": [
+     "figure",
+     "out"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "sound familiar",
+  "type": "idiom",
+  "en": "¿te suena?",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "Sound",
+     "familiar"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "from time to time",
+  "type": "idiom",
+  "en": "de vez en cuando",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "from",
+     "time",
+     "to",
+     "time"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "at all",
+  "type": "idiom",
+  "en": "para nada, en absoluto (en frases negativas)",
+  "occ": [
+   {
+    "p": 4,
+    "words": [
+     "at",
+     "all"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "on the other hand",
+  "type": "idiom",
+  "en": "por otro lado",
+  "occ": [
+   {
+    "p": 4,
+    "words": [
+     "on",
+     "the",
+     "other",
+     "hand"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "in other words",
+  "type": "idiom",
+  "en": "o sea, en otras palabras",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "In",
+     "other",
+     "words"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "for a while",
+  "type": "idiom",
+  "en": "por un rato, por un tiempo",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "for",
+     "a",
+     "while"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "that is why",
+  "type": "idiom",
+  "en": "por eso",
+  "occ": [
+   {
+    "p": 7,
+    "words": [
+     "That",
+     "is",
+     "why"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "somebody else's problem",
+  "type": "idiom",
+  "en": "problema de otro",
+  "occ": [
+   {
+    "p": 7,
+    "words": [
+     "somebody",
+     "else's",
+     "problem"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "of course",
+  "type": "idiom",
+  "en": "obvio, por supuesto",
+  "occ": [
+   {
+    "p": 7,
+    "words": [
+     "Of",
+     "course"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "the good news is (that)",
+  "type": "idiom",
+  "en": "lo bueno es que",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "good",
+     "news",
+     "is"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "most of the time",
+  "type": "idiom",
+  "en": "casi siempre, la mayoría de las veces",
+  "occ": [
+   {
+    "p": 10,
+    "words": [
+     "Most",
+     "of",
+     "the",
+     "time"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "make a (huge) difference",
+  "type": "idiom",
+  "en": "cambiar mucho las cosas, hacer una gran diferencia",
+  "occ": [
+   {
+    "p": 11,
+    "words": [
+     "makes",
+     "a",
+     "huge",
+     "difference"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "be likely to",
+  "type": "idiom",
+  "en": "tender a, ser probable que",
+  "occ": [
+   {
+    "p": 12,
+    "words": [
+     "likely",
+     "to"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "get things done",
+  "type": "idiom",
+  "en": "sacar las cosas adelante, terminar lo que hay que hacer",
+  "occ": [
+   {
+    "p": 12,
+    "words": [
+     "get",
+     "things",
+     "done"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "next time",
+  "type": "idiom",
+  "en": "la próxima vez (que)",
+  "occ": [
+   {
+    "p": 13,
+    "words": [
+     "next",
+     "time"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "take a deep breath",
+  "type": "idiom",
+  "en": "respirar hondo",
+  "occ": [
+   {
+    "p": 13,
+    "words": [
+     "Take",
+     "a",
+     "deep",
+     "breath"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "the rest will follow",
+  "type": "idiom",
+  "en": "lo demás viene solo",
+  "occ": [
+   {
+    "p": 13,
+    "words": [
+     "rest",
+     "will",
+     "follow"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "preposición + -ing",
+  "type": "grammar",
+  "en": "preposición + infinitivo",
+  "explain": "Después de about, at, for, of, etc. el verbo va con -ing: about being lazy = de ser vago; good at thinking = bueno para pensar.",
+  "occ": [
+   {
+    "p": 3,
+    "words": [
+     "about",
+     "being"
+    ]
+   },
+   {
+    "p": 7,
+    "words": [
+     "at",
+     "thinking"
+    ]
+   },
+   {
+    "p": 12,
+    "words": [
+     "for",
+     "procrastinating"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "take (time)",
+  "type": "collocation",
+  "en": "llevar (tiempo), tardar",
+  "explain": "It will take two hours = te va a llevar dos horas.",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "take",
+     "about",
+     "two",
+     "hours"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "make a cup of coffee",
+  "type": "collocation",
+  "en": "hacerse un café",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "make",
+     "cup",
+     "of",
+     "coffee"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "be called",
+  "type": "collocation",
+  "en": "llamarse",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "is",
+     "called"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "keep (oneself) busy",
+  "type": "collocation",
+  "en": "mantenerse ocupado",
+  "occ": [
+   {
+    "p": 4,
+    "words": [
+     "keep",
+     "themselves",
+     "busy"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "time management",
+  "type": "collocation",
+  "en": "manejo del tiempo, organización del tiempo",
+  "occ": [
+   {
+    "p": 4,
+    "words": [
+     "time",
+     "management"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "feel bad",
+  "type": "collocation",
+  "en": "sentirse mal",
+  "occ": [
+   {
+    "p": 4,
+    "words": [
+     "feel",
+     "bad"
+    ]
+   },
+   {
+    "p": 5,
+    "words": [
+     "feel",
+     "bad"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "feel guilty",
+  "type": "collocation",
+  "en": "sentirse culpable",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "feel",
+     "guilty"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "be good at",
+  "type": "collocation",
+  "en": "ser bueno para (algo)",
+  "occ": [
+   {
+    "p": 7,
+    "words": [
+     "good",
+     "at"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "leave something for tomorrow",
+  "type": "collocation",
+  "en": "dejar algo para mañana",
+  "occ": [
+   {
+    "p": 7,
+    "words": [
+     "leave",
+     "for",
+     "tomorrow"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "be kind to yourself",
+  "type": "collocation",
+  "en": "tratarte bien, no ser duro con vos mismo",
+  "occ": [
+   {
+    "p": 12,
+    "words": [
+     "be",
+     "kind",
+     "to",
+     "yourself"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "do your homework",
+  "type": "collocation",
+  "en": "hacer la tarea",
+  "occ": [
+   {
+    "p": 13,
+    "words": [
+     "doing",
+     "your",
+     "homework"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "take a step",
+  "type": "collocation",
+  "en": "dar un paso",
+  "explain": "En inglés el paso se «toma»: take a step = dar un paso; take it = darlo.",
+  "occ": [
+   {
+    "p": 13,
+    "words": [
+     "step",
+     "and",
+     "take",
+     "it"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "it is + día / hora",
+  "type": "grammar",
+  "en": "es domingo; es medianoche",
+  "explain": "En inglés la oración siempre necesita sujeto. Para la hora, el día o el clima se usa it: it is Sunday = es domingo.",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "It",
+     "is",
+     "Sunday"
+    ]
+   },
+   {
+    "p": 2,
+    "words": [
+     "it",
+     "is",
+     "midnight"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "have + algo + to + verbo",
+  "type": "grammar",
+  "en": "tener algo para hacer; tener que hacer algo",
+  "explain": "You have a report to write = tenés un informe para escribir, o sea, tenés que escribirlo.",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "have",
+     "report",
+     "to",
+     "write"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "will + verbo",
+  "type": "grammar",
+  "en": "futuro: va a + verbo",
+  "explain": "will + verbo en infinitivo (sin to) habla del futuro: it will take = va a llevar, you will carry on = vas a seguir.",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "will",
+     "take"
+    ]
+   },
+   {
+    "p": 7,
+    "words": [
+     "will",
+     "be"
+    ]
+   },
+   {
+    "p": 10,
+    "words": [
+     "will",
+     "carry"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "instead of + -ing",
+  "type": "grammar",
+  "en": "en vez de + infinitivo",
+  "explain": "Después de una preposición, en inglés va el verbo con -ing, no el infinitivo: instead of starting = en vez de empezar.",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "Instead",
+     "of",
+     "starting"
+    ]
+   },
+   {
+    "p": 13,
+    "words": [
+     "instead",
+     "of",
+     "doing"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "be + -ing",
+  "type": "grammar",
+  "en": "estar + gerundio (algo que pasa ahora)",
+  "explain": "Presente continuo: be + verbo con -ing = estar + -ando/-iendo. The report is still waiting = el informe sigue esperando.",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "is",
+     "still",
+     "waiting"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "not … anything",
+  "type": "grammar",
+  "en": "no … nada",
+  "explain": "En inglés no hay doble negación: «no hacen nada» = do not do anything (no «nothing»).",
+  "occ": [
+   {
+    "p": 4,
+    "words": [
+     "not",
+     "anything"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "not … but …",
+  "type": "grammar",
+  "en": "no … sino …",
+  "explain": "Not X but Y = no X sino Y: not a problem of time but of emotions = no es un problema de tiempo sino de emociones.",
+  "occ": [
+   {
+    "p": 4,
+    "words": [
+     "not",
+     "problem",
+     "of",
+     "time",
+     "management",
+     "but"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "make + persona + verbo",
+  "type": "grammar",
+  "en": "hacer que alguien + verbo",
+  "explain": "Después de make el segundo verbo va sin to: make us feel bad = hacer que nos sintamos mal.",
+  "occ": [
+   {
+    "p": 4,
+    "words": [
+     "make",
+     "us",
+     "feel"
+    ]
+   },
+   {
+    "p": 12,
+    "words": [
+     "makes",
+     "task",
+     "look"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "adjetivo + enough",
+  "type": "grammar",
+  "en": "lo bastante / lo suficientemente + adjetivo",
+  "explain": "Enough va después del adjetivo: good enough = lo suficientemente bueno.",
+  "occ": [
+   {
+    "p": 4,
+    "words": [
+     "good",
+     "enough"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "even + comparativo",
+  "type": "grammar",
+  "en": "todavía / aún + más …",
+  "explain": "Even refuerza la comparación: even worse = todavía peor.",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "even",
+     "worse"
+    ]
+   },
+   {
+    "p": 12,
+    "words": [
+     "even",
+     "worse"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "much more + adjetivo + than",
+  "type": "grammar",
+  "en": "mucho más … que",
+  "explain": "Para decir «mucho más» delante de un comparativo se usa much: much more attractive = mucho más atractivo; much easier = mucho más fácil. Adjetivos cortos: -er (easy → easier); largos: more + adjetivo.",
+  "occ": [
+   {
+    "p": 7,
+    "words": [
+     "much",
+     "more",
+     "attractive",
+     "than"
+    ]
+   },
+   {
+    "p": 9,
+    "words": [
+     "much",
+     "easier"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "it is + adjetivo + to + verbo",
+  "type": "grammar",
+  "en": "es + adjetivo + infinitivo",
+  "explain": "It is easy to leave = es fácil dejar. En inglés hace falta it como sujeto y to antes del verbo.",
+  "occ": [
+   {
+    "p": 7,
+    "words": [
+     "it",
+     "is",
+     "easy",
+     "to"
+    ]
+   },
+   {
+    "p": 9,
+    "words": [
+     "it",
+     "is",
+     "easier",
+     "to"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "how to + verbo",
+  "type": "grammar",
+  "en": "cómo + infinitivo",
+  "explain": "How to deal with it = cómo manejarlo.",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "How",
+     "to",
+     "deal"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "there is / there are",
+  "type": "grammar",
+  "en": "hay",
+  "explain": "There is + singular, there are + plural: there are simple tricks = hay trucos simples.",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "there",
+     "are"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "sound + adjetivo",
+  "type": "grammar",
+  "en": "sonar / parecer + adjetivo",
+  "explain": "Sound va con adjetivo, no con adverbio: it sounds obvious = suena obvio.",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "sounds",
+     "scary"
+    ]
+   },
+   {
+    "p": 11,
+    "words": [
+     "sounds",
+     "obvious"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "once + presente",
+  "type": "grammar",
+  "en": "una vez que / cuando + presente (o subjuntivo)",
+  "explain": "Once you get started = una vez que arranques. En inglés se usa presente aunque hable del futuro.",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "Once",
+     "you",
+     "get"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "número + sustantivo (five-minute)",
+  "type": "grammar",
+  "en": "de cinco minutos",
+  "explain": "Cuando un número + sustantivo describe a otro sustantivo, va con guion y en singular: a five-minute rule (no five-minutes).",
+  "occ": [
+   {
+    "p": 10,
+    "words": [
+     "five",
+     "minute",
+     "rule"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "promise yourself that you will …",
+  "type": "grammar",
+  "en": "prometete que vas a …",
+  "explain": "Promise (that) + will + verbo = prometer que vas a hacer algo. El imperativo (promise) no lleva sujeto.",
+  "occ": [
+   {
+    "p": 10,
+    "words": [
+     "promise",
+     "yourself",
+     "that",
+     "you",
+     "will"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "if + presente, … can / will",
+  "type": "grammar",
+  "en": "si + presente, … podés / vas a … (primer condicional)",
+  "explain": "Primer condicional: if + presente para la condición, y can / will + verbo para el resultado. If you want to give up, you can = si querés abandonar, podés.",
+  "occ": [
+   {
+    "p": 10,
+    "words": [
+     "If",
+     "you",
+     "want",
+     "that",
+     "you",
+     "can"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "the + -est (superlativo)",
+  "type": "grammar",
+  "en": "el / la más …",
+  "explain": "Adjetivos cortos: the + adjetivo + -est = el más …: the hardest part = la parte más difícil; the smallest step = el paso más chico.",
+  "occ": [
+   {
+    "p": 10,
+    "words": [
+     "the",
+     "hardest"
+    ]
+   },
+   {
+    "p": 13,
+    "words": [
+     "the",
+     "smallest"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "relativo sin that",
+  "type": "grammar",
+  "en": "las pestañas que no necesitás",
+  "explain": "Cuando el relativo es objeto, that / which se puede omitir: the tabs (that) you do not need.",
+  "occ": [
+   {
+    "p": 11,
+    "words": [
+     "tabs",
+     "you",
+     "do",
+     "not",
+     "need"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "less likely to",
+  "type": "grammar",
+  "en": "menos propenso a, con menos probabilidad de",
+  "explain": "less + adjetivo = menos + adjetivo (lo contrario de more). Be less likely to do it = tener menos tendencia a hacerlo.",
+  "occ": [
+   {
+    "p": 12,
+    "words": [
+     "less",
+     "likely",
+     "to"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "-ing como sujeto",
+  "type": "grammar",
+  "en": "infinitivo como sujeto",
+  "explain": "Cuando una acción es el sujeto, en inglés se usa -ing: Feeling guilty does not help = sentirse culpable no ayuda.",
+  "occ": [
+   {
+    "p": 12,
+    "words": [
+     "Feeling",
+     "guilty",
+     "does"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "help + persona + verbo",
+  "type": "grammar",
+  "en": "ayudar a alguien a + verbo",
+  "explain": "Después de help el segundo verbo puede ir sin to: help you get things done = ayudarte a sacar las cosas adelante.",
+  "occ": [
+   {
+    "p": 12,
+    "words": [
+     "help",
+     "you",
+     "get"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "catch yourself + -ing",
+  "type": "grammar",
+  "en": "darte cuenta de que estás + gerundio",
+  "explain": "Catch yourself cleaning = pescarte limpiando, darte cuenta de que estás limpiando.",
+  "occ": [
+   {
+    "p": 13,
+    "words": [
+     "catch",
+     "yourself",
+     "cleaning"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "do not + verbo (imperativo negativo)",
+  "type": "grammar",
+  "en": "no + verbo (orden negativa)",
+  "explain": "Do not (don't) + verbo = orden negativa: do not panic = no entres en pánico.",
+  "occ": [
+   {
+    "p": 13,
+    "words": [
+     "do",
+     "not",
+     "panic"
+    ]
+   }
+  ]
+ }
+]

@@ -18,29 +18,37 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from conjugate import conjugate, analyse, TENSES, strip_acc  # noqa: E402
+import english  # noqa: E402
 import validate_text  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 # a word may carry a colloquial elision apostrophe (ASCII '): la'o, demasia'o, pa', estamo'
 WORD = re.compile(r"[^\W\d_]+(?:'[^\W\d_]+)*'?")
+WORD_EN = re.compile(r"[^\W\d_]+(?:['’][^\W\d_]+)*")          # don't, it's, I’m — one token
+LEX_DIR = {"es": "lex", "en": "lex_en"}                           # English texts have their own lexicon (glosses in Spanish)
+POS_LABEL_EN = {"v": "verb", "n": "noun", "adj": "adjective", "adv": "adverb", "prep": "preposition",
+                "conj": "conjunction", "pron": "pronoun", "det": "determiner", "num": "number",
+                "interj": "interjection", "other": ""}
 PRON_VARIANT = {"la", "las", "lo", "los", "le", "les"}
 POS_LABEL = {"v": "verbo", "n": "sustantivo", "adj": "adjetivo", "adv": "adverbio", "prep": "preposición",
              "conj": "conjunción", "pron": "pronombre", "det": "determinante", "num": "numeral",
              "interj": "interjección", "other": ""}
 
 
-def load_names():
+def load_names(lang="es"):
+    d = LEX_DIR[lang]
     names = set()
-    for f in [ROOT / "lex/names.json"] + sorted(Path(p) for p in glob.glob(str(ROOT / "lex/parts/*.names.json"))):
+    for f in [ROOT / f"{d}/names.json"] + sorted(Path(p) for p in glob.glob(str(ROOT / f"{d}/parts/*.names.json"))):
         if f.exists():
             names.update(n.lower() for n in json.loads(f.read_text(encoding="utf-8")))
     return names
 
 
-def load_lex():
+def load_lex(lang="es"):
+    d = LEX_DIR[lang]
     lemmas, forms, conflicts = {}, {}, []
     for kind, store in (("lemmas", lemmas), ("forms", forms)):
-        files = [ROOT / f"lex/{kind}.json"] + sorted(Path(p) for p in glob.glob(str(ROOT / f"lex/parts/*.{kind}.json")))
+        files = [ROOT / f"{d}/{kind}.json"] + sorted(Path(p) for p in glob.glob(str(ROOT / f"{d}/parts/*.{kind}.json")))
         for f in files:
             if not f.exists():
                 continue
@@ -90,8 +98,20 @@ def adj_forms(lemma, lm):
     return d
 
 
-def lemma_entry(key, lm):
+def lemma_entry(key, lm, lang="es"):
     lemma, pos = split_key(key)
+    if lang == "en":       # "en" holds the gloss in the learner's language — Spanish (rioplatense) for English texts
+        e = {"lemma": lemma, "pos": pos, "posLabel": POS_LABEL_EN.get(pos, ""), "en": lm["en"], "lang": "en"}
+        f = english.forms(lemma, pos, lm)
+        if pos == "n":
+            e["plural"] = f["pl"]
+        elif pos == "v":
+            e["forms"] = f
+        elif pos in ("adj", "adv") and not f["cmp"].startswith("more "):
+            e["cmp"], e["sup"] = f["cmp"], f["sup"]
+        if lm.get("note"):
+            e["note"] = lm["note"]
+        return e
     e = {"lemma": lemma, "pos": pos, "posLabel": POS_LABEL.get(pos, ""), "en": lm["en"]}
     if pos == "n":
         g = lm.get("g", "m")
@@ -112,10 +132,12 @@ def lemma_entry(key, lm):
     return e
 
 
-def auto_analysis(surface, key, lemmas):
+def auto_analysis(surface, key, lemmas, lang="es"):
     lemma, pos = split_key(key)
-    s = surface.lower()
+    s = surface.lower().replace("’", "'")
     lm = lemmas.get(key, {})
+    if lang == "en":
+        return english.analyse(s, lemma, pos, lm)
     if pos == "v":
         return analyse(s, lemma, lm.get("m"))
     if pos == "n":
@@ -133,7 +155,7 @@ def auto_analysis(surface, key, lemmas):
     return ""
 
 
-PHRASE_TYPES = {"idiom": "expression", "collocation": "collocation", "grammar": "grammar"}
+PHRASE_TYPES = {"idiom": "expression", "collocation": "collocation", "phrasal": "phrasal verb", "grammar": "grammar"}
 MAX_GAP = 5          # words allowed between two parts of a discontinuous phrase (tomaron … decisión)
 
 
@@ -204,7 +226,7 @@ def sentence_span(para, i0, i1):
 def phrase_index(d):
     """Expressions that translate one-to-one (idioms, collocations) — for the Translate mode."""
     return [{"key": p["key"], "type": p["type"], "en": p["en"], "example": p.get("example")}
-            for p in d.get("phrases", {}).values() if p["type"] in ("idiom", "collocation")]
+            for p in d.get("phrases", {}).values() if p["type"] in ("idiom", "collocation", "phrasal")]
 
 
 def input_path(tid):
@@ -216,10 +238,12 @@ def input_path(tid):
 
 
 def build(tid):
-    lemmas, forms_lex, conflicts = load_lex()
-    known_names = load_names()
     src = input_path(tid)
     meta = json.loads(src.with_suffix(".meta.json").read_text(encoding="utf-8"))
+    lang = meta.get("lang", "es")
+    lemmas, forms_lex, conflicts = load_lex(lang)
+    known_names = load_names(lang)
+    word_re = WORD_EN if lang == "en" else WORD
     src_rel = str(src.relative_to(ROOT))
     lines = [ln.rstrip() for ln in (ROOT / src_rel).read_text(encoding="utf-8").split("\n")]
     paras_txt = [ln for ln in lines if ln.strip()]
@@ -239,7 +263,7 @@ def build(tid):
         if key not in lemmas:
             problems.append(f"{surface!r}: lemma {key} not in lemmas")
             return None
-        analysis = entry[2] if len(entry) > 2 else auto_analysis(surface, key, lemmas)
+        analysis = entry[2] if len(entry) > 2 else auto_analysis(surface, key, lemmas, lang)
         if analysis is None:
             problems.append(f"{surface!r} is not a known form of {key} — add a manual analysis")
             analysis = ""
@@ -254,7 +278,7 @@ def build(tid):
     paragraphs, headings = [], []
     for pi, text in zip(line_no, paras_txt):           # pi = line number (overrides use it)
         pieces, pos = [], 0
-        for m in WORD.finditer(text):
+        for m in word_re.finditer(text):
             if m.start() > pos:
                 pieces.append(text[pos:m.start()])
             pieces.append([m.group()])
@@ -265,10 +289,10 @@ def build(tid):
         seen = Counter()
         for wi, w in enumerate(words):
             surface = w[0]
-            low = surface.lower()
+            low = surface.lower().replace("’", "'")
             seen[low] += 1
             entry = ovr.get((pi, low, seen[low])) or forms_lex.get(low) or forms_lex.get(surface)
-            if low in PRON_VARIANT and f"{low}#pron" in forms_lex and wi + 1 < len(words):
+            if lang == "es" and low in PRON_VARIANT and f"{low}#pron" in forms_lex and wi + 1 < len(words):
                 nxt = forms_lex.get(words[wi + 1][0].lower())
                 if nxt and split_key(nxt[0])[1] == "v" and not ovr.get((pi, low, seen[low])):
                     entry = forms_lex[f"{low}#pron"]
@@ -293,7 +317,8 @@ def build(tid):
         "chapters": [{"id": "c1", "title": meta["title"], "paragraphs": paragraphs, "headings": headings,
                       "phraseOcc": occurrences}],
         "forms": forms_out,
-        "lemmas": {k: lemma_entry(k, lemmas[k]) for k in sorted(used_lemmas)},
+        "lemmas": {k: lemma_entry(k, lemmas[k], lang) for k in sorted(used_lemmas)},
+        "lang": lang,
         "phrases": phrases,
     }
     (ROOT / "texts").mkdir(exist_ok=True)
@@ -303,7 +328,7 @@ def build(tid):
         "window.LECTOR_TEXTS=window.LECTOR_TEXTS||{};window.LECTOR_TEXTS[" + json.dumps(tid) + "]="
         + json.dumps(doc, ensure_ascii=False, separators=(",", ":")) + ";\n", encoding="utf-8")
 
-    miss_file = ROOT / f"lex/missing_{tid}.tsv"
+    miss_file = ROOT / f"{LEX_DIR[lang]}/missing_{tid}.tsv"
     if missing:
         miss_file.write_text("".join(f"{w}\t{n}\t{context[w]}\n" for w, n in missing.most_common()), encoding="utf-8")
     elif miss_file.exists():

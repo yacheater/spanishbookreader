@@ -1,0 +1,640 @@
+{
+ "the.det": {
+  "en": "el, la, los, las"
+ },
+ "it.pron": {
+  "en": "eso; lo, la (sujeto que no se traduce: it is = es)"
+ },
+ "be.v": {
+  "en": "ser; estar"
+ },
+ "that.conj": {
+  "en": "que; ese, esa; eso"
+ },
+ "you.pron": {
+  "en": "vos; te; (uno, en general)"
+ },
+ "a.det": {
+  "en": "un, una"
+ },
+ "an.det": {
+  "en": "un, una (antes de vocal)"
+ },
+ "we.pron": {
+  "en": "nosotros"
+ },
+ "to.prep": {
+  "en": "a; para; (marca del infinitivo)"
+ },
+ "of.prep": {
+  "en": "de"
+ },
+ "not.adv": {
+  "en": "no"
+ },
+ "and.conj": {
+  "en": "y"
+ },
+ "do.v": {
+  "en": "hacer; (auxiliar en preguntas y negaciones)"
+ },
+ "will.other": {
+  "en": "(auxiliar de futuro: will + verbo = ir a + verbo)"
+ },
+ "your.det": {
+  "en": "tu, tus"
+ },
+ "for.prep": {
+  "en": "para; por; durante"
+ },
+ "time.n": {
+  "en": "tiempo; vez"
+ },
+ "task.n": {
+  "en": "tarea"
+ },
+ "but.conj": {
+  "en": "pero; sino"
+ },
+ "feel.v": {
+  "en": "sentir(se)"
+ },
+ "in.prep": {
+  "en": "en"
+ },
+ "get.v": {
+  "en": "conseguir; recibir; ponerse (+ adj.)"
+ },
+ "why.adv": {
+  "en": "por qué"
+ },
+ "put.v": {
+  "en": "poner"
+ },
+ "thing.n": {
+  "en": "cosa"
+ },
+ "report.n": {
+  "en": "informe"
+ },
+ "write.v": {
+  "en": "escribir"
+ },
+ "take.v": {
+  "en": "tomar; llevar"
+ },
+ "about.prep": {
+  "en": "sobre, de; (con números) unos, más o menos"
+ },
+ "phone.n": {
+  "en": "celular; teléfono"
+ },
+ "again.adv": {
+  "en": "otra vez, de nuevo"
+ },
+ "lazy.adj": {
+  "en": "vago, haragán"
+ },
+ "person.n": {
+  "en": "persona"
+ },
+ "on.prep": {
+  "en": "en; sobre"
+ },
+ "very.adv": {
+  "en": "muy"
+ },
+ "problem.n": {
+  "en": "problema"
+ },
+ "good.adj": {
+  "en": "bueno"
+ },
+ "when.conj": {
+  "en": "cuando"
+ },
+ "feeling.n": {
+  "en": "sensación; sentimiento"
+ },
+ "so.adv": {
+  "en": "así que, entonces; tan"
+ },
+ "our.det": {
+  "en": "nuestro, nuestra"
+ },
+ "brain.n": {
+  "en": "cerebro"
+ },
+ "tomorrow.adv": {
+  "en": "mañana"
+ },
+ "first.num": {
+  "en": "primero"
+ },
+ "yourself.pron": {
+  "en": "vos mismo; te"
+ },
+ "off.adv": {
+  "en": "(partícula: fuera, apagado; put off = postergar)"
+ },
+ "instead.adv": {
+  "en": "en cambio (instead of = en vez de)"
+ },
+ "check.v": {
+  "en": "revisar, chequear"
+ },
+ "make.v": {
+  "en": "hacer; hacer que"
+ },
+ "procrastination.n": {
+  "en": "procrastinación"
+ },
+ "almost.adv": {
+  "en": "casi"
+ },
+ "many.det": {
+  "en": "muchos, muchas"
+ },
+ "procrastinator.n": {
+  "en": "persona que deja todo para después"
+ },
+ "want.v": {
+  "en": "querer"
+ },
+ "at.prep": {
+  "en": "en; a"
+ },
+ "other.det": {
+  "en": "otro, otra"
+ },
+ "busy.adj": {
+  "en": "ocupado"
+ },
+ "keep.v": {
+  "en": "mantener; guardar; seguir (+ -ing)"
+ },
+ "themselves.pron": {
+  "en": "a sí mismos; se"
+ },
+ "with.prep": {
+  "en": "con"
+ },
+ "us.pron": {
+  "en": "nos; nosotros"
+ },
+ "bad.adj": {
+  "en": "malo; mal"
+ },
+ "show.v": {
+  "en": "mostrar"
+ },
+ "avoid.v": {
+  "en": "evitar"
+ },
+ "rid.adj": {
+  "en": "libre de (get rid of = sacarse de encima)"
+ },
+ "later.adv": {
+  "en": "después, más tarde"
+ },
+ "because.conj": {
+  "en": "porque"
+ },
+ "guilty.adj": {
+  "en": "culpable"
+ },
+ "up.adv": {
+  "en": "arriba (partícula de phrasal verbs)"
+ },
+ "even.adv": {
+  "en": "incluso; todavía (con comparativo)"
+ },
+ "future.n": {
+  "en": "futuro"
+ },
+ "reward.n": {
+  "en": "recompensa, premio"
+ },
+ "much.adv": {
+  "en": "mucho"
+ },
+ "next.det": {
+  "en": "próximo; siguiente"
+ },
+ "work.n": {
+  "en": "trabajo"
+ },
+ "somebody.pron": {
+  "en": "alguien"
+ },
+ "help.v": {
+  "en": "ayudar"
+ },
+ "sound.v": {
+  "en": "sonar"
+ },
+ "start.v": {
+  "en": "empezar, arrancar"
+ },
+ "five.num": {
+  "en": "cinco"
+ },
+ "only.adv": {
+  "en": "solo, nada más"
+ },
+ "Sunday.n": {
+  "en": "domingo"
+ },
+ "evening.n": {
+  "en": "tarde, noche (el final del día)"
+ },
+ "have.v": {
+  "en": "tener"
+ },
+ "know.v": {
+  "en": "saber; conocer"
+ },
+ "two.num": {
+  "en": "dos"
+ },
+ "hour.n": {
+  "en": "hora"
+ },
+ "cup.n": {
+  "en": "taza"
+ },
+ "coffee.n": {
+  "en": "café"
+ },
+ "tidy.v": {
+  "en": "ordenar"
+ },
+ "desk.n": {
+  "en": "escritorio"
+ },
+ "then.adv": {
+  "en": "después, luego; entonces"
+ },
+ "suddenly.adv": {
+  "en": "de repente"
+ },
+ "midnight.n": {
+  "en": "medianoche"
+ },
+ "still.adv": {
+  "en": "todavía"
+ },
+ "wait.v": {
+  "en": "esperar"
+ },
+ "familiar.adj": {
+  "en": "conocido, familiar"
+ },
+ "this.det": {
+  "en": "este, esta; esto"
+ },
+ "habit.n": {
+  "en": "hábito, costumbre"
+ },
+ "call.v": {
+  "en": "llamar"
+ },
+ "everyone.pron": {
+  "en": "todos, todo el mundo"
+ },
+ "from.prep": {
+  "en": "de; desde"
+ },
+ "think.v": {
+  "en": "pensar, creer"
+ },
+ "simply.adv": {
+  "en": "simplemente"
+ },
+ "psychologist.n": {
+  "en": "psicólogo"
+ },
+ "disagree.v": {
+  "en": "no estar de acuerdo"
+ },
+ "anything.pron": {
+  "en": "algo; nada (en negativas)"
+ },
+ "all.det": {
+  "en": "todo"
+ },
+ "hand.n": {
+  "en": "mano"
+ },
+ "often.adv": {
+  "en": "a menudo, muchas veces"
+ },
+ "they.pron": {
+  "en": "ellos, ellas"
+ },
+ "just.adv": {
+  "en": "simplemente, nomás; recién"
+ },
+ "according.prep": {
+  "en": "(according to = según)"
+ },
+ "researcher.n": {
+  "en": "investigador"
+ },
+ "management.n": {
+  "en": "gestión, manejo"
+ },
+ "emotion.n": {
+  "en": "emoción"
+ },
+ "boring.adj": {
+  "en": "aburrido, embolante"
+ },
+ "difficult.adj": {
+  "en": "difícil"
+ },
+ "or.conj": {
+  "en": "o"
+ },
+ "might.other": {
+  "en": "(verbo modal) podría, puede que"
+ },
+ "enough.adv": {
+  "en": "suficiente, lo bastante"
+ },
+ "word.n": {
+  "en": "palabra"
+ },
+ "unpleasant.adj": {
+  "en": "desagradable"
+ },
+ "while.n": {
+  "en": "rato"
+ },
+ "come.v": {
+  "en": "venir"
+ },
+ "back.adv": {
+  "en": "de vuelta, atrás"
+ },
+ "usually.adv": {
+  "en": "normalmente, por lo general"
+ },
+ "strong.adj": {
+  "en": "fuerte"
+ },
+ "now.adv": {
+  "en": "ahora"
+ },
+ "also.adv": {
+  "en": "también"
+ },
+ "end.v": {
+  "en": "terminar"
+ },
+ "circle.n": {
+  "en": "círculo"
+ },
+ "like.v": {
+  "en": "gustar (I like = me gusta)"
+ },
+ "today.adv": {
+  "en": "hoy"
+ },
+ "seem.v": {
+  "en": "parecer"
+ },
+ "attractive.adj": {
+  "en": "atractivo"
+ },
+ "than.conj": {
+  "en": "que (en comparaciones)"
+ },
+ "big.adj": {
+  "en": "grande"
+ },
+ "month.n": {
+  "en": "mes"
+ },
+ "imagine.v": {
+  "en": "imaginar(se)"
+ },
+ "self.n": {
+  "en": "uno mismo; yo"
+ },
+ "treat.v": {
+  "en": "tratar"
+ },
+ "like.prep": {
+  "en": "como"
+ },
+ "stranger.n": {
+  "en": "desconocido, extraño"
+ },
+ "easy.adj": {
+  "en": "fácil"
+ },
+ "leave.v": {
+  "en": "dejar; irse"
+ },
+ "hard.adj": {
+  "en": "difícil; duro, pesado"
+ },
+ "else.adv": {
+  "en": "otro; más (somebody else = otra persona)"
+ },
+ "course.n": {
+  "en": "curso (of course = por supuesto)"
+ },
+ "arrive.v": {
+  "en": "llegar"
+ },
+ "how.adv": {
+  "en": "cómo"
+ },
+ "deal.v": {
+  "en": "repartir (deal with = lidiar con)"
+ },
+ "news.n": {
+  "en": "noticia, noticias"
+ },
+ "there.adv": {
+  "en": "ahí, allá (there is / there are = hay)"
+ },
+ "simple.adj": {
+  "en": "simple, sencillo"
+ },
+ "trick.n": {
+  "en": "truco"
+ },
+ "really.adv": {
+  "en": "de verdad, realmente"
+ },
+ "break.v": {
+  "en": "romper"
+ },
+ "down.adv": {
+  "en": "abajo (partícula de phrasal verbs)"
+ },
+ "into.prep": {
+  "en": "en, dentro de"
+ },
+ "small.adj": {
+  "en": "chico, pequeño"
+ },
+ "step.n": {
+  "en": "paso"
+ },
+ "scary.adj": {
+  "en": "que da miedo"
+ },
+ "sentence.n": {
+  "en": "oración, frase"
+ },
+ "once.conj": {
+  "en": "una vez que, cuando"
+ },
+ "go.v": {
+  "en": "ir"
+ },
+ "second.num": {
+  "en": "segundo"
+ },
+ "try.v": {
+  "en": "probar, intentar"
+ },
+ "minute.n": {
+  "en": "minuto"
+ },
+ "rule.n": {
+  "en": "regla"
+ },
+ "promise.v": {
+  "en": "prometer"
+ },
+ "if.conj": {
+  "en": "si"
+ },
+ "give.v": {
+  "en": "dar"
+ },
+ "after.prep": {
+  "en": "después de"
+ },
+ "can.other": {
+  "en": "(verbo modal) poder"
+ },
+ "most.det": {
+  "en": "la mayoría, la mayor parte"
+ },
+ "carry.v": {
+  "en": "llevar, cargar"
+ },
+ "part.n": {
+  "en": "parte"
+ },
+ "third.num": {
+  "en": "tercero"
+ },
+ "distraction.n": {
+  "en": "distracción"
+ },
+ "another.det": {
+  "en": "otro, otra"
+ },
+ "room.n": {
+  "en": "cuarto, habitación"
+ },
+ "close.v": {
+  "en": "cerrar"
+ },
+ "tab.n": {
+  "en": "pestaña"
+ },
+ "need.v": {
+  "en": "necesitar"
+ },
+ "obvious.adj": {
+  "en": "obvio"
+ },
+ "huge.adj": {
+  "en": "enorme"
+ },
+ "difference.n": {
+  "en": "diferencia"
+ },
+ "finally.adv": {
+  "en": "por último; finalmente"
+ },
+ "kind.adj": {
+  "en": "amable, bueno"
+ },
+ "study.n": {
+  "en": "estudio"
+ },
+ "who.pron": {
+  "en": "quien; que"
+ },
+ "forgive.v": {
+  "en": "perdonar"
+ },
+ "procrastinate.v": {
+  "en": "postergar las cosas, procrastinar"
+ },
+ "past.n": {
+  "en": "pasado"
+ },
+ "little.adv": {
+  "en": "poco"
+ },
+ "likely.adj": {
+  "en": "probable"
+ },
+ "look.v": {
+  "en": "mirar; parecer"
+ },
+ "catch.v": {
+  "en": "agarrar"
+ },
+ "clean.v": {
+  "en": "limpiar"
+ },
+ "kitchen.n": {
+  "en": "cocina"
+ },
+ "homework.n": {
+  "en": "tarea (de la escuela)"
+ },
+ "panic.v": {
+  "en": "entrar en pánico",
+  "past": "panicked",
+  "pp": "panicked",
+  "ing": "panicking"
+ },
+ "deep.adj": {
+  "en": "profundo, hondo"
+ },
+ "breath.n": {
+  "en": "respiración, aliento"
+ },
+ "figure.v": {
+  "en": "(figure out = descifrar, darse cuenta)"
+ },
+ "out.adv": {
+  "en": "afuera (partícula de phrasal verbs)"
+ },
+ "possible.adj": {
+  "en": "posible"
+ },
+ "rest.n": {
+  "en": "resto; descanso"
+ },
+ "follow.v": {
+  "en": "seguir"
+ },
+ "wrong.adj": {
+  "en": "equivocado, incorrecto",
+  "cmp": "more wrong",
+  "sup": "most wrong"
+ }
+}

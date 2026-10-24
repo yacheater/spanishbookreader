@@ -55,7 +55,7 @@ def users():
     accounts = accounts.get("users", accounts) if isinstance(accounts, dict) else accounts
     by_email = {a.get("email", "").lower(): a["id"] for a in accounts}
     for name, u in reg.items():
-        u["id"] = by_email.get(u["email"].lower())
+        u["id"] = by_email.get(u["email"].lower()) if u.get("email") else None
     return reg
 
 

@@ -109,7 +109,7 @@ function addPhraseCard(text, occ) {
   const ex = sentenceAround(para, t0, t1);
   if (S.cards[key]) { if (!S.cards[key].folders.includes(folder)) S.cards[key].folders.push(folder); }
   else S.cards[key] = {
-    key, L: { lemma: P.key, pos: "phrase", posLabel: P.typeLabel, type: P.type, en: P.en, explain: P.explain },
+    key, L: { lemma: P.key, pos: "phrase", posLabel: P.typeLabel, type: P.type, en: P.en, explain: P.explain, lang: text.lang || "es" },
     surface: ex.word, analysis: "", formEn: P.en, example: ex, textId: text.id, folders: [folder], added: Date.now(),
     srs: { ef: 2.5, ivl: 0, reps: 0, due: Date.now(), lapses: 0 }, stats: { right: 0, wrong: 0 }, tested: 0,
   };
@@ -135,20 +135,27 @@ function updateBadges() {
 }
 
 // ---------- speech ----------
-function speak(text) {
+// a word/phrase belongs to the language being learned (L.lang, "es" by default); its gloss is in the other one
+const langOf = (L) => (L && L.lang) || "es";
+const baseOf = (L) => (langOf(L) === "en" ? "es" : "en");
+const LANG_NAME = { es: "Spanish", en: "English" };
+const typeHere = (lang) => (lang === "es" ? "en español…" : "in English…");
+function speak(text, lang = "es") {
   try {
     const u = new SpeechSynthesisUtterance(text);
-    u.lang = "es-ES"; u.rate = 0.9;
-    const v = speechSynthesis.getVoices().find((x) => x.lang && x.lang.startsWith("es"));
+    u.lang = lang === "en" ? "en-US" : "es-ES"; u.rate = 0.9;
+    const voices = speechSynthesis.getVoices();
+    const v = lang === "en" ? voices.find((x) => x.lang && x.lang.startsWith("en-US")) || voices.find((x) => x.lang && x.lang.startsWith("en"))
+      : voices.find((x) => x.lang === "es-AR") || voices.find((x) => x.lang && x.lang.startsWith("es"));
     if (v) u.voice = v;
     speechSynthesis.cancel(); speechSynthesis.speak(u);
   } catch (e) { /* no speech */ }
 }
 document.addEventListener("click", (e) => {
   const b = e.target.closest("[data-speak]");
-  if (b) { e.stopPropagation(); speak(b.dataset.speak); }
+  if (b) { e.stopPropagation(); speak(b.dataset.speak, b.dataset.lang); }
 });
-const speakBtn = (t) => `<button class="speak" data-speak="${esc(t)}" aria-label="Pronounce">🔊</button>`;
+const speakBtn = (t, lang = "es") => `<button class="speak" data-speak="${esc(t)}" data-lang="${lang}" aria-label="Pronounce">🔊</button>`;
 
 // ---------- account & sync status ----------
 function signInHtml() {
@@ -409,14 +416,14 @@ function showPopup(el) {
   const phHtml = info.occs.map((o, i) => {
     const P = current.phrases[o.ph], pc = S.cards[phraseKey(P)];
     return `<div class="ph-block"><div class="ph-type">${esc(P.typeLabel)}</div>
-      <div class="head"><span class="surface">${esc(P.key)}</span>${speakBtn(P.key.replace(/\+.*$/, ""))}</div>
+      <div class="head"><span class="surface">${esc(P.key)}</span>${speakBtn(P.key.replace(/\+.*$/, ""), current.lang)}</div>
       <div class="en">${esc(P.en)}</div>${P.explain ? `<div class="explain">${esc(P.explain)}</div>` : ""}
       <div class="actions">${pc ? `<span class="pill ${status(pc)}">${STATUS_LABEL[status(pc)]}</span><button class="btn" data-act="ph-remove" data-i="${i}">Remove</button>`
         : `<button class="btn primary" data-act="ph-learn" data-i="${i}">+ Learn ${P.type === "grammar" ? "construction" : "phrase"}</button>`}</div></div>`;
   }).join("");
   popup.innerHTML = phHtml + `
-    <div class="head"><span class="surface">${esc(info.surface)}</span>${speakBtn(info.surface)}
-      ${same ? "" : `<span class="arrow">→</span><span class="lemma">${esc(displayLemma(L))}</span>${speakBtn(displayLemma(L))}`}
+    <div class="head"><span class="surface">${esc(info.surface)}</span>${speakBtn(info.surface, current.lang)}
+      ${same ? "" : `<span class="arrow">→</span><span class="lemma">${esc(displayLemma(L))}</span>${speakBtn(displayLemma(L), current.lang)}`}
       <span class="pos">${esc(L.posLabel)}</span></div>
     ${F.analysis ? `<div class="analysis">${esc(F.analysis)}</div>` : ""}
     <div class="en">${esc(info.en || F.en)}</div>
@@ -492,6 +499,13 @@ const PERS = ["yo", "tú", "él / ella / ud.", "nosotros", "vosotros", "ellos / 
 const TENSE_NAMES = { presente: "Presente", preterito_indefinido: "Pretérito indefinido", preterito_imperfecto: "Pretérito imperfecto",
   futuro: "Futuro", condicional: "Condicional", subjuntivo_presente: "Subjuntivo presente" };
 function grammarHtml(L, compact) {
+  if (L.lang === "en" && L.pos !== "phrase") {
+    if (L.pos === "v" && L.forms) return `<div class="gram">${[L.forms.base, L.forms.past, L.forms.pp].map(esc).join(" · ")}
+      <span class="faint">· ${esc(L.forms.ing)} · he/she ${esc(L.forms.s)}</span></div>`;
+    if (L.pos === "n" && L.plural && L.plural !== L.lemma) return `<div class="gram">plural: ${esc(L.plural)}</div>`;
+    if (L.cmp) return `<div class="gram">${esc(L.cmp)} · ${esc(L.sup)}</div>`;
+    return "";
+  }
   if (L.pos === "phrase") return L.explain ? `<div class="explain">${esc(L.explain)}</div>` : "";
   if (L.pos === "n") {
     return `<div class="gram">${{ m: "masculine", f: "feminine", "m/f": "masc. / fem." }[L.gender] || ""} · pl. ${L.gender === "f" ? "las" : "los"} ${esc(L.plural)}</div>`;
@@ -523,7 +537,7 @@ function exampleHtml(ex, blank) {
 function cardBack(c) {
   const L = c.L;
   return `<div class="wc">
-    <div class="lemma-line"><span class="big">${esc(displayLemma(L))}</span>${speakBtn(displayLemma(L))}<span class="faint small">${esc(L.posLabel)}</span></div>
+    <div class="lemma-line"><span class="big">${esc(displayLemma(L))}</span>${speakBtn(displayLemma(L), langOf(L))}<span class="faint small">${esc(L.posLabel)}</span></div>
     <div class="en">${esc(L.en)}</div>
     ${c.example ? `<div class="ex">${exampleHtml(c.example)}<div class="faint small">${esc(c.surface)}${c.analysis ? " — " + esc(c.analysis) : ""} · ${esc(c.formEn)}</div></div>` : ""}
     ${grammarHtml(L, false)}</div>`;
@@ -722,7 +736,7 @@ document.addEventListener("keydown", (e) => {
 
 // Flashcards (practice)
 function stepFlash(c) {
-  shell(`<div class="card-ui flip" id="fc"><div class="big">${esc(displayLemma(c.L))}</div>${speakBtn(displayLemma(c.L))}
+  shell(`<div class="card-ui flip" id="fc"><div class="big">${esc(displayLemma(c.L))}</div>${speakBtn(displayLemma(c.L), langOf(c.L))}
       <div class="hint">tap to flip · space</div></div>
     <div class="row-btns" id="fb" hidden><button class="btn bad" data-ok="0">Didn't know</button><button class="btn ok" data-ok="1">Knew it</button></div>`);
   const fc = $("#fc");
@@ -743,8 +757,8 @@ function stepChoose(c) {
   const q = dir === "es-en" ? displayLemma(c.L) : c.L.en;
   const label = (o) => (dir === "es-en" ? o.L.en : displayLemma(o.L));
   const opts = shuffle([c, ...others]);
-  shell(`<div class="card-ui"><div class="muted small">${dir === "es-en" ? "Choose the translation" : "Choose the Spanish word"}</div>
-    <div class="prompt">${esc(q)} ${dir === "es-en" ? speakBtn(q) : ""}</div>
+  shell(`<div class="card-ui"><div class="muted small">${dir === "es-en" ? "Choose the translation" : `Choose the ${LANG_NAME[langOf(c.L)]} word`}</div>
+    <div class="prompt">${esc(q)} ${dir === "es-en" ? speakBtn(q, langOf(c.L)) : ""}</div>
     <div class="answers">${opts.map((o, i) => `<button class="btn" data-k="${esc(o.key)}"><span class="key">${i + 1}</span>${esc(label(o))}</button>`).join("")}</div>
     <div id="fbk"></div></div>`);
   const box = $(".answers");
@@ -787,16 +801,23 @@ function enAlternatives(c) {
   const parts = glosses.flatMap((g) => g.split(/;|,|\/|\bor\b/));
   return [...new Set([...glosses, ...parts].map(norm).filter(Boolean))];
 }
-function checkEnglish(input, c) {
+const STOP_ES = new Set("el la los las un una unos unas lo de del al a en que se y o por para con su sus".split(" "));
+const LEAD = { en: /^(to|the|a|an) /, es: /^(el|la|los|las|un|una|unos|unas|lo) / };
+/** Answer typed in the gloss language: English for Spanish words, Spanish (any accents) for English words. */
+const checkAnswer = (input, c) => checkGloss(input, c, baseOf(c.L));
+function checkEnglish(input, c) { return checkGloss(input, c, "en"); }
+function checkGloss(input, c, lang) {
+  const stop = lang === "es" ? STOP_ES : STOP, lead = LEAD[lang];
+  const cont = (x) => x.split(" ").filter((w) => w && !stop.has(w));
   const a = norm(String(input).replace(/\([^)]*\)/g, " ").replace(/…|\.\.\./g, " ").replace(/\s*\/\s*/g, " / "));
   if (a && enAlternatives(c).includes(a)) return { ok: true, exact: true };
   if (!a) return { ok: false };
   const alts = enAlternatives(c);
-  if (alts.some((x) => x === a || x.replace(/^(to|the|a|an) /, "") === a.replace(/^(to|the|a|an) /, ""))) return { ok: true, exact: true };
-  const ca = content(a);
+  if (alts.some((x) => x === a || x.replace(lead, "") === a.replace(lead, ""))) return { ok: true, exact: true };
+  const ca = cont(a);
   if (!ca.length) return { ok: false };
   for (const x of alts) {
-    const cx = content(x);
+    const cx = cont(x);
     if (!cx.length) continue;
     if (lev(ca.join(" "), cx.join(" ")) <= tol(cx.join(" "))) return { ok: true };            // typo in the whole answer
     if (cx.length <= 4 && ca.every((w) => cx.some((y) => wordsClose(w, y)))) return { ok: true };  // close wording / part of a phrase
@@ -806,16 +827,16 @@ function checkEnglish(input, c) {
 
 // Write (test) and Review: Spanish word → type English
 function stepWrite(c, isRetry) {
-  shell(`<div class="card-ui"><div class="muted small">Type the English translation${isRetry ? " · second try, not graded" : ""}</div>
-    <div class="prompt">${esc(displayLemma(c.L))} ${speakBtn(displayLemma(c.L))}</div>
-    <form id="tf"><input class="answer" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="in English…"></form>
+  shell(`<div class="card-ui"><div class="muted small">Type the ${LANG_NAME[baseOf(c.L)]} translation${isRetry ? " · second try, not graded" : ""}</div>
+    <div class="prompt">${esc(displayLemma(c.L))} ${speakBtn(displayLemma(c.L), langOf(c.L))}</div>
+    <form id="tf"><input class="answer" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="${typeHere(baseOf(c.L))}"></form>
     <div class="row-btns" id="ab"><button class="btn" id="dk">Don't know</button><button class="btn primary" id="go">Check</button></div>
     <div id="fbk"></div></div>`);
   const inp = $("#tf input"); inp.focus();
   const submit = (giveUp) => {
     if ($("#tf").dataset.done) return;
     $("#tf").dataset.done = 1; inp.disabled = true; $("#ab").hidden = true;
-    const r = giveUp ? { ok: false } : checkEnglish(inp.value, c);
+    const r = giveUp ? { ok: false } : checkAnswer(inp.value, c);
     const record = (ok) => {
       if (isRetry) { practice(c, ok); return; }
       const wasLearned = status(c) === "learned";
@@ -846,23 +867,26 @@ const spellOut = (a) => a.replace(/\bm\. sg\./g, "masculine singular").replace(/
   .replace(/\bm\. pl\./g, "masculine plural").replace(/\bf\. pl\./g, "feminine plural")
   .replace(/^sg\.$/, "singular").replace(/^pl\.$/, "plural");
 function clozeTask(c) {
-  if (c.L.pos === "phrase") return `<div class="task">
-    <div><span class="muted">${c.L.type === "grammar" ? "Construction" : "Expression"}:</span> <b>${c.L.type === "grammar" ? esc(c.L.lemma) : "?"}</b> <span class="faint">(${esc(c.L.posLabel)})</span></div>
-    <div><span class="muted">Meaning:</span> ${esc(c.L.en)}</div>
-    <div class="faint small">${plural(c.surface.split(/\s+/).length, "word")} missing</div></div>`;
-  const sameAsLemma = c.surface.toLowerCase() === c.L.lemma;
-  if (sameAsLemma) return `<div class="task"><div><span class="muted">Meaning:</span> <b>${esc(c.formEn)}</b> <span class="faint">(${esc(c.L.posLabel)})</span></div></div>`;
-  return `<div class="task">
+  // the meaning is always visible; the grammar (base form, which form to use) sits in a drawer you can open
+  const meaning = (m, extra = "") => `<div class="cz-meaning"><span class="cz-label">means</span> <b>${esc(m)}</b>${extra}</div>`;
+  const drawer = (rows) => `<details class="drawer"><summary>Grammar hint</summary><div class="drawer-body">${rows}</div></details>`;
+  const words = c.surface.split(/\s+/).length;
+  if (c.L.pos === "phrase") {
+    return meaning(c.L.en, words > 1 ? ` <span class="faint">· ${plural(words, "word")}</span>` : "")
+      + drawer(`<div><span class="muted">${c.L.type === "grammar" ? "Construction" : "Kind"}:</span> <b>${esc(c.L.type === "grammar" ? c.L.lemma : c.L.posLabel)}</b></div>
+        ${c.L.explain ? `<div class="muted">${esc(c.L.explain)}</div>` : ""}`);
+  }
+  if (c.surface.toLowerCase() === c.L.lemma) return meaning(c.formEn, ` <span class="faint">· ${esc(c.L.posLabel)}</span>`);
+  return meaning(c.formEn) + drawer(`
     <div><span class="muted">Base form:</span> <b>${esc(displayLemma(c.L))}</b> — ${esc(c.L.en)}</div>
-    ${c.analysis ? `<div><span class="muted">Put it in:</span> <b>${esc(spellOut(c.analysis))}</b></div>` : ""}
-    <div><span class="muted">Meaning here:</span> ${esc(c.formEn)}</div></div>`;
+    ${c.analysis ? `<div><span class="muted">Form:</span> <b>${esc(spellOut(c.analysis))}</b></div>` : ""}`);
 }
 function stepCloze(c) {
   shell(`<div class="card-ui"><div class="muted small">Fill in the missing word</div>
     <div class="cloze">${exampleHtml(c.example, true)}</div>
     ${clozeTask(c)}
     <form id="tf"><input class="answer" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="type the word…"></form>
-    <div class="row-btns" id="ab"><button class="btn" id="hb">Hint</button><button class="btn" id="dk">Don't know</button><button class="btn primary" id="go">Check</button></div>
+    <div class="row-btns" id="ab"><button class="btn" id="hb">First letters</button><button class="btn" id="dk">Don't know</button><button class="btn primary" id="go">Check</button></div>
     <div id="fbk"></div></div>`);
   const inp = $("#tf input"); inp.focus();
   let shown = 0;
@@ -954,7 +978,8 @@ function phraseCardFromIndex(p) {
   if (S.cards[key]) return S.cards[key];
   const folder = folderForText({ id: p.textId, title: p.textTitle });
   S.cards[key] = {
-    key, L: { lemma: p.key, pos: "phrase", posLabel: p.type === "idiom" ? "expression" : p.type, type: p.type, en: p.en, explain: "" },
+    key, L: { lemma: p.key, pos: "phrase", posLabel: { idiom: "expression", phrasal: "phrasal verb" }[p.type] || p.type,
+      type: p.type, en: p.en, explain: "", lang: p.lang || "es" },
     surface: p.example ? p.example.word : p.key, analysis: "", formEn: p.en, example: p.example, textId: p.textId,
     folders: [folder], added: Date.now(), srs: { ef: 2.5, ivl: 0, reps: 0, due: Date.now(), lapses: 0 }, stats: { right: 0, wrong: 0 }, tested: 0,
   };
@@ -968,12 +993,12 @@ async function startTranslate() {
   const only = S.selected.filter((f) => f.startsWith("t:")).map((f) => f.slice(2));
   const byKey = {};
   for (const t of texts) {
-    if ((t.lang || "es") !== "es" || (only.length && !only.includes(t.id))) continue;
-    for (const p of t.phrases || []) if (translatable(p) && !byKey[p.key]) byKey[p.key] = { ...p, textId: t.id, textTitle: t.title };
+    if (only.length && !only.includes(t.id)) continue;
+    for (const p of t.phrases || []) if (translatable(p) && !byKey[p.key]) byKey[p.key] = { ...p, lang: t.lang || "es", textId: t.id, textTitle: t.title };
   }
   for (const c of Object.values(S.cards)) {              // saved phrases count even if their text is gone
     if (c.L.pos === "phrase" && c.L.type !== "grammar" && translatable({ key: c.L.lemma }) && !byKey[c.L.lemma])
-      byKey[c.L.lemma] = { key: c.L.lemma, type: c.L.type, en: c.L.en, example: c.example, textId: c.textId, textTitle: "" };
+      byKey[c.L.lemma] = { key: c.L.lemma, type: c.L.type, en: c.L.en, example: c.example, textId: c.textId, textTitle: "", lang: langOf(c.L) };
   }
   const all = Object.values(byKey);
   if (!all.length) {
@@ -983,17 +1008,18 @@ async function startTranslate() {
   const saved = (p) => S.cards["ph:" + p.key];
   const first = shuffle(all.filter((p) => saved(p) && status(saved(p)) !== "learned"));
   const rest = shuffle(all.filter((p) => !first.includes(p)));
-  const queue = [...first, ...rest].slice(0, 20).map((p) => ({ ...p, dir: Math.random() < 0.5 ? "es-en" : "en-es" }));
+  const queue = [...first, ...rest].slice(0, 20).map((p) => ({ ...p, dir: Math.random() < 0.5 ? "to-base" : "to-foreign" }));
   session = { mode: "translate", M: MODES.translate, queue, i: 0, right: 0, wrong: 0, retry: new Set(), learned: 0, done: new Set() };
   nextStep();
 }
 function stepTranslate(p, isRetry) {
-  const toEs = p.dir === "en-es";
+  const toEs = p.dir === "to-foreign";        // answer in the language being learned (historic name: "to Spanish")
+  const foreign = p.lang || "es", base = foreign === "en" ? "es" : "en";
   const words = spanishAlternatives(p.key)[0].split(" ").length;
-  shell(`<div class="card-ui"><div class="muted small">${toEs ? `Say it in Spanish · ${plural(words, "word")}` : "Translate into English"}
-      · <span class="faint">${esc(p.type === "idiom" ? "expression" : p.type)}</span>${isRetry ? " · second try, not graded" : ""}</div>
-    <div class="prompt">${toEs ? esc(p.en) : `${esc(p.key)} ${speakBtn(p.key.replace(/\(.*?\)/g, ""))}`}</div>
-    <form id="tf"><input class="answer" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="${toEs ? "en español…" : "in English…"}"></form>
+  shell(`<div class="card-ui"><div class="muted small">${toEs ? `Say it in ${LANG_NAME[foreign]} · ${plural(words, "word")}` : `Translate into ${LANG_NAME[base]}`}
+      · <span class="faint">${esc({ idiom: "expression", phrasal: "phrasal verb" }[p.type] || p.type)}</span>${isRetry ? " · second try, not graded" : ""}</div>
+    <div class="prompt">${toEs ? esc(p.en) : `${esc(p.key)} ${speakBtn(p.key.replace(/\(.*?\)/g, ""), foreign)}`}</div>
+    <form id="tf"><input class="answer" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="${typeHere(toEs ? foreign : base)}"></form>
     <div id="hint"></div>
     <div class="row-btns" id="ab"><button class="btn" id="hb">${toEs ? "Hint" : "Context"}</button><button class="btn" id="dk">Don't know</button><button class="btn primary" id="go">Check</button></div>
     <div id="fbk"></div></div>`);
@@ -1010,7 +1036,7 @@ function stepTranslate(p, isRetry) {
     if ($("#tf").dataset.done) return;
     $("#tf").dataset.done = 1; inp.disabled = true; $("#ab").hidden = true;
     const r = giveUp ? { ok: false, expected: spanishAlternatives(p.key)[0], ops: [] }
-      : toEs ? checkSpanish(inp.value, p.key) : checkEnglish(inp.value, { L: { en: p.en }, formEn: p.en });
+      : toEs ? checkSpanish(inp.value, p.key) : checkGloss(inp.value, { L: { en: p.en }, formEn: p.en }, base);
     let card = S.cards["ph:" + p.key];
     const grade = (ok) => {
       if (!card || isRetry) return;
