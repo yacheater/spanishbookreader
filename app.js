@@ -230,6 +230,7 @@ function route() {
 window.addEventListener("hashchange", route);
 
 // ---------- library ----------
+const ICON_TRASH = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4h6v3"/></svg>`;
 /** Texts of this account (cloud) or of this computer (local), minus the ones you deleted / hid. */
 async function libraryTexts() {
   let items = window.LECTOR_INDEX || [];
@@ -242,13 +243,21 @@ async function renderLibrary() {
   let items;
   if (Cloud.user) view.innerHTML = `<div class="empty">Loading…</div>`;
   try { items = libraryCache = await libraryTexts(); } catch (e) { view.innerHTML = `<div class="empty">Couldn't load texts — check the connection.</div>`; return; }
-  const counts = {};
-  Object.values(S.cards).forEach((c) => c.folders.forEach((f) => { counts[f] = (counts[f] || 0) + 1; }));
-  view.innerHTML = `<div class="wide-col"><h1>Texts</h1><div class="lib">${items.map((t) => `
-    <div class="item-wrap"><a class="item" href="#/read/${encodeURIComponent(t.id)}">
-      <div><b>${esc(t.title)}</b></div>
-      <div class="meta">${t.words} words · ${counts["t:" + t.id] || 0} saved${t.source ? " · " + esc(t.source.replace(/^https?:\/\/(www\.)?/, "").split("/")[0]) : ""}</div>
-    </a><button class="del-text" data-del-text="${esc(t.id)}" aria-label="Delete text" title="Delete text">🗑</button></div>`).join("") || `<div class="empty">No texts yet.</div>`}</div>
+  const counts = {}, learned = {};
+  Object.values(S.cards).forEach((c) => c.folders.forEach((f) => {
+    counts[f] = (counts[f] || 0) + 1; if (status(c) === "learned") learned[f] = (learned[f] || 0) + 1;
+  }));
+  const host = (u) => (u ? u.replace(/^https?:\/\/(www\.)?/, "").split("/")[0] : "");
+  view.innerHTML = `<div class="wide-col"><h1>Texts</h1><div class="lib">${items.map((t) => {
+    const f = "t:" + t.id, saved = counts[f] || 0, done = learned[f] || 0;
+    return `<div class="item-wrap"><a class="item" href="#/read/${encodeURIComponent(t.id)}">
+      <div class="item-top"><span class="lang-badge ${t.lang === "en" ? "en" : "es"}">${t.lang === "en" ? "EN" : "ES"}</span>
+        <span class="item-src">${esc(host(t.source) || "study text")}</span></div>
+      <div class="item-title">${esc(t.title)}</div>
+      <div class="item-bar" title="${done} of ${saved} saved words learned"><div style="width:${saved ? Math.round((done / saved) * 100) : 0}%"></div></div>
+      <div class="meta">${Number(t.words).toLocaleString("en-US")} words · ${saved} saved · ${done} learned</div>
+    </a><button class="del-text" data-del-text="${esc(t.id)}" aria-label="Delete text" title="Delete text">${ICON_TRASH}</button></div>`;
+  }).join("") || `<div class="empty">No texts yet.</div>`}</div>
     ${Cloud.user ? `<div class="suggest ui"><div class="sg-head"><h2>Suggest a text</h2>
         <button class="btn primary" id="sg-new">+ Suggest</button></div>
       <p class="muted small">Paste an article or a link. It will be processed — words, translations and phrases —
@@ -574,23 +583,24 @@ function renderWords() {
     </div>
     ${custom ? `<div class="folder-tools"><button class="link-btn" data-act="rename-folder">Rename folder</button> · <button class="link-btn danger" data-act="delete-folder">Delete folder</button></div>` : ""}
     ${scope.length ? `
-    <div class="stats">
-      <div><b>${scope.length}</b><span>words</span></div>
-      <div><b>${counts.learned}</b><span>learned</span></div>
-      <div><b>${counts.learning + counts.new}</b><span>to learn</span></div>
-      <div><b>${due}</b><span>due today</span></div>
+    <div class="progress-card">
+      <div class="pc-head"><div><span class="pc-big">${counts.learned}</span> <span class="muted">of ${scope.length} learned</span></div>
+        <span class="pc-due${due ? " on" : ""}">${due ? `${due} due today` : "nothing due"}</span></div>
+      <div class="seg-bar">${["learned", "learning", "new"].map((k) => counts[k] ? `<span class="${k}" style="flex:${counts[k]}"></span>` : "").join("")}</div>
+      <div class="legend"><span class="dot learned"></span>learned ${counts.learned}<span class="dot learning"></span>learning ${counts.learning}<span class="dot new"></span>new ${counts.new}</div>
     </div>
-    <h2 class="sec">Test <span class="muted small">— marks words as learned</span></h2>
-    <div class="modes">
-      <a class="mode primary" href="#/study/review"><b>Review</b><span>${plural(due, "word")} due today</span></a>
-      <a class="mode" href="#/study/write"><b>Write</b><span>type the English translation</span></a>
-      <a class="mode" href="#/study/translate"><b>Translate</b><span>expressions, both ways</span></a>
+    <a class="review-cta${due ? "" : " quiet"}" href="#/study/review"><span class="ic">↻</span>
+      <span class="cta-text"><b>Review</b><span>${due ? `${plural(due, "word")} waiting — the spaced-repetition test` : "all caught up — come back later"}</span></span><span class="go">→</span></a>
+    <h2 class="sec">Test <span>marks words as learned</span></h2>
+    <div class="mode-row two">
+      <a class="mode" href="#/study/write"><span class="ic">✎</span><b>Write</b><span>type the translation</span></a>
+      <a class="mode" href="#/study/translate"><span class="ic">⇄</span><b>Translate</b><span>expressions, both ways</span></a>
     </div>
-    <h2 class="sec">Practice <span class="muted small">— doesn't count towards learned</span></h2>
-    <div class="modes">
-      <a class="mode" href="#/study/flash"><b>Flashcards</b><span>flip and recall</span></a>
-      <a class="mode" href="#/study/choose"><b>Choose</b><span>pick the right answer</span></a>
-      <a class="mode" href="#/study/cloze"><b>In context</b><span>fill in the sentence</span></a>
+    <h2 class="sec">Practice <span>doesn't change progress</span></h2>
+    <div class="mode-row three">
+      <a class="mode" href="#/study/flash"><span class="ic">▤</span><b>Flashcards</b><span>flip &amp; recall</span></a>
+      <a class="mode" href="#/study/choose"><span class="ic">◉</span><b>Choose</b><span>pick an answer</span></a>
+      <a class="mode" href="#/study/cloze"><span class="ic">▁</span><b>In context</b><span>fill the gap</span></a>
     </div>
     <div class="list-head">
       <div class="seg">${["all", "new", "learning", "learned"].map((k) =>
