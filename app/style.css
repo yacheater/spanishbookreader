@@ -397,3 +397,29 @@ h1 { font-size: 1.65rem; letter-spacing: -.01em; }
 .tool-btn.del-text { position: static; transform: none; }
 .tool-btn.del-text:hover { color: var(--bad); background: var(--bad-soft); }
 .item-wrap .item { padding-right: 4.6rem; }
+
+/* ---- reading progress ---- */
+.read-progress { position: fixed; left: 0; right: 0; top: 44px; height: 3px; z-index: 18; background: transparent; pointer-events: none; }
+.read-progress > div { height: 100%; width: 0; background: var(--accent); border-radius: 0 3px 3px 0; transition: width .12s linear; }
+.resume-banner { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); z-index: 45; display: flex; align-items: center; gap: 12px;
+  background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); border-radius: 999px; padding: 8px 10px 8px 16px;
+  font-size: 14px; white-space: nowrap; transition: opacity .25s, transform .25s; }
+.resume-banner.out { opacity: 0; transform: translate(-50%, 10px); }
+.resume-banner .link-btn { font-size: 14px; font-weight: 600; }
+.x-mini { border: none; background: none; color: var(--faint); font-size: 18px; cursor: pointer; padding: 0 4px; }
+.finish { display: flex; gap: 14px; align-items: flex-start; margin: 2.2em 0 1.4em; padding: 16px 18px; border-radius: 16px;
+  background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-sm); font-size: 15px; line-height: 1.45; }
+.finish-ic { width: 34px; height: 34px; border-radius: 50%; background: var(--ok-soft); color: var(--ok); display: grid; place-items: center; font-weight: 700; flex: none; }
+.finish-body { display: flex; flex-direction: column; gap: 4px; align-items: flex-start; }
+.finish-body span { color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+/* library bars */
+.bars { display: grid; gap: 5px; margin: 10px 0 8px; font-family: -apple-system, sans-serif; }
+.bar-row { display: grid; grid-template-columns: 56px 1fr 40px; align-items: center; gap: 8px; font-size: 11px; color: var(--muted); }
+.bar-row em { font-style: normal; text-align: right; color: var(--faint); font-variant-numeric: tabular-nums; }
+.mini-bar { height: 5px; border-radius: 99px; background: var(--new-bar); overflow: hidden; }
+.mini-bar > div { height: 100%; border-radius: 99px; }
+.mini-bar.read > div { background: var(--accent); }
+.mini-bar.learned > div { background: var(--ok-bar); }
+.lib .meta { display: flex; justify-content: space-between; }
+.lib .meta .cta { color: var(--accent); font-weight: 600; }
+.item-bar { display: none; }
