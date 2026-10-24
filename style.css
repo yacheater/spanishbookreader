@@ -273,3 +273,21 @@ textarea.answer { display: block; width: 100%; min-height: 9rem; padding: .6rem 
 .answer:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
 .answer::placeholder { color: var(--faint); }
 .sg-form + #sg-msg:not(:empty) { margin-top: .6rem; }
+.vos { color: var(--accent); opacity: .85; }
+
+/* ---- delete text, translate ---- */
+.item-wrap { position: relative; }
+.item-wrap .item { padding-right: 3rem; }
+.del-text { position: absolute; right: .6rem; top: 50%; transform: translateY(-50%); border: none; background: none;
+  cursor: pointer; font-size: 1rem; opacity: .45; padding: .4rem; border-radius: .4rem; }
+.del-text:hover { opacity: 1; background: var(--bad-soft); }
+.dt-check { display: flex !important; gap: .5rem; align-items: flex-start; margin: .8rem 0; font-size: .9rem; }
+.dt-check span { display: block; }
+.hintbox { background: var(--accent-soft); margin-top: .6rem; }
+.dw-line { margin: .5rem 0 .2rem; font-family: Georgia, serif; font-size: 1.05rem; }
+.dw { padding: 0 .15em; border-radius: .2em; }
+.dw.ok { color: var(--ok); }
+.dw.accent, .dw.spelling { background: var(--learn); }
+.dw.missing, .dw.wrong { background: var(--bad-soft); color: var(--bad); text-decoration: underline; }
+.dw-notes { margin: .3rem 0 0; padding-left: 1.1rem; font-size: .85rem; }
+.feedback .ex { margin-top: .5rem; color: var(--muted); font-family: Georgia, serif; }
