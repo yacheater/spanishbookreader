@@ -18,7 +18,7 @@ const Store = {
     try { s = JSON.parse(localStorage.getItem(KEY)); } catch (e) { s = null; }
     this.state = Object.assign({
       settings: { fs: { mobile: 18, desktop: 20 }, lh: "normal", width: "narrow", theme: "auto" },
-      cards: {}, known: {}, folders: {}, positions: {}, hidden: {}, titles: {}, selected: [], statusFilter: "all",
+      cards: {}, known: {}, folders: {}, positions: {}, hidden: {}, titles: {}, profile: {}, selected: [], statusFilter: "all",
     }, s || {});
     if (!Array.isArray(this.state.selected)) this.state.selected = [];
     Sync.init(this.state);
@@ -56,7 +56,7 @@ function applySettings() {
 }
 $("#settings-btn").onclick = () => { const p = $("#settings"); p.hidden = !p.hidden; };
 $("#settings").addEventListener("click", (e) => {
-  const b = e.target.closest("button"); if (!b) return;
+  const b = e.target.closest("button"); if (!b || !b.dataset.set) return;
   const st = S.settings, dev = isMobile() ? "mobile" : "desktop";
   if (b.dataset.set === "fs-") st.fs[dev] = Math.max(14, st.fs[dev] - 2);
   else if (b.dataset.set === "fs+") st.fs[dev] = Math.min(32, st.fs[dev] + 2);
@@ -95,7 +95,7 @@ function addCard(text, fid, ref) {
     if (!S.cards[key].folders.includes(folder)) S.cards[key].folders.push(folder);
   } else {
     S.cards[key] = {
-      key, L, surface: ref.surface, analysis: F.analysis, formEn: ref.en || F.en,
+      key, L, surface: ref.surface, analysis: F.analysis, formEn: ref.en || F.en, formRu: F.ru,
       example: ref.example, textId: text.id, folders: [folder], added: Date.now(),
       srs: { ef: 2.5, ivl: 0, reps: 0, due: Date.now(), lapses: 0 }, stats: { right: 0, wrong: 0 }, tested: 0,
     };
@@ -111,15 +111,15 @@ function addPhraseCard(text, occ) {
   const ex = sentenceAround(para, t0, t1);
   if (S.cards[key]) { if (!S.cards[key].folders.includes(folder)) S.cards[key].folders.push(folder); }
   else S.cards[key] = {
-    key, L: { lemma: P.key, pos: "phrase", posLabel: P.typeLabel, type: P.type, en: P.en, explain: P.explain, lang: text.lang || "es" },
-    surface: ex.word, analysis: "", formEn: P.en, example: ex, textId: text.id, folders: [folder], added: Date.now(),
+    key, L: { lemma: P.key, pos: "phrase", posLabel: P.typeLabel, type: P.type, en: P.en, ru: P.ru, explain: P.explain, explain_ru: P.explain_ru, lang: text.lang || "es" },
+    surface: ex.word, analysis: "", formEn: P.en, formRu: P.ru, example: ex, textId: text.id, folders: [folder], added: Date.now(),
     srs: { ef: 2.5, ivl: 0, reps: 0, due: Date.now(), lapses: 0 }, stats: { right: 0, wrong: 0 }, tested: 0,
   };
   Store.save();
 }
 // New = never written in the test; Learning = written wrong last time; Learned = last test passed.
 function status(c) { return c.srs.reps > 0 ? "learned" : c.tested ? "learning" : "new"; }
-const STATUS_LABEL = { new: "New", learning: "Learning", learned: "Learned" };
+const STATUS_LABEL = new Proxy({}, { get: (_, k) => t({ new: "New", learning: "Learning", learned: "Learned" }[k] || String(k)) });
 function gradeTest(c, ok) {            // the only place that moves a word towards "learned"
   const s = c.srs;
   c.tested = (c.tested || 0) + 1;
@@ -131,7 +131,7 @@ function gradeTest(c, ok) {            // the only place that moves a word towar
 function practice(c, ok) { c.stats[ok ? "right" : "wrong"]++; Store.save(); }
 const dueCards = (cards) => cards.filter((c) => c.srs.due <= Date.now());
 function updateBadges() {
-  const all = Object.values(S.cards);
+  const all = myCards();
   $("#nav-count").textContent = all.length || "";
   $("#nav-due").textContent = dueCards(all).length || "";
 }
@@ -140,8 +140,54 @@ function updateBadges() {
 // a word/phrase belongs to the language being learned (L.lang, "es" by default); its gloss is in the other one
 const langOf = (L) => (L && L.lang) || "es";
 const baseOf = (L) => (langOf(L) === "en" ? "es" : "en");
-const LANG_NAME = { es: "Spanish", en: "English" };
-const typeHere = (lang) => (lang === "es" ? "en español…" : "in English…");
+const langName = (l) => t({ es: "Spanish", en: "English", ru: "Russian" }[l] || l);
+const typeHere = (lang) => t({ es: "in Spanish…", en: "in English…", ru: "in Russian…" }[lang]);
+// ---- learner profile: native language (interface + glosses) and the one language being learned ----
+const NATIVE = () => (S.profile && S.profile.native) || "en";
+const TARGET = () => (S.profile && S.profile.target) || "es";
+/** Gloss in the learner's language: the Russian overlay when the text has it, else the default gloss. */
+const gl = (o) => (o ? (NATIVE() === "ru" && o.ru ? o.ru : o.en) : "");
+const glossLang = (L, o = L) => (NATIVE() === "ru" && o && o.ru ? "ru" : baseOf(L));
+const cardGloss = (c) => (NATIVE() === "ru" && c.L.ru ? c.L.ru : c.L.en);
+const cardForm = (c) => (NATIVE() === "ru" && c.formRu ? c.formRu : c.formEn);
+const explainOf = (o) => (NATIVE() === "ru" && o.explain_ru ? o.explain_ru : o.explain);
+function myCards() { return Object.values(S.cards).filter((c) => langOf(c.L) === TARGET()); }
+function applyLang() {
+  UI_LANG = NATIVE();
+  document.documentElement.lang = UI_LANG;
+  document.querySelectorAll("[data-i18n]").forEach((el) => (el.textContent = t(el.dataset.i18n)));
+  const cur = $("#lang-cur");
+  if (cur) cur.textContent = S.profile.native ? t("I speak {a} · learning {b}", { a: langName(NATIVE()), b: langName(TARGET()) }) : "";
+  Cloud.onStatus && Cloud.onStatus(Cloud.status);
+}
+const PAIRS = { ru: ["es", "en"], en: ["es"], es: ["en"] };       // native → languages you can learn here
+function openProfileDialog(first) {
+  let native = S.profile.native || "", target = S.profile.target || "";
+  const draw = () => {
+    const targets = native ? PAIRS[native] : [];
+    if (!targets.includes(target)) target = targets.length === 1 ? targets[0] : "";
+    openModal(`${first ? "" : '<button class="x" data-close aria-label="Close">×</button>'}<b>${esc(t("Welcome to Lector"))}</b>
+      <div class="pf-q">${esc(t("What language do you speak?"))}</div>
+      <div class="pf-opts">${[["ru", "Русский"], ["en", "English"], ["es", "Español"]].map(([k, v]) =>
+        `<button class="chip${native === k ? " on" : ""}" data-native="${k}">${v}</button>`).join("")}</div>
+      <div class="pf-q">${esc(t("What do you want to learn?"))}</div>
+      <div class="pf-opts">${[["es", "Español"], ["en", "English"]].map(([k, v]) =>
+        `<button class="chip${target === k ? " on" : ""}" data-target="${k}"${native && !targets.includes(k) ? " disabled" : ""}>${v}</button>`).join("")}</div>
+      <p class="muted small">${esc(t("Translations and the interface will be in your language."))}${first ? "" : "<br>" + esc(t("Your words in the other language are kept — switch back any time."))}</p>
+      <div class="row-btns">${first ? "" : `<button class="btn" data-close>${esc(t("Cancel"))}</button>`}
+        <button class="btn primary" id="pf-ok"${native && target ? "" : " disabled"}>${esc(first ? t("Start") : t("Save"))}</button></div>`);
+    if (first) modal.onclick = null;                       // the first choice can't be skipped
+    modal.querySelectorAll("[data-native]").forEach((b) => (b.onclick = () => { native = b.dataset.native; UI_LANG = native; draw(); }));
+    modal.querySelectorAll("[data-target]").forEach((b) => (b.onclick = () => { target = b.dataset.target; draw(); }));
+    $("#pf-ok").onclick = () => {
+      const changed = target !== S.profile.target;
+      S.profile = { native, target };
+      if (changed) S.selected = [];
+      Store.save(); applyLang(); modal._onClose = route; closeModal();
+    };
+  };
+  draw();
+}
 function speak(text, lang = "es") {
   try {
     const u = new SpeechSynthesisUtterance(text);
@@ -161,38 +207,38 @@ const speakBtn = (t, lang = "es") => `<button class="speak" data-speak="${esc(t)
 
 // ---------- account & sync status ----------
 function signInHtml() {
-  return `<div class="signin ui"><p><b>Sign in</b> to see your texts and keep progress in sync between your phone and laptop.</p>
+  return `<div class="signin ui"><p><b>${t("Sign in")}</b> ${t("to see your texts and keep progress in sync between your phone and laptop.")}</p>
     <form id="si-form">
-      <input class="answer" id="si-email" type="email" autocomplete="email" placeholder="email" required>
-      <input class="answer" id="si-pass" type="password" autocomplete="current-password" placeholder="password (8+ characters)" minlength="8" style="margin-top:.5rem">
+      <input class="answer" id="si-email" type="email" autocomplete="email" placeholder="${t("email")}" required>
+      <input class="answer" id="si-pass" type="password" autocomplete="current-password" placeholder="${t("password (8+ characters)")}" minlength="8" style="margin-top:.5rem">
     </form>
-    <div class="row-btns"><button class="btn" id="si-new">Create account</button><button class="btn primary" id="si-in">Sign in</button></div>
+    <div class="row-btns"><button class="btn" id="si-new">${t("Create account")}</button><button class="btn primary" id="si-in">${t("Sign in")}</button></div>
     <div id="si-msg" class="muted small"></div>
-    <p class="muted small" style="margin-top:.8rem">No password yet? <button class="link-btn" id="si-link">Email me a sign-in link</button> (opens in the browser, not in the home-screen app)</p></div>`;
+    <p class="muted small" style="margin-top:.8rem">${t("No password yet?")} <button class="link-btn" id="si-link">${t("Email me a sign-in link")}</button> ${t("(opens in the browser, not in the home-screen app)")}</p></div>`;
 }
 function bindSignIn() {
   const msg = (t) => ($("#si-msg").textContent = t);
   const creds = () => [$("#si-email").value.trim(), $("#si-pass").value];
   const signIn = async (e) => {
     if (e) e.preventDefault();
-    const [email, pw] = creds(); if (!email || !pw) { msg("Enter your email and password."); return; }
-    msg("Signing in…");
+    const [email, pw] = creds(); if (!email || !pw) { msg(t("Enter your email and password.")); return; }
+    msg(t("Signing in…"));
     const { error } = await Cloud.signInPassword(email, pw);
-    if (error) msg(/confirm/i.test(error.message) ? "Confirm your email first — open the link we sent you." : error.message);
+    if (error) msg(/confirm/i.test(error.message) ? t("Confirm your email first — open the link we sent you.") : error.message);
   };
   const create = async () => {
     const [email, pw] = creds();
-    if (!email || pw.length < 8) { msg("Enter your email and a password of at least 8 characters."); return; }
-    msg("Creating account…");
+    if (!email || pw.length < 8) { msg(t("Enter your email and a password of at least 8 characters.")); return; }
+    msg(t("Creating account…"));
     const { data, error } = await Cloud.signUp(email, pw);
     if (error) { msg(error.message); return; }
-    if (!data.session) msg("Almost done: open the confirmation link in the email we sent you, then sign in here.");
+    if (!data.session) msg(t("Almost done: open the confirmation link in the email we sent you, then sign in here."));
   };
   const link = async () => {
-    const email = $("#si-email").value.trim(); if (!email) { msg("Enter your email first."); return; }
-    msg("Sending…");
+    const email = $("#si-email").value.trim(); if (!email) { msg(t("Enter your email first.")); return; }
+    msg(t("Sending…"));
     const { error } = await Cloud.sendLink(email);
-    msg(error ? error.message : "Check your inbox and open the link on this device.");
+    msg(error ? error.message : t("Check your inbox and open the link on this device."));
   };
   $("#si-form").onsubmit = signIn; $("#si-in").onclick = signIn;
   $("#si-new").onclick = create; $("#si-link").onclick = link;
@@ -200,14 +246,14 @@ function bindSignIn() {
 const SYNC_LABEL = { local: "", "signed-out": "sign in", idle: "", pending: "saving…", syncing: "syncing…", synced: "synced", offline: "offline", error: "sync error" };
 Cloud.onStatus = (s) => {
   const el = $("#sync-status"); if (!el) return;
-  el.textContent = SYNC_LABEL[s] || ""; el.className = "sync-status " + s;
+  el.textContent = SYNC_LABEL[s] ? t(SYNC_LABEL[s]) : ""; el.className = "sync-status " + s;
 };
 function renderAccount() {
   const row = $("#account-row"); if (!row) return;
   if (!Cloud.client) { row.hidden = true; return; }
   row.hidden = false;
-  row.innerHTML = Cloud.user ? `<span>Account</span><span class="acct">${esc(Cloud.user.email)}</span><button id="sync-now">Sync now</button><button id="sign-out">Sign out</button>`
-    : `<span>Account</span><a href="#/">Sign in to sync</a>`;
+  row.innerHTML = Cloud.user ? `<span>${t("Account")}</span><span class="acct">${esc(Cloud.user.email)}</span><button id="sync-now">${t("Sync now")}</button><button id="sign-out">${t("Sign out")}</button>`
+    : `<span>${t("Account")}</span><a href="#/">${t("Sign in to sync")}</a>`;
   if (Cloud.user) {
     $("#sign-out").onclick = () => Cloud.signOut();
     $("#sync-now").onclick = () => Cloud.sync(S, (r) => Store.save(r));
@@ -238,99 +284,98 @@ const ICON_TRASH = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" 
 async function libraryTexts() {
   let items = window.LECTOR_INDEX || [];
   if (Cloud.user) items = await Cloud.listTexts();
-  return items.filter((t) => !S.hidden[t.id]);
+  return items.filter((x) => !S.hidden[x.id] && (x.lang || "es") === TARGET());
 }
 let libraryCache = [];
 async function renderLibrary() {
-  if (Cloud.status === "signed-out") { view.innerHTML = `<div class="wide-col"><h1>Texts</h1>${signInHtml()}</div>`; bindSignIn(); return; }
+  if (Cloud.status === "signed-out") { view.innerHTML = `<div class="wide-col"><h1>${t("Texts")}</h1>${signInHtml()}</div>`; bindSignIn(); return; }
   let items;
-  if (Cloud.user) view.innerHTML = `<div class="empty">Loading…</div>`;
-  try { items = libraryCache = await libraryTexts(); } catch (e) { view.innerHTML = `<div class="empty">Couldn't load texts — check the connection.</div>`; return; }
+  if (Cloud.user) view.innerHTML = `<div class="empty">${t("Loading…")}</div>`;
+  try { items = libraryCache = await libraryTexts(); } catch (e) { view.innerHTML = `<div class="empty">${t("Couldn't load texts — check the connection.")}</div>`; return; }
   const counts = {}, learned = {};
-  Object.values(S.cards).forEach((c) => c.folders.forEach((f) => {
+  myCards().forEach((c) => c.folders.forEach((f) => {
     counts[f] = (counts[f] || 0) + 1; if (status(c) === "learned") learned[f] = (learned[f] || 0) + 1;
   }));
   const host = (u) => (u ? u.replace(/^https?:\/\/(www\.)?/, "").split("/")[0] : "");
-  view.innerHTML = `<div class="wide-col"><h1>Texts</h1><div class="lib">${items.map((t) => {
-    const f = "t:" + t.id, saved = counts[f] || 0, done = learned[f] || 0, read = readPos(t.id).max;
-    const cta = read >= 0.99 ? "Read again" : read > 0.02 ? "Continue" : "Start";
-    return `<div class="item-wrap"><a class="item" href="#/read/${encodeURIComponent(t.id)}">
-      <div class="item-top"><span class="lang-badge ${t.lang === "en" ? "en" : "es"}">${t.lang === "en" ? "EN" : "ES"}</span>
-        <span class="item-src">${esc(host(t.source) || "study text")}</span></div>
-      <div class="item-title">${esc(titleOf(t))}</div>
+  view.innerHTML = `<div class="wide-col"><h1>${t("Texts")}</h1><div class="lib">${items.map((x) => {
+    const f = "t:" + x.id, saved = counts[f] || 0, done = learned[f] || 0, read = readPos(x.id).max;
+    const cta = read >= 0.99 ? t("Read again") : read > 0.02 ? t("Continue") : t("Start");
+    return `<div class="item-wrap"><a class="item" href="#/read/${encodeURIComponent(x.id)}">
+      <div class="item-top"><span class="lang-badge ${x.lang === "en" ? "en" : "es"}">${x.lang === "en" ? "EN" : "ES"}</span>
+        <span class="item-src">${esc(host(x.source) || t("study text"))}</span>${x.public && x.mine === false ? `<span class="open-badge">${t("Open library")}</span>` : ""}</div>
+      <div class="item-title">${esc(titleOf(x))}</div>
       <div class="bars">
-        <div class="bar-row"><span>Read</span><div class="mini-bar read"><div style="width:${Math.round(read * 100)}%"></div></div><em>${Math.round(read * 100)}%</em></div>
-        <div class="bar-row"><span>Learned</span><div class="mini-bar learned"><div style="width:${saved ? Math.round((done / saved) * 100) : 0}%"></div></div><em>${done}/${saved}</em></div>
+        <div class="bar-row"><span>${t("Read")}</span><div class="mini-bar read"><div style="width:${Math.round(read * 100)}%"></div></div><em>${Math.round(read * 100)}%</em></div>
+        <div class="bar-row"><span>${t("Learned")}</span><div class="mini-bar learned"><div style="width:${saved ? Math.round((done / saved) * 100) : 0}%"></div></div><em>${done}/${saved}</em></div>
       </div>
-      <div class="meta"><span>${Number(t.words).toLocaleString("en-US")} words · ${saved} saved</span><span class="cta">${cta} →</span></div>
-    </a><div class="item-tools"><button class="tool-btn" data-rename-text="${esc(t.id)}" aria-label="Rename" title="Rename">${ICON_PEN}</button>
-      <button class="tool-btn del-text" data-del-text="${esc(t.id)}" aria-label="Delete text" title="Delete text">${ICON_TRASH}</button></div></div>`;
-  }).join("") || `<div class="empty">No texts yet.</div>`}</div>
-    ${Cloud.user ? `<div class="suggest ui"><div class="sg-head"><h2>Suggest a text</h2>
-        <button class="btn primary" id="sg-new">+ Suggest</button></div>
-      <p class="muted small">Paste an article or a link. It will be processed — words, translations and phrases —
-        and appear here when it's ready.</p><div id="sg-list"></div></div>`
+      <div class="meta"><span>${t("{n} words · {s} saved", { n: Number(x.words).toLocaleString(UI_LANG), s: saved })}</span><span class="cta">${cta} →</span></div>
+    </a><div class="item-tools"><button class="tool-btn" data-rename-text="${esc(x.id)}" aria-label="${t("Rename")}" title="${t("Rename")}">${ICON_PEN}</button>
+      <button class="tool-btn del-text" data-del-text="${esc(x.id)}" aria-label="${t("Delete text")}" title="${t("Delete text")}">${ICON_TRASH}</button></div></div>`;
+  }).join("") || `<div class="empty">${t("No texts in {lang} yet.", { lang: langName(TARGET()) })}</div>`}</div>
+    ${Cloud.user ? `<div class="suggest ui"><div class="sg-head"><h2>${t("Suggest a text")}</h2>
+        <button class="btn primary" id="sg-new">${t("+ Suggest")}</button></div>
+      <p class="muted small">${t("Paste an article or a link. It will be processed — words, translations and phrases — and appear here when it's ready.")}</p><div id="sg-list"></div></div>`
       : `<p class="howto">To add a text, drop a PDF or .txt into <code>inputs/</code> and ask Claude Code to process it.</p>`}</div>`;
   view.querySelectorAll("[data-rename-text]").forEach((b) => (b.onclick = (e) => {
-    e.preventDefault(); e.stopPropagation(); renameText(items.find((t) => t.id === b.dataset.renameText));
+    e.preventDefault(); e.stopPropagation(); renameText(items.find((x) => x.id === b.dataset.renameText));
   }));
   view.querySelectorAll("[data-del-text]").forEach((b) => (b.onclick = (e) => {
-    e.preventDefault(); e.stopPropagation(); confirmDeleteText(items.find((t) => t.id === b.dataset.delText));
+    e.preventDefault(); e.stopPropagation(); confirmDeleteText(items.find((x) => x.id === b.dataset.delText));
   }));
   if (Cloud.user) {
     $("#sg-new").onclick = openSuggestDialog;
     renderSuggestions();
   }
 }
-function renameText(t) {
-  openModal(`<b>Rename text</b><form id="rn-form"><input class="answer" id="rn-title" maxlength="200" style="margin-top:.6rem"></form>
-    <p class="muted small">Only for you — leave it empty to go back to the original title:<br>${esc(t.title)}</p>
-    <div class="row-btns"><button class="btn" data-close>Cancel</button><button class="btn primary" id="rn-ok">Save</button></div>`);
-  const inp = $("#rn-title"); inp.value = titleOf(t); inp.focus(); inp.select();
+function renameText(x) {
+  openModal(`<b>${t("Rename text")}</b><form id="rn-form"><input class="answer" id="rn-title" maxlength="200" style="margin-top:.6rem"></form>
+    <p class="muted small">${t("Only for you — leave it empty to go back to the original title:")}<br>${esc(x.title)}</p>
+    <div class="row-btns"><button class="btn" data-close>${t("Cancel")}</button><button class="btn primary" id="rn-ok">${t("Save")}</button></div>`);
+  const inp = $("#rn-title"); inp.value = titleOf(x); inp.focus(); inp.select();
   const save = () => {
     const v = inp.value.trim();
-    if (!v || v === t.title) delete S.titles[t.id]; else S.titles[t.id] = v;
-    const f = S.folders["t:" + t.id]; if (f) f.name = titleOf(t);            // the text's folder follows the name
-    if (window.LECTOR_TEXTS[t.id]) current = window.LECTOR_TEXTS[t.id];
+    if (!v || v === x.title) delete S.titles[x.id]; else S.titles[x.id] = v;
+    const f = S.folders["t:" + x.id]; if (f) f.name = titleOf(x);            // the text's folder follows the name
+    if (window.LECTOR_TEXTS[x.id]) current = window.LECTOR_TEXTS[x.id];
     Store.save(); modal._onClose = renderLibrary; closeModal();
   };
   $("#rn-form").onsubmit = (e) => { e.preventDefault(); save(); };
   $("#rn-ok").onclick = save;
 }
 // two-step delete: 1) are you sure  2) can't be undone + optionally remove the saved words of this text
-function confirmDeleteText(t) {
-  const folder = "t:" + t.id;
+function confirmDeleteText(x) {
+  const folder = "t:" + x.id;
   const cards = Object.values(S.cards).filter((c) => c.folders.includes(folder));
-  openModal(`<b>Delete “${esc(titleOf(t))}”?</b><p class="muted small">It disappears from Texts on all your devices.</p>
-    <div class="row-btns"><button class="btn" data-close>Cancel</button><button class="btn bad" id="dt-1">Delete…</button></div>`);
+  openModal(`<b>${esc(t("Delete “{t}”?", { t: titleOf(x) }))}</b><p class="muted small">${t("It disappears from Texts on all your devices.")}</p>
+    <div class="row-btns"><button class="btn" data-close>${t("Cancel")}</button><button class="btn bad" id="dt-1">${t("Delete…")}</button></div>`);
   $("#dt-1").onclick = () => {
-    openModal(`<b>Are you sure?</b><p class="muted small">This can't be undone — to read it again, the text has to be processed again.</p>
-      ${cards.length ? `<label class="dt-check"><input type="checkbox" id="dt-words"> Also remove ${plural(cards.length, "saved word")} from this text
-        <span class="muted small">(words that are also in other folders only leave this one)</span></label>` : ""}
+    openModal(`<b>${t("Are you sure?")}</b><p class="muted small">${t("This can't be undone — to read it again, the text has to be processed again.")}</p>
+      ${cards.length ? `<label class="dt-check"><input type="checkbox" id="dt-words"> ${t("Also remove the words saved from this text ({n})", { n: cards.length })}
+        <span class="muted small">${t("(words that are also in other folders only leave this one)")}</span></label>` : ""}
       <div id="dt-msg" class="muted small"></div>
-      <div class="row-btns"><button class="btn" data-close>Cancel</button><button class="btn bad" id="dt-2">Yes, delete</button></div>`);
+      <div class="row-btns"><button class="btn" data-close>${t("Cancel")}</button><button class="btn bad" id="dt-2">${t("Yes, delete")}</button></div>`);
     $("#dt-2").onclick = async () => {
       $("#dt-2").disabled = true;
       let deleted = false;
       if (Cloud.user) {
-        try { deleted = await Cloud.deleteText(t.id); } catch (e) { $("#dt-msg").textContent = "Couldn't delete: " + e.message; $("#dt-2").disabled = false; return; }
+        try { deleted = await Cloud.deleteText(x.id); } catch (e) { $("#dt-msg").textContent = t("Couldn't delete: ") + e.message; $("#dt-2").disabled = false; return; }
       }
-      if (!deleted) S.hidden[t.id] = Date.now();          // shared with you / local mode: hide it from your library
+      if (!deleted) S.hidden[x.id] = Date.now();          // shared with you / local mode: hide it from your library
       if ($("#dt-words") && $("#dt-words").checked) {
         for (const c of cards) { c.folders = c.folders.filter((f) => f !== folder); if (!c.folders.length) delete S.cards[c.key]; }
       }
-      delete S.positions[t.id]; delete window.LECTOR_TEXTS[t.id];
+      delete S.positions[x.id]; delete window.LECTOR_TEXTS[x.id];
       Store.save(); modal._onClose = renderLibrary; closeModal();
     };
   };
 }
-const SG_STATUS = { new: "Waiting", processing: "In progress", done: "Ready", rejected: "Not added" };
+const SG_STATUS = new Proxy({}, { get: (_, k) => t({ new: "Waiting", processing: "In progress", done: "Ready", rejected: "Not added" }[k] || String(k)) });
 async function renderSuggestions() {
   const box = $("#sg-list"); if (!box) return;
   const rows = await Cloud.mySuggestions();
   box.innerHTML = rows.length ? `<ul class="sg-rows">${rows.map((r) => `<li>
-      <div><b>${esc(r.title || r.source_url || "Untitled")}</b>
-        <div class="muted small">${new Date(r.created_at).toLocaleDateString("en-US", { month: "short", day: "numeric" })}${r.reply ? " · " + esc(r.reply) : ""}</div></div>
+      <div><b>${esc(r.title || r.source_url || t("Untitled"))}</b>
+        <div class="muted small">${new Date(r.created_at).toLocaleDateString(UI_LANG, { month: "short", day: "numeric" })}${r.reply ? " · " + esc(r.reply) : ""}</div></div>
       <span class="pill sg-${r.status}">${SG_STATUS[r.status] || r.status}</span></li>`).join("")}</ul>` : "";
 }
 /** Markdown → plain text the reader can use: one paragraph per line, headings on their own line, no markup. */
@@ -361,38 +406,38 @@ function markdownToText(md) {
   return { title, body: out.filter((x) => x && !/^[-—|\s]+$/.test(x)).join("\n") };
 }
 function openSuggestDialog() {
-  openModal(`<button class="x" data-close aria-label="Close">×</button><b>Suggest a text</b>
+  openModal(`<button class="x" data-close aria-label="Close">×</button><b>${t("Suggest a text")}</b>
     <form id="sg-form" class="sg-form">
-      <label>Title<input class="answer" id="sg-title" maxlength="200" placeholder="e.g. Historia del mate"></label>
-      <label>Link (optional)<input class="answer" id="sg-url" type="url" placeholder="https://…"></label>
-      <div class="sg-text-head"><span>Text</span>
+      <label>${t("Title")}<input class="answer" id="sg-title" maxlength="200" placeholder="${t("e.g. Historia del mate")}"></label>
+      <label>${t("Link (optional)")}<input class="answer" id="sg-url" type="url" placeholder="https://…"></label>
+      <div class="sg-text-head"><span>${t("Text")}</span>
         <label class="attach"><input type="file" id="sg-file" accept=".md,.markdown,.txt,text/markdown,text/plain" hidden>
-          <span class="btn small-btn">📎 Attach .md / .txt</span></label></div>
-      <textarea class="answer" id="sg-body" rows="8" placeholder="Paste the full text here, or attach a .md / .txt file"></textarea>
+          <span class="btn small-btn">${t("📎 Attach .md / .txt")}</span></label></div>
+      <textarea class="answer" id="sg-body" rows="8" placeholder="${t("Paste the full text here, or attach a .md / .txt file")}"></textarea>
       <div id="sg-file-msg" class="muted small"></div>
-      <label>Note (optional)<input class="answer" id="sg-note" maxlength="300" placeholder="e.g. only the first chapter"></label>
+      <label>${t("Note (optional)")}<input class="answer" id="sg-note" maxlength="300" placeholder="${t("e.g. only the first chapter")}"></label>
     </form>
     <div id="sg-msg" class="muted small"></div>
-    <div class="row-btns"><button class="btn" data-close>Cancel</button><button class="btn primary" id="sg-send">Send</button></div>`);
+    <div class="row-btns"><button class="btn" data-close>${t("Cancel")}</button><button class="btn primary" id="sg-send">${t("Send")}</button></div>`);
   $("#sg-title").focus();
   $("#sg-file").onchange = async (e) => {
     const f = e.target.files[0]; if (!f) return;
-    if (f.size > 1_000_000) { $("#sg-file-msg").textContent = "That file is too big — send one chapter at a time."; return; }
+    if (f.size > 1_000_000) { $("#sg-file-msg").textContent = t("That file is too big — send one chapter at a time."); return; }
     const raw = await f.text();
     const isMd = /\.(md|markdown)$/i.test(f.name) || f.type === "text/markdown";
     const { title, body } = isMd ? markdownToText(raw) : { title: "", body: raw.trim() };
     $("#sg-body").value = body;
     if (!$("#sg-title").value.trim()) $("#sg-title").value = title || f.name.replace(/\.[^.]+$/, "");
-    $("#sg-file-msg").textContent = `Loaded ${f.name} — ${body.length.toLocaleString("en-US")} characters${isMd ? ", Markdown converted to plain text" : ""}. You can edit it before sending.`;
+    $("#sg-file-msg").textContent = t("Loaded {f} ({n} characters). You can edit it before sending.", { f: f.name, n: body.length.toLocaleString(UI_LANG) });
   };
   $("#sg-send").onclick = async () => {
     const row = { title: $("#sg-title").value.trim(), source_url: $("#sg-url").value.trim(),
       body: $("#sg-body").value.trim(), note: $("#sg-note").value.trim() };
-    if (!row.body && !row.source_url) { $("#sg-msg").textContent = "Paste the text or a link."; return; }
-    if (row.body.length > 400000) { $("#sg-msg").textContent = "That's too long — send one chapter at a time."; return; }
-    $("#sg-send").disabled = true; $("#sg-msg").textContent = "Sending…";
+    if (!row.body && !row.source_url) { $("#sg-msg").textContent = t("Paste the text or a link."); return; }
+    if (row.body.length > 400000) { $("#sg-msg").textContent = t("That's too long — send one chapter at a time."); return; }
+    $("#sg-send").disabled = true; $("#sg-msg").textContent = t("Sending…");
     const err = await Cloud.suggest(row);
-    if (err) { $("#sg-send").disabled = false; $("#sg-msg").textContent = "Couldn't send: " + err.message; return; }
+    if (err) { $("#sg-send").disabled = false; $("#sg-msg").textContent = t("Couldn't send: ") + err.message; return; }
     closeModal(); renderSuggestions();
   };
 }
@@ -418,10 +463,10 @@ function sentenceAround(para, idx, idxEnd = idx) {
     after: parts.slice(idxEnd + 1, end).join("") };
 }
 async function renderReader(id) {
-  view.innerHTML = `<div class="empty">Loading…</div>`;
+  view.innerHTML = `<div class="empty">${tr("Loading…")}</div>`;
   let t;
   try { t = await loadText(id); } catch (e) { t = null; }
-  if (!t) { view.innerHTML = `<div class="empty">Text not found.</div>`; return; }
+  if (!t) { view.innerHTML = `<div class="empty">${tr("Text not found.")}</div>`; return; }
   current = t;
   // saved cards keep a copy of the lemma: refresh it from the current build (new fields like vos, fixed glosses)
   let refreshed = false;
@@ -453,7 +498,7 @@ async function renderReader(id) {
     html += heads.has(pi) ? `<h3 data-pi="${pi}">${inner}</h3>` : `<p data-pi="${pi}">${inner}</p>`;
   });
   html += finishCardHtml(t);
-  html += `<p class="src">Source: ${t.source.ref ? `<a href="${esc(t.source.ref)}" target="_blank" rel="noopener">${esc(t.source.ref)}</a>` : esc(t.source.kind)}${t.source.edited ? "<br>" + esc(t.source.edited) : ""}</p></article>`;
+  html += `<p class="src">${tr("Source:")} ${t.source.ref ? `<a href="${esc(t.source.ref)}" target="_blank" rel="noopener">${esc(t.source.ref)}</a>` : esc(t.source.kind)}${t.source.edited ? "<br>" + esc(t.source.edited) : ""}</p></article>`;
   view.innerHTML = html;
   view.insertAdjacentHTML("afterbegin", `<div class="read-progress"><div></div></div>`);
   const pos = readPos(id);
@@ -489,7 +534,7 @@ function updateReadProgress() {
 function showResumeBanner() {
   const b = document.createElement("div");
   b.className = "resume-banner ui";
-  b.innerHTML = `<span>Continuing where you left off</span><button class="link-btn" id="rs-top">Start over</button><button class="x-mini" aria-label="Close">×</button>`;
+  b.innerHTML = `<span>${t("Continuing where you left off")}</span><button class="link-btn" id="rs-top">${t("Start over")}</button><button class="x-mini" aria-label="Close">×</button>`;
   document.body.appendChild(b);
   const close = () => { b.classList.add("out"); setTimeout(() => b.remove(), 250); };
   b.querySelector("#rs-top").onclick = () => { window.scrollTo(0, 0); updateReadProgress(); close(); };
@@ -515,11 +560,11 @@ function textProgress(id) {
   const f = "t:" + id, cards = Object.values(S.cards).filter((c) => c.folders.includes(f));
   return { read: readPos(id).max, saved: cards.length, learned: cards.filter((c) => status(c) === "learned").length };
 }
-function finishCardHtml(t) {
+function finishCardHtml(x) {
   return `<div class="finish ui" id="finish">
-    <div class="finish-ic">✓</div><div class="finish-body"><b>You've reached the end</b>
+    <div class="finish-ic">✓</div><div class="finish-body"><b>${t("You've reached the end")}</b>
     <span id="finish-stats"></span>
-    <a class="btn primary" href="#/words" data-practice="${esc(t.id)}">Practice words from this text</a></div></div>`;
+    <a class="btn primary" href="#/words" data-practice="${esc(x.id)}">${t("Practice words from this text")}</a></div></div>`;
 }
 document.addEventListener("click", (e) => {
   const a = e.target.closest("[data-practice]");
@@ -544,26 +589,27 @@ function showPopup(el) {
   const info = tokenInfo(el), { F, L } = info;
   const card = S.cards[F.lemma], known = !!S.known[F.lemma];
   const same = info.surface.toLowerCase() === L.lemma;
+  const formG = NATIVE() === "ru" && F.ru ? F.ru : (info.en || F.en);
   const phHtml = info.occs.map((o, i) => {
     const P = current.phrases[o.ph], pc = S.cards[phraseKey(P)];
-    return `<div class="ph-block"><div class="ph-type">${esc(P.typeLabel)}</div>
+    return `<div class="ph-block"><div class="ph-type">${esc(t(P.typeLabel))}</div>
       <div class="head"><span class="surface">${esc(P.key)}</span>${speakBtn(P.key.replace(/\+.*$/, ""), current.lang)}</div>
-      <div class="en">${esc(P.en)}</div>${P.explain ? `<div class="explain">${esc(P.explain)}</div>` : ""}
-      <div class="actions">${pc ? `<span class="pill ${status(pc)}">${STATUS_LABEL[status(pc)]}</span><button class="btn" data-act="ph-remove" data-i="${i}">Remove</button>`
-        : `<button class="btn primary" data-act="ph-learn" data-i="${i}">+ Learn ${P.type === "grammar" ? "construction" : "phrase"}</button>`}</div></div>`;
+      <div class="en">${esc(gl(P))}</div>${explainOf(P) ? `<div class="explain">${esc(explainOf(P))}</div>` : ""}
+      <div class="actions">${pc ? `<span class="pill ${status(pc)}">${STATUS_LABEL[status(pc)]}</span><button class="btn" data-act="ph-remove" data-i="${i}">${t("Remove")}</button>`
+        : `<button class="btn primary" data-act="ph-learn" data-i="${i}">${P.type === "grammar" ? t("+ Learn construction") : t("+ Learn phrase")}</button>`}</div></div>`;
   }).join("");
   popup.innerHTML = phHtml + `
     <div class="head"><span class="surface">${esc(info.surface)}</span>${speakBtn(info.surface, current.lang)}
       ${same ? "" : `<span class="arrow">→</span><span class="lemma">${esc(displayLemma(L))}</span>${speakBtn(displayLemma(L), current.lang)}`}
-      <span class="pos">${esc(L.posLabel)}</span></div>
+      <span class="pos">${esc(t(L.posLabel))}</span></div>
     ${F.analysis ? `<div class="analysis">${esc(F.analysis)}</div>` : ""}
-    <div class="en">${esc(info.en || F.en)}</div>
-    ${L.en && L.en !== (info.en || F.en) ? `<div class="en-l">${esc(L.lemma)}: ${esc(L.en)}</div>` : ""}
+    <div class="en">${esc(formG)}</div>
+    ${gl(L) && gl(L) !== formG ? `<div class="en-l">${esc(L.lemma)}: ${esc(gl(L))}</div>` : ""}
     ${grammarHtml(L, true)}
     <div class="actions">
-      ${card ? `<span class="pill ${status(card)}">${STATUS_LABEL[status(card)]}</span><button class="btn" data-act="remove">Remove</button>`
-             : `<button class="btn primary" data-act="learn">+ Learn</button>`}
-      <button class="btn${known ? " ok" : ""}" data-act="known">${known ? "✓ Known" : "I know it"}</button>
+      ${card ? `<span class="pill ${status(card)}">${STATUS_LABEL[status(card)]}</span><button class="btn" data-act="remove">${t("Remove")}</button>`
+             : `<button class="btn primary" data-act="learn">${t("+ Learn")}</button>`}
+      <button class="btn${known ? " ok" : ""}" data-act="known">${known ? t("✓ Known") : t("I know it")}</button>
     </div>`;
   popup.hidden = false;
   const r = el.getBoundingClientRect(), pw = popup.offsetWidth, ph = popup.offsetHeight;
@@ -586,7 +632,7 @@ function hidePopup() {
 function refreshHighlights() {
   if (!current) return;
   const fs = $("#finish-stats");
-  if (fs) { const pr = textProgress(current.id); fs.textContent = pr.saved ? `${plural(pr.saved, "word")} saved from this text · ${pr.learned} learned` : "Tap words while reading to save them for practice."; }
+  if (fs) { const pr = textProgress(current.id); fs.textContent = pr.saved ? t("Saved from this text: {n} · learned: {l}", { n: pr.saved, l: pr.learned }) : t("Tap words while reading to save them for practice."); }
   document.querySelectorAll(".reader .w[data-p]").forEach((el) => {
     const tok = current.chapters[0].paragraphs[+el.dataset.p][+el.dataset.t];
     el.classList.toggle("learning", !!S.cards[current.forms[tok[1]].lemma]);
@@ -635,13 +681,13 @@ function grammarHtml(L, compact) {
   if (L.lang === "en" && L.pos !== "phrase") {
     if (L.pos === "v" && L.forms) return `<div class="gram">${[L.forms.base, L.forms.past, L.forms.pp].map(esc).join(" · ")}
       <span class="faint">· ${esc(L.forms.ing)} · he/she ${esc(L.forms.s)}</span></div>`;
-    if (L.pos === "n" && L.plural && L.plural !== L.lemma) return `<div class="gram">plural: ${esc(L.plural)}</div>`;
+    if (L.pos === "n" && L.plural && L.plural !== L.lemma) return `<div class="gram">${t("plural:")} ${esc(L.plural)}</div>`;
     if (L.cmp) return `<div class="gram">${esc(L.cmp)} · ${esc(L.sup)}</div>`;
     return "";
   }
-  if (L.pos === "phrase") return L.explain ? `<div class="explain">${esc(L.explain)}</div>` : "";
+  if (L.pos === "phrase") return explainOf(L) ? `<div class="explain">${esc(explainOf(L))}</div>` : "";
   if (L.pos === "n") {
-    return `<div class="gram">${{ m: "masculine", f: "feminine", "m/f": "masc. / fem." }[L.gender] || ""} · pl. ${L.gender === "f" ? "las" : "los"} ${esc(L.plural)}</div>`;
+    return `<div class="gram">${t({ m: "masculine", f: "feminine", "m/f": "masc. / fem." }[L.gender] || "")} · pl. ${L.gender === "f" ? "las" : "los"} ${esc(L.plural)}</div>`;
   }
   if (L.pos === "adj" && L.forms) {
     const f = L.forms;
@@ -656,7 +702,7 @@ function grammarHtml(L, compact) {
     if (L.vos) rows.splice(2, 0, `<tr class="vos"><td>vos</td><td>${esc(L.vos.presente)}</td></tr>`);
     return `<div class="gram"><div>Presente</div><table class="conj">${rows.join("")}</table>
       ${L.vos ? `<div class="vos small">imperativo (vos): ${esc(L.vos.imperativo)}</div>` : ""}
-      <details><summary>Other tenses</summary><div class="tenses">${others.map((t) =>
+      <details><summary>${t("Other tenses")}</summary><div class="tenses">${others.map((t) =>
         `<div><b>${TENSE_NAMES[t]}</b>${L.conjugation[t].map(esc).join("<br>")}</div>`).join("")}
         <div><b>Gerundio · Participio</b>${esc(L.gerundio)}<br>${esc(L.participio)}</div></div></details></div>`;
   }
@@ -670,20 +716,20 @@ function exampleHtml(ex, blank) {
 function cardBack(c) {
   const L = c.L;
   return `<div class="wc">
-    <div class="lemma-line"><span class="big">${esc(displayLemma(L))}</span>${speakBtn(displayLemma(L), langOf(L))}<span class="faint small">${esc(L.posLabel)}</span></div>
-    <div class="en">${esc(L.en)}</div>
-    ${c.example ? `<div class="ex">${exampleHtml(c.example)}<div class="faint small">${esc(c.surface)}${c.analysis ? " — " + esc(c.analysis) : ""} · ${esc(c.formEn)}</div></div>` : ""}
+    <div class="lemma-line"><span class="big">${esc(displayLemma(L))}</span>${speakBtn(displayLemma(L), langOf(L))}<span class="faint small">${esc(t(L.posLabel))}</span></div>
+    <div class="en">${esc(cardGloss(c))}</div>
+    ${c.example ? `<div class="ex">${exampleHtml(c.example)}<div class="faint small">${esc(c.surface)}${c.analysis ? " — " + esc(c.analysis) : ""} · ${esc(cardForm(c))}</div></div>` : ""}
     ${grammarHtml(L, false)}</div>`;
 }
 
 // ---------- words & folders ----------
 function folderCounts() {
   const used = {};
-  Object.values(S.cards).forEach((c) => c.folders.forEach((f) => { used[f] = (used[f] || 0) + 1; }));
+  myCards().forEach((c) => c.folders.forEach((f) => { used[f] = (used[f] || 0) + 1; }));
   return used;
 }
 function selectedCards() {
-  const all = Object.values(S.cards);
+  const all = myCards();
   return S.selected.length ? all.filter((c) => c.folders.some((f) => S.selected.includes(f))) : all;
 }
 function renderWords() {
@@ -699,43 +745,43 @@ function renderWords() {
   const custom = S.selected.length === 1 && S.folders[S.selected[0]] && !S.folders[S.selected[0]].auto ? S.folders[S.selected[0]] : null;
 
   view.innerHTML = `<div class="wide-col ui words-page">
-    <h1>Words</h1>
+    <h1>${t("Words")}</h1>
     <div class="folders">
-      <button class="chip${!S.selected.length ? " on" : ""}" data-folder="">All <span class="n">${Object.keys(S.cards).length}</span></button>
+      <button class="chip${!S.selected.length ? " on" : ""}" data-folder="">${t("All")} <span class="n">${myCards().length}</span></button>
       ${folders.map((f) => `<button class="chip${S.selected.includes(f.id) ? " on" : ""}" data-folder="${esc(f.id)}">${f.auto ? "📄" : "📁"} ${esc(f.name)} <span class="n">${used[f.id] || 0}</span></button>`).join("")}
-      <button class="chip ghost" data-act="new-folder">+ Folder</button>
+      <button class="chip ghost" data-act="new-folder">${t("+ Folder")}</button>
     </div>
-    ${custom ? `<div class="folder-tools"><button class="link-btn" data-act="rename-folder">Rename folder</button> · <button class="link-btn danger" data-act="delete-folder">Delete folder</button></div>` : ""}
+    ${custom ? `<div class="folder-tools"><button class="link-btn" data-act="rename-folder">${t("Rename folder")}</button> · <button class="link-btn danger" data-act="delete-folder">${t("Delete folder")}</button></div>` : ""}
     ${scope.length ? `
     <div class="progress-card">
-      <div class="pc-head"><div><span class="pc-big">${counts.learned}</span> <span class="muted">of ${scope.length} learned</span></div>
-        <span class="pc-due${due ? " on" : ""}">${due ? `${due} due today` : "nothing due"}</span></div>
+      <div class="pc-head"><div><span class="pc-big">${counts.learned}</span> <span class="muted">${t("of {n} learned", { n: scope.length })}</span></div>
+        <span class="pc-due${due ? " on" : ""}">${due ? t("{n} due today", { n: due }) : t("nothing due")}</span></div>
       <div class="seg-bar">${["learned", "learning", "new"].map((k) => counts[k] ? `<span class="${k}" style="flex:${counts[k]}"></span>` : "").join("")}</div>
-      <div class="legend"><span class="dot learned"></span>learned ${counts.learned}<span class="dot learning"></span>learning ${counts.learning}<span class="dot new"></span>new ${counts.new}</div>
+      <div class="legend"><span class="dot learned"></span>${t("learned")} ${counts.learned}<span class="dot learning"></span>${t("learning")} ${counts.learning}<span class="dot new"></span>${t("new")} ${counts.new}</div>
     </div>
     <a class="review-cta${due ? "" : " quiet"}" href="#/study/review"><span class="ic">↻</span>
-      <span class="cta-text"><b>Review</b><span>${due ? `${plural(due, "word")} waiting — the spaced-repetition test` : "all caught up — come back later"}</span></span><span class="go">→</span></a>
-    <h2 class="sec">Test <span>marks words as learned</span></h2>
+      <span class="cta-text"><b>${t("Review")}</b><span>${due ? t("{n} waiting — the spaced-repetition test", { n: due }) : t("all caught up — come back later")}</span></span><span class="go">→</span></a>
+    <h2 class="sec">${t("Test")} <span>${t("marks words as learned")}</span></h2>
     <div class="mode-row two">
-      <a class="mode" href="#/study/write"><span class="ic">✎</span><b>Write</b><span>type the translation</span></a>
-      <a class="mode" href="#/study/translate"><span class="ic">⇄</span><b>Translate</b><span>expressions, both ways</span></a>
+      <a class="mode" href="#/study/write"><span class="ic">✎</span><b>${t("Write")}</b><span>${t("type the translation")}</span></a>
+      <a class="mode" href="#/study/translate"><span class="ic">⇄</span><b>${t("Translate")}</b><span>${t("expressions, both ways")}</span></a>
     </div>
-    <h2 class="sec">Practice <span>doesn't change progress</span></h2>
+    <h2 class="sec">${t("Practice")} <span>${t("doesn't change progress")}</span></h2>
     <div class="mode-row three">
-      <a class="mode" href="#/study/flash"><span class="ic">▤</span><b>Flashcards</b><span>flip &amp; recall</span></a>
-      <a class="mode" href="#/study/choose"><span class="ic">◉</span><b>Choose</b><span>pick an answer</span></a>
-      <a class="mode" href="#/study/cloze"><span class="ic">▁</span><b>In context</b><span>fill the gap</span></a>
+      <a class="mode" href="#/study/flash"><span class="ic">▤</span><b>${t("Flashcards")}</b><span>${esc(t("flip & recall"))}</span></a>
+      <a class="mode" href="#/study/choose"><span class="ic">◉</span><b>${t("Choose")}</b><span>${t("pick an answer")}</span></a>
+      <a class="mode" href="#/study/cloze"><span class="ic">▁</span><b>${t("In context")}</b><span>${t("fill the gap")}</span></a>
     </div>
     <div class="list-head">
       <div class="seg">${["all", "new", "learning", "learned"].map((k) =>
-        `<button class="${S.statusFilter === k ? "on" : ""}" data-filter="${k}">${k === "all" ? "All" : STATUS_LABEL[k]}${k === "all" ? "" : ` ${counts[k]}`}</button>`).join("")}</div>
+        `<button class="${S.statusFilter === k ? "on" : ""}" data-filter="${k}">${k === "all" ? t("All") : STATUS_LABEL[k]}${k === "all" ? "" : ` ${counts[k]}`}</button>`).join("")}</div>
     </div>
     <ul class="wlist">${list.map((c) => `
       <li data-open="${esc(c.key)}" tabindex="0">
-        <div class="wl-main"><span class="wl-lemma">${esc(displayLemma(c.L))}</span>${c.L.pos === "phrase" ? `<span class="tag-type">${esc(c.L.posLabel)}</span>` : ""}<span class="wl-en">${esc(c.L.en)}</span></div>
+        <div class="wl-main"><span class="wl-lemma">${esc(displayLemma(c.L))}</span>${c.L.pos === "phrase" ? `<span class="tag-type">${esc(t(c.L.posLabel))}</span>` : ""}<span class="wl-en">${esc(cardGloss(c))}</span></div>
         <span class="pill ${status(c)}">${STATUS_LABEL[status(c)]}</span>
-      </li>`).join("") || `<li class="empty">Nothing here.</li>`}</ul>`
-    : `<div class="empty">No words yet. Open a text, tap a word and press <b>+ Learn</b>.</div>`}
+      </li>`).join("") || `<li class="empty">${t("Nothing here.")}</li>`}</ul>`
+    : `<div class="empty">${esc(t("No words yet. Open a text, tap a word and press + Learn."))}</div>`}
   </div>`;
 }
 view.addEventListener("click", (e) => {
@@ -752,9 +798,9 @@ view.addEventListener("click", (e) => {
   const act = e.target.closest("[data-act]");
   if (act) {
     const a = act.dataset.act, fid = S.selected[0];
-    if (a === "new-folder") openNameDialog("New folder", "", (name) => { const id = "u:" + Date.now(); S.folders[id] = { id, name, auto: false }; S.selected = [id]; });
-    if (a === "rename-folder") openNameDialog("Rename folder", S.folders[fid].name, (name) => { S.folders[fid].name = name; });
-    if (a === "delete-folder") openConfirm(`Delete folder “${S.folders[fid].name}”? Words stay in their other folders.`, () => {
+    if (a === "new-folder") openNameDialog(t("New folder"), "", (name) => { const id = "u:" + Date.now(); S.folders[id] = { id, name, auto: false }; S.selected = [id]; });
+    if (a === "rename-folder") openNameDialog(t("Rename folder"), S.folders[fid].name, (name) => { S.folders[fid].name = name; });
+    if (a === "delete-folder") openConfirm(t("Delete folder “{f}”? Words stay in their other folders.", { f: S.folders[fid].name }), () => {
       Object.values(S.cards).forEach((c) => { c.folders = c.folders.filter((x) => x !== fid); if (!c.folders.length) c.folders = ["t:" + c.textId]; });
       delete S.folders[fid]; S.selected = [];
     });
@@ -778,15 +824,15 @@ function closeModal() {
   if (cb) cb();
 }
 function openNameDialog(title, value, onSave) {
-  openModal(`<b>${esc(title)}</b><form id="nf"><input class="answer" value="${esc(value)}" placeholder="Folder name" style="margin-top:.6rem"></form>
-    <div class="row-btns"><button class="btn" data-close>Cancel</button><button class="btn primary" id="nf-ok">Save</button></div>`);
+  openModal(`<b>${esc(title)}</b><form id="nf"><input class="answer" value="${esc(value)}" placeholder="${t("Folder name")}" style="margin-top:.6rem"></form>
+    <div class="row-btns"><button class="btn" data-close>${t("Cancel")}</button><button class="btn primary" id="nf-ok">${t("Save")}</button></div>`);
   const inp = $("#nf input"); inp.focus(); inp.select();
   const save = () => { const v = inp.value.trim(); if (!v) return; onSave(v); Store.save(); modal._onClose = renderWords; closeModal(); };
   $("#nf").onsubmit = (e) => { e.preventDefault(); save(); };
   $("#nf-ok").onclick = save;
 }
 function openConfirm(text, onYes) {
-  openModal(`<p>${esc(text)}</p><div class="row-btns"><button class="btn" data-close>Cancel</button><button class="btn bad" id="cf-ok">Delete</button></div>`);
+  openModal(`<p>${esc(text)}</p><div class="row-btns"><button class="btn" data-close>${t("Cancel")}</button><button class="btn bad" id="cf-ok">${t("Delete")}</button></div>`);
   $("#cf-ok").onclick = () => { onYes(); Store.save(); modal._onClose = renderWords; closeModal(); };
 }
 function openWordDialog(key) {
@@ -794,10 +840,10 @@ function openWordDialog(key) {
   const st = status(c);
   openModal(`<button class="x" data-close aria-label="Close">×</button>${cardBack(c)}
     <div class="wd-meta"><span class="pill ${st}">${STATUS_LABEL[st]}</span>
-      <span class="muted small">tests: ${c.stats.right} ✓ · ${c.stats.wrong} ✗${st === "learned" ? ` · next review ${new Date(c.srs.due).toLocaleDateString("en-US", { month: "short", day: "numeric" })}` : ""}</span></div>
-    <div class="wd-folders"><div class="muted small">Folders</div>
+      <span class="muted small">${t("tests: {r} ✓ · {w} ✗", { r: c.stats.right, w: c.stats.wrong })}${st === "learned" ? " · " + t("next review {d}", { d: new Date(c.srs.due).toLocaleDateString(UI_LANG, { month: "short", day: "numeric" }) }) : ""}</span></div>
+    <div class="wd-folders"><div class="muted small">${t("Folders")}</div>
       ${Object.values(S.folders).map((f) => `<label><input type="checkbox" value="${esc(f.id)}"${c.folders.includes(f.id) ? " checked" : ""}> ${f.auto ? "📄" : "📁"} ${esc(f.name)}</label>`).join("")}</div>
-    <div class="row-btns spread"><button class="btn bad-ghost" id="wd-del">Remove word</button><button class="btn primary" data-close>Done</button></div>`);
+    <div class="row-btns spread"><button class="btn bad-ghost" id="wd-del">${t("Remove word")}</button><button class="btn primary" data-close>${t("Done")}</button></div>`);
   modal.querySelectorAll(".wd-folders input").forEach((i) => (i.onchange = () => {
     const f = [...modal.querySelectorAll(".wd-folders input:checked")].map((x) => x.value);
     if (!f.length) { i.checked = true; return; }          // a word always stays in at least one folder
@@ -824,8 +870,8 @@ function renderStudy(mode) {
   let pool = mode === "review" ? dueCards(selectedCards()) : selectedCards();
   if (mode === "cloze") pool = pool.filter((c) => c.example);
   if (!pool.length) {
-    view.innerHTML = `<div class="study ui"><h1>${M.title}</h1><div class="empty">${mode === "review"
-      ? "Nothing due — all caught up 🎉" : "No words in the selected folders."}<br><br><a class="btn" href="#/words">Back to words</a></div></div>`;
+    view.innerHTML = `<div class="study ui"><h1>${t(M.title)}</h1><div class="empty">${mode === "review"
+      ? t("Nothing due — all caught up 🎉") : t("No words in the selected folders.")}<br><br><a class="btn" href="#/words">${t("Back to words")}</a></div></div>`;
     return;
   }
   session = { mode, M, queue: shuffle(pool), i: 0, right: 0, wrong: 0, retry: new Set(), learned: 0, done: new Set() };
@@ -834,8 +880,8 @@ function renderStudy(mode) {
 function shell(inner) {
   const s = session, pct = Math.round((s.i / s.queue.length) * 100);
   view.innerHTML = `<div class="study ui">
-    <div class="study-top"><span class="muted small">${s.M.title}${s.M.counts ? ' <span class="tag-test">test</span>' : ""} · ${s.i + 1} / ${s.queue.length}</span>
-      <button class="btn small-btn" id="end">End</button></div>
+    <div class="study-top"><span class="muted small">${t(s.M.title)}${s.M.counts ? ` <span class="tag-test">${t("test")}</span>` : ""} · ${s.i + 1} / ${s.queue.length}</span>
+      <button class="btn small-btn" id="end">${t("End")}</button></div>
     <div class="progress"><div style="width:${pct}%"></div></div>${inner}</div>`;
   $("#end").onclick = finish;
 }
@@ -855,10 +901,10 @@ function finish() {
   const s = session; if (!s) return;
   const answered = s.right + s.wrong;
   const early = s.i < s.queue.length;
-  view.innerHTML = `<div class="study ui"><h1>${early ? "Session ended" : "Done!"}</h1>
+  view.innerHTML = `<div class="study ui"><h1>${early ? t("Session ended") : t("Done!")}</h1>
     <div class="card-ui flip"><div class="big">${s.right} ✓ · ${s.wrong} ✗</div>
-      <div class="muted">${plural(answered, "answer")}${s.M.counts ? ` · ${plural(s.learned, "word")} learned` : " · practice, not counted"}</div></div>
-    <div class="row-btns"><a class="btn" href="#/words">Back to words</a><button class="btn primary" id="again">Again</button></div></div>`;
+      <div class="muted">${t("Answers: {n}", { n: answered })} · ${s.M.counts ? t("words learned: {n}", { n: s.learned }) : t("practice, not counted")}</div></div>
+    <div class="row-btns"><a class="btn" href="#/words">${t("Back to words")}</a><button class="btn primary" id="again">${t("Again")}</button></div></div>`;
   $("#again").onclick = () => renderStudy(s.mode);
   session = null;
 }
@@ -871,8 +917,8 @@ document.addEventListener("keydown", (e) => {
 // Flashcards (practice)
 function stepFlash(c) {
   shell(`<div class="card-ui flip" id="fc"><div class="big">${esc(displayLemma(c.L))}</div>${speakBtn(displayLemma(c.L), langOf(c.L))}
-      <div class="hint">tap to flip · space</div></div>
-    <div class="row-btns" id="fb" hidden><button class="btn bad" data-ok="0">Didn't know</button><button class="btn ok" data-ok="1">Knew it</button></div>`);
+      <div class="hint">${t("tap to flip · space")}</div></div>
+    <div class="row-btns" id="fb" hidden><button class="btn bad" data-ok="0">${t("Didn't know")}</button><button class="btn ok" data-ok="1">${t("Knew it")}</button></div>`);
   const fc = $("#fc");
   fc.onclick = (e) => {
     if (e.target.closest("[data-speak]") || fc.dataset.flipped) return;
@@ -887,11 +933,11 @@ function stepFlash(c) {
 // Choose (practice): multiple choice, both directions
 function stepChoose(c) {
   const dir = Math.random() < 0.5 ? "es-en" : "en-es";
-  let others = shuffle(Object.values(S.cards).filter((o) => o.key !== c.key && o.L.en !== c.L.en)).slice(0, 3);
-  const q = dir === "es-en" ? displayLemma(c.L) : c.L.en;
-  const label = (o) => (dir === "es-en" ? o.L.en : displayLemma(o.L));
+  let others = shuffle(myCards().filter((o) => o.key !== c.key && cardGloss(o) !== cardGloss(c))).slice(0, 3);
+  const q = dir === "es-en" ? displayLemma(c.L) : cardGloss(c);
+  const label = (o) => (dir === "es-en" ? cardGloss(o) : displayLemma(o.L));
   const opts = shuffle([c, ...others]);
-  shell(`<div class="card-ui"><div class="muted small">${dir === "es-en" ? "Choose the translation" : `Choose the ${LANG_NAME[langOf(c.L)]} word`}</div>
+  shell(`<div class="card-ui"><div class="muted small">${dir === "es-en" ? t("Choose the translation") : t("Choose the {lang} word", { lang: langName(langOf(c.L)) })}</div>
     <div class="prompt">${esc(q)} ${dir === "es-en" ? speakBtn(q, langOf(c.L)) : ""}</div>
     <div class="answers">${opts.map((o, i) => `<button class="btn" data-k="${esc(o.key)}"><span class="key">${i + 1}</span>${esc(label(o))}</button>`).join("")}</div>
     <div id="fbk"></div></div>`);
@@ -904,7 +950,7 @@ function stepChoose(c) {
     practice(c, ok);
     if (ok) { setTimeout(() => advance(c, true), 650); return; }       // right: no repeat of what you just chose
     b.classList.add("bad");
-    $("#fbk").innerHTML = `<div class="row-btns"><button class="btn primary" id="nx">Next</button></div>`;
+    $("#fbk").innerHTML = `<div class="row-btns"><button class="btn primary" id="nx">${t("Next")}</button></div>`;
     $("#nx").focus(); $("#nx").onclick = () => advance(c, false);
   };
   box.onclick = (e) => { const b = e.target.closest("[data-k]"); if (b) pick(b); };
@@ -931,17 +977,21 @@ const wordsClose = (a, b) => a === b || stem(a) === stem(b) || lev(a, b) <= Math
 const content = (s) => s.split(" ").filter((w) => w && !STOP.has(w));
 function enAlternatives(c) {
   // drop "(notes)" and "…" first, then split into alternatives; the whole gloss also counts
-  const glosses = [c.L.en, c.formEn].filter(Boolean).map((x) => x.replace(/\([^)]*\)/g, " ").replace(/…|\.\.\./g, " "));
+  const glosses = [cardGloss(c), cardForm(c)].filter(Boolean).map((x) => x.replace(/\([^)]*\)/g, " ").replace(/…|\.\.\./g, " "));
   const parts = glosses.flatMap((g) => g.split(/;|,|\/|\bor\b/));
   return [...new Set([...glosses, ...parts].map(norm).filter(Boolean))];
 }
 const STOP_ES = new Set("el la los las un una unos unas lo de del al a en que se y o por para con su sus".split(" "));
-const LEAD = { en: /^(to|the|a|an) /, es: /^(el|la|los|las|un|una|unos|unas|lo) / };
+const STOP_RU = new Set("и в во на с со по к ко о об от до за из у не ни же ли бы то это как что для при над под".split(" "));
+const LEAD = { en: /^(to|the|a|an) /, es: /^(el|la|los|las|un|una|unos|unas|lo) /, ru: /^\b$/ };
+// Russian: compare word stems (cases / verb endings differ: «привычку» = «привычка», «откладывать» ≈ «откладываем»)
+const stemRu = (w) => w.replace(/(ться|тся|ешь|ет|ем|ете|ют|ут|ит|им|ите|ят|ать|ять|ить|еть|ыть|оть|уть|ла|ло|ли|ой|ей|ий|ый|ая|яя|ое|ее|ые|ие|ого|его|ому|ему|ым|им|ую|юю|ах|ях|ам|ям|ами|ями|ов|ев|ом|ем|а|я|о|е|ы|и|у|ю|ь|й)$/, "");
 /** Answer typed in the gloss language: English for Spanish words, Spanish (any accents) for English words. */
-const checkAnswer = (input, c) => checkGloss(input, c, baseOf(c.L));
+const checkAnswer = (input, c) => checkGloss(input, c, glossLang(c.L));
 function checkEnglish(input, c) { return checkGloss(input, c, "en"); }
 function checkGloss(input, c, lang) {
-  const stop = lang === "es" ? STOP_ES : STOP, lead = LEAD[lang];
+  const stop = lang === "es" ? STOP_ES : lang === "ru" ? STOP_RU : STOP, lead = LEAD[lang];
+  const close = lang === "ru" ? (x, y) => x === y || (stemRu(x).length > 2 && stemRu(x) === stemRu(y)) || lev(x, y) <= Math.min(tol(x), tol(y)) : wordsClose;
   const cont = (x) => x.split(" ").filter((w) => w && !stop.has(w));
   const a = norm(String(input).replace(/\([^)]*\)/g, " ").replace(/…|\.\.\./g, " ").replace(/\s*\/\s*/g, " / "));
   if (a && enAlternatives(c).includes(a)) return { ok: true, exact: true };
@@ -954,17 +1004,17 @@ function checkGloss(input, c, lang) {
     const cx = cont(x);
     if (!cx.length) continue;
     if (lev(ca.join(" "), cx.join(" ")) <= tol(cx.join(" "))) return { ok: true };            // typo in the whole answer
-    if (cx.length <= 4 && ca.every((w) => cx.some((y) => wordsClose(w, y)))) return { ok: true };  // close wording / part of a phrase
+    if (cx.length <= 4 && ca.every((w) => cx.some((y) => close(w, y)))) return { ok: true };  // close wording / part of a phrase
   }
   return { ok: false };
 }
 
 // Write (test) and Review: Spanish word → type English
 function stepWrite(c, isRetry) {
-  shell(`<div class="card-ui"><div class="muted small">Type the ${LANG_NAME[baseOf(c.L)]} translation${isRetry ? " · second try, not graded" : ""}</div>
+  shell(`<div class="card-ui"><div class="muted small">${t("Type the {lang} translation", { lang: langName(glossLang(c.L)) })}${isRetry ? t(" · second try, not graded") : ""}</div>
     <div class="prompt">${esc(displayLemma(c.L))} ${speakBtn(displayLemma(c.L), langOf(c.L))}</div>
-    <form id="tf"><input class="answer" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="${typeHere(baseOf(c.L))}"></form>
-    <div class="row-btns" id="ab"><button class="btn" id="dk">Don't know</button><button class="btn primary" id="go">Check</button></div>
+    <form id="tf"><input class="answer" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="${typeHere(glossLang(c.L))}"></form>
+    <div class="row-btns" id="ab"><button class="btn" id="dk">${t("Don't know")}</button><button class="btn primary" id="go">${t("Check")}</button></div>
     <div id="fbk"></div></div>`);
   const inp = $("#tf input"); inp.focus();
   const submit = (giveUp) => {
@@ -978,10 +1028,10 @@ function stepWrite(c, isRetry) {
       if (ok && !wasLearned) session.learned++;
     };
     record(r.ok);
-    if (r.ok && r.exact) { $("#fbk").innerHTML = `<div class="feedback ok">Correct</div>`; setTimeout(() => advance(c, true), 650); return; }
-    $("#fbk").innerHTML = `<div class="feedback ${r.ok ? "ok" : "bad"}">${r.ok ? "Accepted" : giveUp ? "Answer" : "Not quite"}:
-        <b>${esc(c.L.en)}</b>${c.formEn && c.formEn !== c.L.en ? `<div class="muted small">in the text: ${esc(c.formEn)}</div>` : ""}</div>
-      <div class="row-btns">${!r.ok && !giveUp && !isRetry ? `<button class="btn" id="ovr">I was right</button>` : ""}<button class="btn primary" id="nx">Next</button></div>`;
+    if (r.ok && r.exact) { $("#fbk").innerHTML = `<div class="feedback ok">${t("Correct")}</div>`; setTimeout(() => advance(c, true), 650); return; }
+    $("#fbk").innerHTML = `<div class="feedback ${r.ok ? "ok" : "bad"}">${r.ok ? t("Accepted") : giveUp ? t("Answer") : t("Not quite")}:
+        <b>${esc(cardGloss(c))}</b>${cardForm(c) && cardForm(c) !== cardGloss(c) ? `<div class="muted small">${t("in the text:")} ${esc(cardForm(c))}</div>` : ""}</div>
+      <div class="row-btns">${!r.ok && !giveUp && !isRetry ? `<button class="btn" id="ovr">${t("I was right")}</button>` : ""}<button class="btn primary" id="nx">${t("Next")}</button></div>`;
     $("#nx").focus();
     $("#nx").onclick = () => advance(c, r.ok);
     const o = $("#ovr");
@@ -997,30 +1047,30 @@ function stepWrite(c, isRetry) {
 }
 
 // In context (practice): put the right form into the sentence
-const spellOut = (a) => a.replace(/\bm\. sg\./g, "masculine singular").replace(/\bf\. sg\./g, "feminine singular")
-  .replace(/\bm\. pl\./g, "masculine plural").replace(/\bf\. pl\./g, "feminine plural")
-  .replace(/^sg\.$/, "singular").replace(/^pl\.$/, "plural");
+const spellOut = (a) => a.replace(/\bm\. sg\./g, t("masculine singular")).replace(/\bf\. sg\./g, t("feminine singular"))
+  .replace(/\bm\. pl\./g, t("masculine plural")).replace(/\bf\. pl\./g, t("feminine plural"))
+  .replace(/^sg\.$/, t("singular")).replace(/^pl\.$/, t("plural"));
 function clozeTask(c) {
   // the meaning is always visible; the grammar (base form, which form to use) sits in a drawer you can open
-  const meaning = (m, extra = "") => `<div class="cz-meaning"><span class="cz-label">means</span> <b>${esc(m)}</b>${extra}</div>`;
-  const drawer = (rows) => `<details class="drawer"><summary>Grammar hint</summary><div class="drawer-body">${rows}</div></details>`;
+  const meaning = (m, extra = "") => `<div class="cz-meaning"><span class="cz-label">${t("means")}</span> <b>${esc(m)}</b>${extra}</div>`;
+  const drawer = (rows) => `<details class="drawer"><summary>${t("Grammar hint")}</summary><div class="drawer-body">${rows}</div></details>`;
   const words = c.surface.split(/\s+/).length;
   if (c.L.pos === "phrase") {
-    return meaning(c.L.en, words > 1 ? ` <span class="faint">· ${plural(words, "word")}</span>` : "")
-      + drawer(`<div><span class="muted">${c.L.type === "grammar" ? "Construction" : "Kind"}:</span> <b>${esc(c.L.type === "grammar" ? c.L.lemma : c.L.posLabel)}</b></div>
-        ${c.L.explain ? `<div class="muted">${esc(c.L.explain)}</div>` : ""}`);
+    return meaning(cardGloss(c), words > 1 ? ` <span class="faint">· ${t("{n} words", { n: words })}</span>` : "")
+      + drawer(`<div><span class="muted">${c.L.type === "grammar" ? t("Construction") : t("Kind")}:</span> <b>${esc(c.L.type === "grammar" ? c.L.lemma : t(c.L.posLabel))}</b></div>
+        ${explainOf(c.L) ? `<div class="muted">${esc(explainOf(c.L))}</div>` : ""}`);
   }
-  if (c.surface.toLowerCase() === c.L.lemma) return meaning(c.formEn, ` <span class="faint">· ${esc(c.L.posLabel)}</span>`);
-  return meaning(c.formEn) + drawer(`
-    <div><span class="muted">Base form:</span> <b>${esc(displayLemma(c.L))}</b> — ${esc(c.L.en)}</div>
-    ${c.analysis ? `<div><span class="muted">Form:</span> <b>${esc(spellOut(c.analysis))}</b></div>` : ""}`);
+  if (c.surface.toLowerCase() === c.L.lemma) return meaning(cardForm(c), ` <span class="faint">· ${esc(t(c.L.posLabel))}</span>`);
+  return meaning(cardForm(c)) + drawer(`
+    <div><span class="muted">${t("Base form:")}</span> <b>${esc(displayLemma(c.L))}</b> — ${esc(cardGloss(c))}</div>
+    ${c.analysis ? `<div><span class="muted">${t("Form:")}</span> <b>${esc(spellOut(c.analysis))}</b></div>` : ""}`);
 }
 function stepCloze(c) {
-  shell(`<div class="card-ui"><div class="muted small">Fill in the missing word</div>
+  shell(`<div class="card-ui"><div class="muted small">${t("Fill in the missing word")}</div>
     <div class="cloze">${exampleHtml(c.example, true)}</div>
     ${clozeTask(c)}
-    <form id="tf"><input class="answer" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="type the word…"></form>
-    <div class="row-btns" id="ab"><button class="btn" id="hb">First letters</button><button class="btn" id="dk">Don't know</button><button class="btn primary" id="go">Check</button></div>
+    <form id="tf"><input class="answer" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="${t("type the word…")}"></form>
+    <div class="row-btns" id="ab"><button class="btn" id="hb">${t("First letters")}</button><button class="btn" id="dk">${t("Don't know")}</button><button class="btn primary" id="go">${t("Check")}</button></div>
     <div id="fbk"></div></div>`);
   const inp = $("#tf input"); inp.focus();
   let shown = 0;
@@ -1036,9 +1086,9 @@ function stepCloze(c) {
     const ok = !giveUp && norm(val) === norm(c.surface);
     $(".cloze").innerHTML = exampleHtml(c.example, false);
     practice(c, ok);
-    if (ok && val.toLowerCase() === c.surface.toLowerCase()) { $("#fbk").innerHTML = `<div class="feedback ok">Correct</div>`; setTimeout(() => advance(c, true), 900); return; }
-    $("#fbk").innerHTML = `<div class="feedback ${ok ? "ok" : "bad"}">${ok ? "Correct — mind the accent:" : "Answer:"} <b>${esc(c.surface)}</b></div>
-      <div class="row-btns"><button class="btn primary" id="nx">Next</button></div>`;
+    if (ok && val.toLowerCase() === c.surface.toLowerCase()) { $("#fbk").innerHTML = `<div class="feedback ok">${t("Correct")}</div>`; setTimeout(() => advance(c, true), 900); return; }
+    $("#fbk").innerHTML = `<div class="feedback ${ok ? "ok" : "bad"}">${ok ? t("Correct — mind the accent:") : t("Answer:")} <b>${esc(c.surface)}</b></div>
+      <div class="row-btns"><button class="btn primary" id="nx">${t("Next")}</button></div>`;
     $("#nx").focus(); $("#nx").onclick = () => advance(c, ok);
   };
   $("#tf").onsubmit = (e) => { e.preventDefault(); submit(false); };
@@ -1096,13 +1146,13 @@ function checkSpanish(input, key) {
 }
 function explainOps(ops) {
   if (!ops.some((o) => o.t === "ok" || o.t === "accent" || o.t === "spelling"))
-    return `<div class="dw-notes">A different expression — this one is fixed, it's said exactly like this.</div>`;
+    return `<div class="dw-notes">${t("A different expression — this one is fixed, it's said exactly like this.")}</div>`;
   const lines = ops.filter((o) => o.t !== "ok").map((o) => ({
-    accent: `«${esc(o.a)}» → «${esc(o.e)}» — accent`,
-    spelling: `«${esc(o.a)}» → «${esc(o.e)}» — spelling`,
-    wrong: `«${esc(o.a)}» → «${esc(o.e)}» — different word`,
-    missing: `missing «${esc(o.e)}»`,
-    extra: `extra «${esc(o.a)}»`,
+    accent: `«${esc(o.a)}» → «${esc(o.e)}» — ${t("accent")}`,
+    spelling: `«${esc(o.a)}» → «${esc(o.e)}» — ${t("spelling")}`,
+    wrong: `«${esc(o.a)}» → «${esc(o.e)}» — ${t("different word")}`,
+    missing: `${t("missing")} «${esc(o.e)}»`,
+    extra: `${t("extra")} «${esc(o.a)}»`,
   })[o.t]);
   const line = ops.filter((o) => o.t !== "extra").map((o) => `<span class="dw ${o.t}">${esc(o.e)}</span>`).join(" ");
   return `<div class="dw-line">${line}</div>${lines.length ? `<ul class="dw-notes">${lines.map((l) => `<li>${l}</li>`).join("")}</ul>` : ""}`;
@@ -1113,15 +1163,15 @@ function phraseCardFromIndex(p) {
   const folder = folderForText({ id: p.textId, title: p.textTitle });
   S.cards[key] = {
     key, L: { lemma: p.key, pos: "phrase", posLabel: { idiom: "expression", phrasal: "phrasal verb" }[p.type] || p.type,
-      type: p.type, en: p.en, explain: "", lang: p.lang || "es" },
-    surface: p.example ? p.example.word : p.key, analysis: "", formEn: p.en, example: p.example, textId: p.textId,
+      type: p.type, en: p.en, ru: p.ru, explain: "", lang: p.lang || "es" },
+    surface: p.example ? p.example.word : p.key, analysis: "", formEn: p.en, formRu: p.ru, example: p.example, textId: p.textId,
     folders: [folder], added: Date.now(), srs: { ef: 2.5, ivl: 0, reps: 0, due: Date.now(), lapses: 0 }, stats: { right: 0, wrong: 0 }, tested: 0,
   };
   Store.save();
   return S.cards[key];
 }
 async function startTranslate() {
-  view.innerHTML = `<div class="empty">Loading…</div>`;
+  view.innerHTML = `<div class="empty">${t("Loading…")}</div>`;
   let texts = [];
   try { texts = await libraryTexts(); } catch (e) { /* offline: saved phrases only */ }
   const only = S.selected.filter((f) => f.startsWith("t:")).map((f) => f.slice(2));
@@ -1130,13 +1180,13 @@ async function startTranslate() {
     if (only.length && !only.includes(t.id)) continue;
     for (const p of t.phrases || []) if (translatable(p) && !byKey[p.key]) byKey[p.key] = { ...p, lang: t.lang || "es", textId: t.id, textTitle: titleOf(t) };
   }
-  for (const c of Object.values(S.cards)) {              // saved phrases count even if their text is gone
+  for (const c of myCards()) {                           // saved phrases count even if their text is gone
     if (c.L.pos === "phrase" && c.L.type !== "grammar" && translatable({ key: c.L.lemma }) && !byKey[c.L.lemma])
-      byKey[c.L.lemma] = { key: c.L.lemma, type: c.L.type, en: c.L.en, example: c.example, textId: c.textId, textTitle: "", lang: langOf(c.L) };
+      byKey[c.L.lemma] = { key: c.L.lemma, type: c.L.type, en: c.L.en, ru: c.L.ru, example: c.example, textId: c.textId, textTitle: "", lang: langOf(c.L) };
   }
   const all = Object.values(byKey);
   if (!all.length) {
-    view.innerHTML = `<div class="study ui"><h1>Translate</h1><div class="empty">No expressions in the selected texts yet.<br><br><a class="btn" href="#/words">Back to words</a></div></div>`;
+    view.innerHTML = `<div class="study ui"><h1>${t("Translate")}</h1><div class="empty">${t("No expressions in the selected texts yet.")}<br><br><a class="btn" href="#/words">${t("Back to words")}</a></div></div>`;
     return;
   }
   const saved = (p) => S.cards["ph:" + p.key];
@@ -1148,14 +1198,14 @@ async function startTranslate() {
 }
 function stepTranslate(p, isRetry) {
   const toEs = p.dir === "to-foreign";        // answer in the language being learned (historic name: "to Spanish")
-  const foreign = p.lang || "es", base = foreign === "en" ? "es" : "en";
+  const foreign = p.lang || "es", base = NATIVE() === "ru" && p.ru ? "ru" : foreign === "en" ? "es" : "en";
   const words = spanishAlternatives(p.key)[0].split(" ").length;
-  shell(`<div class="card-ui"><div class="muted small">${toEs ? `Say it in ${LANG_NAME[foreign]} · ${plural(words, "word")}` : `Translate into ${LANG_NAME[base]}`}
-      · <span class="faint">${esc({ idiom: "expression", phrasal: "phrasal verb" }[p.type] || p.type)}</span>${isRetry ? " · second try, not graded" : ""}</div>
-    <div class="prompt">${toEs ? esc(p.en) : `${esc(p.key)} ${speakBtn(p.key.replace(/\(.*?\)/g, ""), foreign)}`}</div>
+  shell(`<div class="card-ui"><div class="muted small">${toEs ? t("Say it in {lang} · {n} words", { lang: langName(foreign), n: words }) : t("Translate into {lang}", { lang: langName(base) })}
+      · <span class="faint">${esc(t({ idiom: "expression", phrasal: "phrasal verb" }[p.type] || p.type))}</span>${isRetry ? t(" · second try, not graded") : ""}</div>
+    <div class="prompt">${toEs ? esc(gl(p)) : `${esc(p.key)} ${speakBtn(p.key.replace(/\(.*?\)/g, ""), foreign)}`}</div>
     <form id="tf"><input class="answer" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="${typeHere(toEs ? foreign : base)}"></form>
     <div id="hint"></div>
-    <div class="row-btns" id="ab"><button class="btn" id="hb">${toEs ? "Hint" : "Context"}</button><button class="btn" id="dk">Don't know</button><button class="btn primary" id="go">Check</button></div>
+    <div class="row-btns" id="ab"><button class="btn" id="hb">${toEs ? t("Hint") : t("Context")}</button><button class="btn" id="dk">${t("Don't know")}</button><button class="btn primary" id="go">${t("Check")}</button></div>
     <div id="fbk"></div></div>`);
   const inp = $("#tf input"); inp.focus();
   let shown = 0;
@@ -1170,24 +1220,24 @@ function stepTranslate(p, isRetry) {
     if ($("#tf").dataset.done) return;
     $("#tf").dataset.done = 1; inp.disabled = true; $("#ab").hidden = true;
     const r = giveUp ? { ok: false, expected: spanishAlternatives(p.key)[0], ops: [] }
-      : toEs ? checkSpanish(inp.value, p.key) : checkGloss(inp.value, { L: { en: p.en }, formEn: p.en }, base);
+      : toEs ? checkSpanish(inp.value, p.key) : checkGloss(inp.value, { L: { en: gl(p) }, formEn: gl(p) }, base);
     let card = S.cards["ph:" + p.key];
     const grade = (ok) => {
       if (!card || isRetry) return;
       const was = status(card) === "learned"; gradeTest(card, ok); if (ok && !was && status(card) === "learned") session.learned++;
     };
     grade(r.ok);
-    if (r.ok && r.exact) { $("#fbk").innerHTML = `<div class="feedback ok">Correct</div>`; setTimeout(() => advance(p, true), 700); return; }
-    const answer = toEs ? `<b>${esc(r.expected)}</b>` : `<b>${esc(p.en)}</b>`;
+    if (r.ok && r.exact) { $("#fbk").innerHTML = `<div class="feedback ok">${t("Correct")}</div>`; setTimeout(() => advance(p, true), 700); return; }
+    const answer = toEs ? `<b>${esc(r.expected)}</b>` : `<b>${esc(gl(p))}</b>`;
     const why = toEs && !giveUp && r.ops.length ? explainOps(r.ops) : "";
-    $("#fbk").innerHTML = `<div class="feedback ${r.ok ? "ok" : "bad"}">${r.ok ? "Accepted, almost exact" : giveUp ? "Answer" : "Not quite"}: ${answer}${why}
+    $("#fbk").innerHTML = `<div class="feedback ${r.ok ? "ok" : "bad"}">${r.ok ? t("Accepted, almost exact") : giveUp ? t("Answer") : t("Not quite")}: ${answer}${why}
         ${p.example ? `<div class="ex small">${exampleHtml(p.example)}</div>` : ""}</div>
-      <div class="row-btns">${!card ? `<button class="btn" id="add">+ Learn this phrase</button>` : ""}
-        ${!r.ok && !giveUp && !isRetry ? `<button class="btn" id="ovr">I was right</button>` : ""}<button class="btn primary" id="nx">Next</button></div>`;
+      <div class="row-btns">${!card ? `<button class="btn" id="add">${t("+ Learn this phrase")}</button>` : ""}
+        ${!r.ok && !giveUp && !isRetry ? `<button class="btn" id="ovr">${t("I was right")}</button>` : ""}<button class="btn primary" id="nx">${t("Next")}</button></div>`;
     $("#nx").focus();
     $("#nx").onclick = () => advance(p, r.ok);
     const add = $("#add");
-    if (add) add.onclick = () => { card = phraseCardFromIndex(p); add.textContent = "✓ Added"; add.disabled = true; };
+    if (add) add.onclick = () => { card = phraseCardFromIndex(p); add.textContent = t("✓ Added"); add.disabled = true; };
     const o = $("#ovr");
     if (o) o.onclick = () => {
       if (card) { card.stats.wrong--; card.srs.lapses--; card.tested--; const was = card.srs.reps > 0; gradeTest(card, true); if (!was) session.learned++; }
@@ -1206,9 +1256,13 @@ updateBadges();
   try { await Cloud.start(); } catch (e) { console.warn("cloud start failed", e); }
   renderAccount();
   Cloud.onRemoteChange = () => { const h = location.hash; if (h.startsWith("#/words") || h === "" || h === "#/") route(); else refreshHighlights(); };
+  applyLang();
+  if (Cloud.user) await Cloud.sync(S, (r) => Store.save(r));
+  applyLang();
   route();
+  if (Cloud.status !== "signed-out" && !S.profile.native) openProfileDialog(true);
+  $("#lang-change").onclick = () => openProfileDialog(false);
   if (Cloud.user) {
-    Cloud.sync(S, (r) => Store.save(r));
     document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") Cloud.sync(S, (r) => Store.save(r)); });
     window.addEventListener("online", () => Cloud.sync(S, (r) => Store.save(r)));
   }

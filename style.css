@@ -423,3 +423,10 @@ h1 { font-size: 1.65rem; letter-spacing: -.01em; }
 .lib .meta { display: flex; justify-content: space-between; }
 .lib .meta .cta { color: var(--accent); font-weight: 600; }
 .item-bar { display: none; }
+
+/* ---- language profile, open library ---- */
+.pf-q { margin: 14px 0 6px; font-size: 14px; color: var(--muted); }
+.pf-opts { display: flex; gap: 8px; flex-wrap: wrap; }
+.pf-opts .chip { font-size: 15px; padding: 6px 14px; }
+.pf-opts .chip:disabled { opacity: .35; cursor: default; }
+.open-badge { margin-left: auto; font-size: 10px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--ok); }
