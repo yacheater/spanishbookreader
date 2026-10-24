@@ -1,0 +1,29 @@
+[
+ {
+  "p": 2,
+  "w": "habla",
+  "n": 1,
+  "form": [
+   "hablar.v",
+   "speaks (se habla = people speak / is spoken)"
+  ]
+ },
+ {
+  "p": 2,
+  "w": "habla",
+  "n": 2,
+  "form": [
+   "hablar.v",
+   "speaks (se habla = people speak / is spoken)"
+  ]
+ },
+ {
+  "p": 7,
+  "w": "habla",
+  "n": 1,
+  "form": [
+   "hablar.v",
+   "speaks (se habla = people speak / is spoken)"
+  ]
+ }
+]

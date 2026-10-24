@@ -45,6 +45,10 @@ account; commits as `yacheater` / its noreply address — repo-local config, nev
 4. Mark multi-word expressions in `lex/phrases/<id>.json` (idioms, collocations, grammar constructions —
    NOT plain connectors; format and rules in `lex/ANNOTATION.md` → «Phrases»).
 5. Rebuild; done when it prints `missing 0`, no `!` problems and `validate: OK`.
+5a. Russian-speaking readers (`"glosses": ["ru"]` in meta): the build lists what lacks Russian in
+   `<lexdir>/ru/missing_<id>.tsv`; write `{"forms":{surface:ru}, "lemmas":{key:ru}}` into `lex/ru/partN.json`
+   (English texts: `lex_en/ru/`) and `{key:{"ru","explain"}}` into `lex/phrases_ru/<id>.json`; rebuild until the
+   «without a Russian gloss» line disappears. `"public": true` in meta = open shelf (only own study texts / open licences).
 6. `python3 tools/publish_texts.py <id>` (always name the ids; `--all` would bring back texts the user deleted in the app) — uploads to the owner's account (+ readers from `share`); the person must
    have signed up once. Sharing an existing text = add `"share": [...]` to its meta and publish again.
 
@@ -63,8 +67,10 @@ Grammar (tense/person, number, gender, conjugation tables) is computed by `tools
 - Deployed: `https://yacheater.github.io/spanishbookreader/` (cloud mode: sign-in, texts from Supabase, sync).
 - Local: `python3 -m http.server 8765 --directory app` → http://localhost:8765 — cloud mode if `app/config.js`
   is filled in, otherwise local mode (texts from `app/data/*.js`, progress only in this browser).
-- After changing sync code: `node tools/test_sync.js`; UI against the fake: serve the project root and open
-  `/tools/cloud_test.html` (test password `correct-horse`).
+- After changing sync code: `node tools/test_sync.js`; UI against the fake: `python3 tools/make_cloud_test.py`
+  (after any change to `app/index.html`), serve the project root and open `/tools/cloud_test.html`
+  (test password `correct-horse`).
+- Interface strings: wrap in `t("English text")` and add ru / es entries to `app/i18n.js` (English is the key).
 - Bump `?v=N` on the asset links in `app/index.html` after changing app files (phones cache aggressively).
 
 ## Language

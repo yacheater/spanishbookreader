@@ -7,7 +7,7 @@
    Merge = per item, newest event wins (edit on one device, delete on another → whichever is later). */
 "use strict";
 
-const SYNCED = ["cards", "folders", "known", "positions", "hidden", "titles"];
+const SYNCED = ["cards", "folders", "known", "positions", "hidden", "titles", "profile"];
 
 const Sync = {
   snapshot: {},
@@ -153,9 +153,11 @@ const Cloud = {
   },
 
   async listTexts() {
-    const { data, error } = await this.client.from("texts").select("id,title,meta,updated_at").order("updated_at", { ascending: false });
-    if (error) throw error;
-    return data.map((r) => ({ id: r.id, title: r.title, ...(r.meta || {}) }));
+    // `public` exists after supabase/migrations/004 — fall back gracefully before it's applied
+    let res = await this.client.from("texts").select("id,title,meta,updated_at,owner,public").order("updated_at", { ascending: false });
+    if (res.error) res = await this.client.from("texts").select("id,title,meta,updated_at,owner").order("updated_at", { ascending: false });
+    if (res.error) throw res.error;
+    return res.data.map((r) => ({ id: r.id, title: r.title, ...(r.meta || {}), public: !!r.public, mine: r.owner === this.user.id }));
   },
   async suggest(row) {
     const { error } = await this.client.from("submissions").insert(row);

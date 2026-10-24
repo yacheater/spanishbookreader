@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-title" content="Lector">
 <link rel="manifest" href="manifest.json">
 <title>Lector</title>
-<link rel="stylesheet" href="style.css?v=18">
+<link rel="stylesheet" href="style.css?v=19">
 <link rel="icon" href="icon.svg">
 <link rel="apple-touch-icon" href="icon.svg">
 </head>
@@ -16,23 +16,24 @@
 <header class="top">
   <a class="brand" href="#/"><span class="logo">Ñ</span><span class="brand-name">Lector</span></a>
   <nav>
-    <a href="#/" data-nav="library">Texts</a>
-    <a href="#/words" data-nav="words">Words <span id="nav-count" class="badge"></span></a>
-    <a href="#/study/review" data-nav="review">Review <span id="nav-due" class="badge accent"></span></a>
+    <a href="#/" data-nav="library"><span data-i18n="Texts">Texts</span></a>
+    <a href="#/words" data-nav="words"><span data-i18n="Words">Words</span> <span id="nav-count" class="badge"></span></a>
+    <a href="#/study/review" data-nav="review"><span data-i18n="Review">Review</span> <span id="nav-due" class="badge accent"></span></a>
   </nav>
   <button id="sync-status" class="sync-status" aria-live="polite"></button>
   <button id="settings-btn" class="icon-btn" aria-label="Reading settings" title="Text size and theme">Aa</button>
 </header>
 
 <div id="settings" class="settings" hidden>
-  <div class="row"><span>Size</span>
+  <div class="row"><span data-i18n="Size">Size</span>
     <button data-set="fs-" aria-label="Smaller">A−</button><output id="fs-val"></output><button data-set="fs+" aria-label="Larger">A+</button></div>
-  <div class="row"><span>Spacing</span>
-    <button data-set="lh" data-v="normal">normal</button><button data-set="lh" data-v="wide">relaxed</button></div>
-  <div class="row"><span>Width</span>
-    <button data-set="width" data-v="narrow">narrow</button><button data-set="width" data-v="full">full</button></div>
-  <div class="row"><span>Theme</span>
-    <button data-set="theme" data-v="auto">auto</button><button data-set="theme" data-v="light">light</button><button data-set="theme" data-v="dark">dark</button></div>
+  <div class="row"><span data-i18n="Spacing">Spacing</span>
+    <button data-set="lh" data-v="normal" data-i18n="normal">normal</button><button data-set="lh" data-v="wide" data-i18n="relaxed">relaxed</button></div>
+  <div class="row"><span data-i18n="Width">Width</span>
+    <button data-set="width" data-v="narrow" data-i18n="narrow">narrow</button><button data-set="width" data-v="full" data-i18n="full">full</button></div>
+  <div class="row"><span data-i18n="Theme">Theme</span>
+    <button data-set="theme" data-v="auto" data-i18n="auto">auto</button><button data-set="theme" data-v="light" data-i18n="light">light</button><button data-set="theme" data-v="dark" data-i18n="dark">dark</button></div>
+  <div class="row" id="lang-row"><span data-i18n="Language">Language</span><span id="lang-cur" class="acct"></span><button id="lang-change" data-i18n="Change">Change</button></div>
   <div class="row" id="account-row" hidden></div>
 </div>
 
@@ -40,10 +41,11 @@
 <div id="popup" class="popup" hidden role="dialog"></div>
 <div id="modal" class="modal" hidden></div>
 
-<script src="config.js?v=18"></script>
+<script src="i18n.js?v=19"></script>
+<script src="config.js?v=19"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
-<script src="data/index.js?v=18" onerror="window.LECTOR_INDEX=[]"></script>
-<script src="sync.js?v=18"></script>
-<script src="app.js?v=18"></script>
+<script src="data/index.js?v=19" onerror="window.LECTOR_INDEX=[]"></script>
+<script src="sync.js?v=19"></script>
+<script src="app.js?v=19"></script>
 </body>
 </html>

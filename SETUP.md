@@ -59,7 +59,8 @@
 
 ## 5. Добавить друга (до трёх человек вместе с тобой)
 1. Один раз: **SQL Editor** → вставь `supabase/migrations/002_sharing_and_queue.sql` → **Run**, затем так же
-   `003_delete_texts.sql` (поделиться текстом, очередь «Suggest a text», удаление текстов из приложения).
+   `003_delete_texts.sql` и `004_open_library.sql` (поделиться текстом, очередь «Suggest a text», удаление
+   текстов из приложения, общая полка).
 2. Скажи Claude имя и почту друга — он добавит их в `inputs/users.json` и создаст папку `inputs/<имя>/`.
 3. [Authentication → Sign In / Providers](https://supabase.com/dashboard/project/tjlzasnuigsaeirpgiiq/auth/providers)
    → включи **Allow new users to sign up** → друг создаёт аккаунт по инструкции `FRIENDS.md` → выключи обратно.

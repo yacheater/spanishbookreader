@@ -45,6 +45,8 @@ def main():
                "updated_at": datetime.datetime.now(datetime.timezone.utc).isoformat()}
         if readers:                       # the column exists only after supabase/migrations/002
             row["readers"] = readers
+        if meta.get("public"):            # open shelf — column from supabase/migrations/004
+            row["public"] = True
         call("POST", "/rest/v1/texts?on_conflict=id", [row],
              {"Prefer": "resolution=merge-duplicates,return=minimal"})
         shared = f", shared with {len(readers)}" if readers else ""

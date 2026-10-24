@@ -62,3 +62,7 @@ create policy "see own suggestions" on public.submissions
 drop policy if exists "delete own texts" on public.texts;
 create policy "delete own texts" on public.texts
   for delete using (owner = auth.uid());
+alter table public.texts add column if not exists public boolean not null default false;
+drop policy if exists "read public texts" on public.texts;
+create policy "read public texts" on public.texts
+  for select using (public and auth.uid() is not null);

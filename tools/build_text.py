@@ -44,6 +44,18 @@ def load_names(lang="es"):
     return names
 
 
+def load_ru(lang="es"):
+    """Russian glosses (overlay for Russian-speaking learners): <lexdir>/ru/*.json = {"forms": {surface: ru}, "lemmas": {key: ru}}."""
+    forms, lemmas = {}, {}
+    for f in sorted(Path(p) for p in glob.glob(str(ROOT / f"{LEX_DIR[lang]}/ru/*.json"))):
+        d = json.loads(f.read_text(encoding="utf-8"))
+        for k, v in d.get("forms", {}).items():
+            forms.setdefault(k, v)
+        for k, v in d.get("lemmas", {}).items():
+            lemmas.setdefault(k, v)
+    return forms, lemmas
+
+
 def load_lex(lang="es"):
     d = LEX_DIR[lang]
     lemmas, forms, conflicts = {}, {}, []
@@ -225,7 +237,8 @@ def sentence_span(para, i0, i1):
 
 def phrase_index(d):
     """Expressions that translate one-to-one (idioms, collocations) — for the Translate mode."""
-    return [{"key": p["key"], "type": p["type"], "en": p["en"], "example": p.get("example")}
+    return [{"key": p["key"], "type": p["type"], "en": p["en"], "example": p.get("example"),
+             **({"ru": p["ru"]} if p.get("ru") else {})}
             for p in d.get("phrases", {}).values() if p["type"] in ("idiom", "collocation", "phrasal")]
 
 
@@ -242,6 +255,9 @@ def build(tid):
     meta = json.loads(src.with_suffix(".meta.json").read_text(encoding="utf-8"))
     lang = meta.get("lang", "es")
     lemmas, forms_lex, conflicts = load_lex(lang)
+    ru_forms, ru_lemmas = load_ru(lang)
+    want_ru = "ru" in meta.get("glosses", [])          # this text has Russian-speaking readers → report what lacks Russian
+    ru_missing = []
     known_names = load_names(lang)
     word_re = WORD_EN if lang == "en" else WORD
     src_rel = str(src.relative_to(ROOT))
@@ -272,6 +288,11 @@ def build(tid):
             fid = f"f{len(form_ids) + 1}"
             form_ids[sig] = fid
             forms_out[fid] = {"lemma": key, "analysis": analysis, "en": entry[1]}
+            ru = ru_forms.get(surface.lower().replace("’", "'"))
+            if ru:
+                forms_out[fid]["ru"] = ru
+            elif want_ru:
+                ru_missing.append(("form", surface.lower(), entry[1], key))
         used_lemmas.add(key)
         return form_ids[sig]
 
@@ -311,13 +332,28 @@ def build(tid):
             headings.append(len(paragraphs) - 1)
 
     phrases, occurrences = locate_phrases(tid, paragraphs, {ln: i for i, ln in enumerate(line_no)}, problems)
+    ph_ru_file = ROOT / f"lex/phrases_ru/{tid}.json"
+    ph_ru = json.loads(ph_ru_file.read_text(encoding="utf-8")) if ph_ru_file.exists() else {}
+    for P in phrases.values():
+        r = ph_ru.get(P["key"])
+        if r:
+            P["ru"] = r.get("ru", "")
+            if r.get("explain"):
+                P["explain_ru"] = r["explain"]
+        elif want_ru:
+            ru_missing.append(("phrase", P["key"], P["en"], P["type"]))
+    if want_ru:
+        for k in sorted(used_lemmas):
+            if k not in ru_lemmas:
+                ru_missing.append(("lemma", k, lemmas[k]["en"], ""))
     doc = {
         "id": tid, "title": meta["title"],
         "source": dict(meta["source"], input=src_rel),
         "chapters": [{"id": "c1", "title": meta["title"], "paragraphs": paragraphs, "headings": headings,
                       "phraseOcc": occurrences}],
         "forms": forms_out,
-        "lemmas": {k: lemma_entry(k, lemmas[k], lang) for k in sorted(used_lemmas)},
+        "lemmas": {k: dict(lemma_entry(k, lemmas[k], lang), **({"ru": ru_lemmas[k]} if k in ru_lemmas else {}))
+                   for k in sorted(used_lemmas)},
         "lang": lang,
         "phrases": phrases,
     }
@@ -328,6 +364,15 @@ def build(tid):
         "window.LECTOR_TEXTS=window.LECTOR_TEXTS||{};window.LECTOR_TEXTS[" + json.dumps(tid) + "]="
         + json.dumps(doc, ensure_ascii=False, separators=(",", ":")) + ";\n", encoding="utf-8")
 
+    ru_file = ROOT / f"{LEX_DIR[lang]}/ru/missing_{tid}.tsv"
+    if ru_missing:
+        ru_file.parent.mkdir(parents=True, exist_ok=True)
+        seen = set()
+        rows = [r for r in ru_missing if not (r[:2] in seen or seen.add(r[:2]))]
+        ru_file.write_text("".join("\t".join(r) + "\n" for r in rows), encoding="utf-8")
+        problems.append(f"{len(rows)} items without a Russian gloss → {ru_file.relative_to(ROOT)}")
+    elif ru_file.exists():
+        ru_file.unlink()
     miss_file = ROOT / f"{LEX_DIR[lang]}/missing_{tid}.tsv"
     if missing:
         miss_file.write_text("".join(f"{w}\t{n}\t{context[w]}\n" for w, n in missing.most_common()), encoding="utf-8")
