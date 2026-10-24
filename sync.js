@@ -7,7 +7,7 @@
    Merge = per item, newest event wins (edit on one device, delete on another → whichever is later). */
 "use strict";
 
-const SYNCED = ["cards", "folders", "known", "positions", "hidden"];
+const SYNCED = ["cards", "folders", "known", "positions", "hidden", "titles"];
 
 const Sync = {
   snapshot: {},

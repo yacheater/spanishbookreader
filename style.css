@@ -391,3 +391,9 @@ h1 { font-size: 1.65rem; letter-spacing: -.01em; }
 .sg-text-head { display: flex; justify-content: space-between; align-items: center; margin: .8rem 0 .3rem; font-size: .8rem; color: var(--muted); }
 .attach { cursor: pointer; }
 .attach .btn { font-size: .78rem; padding: .25rem .65rem; }
+.item-tools { position: absolute; right: 8px; top: 8px; display: flex; gap: 2px; }
+.tool-btn { border: none; background: none; cursor: pointer; padding: 6px; border-radius: 8px; color: var(--faint); display: grid; place-items: center; }
+.tool-btn:hover { color: var(--text); background: var(--bg); }
+.tool-btn.del-text { position: static; transform: none; }
+.tool-btn.del-text:hover { color: var(--bad); background: var(--bad-soft); }
+.item-wrap .item { padding-right: 4.6rem; }
