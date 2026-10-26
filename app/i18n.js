@@ -4,7 +4,9 @@
 const I18N = {
   ru: {
     // header & settings
-    "Texts": "Тексты", "Words": "Слова", "Review": "Повторение", "Size": "Размер", "Spacing": "Интервал",
+    "Texts": "Тексты", "Library": "Библиотека", "Open": "Открыть", "+ Add": "+ Добавить",
+    "Open texts in {lang} with translations in {native}. Add the ones you want to read to your Texts.": "Открытые тексты (язык: {lang}) с переводами (язык: {native}). Добавь нужные в свои «Тексты».",
+    "Nothing in the library for your languages yet.": "Для твоей пары языков в библиотеке пока ничего нет.", "Words": "Слова", "Review": "Повторение", "Size": "Размер", "Spacing": "Интервал",
     "normal": "обычный", "relaxed": "просторный", "Width": "Ширина", "narrow": "узкая", "full": "во весь экран",
     "Theme": "Тема", "auto": "авто", "light": "светлая", "dark": "тёмная", "Account": "Аккаунт", "Sync now": "Синхронизировать",
     "Sign out": "Выйти", "Sign in to sync": "Войти для синхронизации", "Language": "Язык", "Change": "Изменить",
@@ -92,7 +94,9 @@ const I18N = {
     "conjunction": "союз", "pronoun": "местоимение", "determiner": "определитель", "number": "числительное", "interjection": "междометие",
   },
   es: {
-    "Texts": "Textos", "Words": "Palabras", "Review": "Repaso", "Size": "Tamaño", "Spacing": "Interlineado",
+    "Texts": "Textos", "Library": "Biblioteca", "Open": "Abrir", "+ Add": "+ Agregar",
+    "Open texts in {lang} with translations in {native}. Add the ones you want to read to your Texts.": "Textos abiertos en {lang} con traducciones al {native}. Agregá a tus Textos los que quieras leer.",
+    "Nothing in the library for your languages yet.": "Todavía no hay nada en la biblioteca para tus idiomas.", "Words": "Palabras", "Review": "Repaso", "Size": "Tamaño", "Spacing": "Interlineado",
     "normal": "normal", "relaxed": "amplio", "Width": "Ancho", "narrow": "angosto", "full": "completo",
     "Theme": "Tema", "auto": "auto", "light": "claro", "dark": "oscuro", "Account": "Cuenta", "Sync now": "Sincronizar",
     "Sign out": "Cerrar sesión", "Sign in to sync": "Iniciá sesión para sincronizar", "Language": "Idioma", "Change": "Cambiar",

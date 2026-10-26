@@ -18,7 +18,7 @@ const Store = {
     try { s = JSON.parse(localStorage.getItem(KEY)); } catch (e) { s = null; }
     this.state = Object.assign({
       settings: { fs: { mobile: 18, desktop: 20 }, lh: "normal", width: "narrow", theme: "auto" },
-      cards: {}, known: {}, folders: {}, positions: {}, hidden: {}, titles: {}, profile: {}, selected: [], statusFilter: "all",
+      cards: {}, known: {}, folders: {}, positions: {}, hidden: {}, titles: {}, profile: {}, added: {}, selected: [], statusFilter: "all",
     }, s || {});
     if (!Array.isArray(this.state.selected)) this.state.selected = [];
     Sync.init(this.state);
@@ -267,11 +267,12 @@ function route() {
   hidePopup(); modal._onClose = null; closeModal();
   const h = location.hash.replace(/^#\/?/, "");
   const [page, arg] = h.split("/");
-  const navKey = page === "read" || !page ? "library" : page === "study" && arg === "review" ? "review" : page === "study" ? "words" : page;
+  const navKey = page === "read" || !page ? "library" : page === "library" ? "library-cat" : page === "study" && arg === "review" ? "review" : page === "study" ? "words" : page;
   document.querySelectorAll("[data-nav]").forEach((a) => a.classList.toggle("active", a.dataset.nav === navKey));
   window.scrollTo(0, 0);
   if (page === "read" && arg) return renderReader(decodeURIComponent(arg));
   if (page === "words") return renderWords();
+  if (page === "library") return renderCatalog();
   if (page === "study") return renderStudy(arg || "flash");
   renderLibrary();
 }
@@ -281,10 +282,37 @@ window.addEventListener("hashchange", route);
 const ICON_PEN = `<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16v4zM14 6l4 4"/></svg>`;
 const ICON_TRASH = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4h6v3"/></svg>`;
 /** Texts of this account (cloud) or of this computer (local), minus the ones you deleted / hid. */
+async function allTexts() {
+  return Cloud.user ? Cloud.listTexts() : (window.LECTOR_INDEX || []);
+}
+/** "Texts": yours, shared with you, and the ones you added from the Library — in the language you learn. */
 async function libraryTexts() {
-  let items = window.LECTOR_INDEX || [];
-  if (Cloud.user) items = await Cloud.listTexts();
-  return items.filter((x) => !S.hidden[x.id] && (x.lang || "es") === TARGET());
+  return (await allTexts()).filter((x) => !S.hidden[x.id] && (x.lang || "es") === TARGET() && (x.mine !== false || !x.public || S.added[x.id]));
+}
+/** "Library": open texts of other people in your language pair (with translations in your native language). */
+async function catalogTexts() {
+  return (await allTexts()).filter((x) => x.public && x.mine === false && (x.lang || "es") === TARGET() && (x.glosses || []).includes(NATIVE()));
+}
+async function renderCatalog() {
+  view.innerHTML = `<div class="empty">${t("Loading…")}</div>`;
+  let items;
+  try { items = await catalogTexts(); } catch (e) { view.innerHTML = `<div class="empty">${t("Couldn't load texts — check the connection.")}</div>`; return; }
+  const host = (u) => (u ? u.replace(/^https?:\/\/(www\.)?/, "").split("/")[0] : "");
+  view.innerHTML = `<div class="wide-col"><h1>${t("Library")}</h1>
+    <p class="muted small ui">${t("Open texts in {lang} with translations in {native}. Add the ones you want to read to your Texts.", { lang: langName(TARGET()), native: langName(NATIVE()) })}</p>
+    <div class="lib">${items.map((x) => {
+      const added = !!S.added[x.id] && !S.hidden[x.id];
+      return `<div class="item cat-item">
+        <div class="item-top"><span class="lang-badge ${x.lang === "en" ? "en" : "es"}">${x.lang === "en" ? "EN" : "ES"}</span>
+          <span class="item-src">${esc(host(x.source) || (x.license === "own" ? t("study text") : x.license || ""))}</span></div>
+        <div class="item-title">${esc(x.title)}</div>
+        <div class="meta"><span>${t("{n} words", { n: Number(x.words).toLocaleString(UI_LANG) })}</span>
+          ${added ? `<a class="cta" href="#/read/${encodeURIComponent(x.id)}">${t("✓ Added")} · ${t("Open")} →</a>`
+                  : `<button class="btn primary small-btn" data-add="${esc(x.id)}">${t("+ Add")}</button>`}</div></div>`;
+    }).join("") || `<div class="empty">${t("Nothing in the library for your languages yet.")}</div>`}</div></div>`;
+  view.querySelectorAll("[data-add]").forEach((b) => (b.onclick = () => {
+    S.added[b.dataset.add] = Date.now(); delete S.hidden[b.dataset.add]; Store.save(); renderCatalog();
+  }));
 }
 let libraryCache = [];
 async function renderLibrary() {
@@ -360,7 +388,8 @@ function confirmDeleteText(x) {
       if (Cloud.user) {
         try { deleted = await Cloud.deleteText(x.id); } catch (e) { $("#dt-msg").textContent = t("Couldn't delete: ") + e.message; $("#dt-2").disabled = false; return; }
       }
-      if (!deleted) S.hidden[x.id] = Date.now();          // shared with you / local mode: hide it from your library
+      if (S.added[x.id]) delete S.added[x.id];           // added from the Library: just take it off your Texts
+      else if (!deleted) S.hidden[x.id] = Date.now();    // shared with you / local mode: hide it from your Texts
       if ($("#dt-words") && $("#dt-words").checked) {
         for (const c of cards) { c.folders = c.folders.filter((f) => f !== folder); if (!c.folders.length) delete S.cards[c.key]; }
       }

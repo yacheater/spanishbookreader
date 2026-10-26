@@ -11,7 +11,9 @@ s = s.replace(cdn, '''<script src="/tools/fake_supabase.js"></script>
 ''' + data + '''
 <script>
   if (!FAKE.db.texts.length) for (const t of Object.values(window.LECTOR_TEXTS))
-    FAKE.db.texts.push({ id: t.id, owner: "u1", public: false, title: t.title, meta: { source: t.source.ref, words: 1, lang: t.lang || "es",
+    FAKE.db.texts.push({ id: t.id, owner: ["own", "public domain", "CC BY 4.0"].includes(t.license) ? "u2" : "u1",
+      public: ["own", "public domain", "CC BY 4.0"].includes(t.license), title: t.title,
+      meta: { source: t.source.ref, words: 1, lang: t.lang || "es", glosses: t.glosses || [], license: t.license,
       phrases: Object.values(t.phrases || {}).filter((p) => ["idiom", "collocation", "phrasal"].includes(p.type))
         .map((p) => ({ key: p.key, type: p.type, en: p.en, ru: p.ru, example: p.example })) }, data: t, updated_at: "" });
   FAKE.persist(); window.LECTOR_TEXTS = {};

@@ -167,6 +167,7 @@ def auto_analysis(surface, key, lemmas, lang="es"):
     return ""
 
 
+OPEN_LICENSES = {"public domain", "CC BY 4.0", "CC BY-SA 4.0", "CC0", "own"}
 PHRASE_TYPES = {"idiom": "expression", "collocation": "collocation", "phrasal": "phrasal verb", "grammar": "grammar"}
 MAX_GAP = 5          # words allowed between two parts of a discontinuous phrase (tomaron … decisión)
 
@@ -355,8 +356,12 @@ def build(tid):
         "lemmas": {k: dict(lemma_entry(k, lemmas[k], lang), **({"ru": ru_lemmas[k]} if k in ru_lemmas else {}))
                    for k in sorted(used_lemmas)},
         "lang": lang,
+        "license": meta.get("license", ""),
         "phrases": phrases,
     }
+    # which native languages can read this text: the default gloss language + Russian when the overlay is complete
+    full_ru = forms_out and all(f.get("ru") for f in forms_out.values()) and all(p.get("ru") for p in phrases.values())
+    doc["glosses"] = ["en" if lang == "es" else "es"] + (["ru"] if full_ru else [])
     (ROOT / "texts").mkdir(exist_ok=True)
     (ROOT / f"texts/{tid}.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
     (ROOT / "app/data").mkdir(parents=True, exist_ok=True)
@@ -403,7 +408,8 @@ def write_index():
         items.append({"id": d["id"], "title": d["title"], "source": d["source"].get("ref", ""),
                       "chapters": [{"id": c["id"], "title": c["title"]} for c in d["chapters"]],
                       "words": sum(1 for c in d["chapters"] for p in c["paragraphs"] for t in p if isinstance(t, list)),
-                      "lang": d.get("lang", "es"), "phrases": phrase_index(d)})
+                      "lang": d.get("lang", "es"), "phrases": phrase_index(d), "glosses": d.get("glosses", []),
+                      "public": bool(d.get("license") in OPEN_LICENSES), "mine": True})
     (ROOT / "app/data/index.js").write_text(
         "window.LECTOR_INDEX=" + json.dumps(items, ensure_ascii=False) + ";\n", encoding="utf-8")
 

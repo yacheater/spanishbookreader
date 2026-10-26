@@ -39,6 +39,7 @@ def main():
         words = sum(1 for c in d["chapters"] for p in c["paragraphs"] for t in p if isinstance(t, list))
         from build_text import phrase_index
         info = {"source": d["source"].get("ref", ""), "words": words, "lang": d.get("lang", "es"),
+                "glosses": d.get("glosses", []), "license": d.get("license", ""),
                 "phrases": phrase_index(d),
                 "chapters": [{"id": c["id"], "title": c["title"]} for c in d["chapters"]]}
         row = {"id": tid, "owner": owner, "title": d["title"], "meta": info, "data": d,

@@ -10,7 +10,7 @@
 <meta name="apple-mobile-web-app-title" content="Lector">
 <link rel="manifest" href="manifest.json">
 <title>Lector</title>
-<link rel="stylesheet" href="style.css?v=21">
+<link rel="stylesheet" href="style.css?v=23">
 <link rel="icon" href="icon.svg">
 <link rel="apple-touch-icon" href="icon.svg">
 </head>
@@ -19,6 +19,7 @@
   <a class="brand" href="#/"><span class="logo">Ñ</span><span class="brand-name">Lector</span></a>
   <nav>
     <a href="#/" data-nav="library"><span data-i18n="Texts">Texts</span></a>
+    <a href="#/library" data-nav="library-cat"><span data-i18n="Library">Library</span></a>
     <a href="#/words" data-nav="words"><span data-i18n="Words">Words</span> <span id="nav-count" class="badge"></span></a>
     <a href="#/study/review" data-nav="review"><span data-i18n="Review">Review</span> <span id="nav-due" class="badge accent"></span></a>
   </nav>
@@ -43,18 +44,20 @@
 <div id="popup" class="popup" hidden role="dialog"></div>
 <div id="modal" class="modal" hidden></div>
 
-<script src="i18n.js?v=21"></script>
+<script src="i18n.js?v=23"></script>
 <script src="/tools/fake_supabase.js"></script>
-<script src="data/amar_los_cerros.js"></script><script src="data/bby_wow.js"></script><script src="data/kene_ayahuasca.js"></script><script src="data/mate.js"></script><script src="data/put_off.js"></script><script src="data/tu_usted.js"></script>
+<script src="data/amar_los_cerros.js"></script><script src="data/bby_wow.js"></script><script src="data/kene_ayahuasca.js"></script><script src="data/mate.js"></script><script src="data/put_off.js"></script><script src="data/tortuga_gigante.js"></script><script src="data/tu_usted.js"></script>
 <script>
   if (!FAKE.db.texts.length) for (const t of Object.values(window.LECTOR_TEXTS))
-    FAKE.db.texts.push({ id: t.id, owner: "u1", public: false, title: t.title, meta: { source: t.source.ref, words: 1, lang: t.lang || "es",
+    FAKE.db.texts.push({ id: t.id, owner: ["own", "public domain", "CC BY 4.0"].includes(t.license) ? "u2" : "u1",
+      public: ["own", "public domain", "CC BY 4.0"].includes(t.license), title: t.title,
+      meta: { source: t.source.ref, words: 1, lang: t.lang || "es", glosses: t.glosses || [], license: t.license,
       phrases: Object.values(t.phrases || {}).filter((p) => ["idiom", "collocation", "phrasal"].includes(p.type))
         .map((p) => ({ key: p.key, type: p.type, en: p.en, ru: p.ru, example: p.example })) }, data: t, updated_at: "" });
   FAKE.persist(); window.LECTOR_TEXTS = {};
 </script>
 <script>window.LECTOR_INDEX=[];</script>
-<script src="sync.js?v=21"></script>
-<script src="app.js?v=21"></script>
+<script src="sync.js?v=23"></script>
+<script src="app.js?v=23"></script>
 </body>
 </html>

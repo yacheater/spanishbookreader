@@ -10,6 +10,7 @@ Lector is a small reading-and-flashcards app I built for learning languages. You
 - **Practice:** Flashcards, Choose (multiple choice), In context (fill the gap in the original sentence; grammar hint on request).
 - **Tests:** Write (type the translation — typos and close answers are accepted, and there's an "I was right" button), Translate (expressions both ways, with word-by-word feedback on mistakes), Review (spaced repetition). A word only counts as *learned* after you pass a test.
 - **Folders.** Every text is a folder; make your own; study one folder, several or all.
+- **Library.** Open texts (public domain, open licences, our study texts) in your language pair — tap **+ Add** to put one on your shelf.
 - **Your own texts.** "Suggest a text": paste an article, a link, or attach a .md / .txt file — it gets processed (every word and expression annotated) and appears in your library.
 
 **What you need to do (5 minutes)**

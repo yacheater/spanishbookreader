@@ -12,7 +12,8 @@
   function query(table) {
     const q = { cols: "*", filters: [] };
     FAKE.db[table] = FAKE.db[table] || [];
-    const rows = () => FAKE.db[table].filter((r) => q.filters.every(([c, v]) => r[c] === v)).map((r) => pick(r, q.cols));
+    const visible = (r) => table !== "texts" || r.owner === (FAKE.session && FAKE.session.user.id) || r.public;   // RLS
+    const rows = () => FAKE.db[table].filter((r) => visible(r) && q.filters.every(([c, v]) => r[c] === v)).map((r) => pick(r, q.cols));
     Object.assign(q, {
       select(cols) { q.cols = cols; FAKE.calls.push((q.del ? "delete " : "select ") + table); return q; },
       eq(c, v) { q.filters.push([c, v]); return q; },
