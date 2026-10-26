@@ -3,7 +3,7 @@
 Lector is a small reading-and-flashcards app I built for learning languages. You read real texts; tap any word to see what it means and how it works; save the words you want; then practise them in short sessions — on your phone or laptop, progress in sync. It's free and private: you have your own account, and only you see your texts and words.
 
 **What's inside (as of now)**
-- **Two directions.** Spanish through English (texts in Spanish, translations in English) and English through Spanish (texts in English, translations in Argentine Spanish).
+- **Your language pair.** You speak Russian, English or Spanish and learn Spanish or English — the interface and all translations are in your language (Spanish = Argentine, with *vos*).
 - **Reader.** Tap or hover any word → translation in context, base form (*tomaban → tomar*, *went → go*), grammar (tense, person, plural), pronunciation 🔊. Adjustable text size, spacing and light/dark theme.
 - **Expressions, underlined in the text.** Idioms (*de hecho*), word partnerships (*tomar una decisión*), phrasal verbs (*put off*, *give up*) and grammar patterns (*hay que + infinitive*), each with a short explanation — save them like words.
 - **Word cards.** Translation, the sentence where you met the word, full conjugation (incl. *vos* forms) or *go · went · gone*, plural forms.
@@ -17,7 +17,7 @@ Lector is a small reading-and-flashcards app I built for learning languages. You
 1. Open **https://yacheater.github.io/spanishbookreader/**
 2. Enter your email, choose a password (8+ characters) → **Create account**.
 3. Confirm your email with the link Supabase sends you (check spam).
-4. Back on the site → email + password → **Sign in**.
+4. Back on the site → email + password → **Sign in** → choose the language you speak and the one you learn.
 5. **Send me the email you signed up with** — I'll add your texts to your account.
 6. Optional, recommended: put it on your phone's home screen — iPhone: Safari → Share → *Add to Home Screen*; Android: Chrome → ⋮ → *Add to Home screen*. Sign in with the same email and password; your progress syncs automatically.
 
