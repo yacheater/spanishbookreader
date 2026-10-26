@@ -92,12 +92,14 @@ IRR = {
     "salir": {"yo": "salgo", "fut": "saldr"},
     "valer": {"yo": "valgo", "fut": "valdr"},
     "andar": {"pret": "anduv"},
+    "reír": {"presente": "río ríes ríe reímos reís ríen", "preterito_indefinido": "reí reíste rio reímos reísteis rieron",
+             "subjuntivo_presente": "ría rías ría riamos riáis rían", "ger": "riendo", "part": "reído"},
     "ducir": {"pret": "duj"},          # conducir, producir, introducir, traducir, reducir …
     "volver": {"part": "vuelto"}, "solver": {"part": "suelto"}, "morir": {"part": "muerto"},
     "scribir": {"part": "scrito"}, "cubrir": {"part": "cubierto"}, "abrir": {"part": "abierto"},
     "romper": {"part": "roto"},
 }
-PREFIXABLE = {"tener", "venir", "poner", "hacer", "decir", "traer", "ducir", "volver", "solver",
+PREFIXABLE = {"tener", "venir", "poner", "hacer", "decir", "traer", "ducir", "volver", "solver", "reír",
               "scribir", "cubrir", "abrir", "caer"}
 NO_ZC = {"hacer", "cocer", "mecer", "torcer", "vencer", "ejercer", "convencer"}
 
@@ -246,7 +248,7 @@ def conjugate(inf, model=None):
     out["preterito_imperfecto"] = table("preterito_imperfecto") or [stem + e for e in E["imp"]]
 
     # futuro / condicional
-    fs = prefix + irr["fut"] if "fut" in irr else inf
+    fs = prefix + irr["fut"] if "fut" in irr else (inf[:-2] + "ir" if inf.endswith("ír") else inf)   # oír → oiré, reír → reiré
     out["futuro"] = [fs + e for e in FUT]
     out["condicional"] = [fs + e for e in COND]
 
@@ -392,6 +394,10 @@ if __name__ == "__main__":
         ("jugar", "presente"): "juego juegas juega jugamos jugáis juegan",
         ("oír", "presente"): "oigo oyes oye oímos oís oyen",
         ("estar", "subjuntivo_presente"): "esté estés esté estemos estéis estén",
+        ("reír", "presente"): "río ríes ríe reímos reís ríen",
+        ("reír", "futuro"): "reiré reirás reirá reiremos reiréis reirán",
+        ("oír", "condicional"): "oiría oirías oiría oiríamos oiríais oirían",
+        ("sonreír", "preterito_indefinido"): "sonreí sonreíste sonrio sonreímos sonreísteis sonrieron",
         ("encargarse", "preterito_indefinido"): "me encargué te encargaste se encargó nos encargamos os encargasteis se encargaron",
         ("vencer", "presente"): "venzo vences vence vencemos vencéis vencen",
         ("distinguir", "presente"): "distingo distingues distingue distinguimos distinguís distinguen",

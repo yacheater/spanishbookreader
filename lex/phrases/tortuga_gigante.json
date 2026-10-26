@@ -1,0 +1,1255 @@
+[
+ {
+  "key": "había una vez",
+  "type": "idiom",
+  "en": "once upon a time",
+  "occ": [
+   {
+    "p": 1,
+    "words": [
+     "Había",
+     "una",
+     "vez"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "dar de comer / dar de beber",
+  "type": "idiom",
+  "en": "to feed; to give (someone) something to drink",
+  "explain": "dar de + infinitive means providing food or drink for someone: 'daba de comer a sus hermanos' = he fed his brothers.",
+  "occ": [
+   {
+    "p": 1,
+    "words": [
+     "daba",
+     "de",
+     "comer"
+    ]
+   },
+   {
+    "p": 17,
+    "words": [
+     "dio",
+     "de",
+     "beber"
+    ]
+   },
+   {
+    "p": 25,
+    "words": [
+     "darle",
+     "de",
+     "beber"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tener puntería",
+  "type": "idiom",
+  "en": "to be a good shot; to have good aim",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "tiene",
+     "mucha",
+     "puntería"
+    ]
+   },
+   {
+    "p": 5,
+    "words": [
+     "tenía",
+     "una",
+     "gran",
+     "puntería"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "hacer ejercicio",
+  "type": "collocation",
+  "en": "to exercise; to get exercise",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "hacer",
+     "mucho",
+     "ejercicio"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "al aire libre",
+  "type": "idiom",
+  "en": "in the open air; outdoors",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "al",
+     "aire",
+     "libre"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "imperativo con usted",
+  "type": "grammar",
+  "en": "polite command (you, formal)",
+  "explain": "Commands to someone addressed as usted use the present subjunctive form: cazar → cace ('hunt'), irse → váyase. Here the zoo director speaks formally to his friend.",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "cace"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "querer que + subjuntivo",
+  "type": "grammar",
+  "en": "to want someone to do something",
+  "explain": "When the subject wants someone else to act, Spanish uses que + subjunctive, not an infinitive: 'quiero que se vaya' = I want you to go.",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "quiero",
+     "que",
+     "se",
+     "vaya"
+    ]
+   },
+   {
+    "p": 42,
+    "words": [
+     "quiere",
+     "nunca",
+     "que",
+     "se",
+     "vaya"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "para que + subjuntivo",
+  "type": "grammar",
+  "en": "so that …; in order for …",
+  "explain": "Para que always takes the subjunctive. After a past verb it is the imperfect subjunctive, in -ra or the more literary -se: 'para que no se cayese / cayera' = so that he wouldn't fall.",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "para",
+     "que",
+     "puedan"
+    ]
+   },
+   {
+    "p": 17,
+    "words": [
+     "para",
+     "que",
+     "comiera"
+    ]
+   },
+   {
+    "p": 22,
+    "words": [
+     "para",
+     "que",
+     "cayese"
+    ]
+   },
+   {
+    "p": 39,
+    "words": [
+     "para",
+     "que",
+     "cayera"
+    ]
+   },
+   {
+    "p": 40,
+    "words": [
+     "para",
+     "que",
+     "tomara"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "diminutivo -ito / -ita",
+  "type": "grammar",
+  "en": "little …; dear little …",
+  "explain": "The suffix -ito/-ita makes a word small or affectionate and is very frequent in Rioplatense speech: hermanos → hermanitos, chica → chiquita (c → qu), golpes → golpecitos ('gentle pats').",
+  "occ": [
+   {
+    "p": 2,
+    "words": [
+     "hermanitos"
+    ]
+   },
+   {
+    "p": 10,
+    "words": [
+     "golpecitos"
+    ]
+   },
+   {
+    "p": 17,
+    "words": [
+     "chiquita"
+    ]
+   },
+   {
+    "p": 17,
+    "words": [
+     "yuyitos"
+    ]
+   },
+   {
+    "p": 32,
+    "words": [
+     "ratoncito"
+    ]
+   },
+   {
+    "p": 37,
+    "words": [
+     "ratoncito"
+    ]
+   },
+   {
+    "p": 41,
+    "words": [
+     "pastito"
+    ]
+   },
+   {
+    "p": 42,
+    "words": [
+     "palmadita"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "imperfecto vs pretérito en la narración",
+  "type": "grammar",
+  "en": "background / habit vs. single event",
+  "explain": "The imperfect describes the setting and repeated habits (vivía, estaba contento, dormía bajo los árboles); the preterite moves the story forward with single events (un día se enfermó).",
+  "occ": [
+   {
+    "p": 1,
+    "words": [
+     "un",
+     "día",
+     "se",
+     "enfermó"
+    ]
+   },
+   {
+    "p": 3,
+    "words": [
+     "Dormía",
+     "bajo",
+     "los",
+     "árboles"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "irse a vivir",
+  "type": "collocation",
+  "en": "to go and live (somewhere); to move to",
+  "occ": [
+   {
+    "p": 3,
+    "words": [
+     "se",
+     "fue",
+     "a",
+     "vivir"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "hacer bien (a alguien)",
+  "type": "idiom",
+  "en": "to do (someone) good",
+  "occ": [
+   {
+    "p": 3,
+    "words": [
+     "le",
+     "hacía",
+     "bien"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "hacer mal tiempo",
+  "type": "collocation",
+  "en": "to be bad weather",
+  "occ": [
+   {
+    "p": 3,
+    "words": [
+     "hacía",
+     "mal",
+     "tiempo"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "pluscuamperfecto (había + participio)",
+  "type": "grammar",
+  "en": "had done",
+  "explain": "Imperfect of haber + past participle marks something that happened before another past moment in the story: 'Había hecho un atado' = he had made a bundle (before this point).",
+  "occ": [
+   {
+    "p": 4,
+    "words": [
+     "Había",
+     "hecho"
+    ]
+   },
+   {
+    "p": 4,
+    "words": [
+     "Había",
+     "también",
+     "agarrado"
+    ]
+   },
+   {
+    "p": 8,
+    "words": [
+     "había",
+     "llevado"
+    ]
+   },
+   {
+    "p": 15,
+    "words": [
+     "había",
+     "oído"
+    ]
+   },
+   {
+    "p": 20,
+    "words": [
+     "había",
+     "dicho"
+    ]
+   },
+   {
+    "p": 21,
+    "words": [
+     "había",
+     "oído"
+    ]
+   },
+   {
+    "p": 29,
+    "words": [
+     "Había",
+     "llegado"
+    ]
+   },
+   {
+    "p": 29,
+    "words": [
+     "había",
+     "comido"
+    ]
+   },
+   {
+    "p": 30,
+    "words": [
+     "había",
+     "podido"
+    ]
+   },
+   {
+    "p": 40,
+    "words": [
+     "había",
+     "salvado"
+    ]
+   },
+   {
+    "p": 40,
+    "words": [
+     "había",
+     "hecho"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tan + adjetivo + como",
+  "type": "grammar",
+  "en": "as … as",
+  "explain": "Comparison of equality: tan + adjective + como. 'Tan alta como una silla' = as tall as a chair.",
+  "occ": [
+   {
+    "p": 4,
+    "words": [
+     "tan",
+     "grandes",
+     "como"
+    ]
+   },
+   {
+    "p": 8,
+    "words": [
+     "tan",
+     "alta",
+     "como"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "hacía + tiempo + que",
+  "type": "grammar",
+  "en": "for (a period of time) up to then",
+  "explain": "Hacer in the imperfect + a period of time tells how long something had (or had not) been going on in the past: 'hacía dos días que no cazaba nada' = he hadn't caught anything for two days.",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "hacía",
+     "dos",
+     "días",
+     "que"
+    ]
+   },
+   {
+    "p": 29,
+    "words": [
+     "desde",
+     "hacía",
+     "una",
+     "semana"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "de canto",
+  "type": "idiom",
+  "en": "on its edge; on its side",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "de",
+     "canto"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "al + infinitivo",
+  "type": "grammar",
+  "en": "on / when (doing something)",
+  "explain": "Al + infinitive means 'at the moment of / upon doing': 'al ver al hombre' = when it saw the man. (In line 5 the scan prints 'AI' for 'Al'.)",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "Al",
+     "ver"
+    ]
+   },
+   {
+    "p": 38,
+    "words": [
+     "Al",
+     "oír"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "de un salto",
+  "type": "idiom",
+  "en": "in one leap; with a single jump",
+  "occ": [
+   {
+    "p": 5,
+    "words": [
+     "de",
+     "un",
+     "salto"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "decirse",
+  "type": "collocation",
+  "en": "to say to oneself; to think",
+  "occ": [
+   {
+    "p": 6,
+    "words": [
+     "se",
+     "dijo"
+    ]
+   },
+   {
+    "p": 21,
+    "words": [
+     "se",
+     "dijo"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "ir a + infinitivo",
+  "type": "grammar",
+  "en": "to be going to …",
+  "explain": "Ir (present) + a + infinitive is the everyday future: 'voy a morir' = I'm going to die. In the imperfect it means 'was about to': 'iba a morir' = she was going to die.",
+  "occ": [
+   {
+    "p": 6,
+    "words": [
+     "voy",
+     "a",
+     "comer"
+    ]
+   },
+   {
+    "p": 13,
+    "words": [
+     "Voy",
+     "a",
+     "morir"
+    ]
+   },
+   {
+    "p": 13,
+    "words": [
+     "Voy",
+     "a",
+     "morir"
+    ]
+   },
+   {
+    "p": 16,
+    "words": [
+     "voy",
+     "a",
+     "curar"
+    ]
+   },
+   {
+    "p": 19,
+    "words": [
+     "va",
+     "a",
+     "volver"
+    ]
+   },
+   {
+    "p": 19,
+    "words": [
+     "voy",
+     "a",
+     "morir"
+    ]
+   },
+   {
+    "p": 19,
+    "words": [
+     "voy",
+     "a",
+     "morir"
+    ]
+   },
+   {
+    "p": 21,
+    "words": [
+     "va",
+     "a",
+     "morir"
+    ]
+   },
+   {
+    "p": 27,
+    "words": [
+     "Voy",
+     "a",
+     "morir"
+    ]
+   },
+   {
+    "p": 27,
+    "words": [
+     "voy",
+     "a",
+     "morir"
+    ]
+   },
+   {
+    "p": 31,
+    "words": [
+     "iba",
+     "a",
+     "morir"
+    ]
+   },
+   {
+    "p": 36,
+    "words": [
+     "vamos",
+     "a",
+     "morir"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tener lástima de",
+  "type": "collocation",
+  "en": "to feel sorry for; to take pity on",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "tuvo",
+     "lástima",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "no … más que",
+  "type": "grammar",
+  "en": "only; nothing but",
+  "explain": "No + verb + más que = only: 'no tenía más que una sola camisa' = he had only one shirt.",
+  "occ": [
+   {
+    "p": 8,
+    "words": [
+     "no",
+     "tenía",
+     "más",
+     "que"
+    ]
+   },
+   {
+    "p": 18,
+    "words": [
+     "no",
+     "había",
+     "más",
+     "que"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "quedar + participio / adjetivo",
+  "type": "grammar",
+  "en": "to be left / to end up (in a state)",
+  "explain": "Quedar + participle describes the state something ends up in or stays in: 'quedaba tendida' = she lay there stretched out.",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "quedó",
+     "arrimada"
+    ]
+   },
+   {
+    "p": 23,
+    "words": [
+     "quedaba",
+     "casi",
+     "enterrada"
+    ]
+   },
+   {
+    "p": 26,
+    "words": [
+     "quedaba",
+     "tendida"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "días y días",
+  "type": "idiom",
+  "en": "for days and days; day after day",
+  "occ": [
+   {
+    "p": 9,
+    "words": [
+     "días",
+     "y",
+     "días"
+    ]
+   },
+   {
+    "p": 18,
+    "words": [
+     "días",
+     "y",
+     "días"
+    ]
+   },
+   {
+    "p": 26,
+    "words": [
+     "días",
+     "y",
+     "días"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "no … más (ya no)",
+  "type": "grammar",
+  "en": "no longer; not … any more",
+  "explain": "No + verb … más means 'not any more': 'no pudo levantarse más' = he couldn't get up any more.",
+  "occ": [
+   {
+    "p": 12,
+    "words": [
+     "no",
+     "pudo",
+     "levantarse",
+     "más"
+    ]
+   },
+   {
+    "p": 13,
+    "words": [
+     "no",
+     "puedo",
+     "levantarme",
+     "más"
+    ]
+   },
+   {
+    "p": 40,
+    "words": [
+     "no",
+     "quiso",
+     "separarse",
+     "más"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "en voz alta",
+  "type": "idiom",
+  "en": "out loud; aloud",
+  "occ": [
+   {
+    "p": 12,
+    "words": [
+     "en",
+     "voz",
+     "alta"
+    ]
+   },
+   {
+    "p": 18,
+    "words": [
+     "en",
+     "voz",
+     "alta"
+    ]
+   },
+   {
+    "p": 26,
+    "words": [
+     "en",
+     "voz",
+     "alta"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "no tener quién + subjuntivo",
+  "type": "grammar",
+  "en": "to have nobody to …",
+  "explain": "No tener quién + subjunctive = there is no one who would do it: 'no tengo quién me dé agua' = I have no one to give me water.",
+  "occ": [
+   {
+    "p": 13,
+    "words": [
+     "no",
+     "tengo",
+     "quién",
+     "me",
+     "dé"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "al poco rato",
+  "type": "idiom",
+  "en": "a little later; shortly after",
+  "occ": [
+   {
+    "p": 14,
+    "words": [
+     "al",
+     "poco",
+     "rato"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "perder / recobrar el conocimiento",
+  "type": "collocation",
+  "en": "to lose / to regain consciousness",
+  "occ": [
+   {
+    "p": 14,
+    "words": [
+     "perdió",
+     "el",
+     "conocimiento"
+    ]
+   },
+   {
+    "p": 18,
+    "words": [
+     "recobró",
+     "él",
+     "conocimiento"
+    ]
+   },
+   {
+    "p": 20,
+    "words": [
+     "perdió",
+     "el",
+     "conocimiento"
+    ]
+   },
+   {
+    "p": 26,
+    "words": [
+     "recobraba",
+     "el",
+     "conocimiento"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "ponerse a + infinitivo",
+  "type": "grammar",
+  "en": "to start (doing something)",
+  "explain": "Ponerse a + infinitive = to begin an activity, often suddenly: 'se puso a buscar raíces' = she set about looking for roots.",
+  "occ": [
+   {
+    "p": 17,
+    "words": [
+     "Se",
+     "puso",
+     "a",
+     "buscar"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "morirse de (sed / hambre)",
+  "type": "collocation",
+  "en": "to be dying of (thirst / hunger)",
+  "occ": [
+   {
+    "p": 17,
+    "words": [
+     "se",
+     "moría",
+     "de",
+     "sed"
+    ]
+   },
+   {
+    "p": 25,
+    "words": [
+     "se",
+     "moría",
+     "de",
+     "sed"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "darse cuenta de",
+  "type": "collocation",
+  "en": "to realise; to notice",
+  "occ": [
+   {
+    "p": 17,
+    "words": [
+     "darse",
+     "cuenta",
+     "de"
+    ]
+   },
+   {
+    "p": 28,
+    "words": [
+     "se",
+     "daba",
+     "cuenta",
+     "de"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "cada vez más / cada día más",
+  "type": "grammar",
+  "en": "more and more; … every day",
+  "explain": "Cada vez / cada día + más (or menos) + adjective expresses gradual change: 'cada vez más débil' = weaker and weaker.",
+  "occ": [
+   {
+    "p": 1,
+    "words": [
+     "cada",
+     "día",
+     "más"
+    ]
+   },
+   {
+    "p": 17,
+    "words": [
+     "cada",
+     "vez",
+     "más"
+    ]
+   },
+   {
+    "p": 26,
+    "words": [
+     "Cada",
+     "vez",
+     "más"
+    ]
+   },
+   {
+    "p": 26,
+    "words": [
+     "cada",
+     "día",
+     "menos"
+    ]
+   },
+   {
+    "p": 27,
+    "words": [
+     "cada",
+     "vez",
+     "más"
+    ]
+   },
+   {
+    "p": 30,
+    "words": [
+     "cada",
+     "vez",
+     "más"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "dicho esto",
+  "type": "idiom",
+  "en": "having said this; with that",
+  "explain": "A past participle at the start of a sentence works like 'having …': 'dicho esto' = once this was said.",
+  "occ": [
+   {
+    "p": 22,
+    "words": [
+     "Dicho",
+     "esto"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "con mucho cuidado",
+  "type": "idiom",
+  "en": "very carefully",
+  "occ": [
+   {
+    "p": 22,
+    "words": [
+     "con",
+     "mucho",
+     "cuidado"
+    ]
+   },
+   {
+    "p": 23,
+    "words": [
+     "con",
+     "mucho",
+     "cuidado"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "emprender el viaje / el camino / la marcha",
+  "type": "collocation",
+  "en": "to set off; to start the journey",
+  "occ": [
+   {
+    "p": 22,
+    "words": [
+     "emprendió",
+     "el",
+     "viaje"
+    ]
+   },
+   {
+    "p": 28,
+    "words": [
+     "emprendía",
+     "el",
+     "camino"
+    ]
+   },
+   {
+    "p": 38,
+    "words": [
+     "emprendió",
+     "la",
+     "marcha"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "cruzar a nado",
+  "type": "idiom",
+  "en": "to swim across",
+  "occ": [
+   {
+    "p": 23,
+    "words": [
+     "cruzó",
+     "a",
+     "nado"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "a cada rato",
+  "type": "idiom",
+  "en": "all the time; every few moments",
+  "occ": [
+   {
+    "p": 25,
+    "words": [
+     "a",
+     "cada",
+     "rato"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "semana tras semana",
+  "type": "idiom",
+  "en": "week after week",
+  "occ": [
+   {
+    "p": 26,
+    "words": [
+     "semana",
+     "tras",
+     "semana"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "ir + gerundio",
+  "type": "grammar",
+  "en": "to be gradually (doing / becoming)",
+  "explain": "Ir + gerund shows a slow, progressive process: 'se iba debilitando' = she was gradually getting weaker.",
+  "occ": [
+   {
+    "p": 26,
+    "words": [
+     "se",
+     "iba",
+     "debilitando"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "no poder más",
+  "type": "idiom",
+  "en": "to be unable to go on; to be exhausted",
+  "occ": [
+   {
+    "p": 29,
+    "words": [
+     "no",
+     "pudo",
+     "más"
+    ]
+   },
+   {
+    "p": 29,
+    "words": [
+     "no",
+     "podía",
+     "más"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "caer la noche",
+  "type": "collocation",
+  "en": "night falls",
+  "occ": [
+   {
+    "p": 30,
+    "words": [
+     "cayó",
+     "noche"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "¡si …! (exclamativo)",
+  "type": "grammar",
+  "en": "but …!; why, …!",
+  "explain": "At the start of an exclamation, si does not mean 'if' but adds surprise or protest: '¡Si ya has llegado!' = But you've already arrived!",
+  "occ": [
+   {
+    "p": 37,
+    "words": [
+     "Si",
+     "ya",
+     "has",
+     "llegado"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "de madrugada",
+  "type": "idiom",
+  "en": "in the early morning; before dawn",
+  "occ": [
+   {
+    "p": 39,
+    "words": [
+     "de",
+     "madrugada"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "ver + infinitivo",
+  "type": "grammar",
+  "en": "to see (someone) do something",
+  "explain": "Verbs of perception take a bare infinitive: 'vio llegar a una tortuga' = he saw a turtle arrive.",
+  "occ": [
+   {
+    "p": 39,
+    "words": [
+     "vio",
+     "Llegar"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "como si + subjuntivo",
+  "type": "grammar",
+  "en": "as if …",
+  "explain": "Como si is always followed by the imperfect subjunctive: 'como si fuera su propia hija' = as if she were his own daughter.",
+  "occ": [
+   {
+    "p": 40,
+    "words": [
+     "como",
+     "si",
+     "fuera"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "tenerle cariño a alguien",
+  "type": "collocation",
+  "en": "to be fond of someone",
+  "occ": [
+   {
+    "p": 41,
+    "words": [
+     "cariño",
+     "que",
+     "le",
+     "tienen"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "sin que + subjuntivo",
+  "type": "grammar",
+  "en": "without (someone doing something)",
+  "explain": "Sin que always takes the subjunctive: 'sin que le dé una palmadita' = without him giving her a pat.",
+  "occ": [
+   {
+    "p": 42,
+    "words": [
+     "sin",
+     "que",
+     "dé"
+    ]
+   }
+  ]
+ }
+]

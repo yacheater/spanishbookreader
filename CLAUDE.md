@@ -32,7 +32,11 @@ account; commits as `yacheater` / its noreply address — repo-local config, nev
 ## Adding a text («обработай …»)
 1. Put the text into `inputs/<user>/<id>.txt` — **verbatim**, one paragraph per line; write `<id>.meta.json` next to it.
    From the app queue: `python3 tools/suggestions.py list` → `take <n> <id>` (writes both files) → … → `done <n> <id>`
-   (or `reject <n> "reason"`). **Song lyrics are never stored or processed** (copyright) — reject and offer an
+   (or `reject <n> "reason"`; `done <n> <id> "reply"` for a custom message). **Daily limit: 8 000 characters per
+   user per day** (`take` enforces it, log `inputs/quota.json`; `--force` only when the owner allows an exception).
+   **Licence** (`"license"` in meta): public domain (author died > 70 years ago), CC BY / BY-SA / CC0, or our own study
+   texts → `"public": true` (open shelf); CC BY-NC → public only while the app is free; everything else → private.
+   Obvious copy/OCR errors in a source may be fixed — list them in `meta.source.edited`. **Song lyrics are never stored or processed** (copyright) — reject and offer an
    original study text about the song's language instead (like `inputs/nastya/bby_wow.txt`).
    Websites behind a bot check (cultura.gob.ar, scielo.cl) can't be fetched — ask the user to paste the text.
    **Scientific articles:** drop navigation and reference/bibliography blocks; replace the methodology

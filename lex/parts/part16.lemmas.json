@@ -1,0 +1,835 @@
+{
+ "a.prep": {
+  "en": "to; at"
+ },
+ "aceptar.v": {
+  "en": "to accept"
+ },
+ "acercar.v": {
+  "en": "to bring closer (acercarse = to approach)"
+ },
+ "acomodar.v": {
+  "en": "to arrange; to fit; to make comfortable"
+ },
+ "acostar.v": {
+  "en": "to lay down; to put to bed (acostarse = to lie down)",
+  "m": "o>ue"
+ },
+ "adelantar.v": {
+  "en": "to advance; to pay in advance; to move forward"
+ },
+ "agarrar.v": {
+  "en": "to grab; to catch"
+ },
+ "ah.interj": {
+  "en": "ah!; oh!"
+ },
+ "alfombra.n": {
+  "en": "carpet; rug",
+  "g": "f"
+ },
+ "allá.adv": {
+  "en": "there; over there"
+ },
+ "ancho.n": {
+  "en": "width (de ancho = wide)",
+  "g": "m"
+ },
+ "andar.v": {
+  "en": "to walk; to go about; to travel"
+ },
+ "apenas.adv": {
+  "en": "barely; hardly; as soon as"
+ },
+ "apetito.n": {
+  "en": "appetite",
+  "g": "m"
+ },
+ "apuntar.v": {
+  "en": "to point (to); to aim; to note"
+ },
+ "aquel.det": {
+  "en": "that (over there); those"
+ },
+ "arena.n": {
+  "en": "sand",
+  "g": "f"
+ },
+ "arrastrar.v": {
+  "en": "to drag"
+ },
+ "arrimar.v": {
+  "en": "to move close; to push up against"
+ },
+ "atado.n": {
+  "en": "bundle",
+  "g": "m"
+ },
+ "atravesar.v": {
+  "en": "to cross; to go through",
+  "m": "e>ie"
+ },
+ "añadir.v": {
+  "en": "to add"
+ },
+ "beber.v": {
+  "en": "to drink"
+ },
+ "bicho.n": {
+  "en": "creature; critter; bug",
+  "g": "m"
+ },
+ "bramar.v": {
+  "en": "to roar; to bellow"
+ },
+ "buscar.v": {
+  "en": "to look for; to seek"
+ },
+ "caer.v": {
+  "en": "to fall"
+ },
+ "calor.n": {
+  "en": "heat (hace calor = it is hot)",
+  "g": "m"
+ },
+ "caminar.v": {
+  "en": "to walk"
+ },
+ "camisa.n": {
+  "en": "shirt",
+  "g": "f"
+ },
+ "cansado.adj": {
+  "en": "tired"
+ },
+ "canto.n": {
+  "en": "song; chant; edge (de canto = on its edge)",
+  "g": "m"
+ },
+ "cargar.v": {
+  "en": "to load; to carry; to charge"
+ },
+ "cazador.n": {
+  "en": "hunter",
+  "g": "m"
+ },
+ "cazar.v": {
+  "en": "to hunt"
+ },
+ "ceniza.n": {
+  "en": "ash",
+  "g": "f"
+ },
+ "cerrar.v": {
+  "en": "to close",
+  "m": "e>ie"
+ },
+ "chico.adj": {
+  "en": "small; little; young (Rioplatense)"
+ },
+ "chiquito.adj": {
+  "en": "tiny; little (diminutive of chico)"
+ },
+ "cocinar.v": {
+  "en": "to cook"
+ },
+ "colgar.v": {
+  "en": "to hang",
+  "m": "o>ue"
+ },
+ "color.n": {
+  "en": "colour",
+  "g": "m"
+ },
+ "comer.v": {
+  "en": "to eat"
+ },
+ "completamente.adv": {
+  "en": "completely"
+ },
+ "comprender.v": {
+  "en": "to understand; to comprise"
+ },
+ "comprometer.v": {
+  "en": "to commit; to involve; to compromise (comprometerse = to commit oneself)"
+ },
+ "conocer.v": {
+  "en": "to know; to get to know; to meet"
+ },
+ "conseguir.v": {
+  "en": "to get; to obtain; to achieve",
+  "m": "e>i"
+ },
+ "construir.v": {
+  "en": "to build; to construct"
+ },
+ "contento.adj": {
+  "en": "happy; content"
+ },
+ "correr.v": {
+  "en": "to run"
+ },
+ "cortar.v": {
+  "en": "to cut"
+ },
+ "creer.v": {
+  "en": "to believe; to think"
+ },
+ "cruzar.v": {
+  "en": "to cross; to bring together"
+ },
+ "cuarto.n": {
+  "en": "room; quarter",
+  "g": "m"
+ },
+ "cuello.n": {
+  "en": "neck",
+  "g": "m"
+ },
+ "cuero.n": {
+  "en": "hide; skin; leather",
+  "g": "m"
+ },
+ "cuidar.v": {
+  "en": "to take care of; to look after"
+ },
+ "curar.v": {
+  "en": "to cure; to heal; to treat (with plant medicine)"
+ },
+ "curioso.adj": {
+  "en": "curious; nosy; strange"
+ },
+ "cáscara.n": {
+  "en": "shell; peel",
+  "g": "f"
+ },
+ "dar.v": {
+  "en": "to give"
+ },
+ "debilitar.v": {
+  "en": "to weaken (debilitarse = to grow weak)"
+ },
+ "decir.v": {
+  "en": "to say; to tell"
+ },
+ "delirar.v": {
+  "en": "to be delirious; to rave"
+ },
+ "delirio.n": {
+  "en": "delirium",
+  "g": "m"
+ },
+ "deshacer.v": {
+  "en": "to undo; to untie"
+ },
+ "detener.v": {
+  "en": "to stop; to arrest (detenerse = to stop)"
+ },
+ "diez.num": {
+  "en": "ten"
+ },
+ "director.n": {
+  "en": "director; head",
+  "g": "m"
+ },
+ "doler.v": {
+  "en": "to hurt; to ache",
+  "m": "o>ue"
+ },
+ "dormir.v": {
+  "en": "to sleep",
+  "m": "o>ue,u"
+ },
+ "débil.adj": {
+  "en": "weak"
+ },
+ "dónde.adv": {
+  "en": "where (question)"
+ },
+ "embarrado.adj": {
+  "en": "muddy; mud-caked"
+ },
+ "emprender.v": {
+  "en": "to undertake; to set out on"
+ },
+ "encima.adv": {
+  "en": "on top; above (encima de = on top of)"
+ },
+ "encontrar.v": {
+  "en": "to find; encontrarse: to be (located)",
+  "m": "o>ue"
+ },
+ "enfermar.v": {
+  "en": "to make ill; to fall ill"
+ },
+ "enfermo.adj": {
+  "en": "ill; sick"
+ },
+ "enorme.adj": {
+  "en": "enormous; huge"
+ },
+ "enredadera.n": {
+  "en": "vine; climbing plant",
+  "g": "f"
+ },
+ "enseguida.adv": {
+  "en": "at once; straight away"
+ },
+ "entender.v": {
+  "en": "to understand",
+  "m": "e>ie"
+ },
+ "escopeta.n": {
+  "en": "shotgun",
+  "g": "f"
+ },
+ "espantoso.adj": {
+  "en": "terrifying; dreadful"
+ },
+ "estar.v": {
+  "en": "to be (state, location)"
+ },
+ "feliz.adj": {
+  "en": "happy"
+ },
+ "fiebre.n": {
+  "en": "fever",
+  "g": "f"
+ },
+ "fin.n": {
+  "en": "end (por fin / al fin = at last); aim",
+  "g": "m"
+ },
+ "flaco.adj": {
+  "en": "thin; skinny"
+ },
+ "fuerte.adj": {
+  "en": "strong"
+ },
+ "fuerza.n": {
+  "en": "strength; force",
+  "g": "f"
+ },
+ "fumar.v": {
+  "en": "to smoke"
+ },
+ "garganta.n": {
+  "en": "throat",
+  "g": "f"
+ },
+ "golpecito.n": {
+  "en": "little pat; light tap (diminutive of golpe)",
+  "g": "m"
+ },
+ "gravemente.adv": {
+  "en": "seriously; gravely"
+ },
+ "gritar.v": {
+  "en": "to shout; to scream"
+ },
+ "haber.v": {
+  "en": "to have (auxiliary); there is/are (hay)"
+ },
+ "hablar.v": {
+  "en": "to speak; to talk"
+ },
+ "herir.v": {
+  "en": "to wound; to injure",
+  "m": "e>ie,i"
+ },
+ "hermanito.n": {
+  "en": "little brother (diminutive of hermano; hermanitos = little brothers and sisters)",
+  "g": "m"
+ },
+ "hermano.n": {
+  "en": "brother (hermanos = brothers and sisters)",
+  "g": "m"
+ },
+ "heroico.adj": {
+  "en": "heroic"
+ },
+ "hombro.n": {
+  "en": "shoulder",
+  "g": "m"
+ },
+ "hora.n": {
+  "en": "hour; time",
+  "g": "f"
+ },
+ "horizonte.n": {
+  "en": "horizon",
+  "g": "m"
+ },
+ "iluminar.v": {
+  "en": "to light up; to illuminate"
+ },
+ "inmenso.adj": {
+  "en": "immense; huge"
+ },
+ "ir.v": {
+  "en": "to go"
+ },
+ "jardín.n": {
+  "en": "garden (Jardín Zoológico = zoo)",
+  "g": "m"
+ },
+ "jaula.n": {
+  "en": "cage",
+  "g": "f"
+ },
+ "laguna.n": {
+  "en": "lagoon; (mountain) lake",
+  "g": "f"
+ },
+ "lanzar.v": {
+  "en": "to throw; to launch; to let out (a cry) (lanzarse = to leap)"
+ },
+ "lata.n": {
+  "en": "can; tin",
+  "g": "f"
+ },
+ "legua.n": {
+  "en": "league (old unit of distance, about 5 km)",
+  "g": "f"
+ },
+ "lejano.adj": {
+  "en": "distant; far"
+ },
+ "levantar.v": {
+  "en": "to raise; to lift (levantar argumentos = to put forward arguments)"
+ },
+ "leña.n": {
+  "en": "firewood",
+  "g": "f"
+ },
+ "libre.adj": {
+  "en": "free"
+ },
+ "limpiar.v": {
+  "en": "to clean"
+ },
+ "llegar.v": {
+  "en": "to arrive; to come; to reach"
+ },
+ "llenar.v": {
+  "en": "to fill"
+ },
+ "llevar.v": {
+  "en": "to take; to carry; to lead"
+ },
+ "lomo.n": {
+  "en": "back (of an animal)",
+  "g": "m"
+ },
+ "luz.n": {
+  "en": "light",
+  "g": "f"
+ },
+ "lástima.n": {
+  "en": "pity (tener lástima de = to feel sorry for; ¡qué lástima! = what a pity!)",
+  "g": "f"
+ },
+ "límite.n": {
+  "en": "limit; border",
+  "g": "m"
+ },
+ "madrugada.n": {
+  "en": "small hours; early morning (de madrugada = before dawn)",
+  "g": "f"
+ },
+ "manta.n": {
+  "en": "blanket",
+  "g": "f"
+ },
+ "marcha.n": {
+  "en": "march; progress; departure (emprender la marcha = to set off)",
+  "g": "f"
+ },
+ "mañana.n": {
+  "en": "morning",
+  "g": "f"
+ },
+ "medio.adj": {
+  "en": "middle; half; average"
+ },
+ "meter.v": {
+  "en": "to put in; to insert"
+ },
+ "minuto.n": {
+  "en": "minute",
+  "g": "m"
+ },
+ "mirar.v": {
+  "en": "to look (at); to watch"
+ },
+ "molestar.v": {
+  "en": "to bother; to annoy"
+ },
+ "mono.n": {
+  "en": "monkey",
+  "g": "m"
+ },
+ "monte.n": {
+  "en": "mountain; (Rioplatense) the bush, wild forest",
+  "g": "m"
+ },
+ "moribundo.adj": {
+  "en": "dying"
+ },
+ "morir.v": {
+  "en": "to die (morirse de = to be dying of)",
+  "m": "o>ue,u"
+ },
+ "mover.v": {
+  "en": "to move",
+  "m": "o>ue"
+ },
+ "más.adv": {
+  "en": "more; most"
+ },
+ "mío.pron": {
+  "en": "mine; of mine"
+ },
+ "nado.n": {
+  "en": "swimming (a nado = by swimming)",
+  "g": "m"
+ },
+ "noche.n": {
+  "en": "night",
+  "g": "f"
+ },
+ "nudo.n": {
+  "en": "knot",
+  "g": "m"
+ },
+ "orilla.n": {
+  "en": "shore; bank; edge",
+  "g": "f"
+ },
+ "oír.v": {
+  "en": "to hear"
+ },
+ "palmadita.n": {
+  "en": "little pat (diminutive of palmada)",
+  "g": "f"
+ },
+ "palmera.n": {
+  "en": "palm tree",
+  "g": "f"
+ },
+ "pantano.n": {
+  "en": "swamp; marsh",
+  "g": "m"
+ },
+ "parado.adj": {
+  "en": "standing (up) (Latin America); stopped"
+ },
+ "pasar.v": {
+  "en": "to pass; to happen; to spend (time)"
+ },
+ "pasear.v": {
+  "en": "to walk; to stroll"
+ },
+ "paso.n": {
+  "en": "step; pass; passage",
+  "g": "m"
+ },
+ "pastito.n": {
+  "en": "short, tender grass (diminutive of pasto)",
+  "g": "m"
+ },
+ "pasto.n": {
+  "en": "grass; pasture",
+  "g": "m"
+ },
+ "pata.n": {
+  "en": "leg (of an animal); paw",
+  "g": "f"
+ },
+ "pensar.v": {
+  "en": "to think",
+  "m": "e>ie"
+ },
+ "perder.v": {
+  "en": "to lose",
+  "m": "e>ie"
+ },
+ "pesar.v": {
+  "en": "to weigh"
+ },
+ "piola.n": {
+  "en": "string; cord (Rioplatense)",
+  "g": "f"
+ },
+ "pobre.adj": {
+  "en": "poor"
+ },
+ "poder.v": {
+  "en": "can; to be able to"
+ },
+ "poner.v": {
+  "en": "to put; to place"
+ },
+ "posiblemente.adv": {
+  "en": "possibly"
+ },
+ "preferir.v": {
+  "en": "to prefer",
+  "m": "e>ie,i"
+ },
+ "pronto.adv": {
+  "en": "soon; quickly"
+ },
+ "prueba.n": {
+  "en": "proof; test",
+  "g": "f"
+ },
+ "quedar.v": {
+  "en": "to remain; to be left; to end up"
+ },
+ "quejarse.v": {
+  "en": "to complain"
+ },
+ "quemar.v": {
+  "en": "to burn"
+ },
+ "querer.v": {
+  "en": "to want; to love"
+ },
+ "querosene.n": {
+  "en": "kerosene (also queroseno)",
+  "g": "m"
+ },
+ "ramada.n": {
+  "en": "brush shelter; lean-to roofed with branches or leaves",
+  "g": "f"
+ },
+ "rato.n": {
+  "en": "while; short time (al poco rato = shortly after)",
+  "g": "m"
+ },
+ "ratoncito.n": {
+  "en": "little mouse (diminutive of ratón)",
+  "g": "m"
+ },
+ "ratón.n": {
+  "en": "mouse",
+  "g": "m"
+ },
+ "raíz.n": {
+  "en": "root (a raíz de: as a result of)",
+  "g": "f"
+ },
+ "recobrar.v": {
+  "en": "to regain; to recover"
+ },
+ "reconocer.v": {
+  "en": "to recognize; to acknowledge"
+ },
+ "recorrer.v": {
+  "en": "to travel around; to go through"
+ },
+ "remedio.n": {
+  "en": "medicine; remedy",
+  "g": "m"
+ },
+ "resplandor.n": {
+  "en": "glow; brightness",
+  "g": "m"
+ },
+ "responder.v": {
+  "en": "to answer; to respond"
+ },
+ "reír.v": {
+  "en": "to laugh"
+ },
+ "rico.adj": {
+  "en": "rich; tasty"
+ },
+ "rincón.n": {
+  "en": "corner (inside)",
+  "g": "m"
+ },
+ "romper.v": {
+  "en": "to break; to smash"
+ },
+ "rugido.n": {
+  "en": "roar",
+  "g": "m"
+ },
+ "saber.v": {
+  "en": "to know"
+ },
+ "sacar.v": {
+  "en": "to take out; to get out"
+ },
+ "salto.n": {
+  "en": "jump; leap",
+  "g": "m"
+ },
+ "salvar.v": {
+  "en": "to save; to rescue"
+ },
+ "sanar.v": {
+  "en": "to heal; to cure"
+ },
+ "sano.adj": {
+  "en": "healthy"
+ },
+ "seco.adj": {
+  "en": "dry"
+ },
+ "seguida.n": {
+  "en": "en seguida = at once; straight away",
+  "g": "f"
+ },
+ "semana.n": {
+  "en": "week",
+  "g": "f"
+ },
+ "sentarse.v": {
+  "en": "to sit down",
+  "m": "e>ie"
+ },
+ "sentir.v": {
+  "en": "to feel; to be sorry",
+  "m": "e>ie,i"
+ },
+ "sentirse.v": {
+  "en": "to feel (+ adjective / adverb)",
+  "m": "e>ie,i"
+ },
+ "separar.v": {
+  "en": "to separate (separarse de = to part from)"
+ },
+ "silla.n": {
+  "en": "chair",
+  "g": "f"
+ },
+ "siquiera.adv": {
+  "en": "even (ni siquiera = not even)"
+ },
+ "soga.n": {
+  "en": "rope",
+  "g": "f"
+ },
+ "solo.adj": {
+  "en": "alone; single; only one"
+ },
+ "subir.v": {
+  "en": "to go up; to rise; to climb"
+ },
+ "sujetar.v": {
+  "en": "to hold; to fasten"
+ },
+ "sumamente.adv": {
+  "en": "extremely"
+ },
+ "suyo.pron": {
+  "en": "his; hers; its; theirs; yours (formal) (el suyo, la suya…)"
+ },
+ "tarde.n": {
+  "en": "afternoon; evening",
+  "g": "f"
+ },
+ "tendido.adj": {
+  "en": "lying (stretched out)"
+ },
+ "tener.v": {
+  "en": "to have"
+ },
+ "tierno.adj": {
+  "en": "tender; soft"
+ },
+ "tigre.n": {
+  "en": "tiger; (in South America) jaguar",
+  "g": "m"
+ },
+ "tira.n": {
+  "en": "strip",
+  "g": "f"
+ },
+ "tomar.v": {
+  "en": "to drink; to take"
+ },
+ "tortuga.n": {
+  "en": "turtle; tortoise",
+  "g": "f"
+ },
+ "trabajador.adj": {
+  "en": "hard-working",
+  "f": "trabajadora"
+ },
+ "traer.v": {
+  "en": "to bring; to carry"
+ },
+ "trapo.n": {
+  "en": "rag; cloth",
+  "g": "m"
+ },
+ "trescientos.num": {
+  "en": "three hundred"
+ },
+ "tristeza.n": {
+  "en": "sadness",
+  "g": "f"
+ },
+ "uña.n": {
+  "en": "nail; claw",
+  "g": "f"
+ },
+ "vendar.v": {
+  "en": "to bandage"
+ },
+ "venenoso.adj": {
+  "en": "poisonous; venomous"
+ },
+ "ver.v": {
+  "en": "to see"
+ },
+ "verano.n": {
+  "en": "summer",
+  "g": "m"
+ },
+ "viaje.n": {
+  "en": "journey; trip",
+  "g": "m"
+ },
+ "viajero.n": {
+  "en": "traveller",
+  "g": "m"
+ },
+ "viento.n": {
+  "en": "wind",
+  "g": "m"
+ },
+ "vivir.v": {
+  "en": "to live"
+ },
+ "vivo.adj": {
+  "en": "alive; living; lively"
+ },
+ "volver.v": {
+  "en": "to return; to turn; to make (+ adj)",
+  "m": "o>ue"
+ },
+ "víbora.n": {
+  "en": "snake; viper",
+  "g": "f"
+ },
+ "yuyito.n": {
+  "en": "little herb; tender wild plant (diminutive of yuyo, Rioplatense)",
+  "g": "m"
+ },
+ "zonzo.adj": {
+  "en": "silly; foolish (Rioplatense)"
+ },
+ "zoológico.n": {
+  "en": "zoo",
+  "g": "m"
+ },
+ "árbol.n": {
+  "en": "tree",
+  "g": "m"
+ }
+}
