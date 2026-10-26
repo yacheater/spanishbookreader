@@ -461,3 +461,10 @@ h1 { font-size: 1.65rem; letter-spacing: -.01em; }
 .pill.sm { font-size: 10.5px; padding: 1px 8px; flex: none; }
 .ph-block .btn.primary { background: none; color: var(--accent); border-color: var(--accent); }
 .ph-block .btn.primary:hover { background: var(--accent-soft); }
+.cat-item { cursor: default; }
+.cat-item .meta { align-items: center; margin-top: 10px; }
+.cat-item .meta .small-btn { padding: 5px 14px; }
+.lib .cat-item { display: block; padding: 14px 16px 12px; background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); box-shadow: var(--shadow-sm); color: var(--text); }
+.cat-item a.cta { text-decoration: none; }
+.cat-item .item-src { text-transform: none; }
