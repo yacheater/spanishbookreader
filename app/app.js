@@ -240,10 +240,10 @@ function openProfileDialog(first) {
   };
   draw();
 }
-function speak(text, lang = "es") {
+function speak(text, lang = "es", rate = 0.9) {
   try {
     const u = new SpeechSynthesisUtterance(text);
-    u.lang = lang === "en" ? "en-US" : "es-ES"; u.rate = 0.9;
+    u.lang = lang === "en" ? "en-US" : "es-ES"; u.rate = rate;
     const voices = speechSynthesis.getVoices();
     const v = lang === "en" ? voices.find((x) => x.lang && x.lang.startsWith("en-US")) || voices.find((x) => x.lang && x.lang.startsWith("en"))
       : voices.find((x) => x.lang === "es-AR") || voices.find((x) => x.lang && x.lang.startsWith("es"));
@@ -844,6 +844,11 @@ function renderWords() {
   const list = scope.slice().sort((a, b) => a.L.lemma.localeCompare(b.L.lemma, "es"));
   const n = sessionSize(), per = n && scope.length > n ? n : scope.length;
   const [exW, exT] = modeExamples(inFolders);
+  const wd = writeSetting();
+  const exWrite = wd === "fwd" ? exW : wd === "rev" ? exW.split(" → ").reverse().join(" → ") : exW.replace(" → ", " ⇄ ");
+  const writeDesc = { fwd: t("one saved word at a time — you type what it means in {lang}", { lang: langName(NATIVE()) }),
+    rev: t("you see the meaning — you type the word in {lang}", { lang: langName(TARGET()) }),
+    mix: t("new words: you type the meaning; words you know: you type them in {lang}", { lang: langName(TARGET()) }) }[wd];
   const custom = S.selected.length === 1 && S.folders[S.selected[0]] && !S.folders[S.selected[0]].auto ? S.folders[S.selected[0]] : null;
 
   view.innerHTML = `<div class="wide-col ui words-page">
@@ -878,15 +883,18 @@ function renderWords() {
     <h2 class="sec">${t("Test")} <span>${t("marks words as learned")}</span></h2>
     <div class="mode-row two">
       <a class="mode" href="#/study/write"><span class="ic">✎</span><b>${t("Write")}</b>
-        <span>${t("one saved word at a time — you type what it means in {lang}", { lang: langName(NATIVE()) })}</span><span class="ex">${esc(exW)}</span></a>
+        <span>${writeDesc}</span><span class="ex">${esc(exWrite)}</span></a>
       <a class="mode" href="#/study/translate"><span class="ic">⇄</span><b>${t("Translate")}</b>
         <span>${t("whole expressions from your texts, both directions")}</span><span class="ex">${esc(exT)}</span></a>
     </div>
+    <div class="scope-row dir-row"><span class="lbl">${t("Write")}</span><div class="seg">${WRITE_DIRS.map((k) =>
+      `<button class="${wd === k ? "on" : ""}" data-wdir="${k}">${k === "fwd" ? "→ " + langName(NATIVE()) : k === "rev" ? "→ " + langName(TARGET()) : t("mixed")}</button>`).join("")}</div></div>
     <h2 class="sec">${t("Practice")} <span>${t("doesn't change progress")}</span></h2>
-    <div class="mode-row three">
+    <div class="mode-row four">
       <a class="mode" href="#/study/flash"><span class="ic">▤</span><b>${t("Flashcards")}</b><span>${esc(t("flip & recall"))}</span></a>
       <a class="mode" href="#/study/choose"><span class="ic">◉</span><b>${t("Choose")}</b><span>${t("pick an answer")}</span></a>
       <a class="mode" href="#/study/cloze"><span class="ic">▁</span><b>${t("In context")}</b><span>${t("fill the gap")}</span></a>
+      <a class="mode" href="#/study/listen"><span class="ic">♪</span><b>${t("Listen")}</b><span>${t("hear it, type it")}</span></a>
     </div>
     <h2 class="sec list-head">${filterLabel(S.statusFilter)} <span>${list.length}</span></h2>
     <ul class="wlist">${list.map((c) => `
@@ -908,6 +916,8 @@ view.addEventListener("click", (e) => {
   }
   const f = e.target.closest("[data-filter]");
   if (f) { S.statusFilter = f.dataset.filter; Store.save(); renderWords(); return; }
+  const wdb = e.target.closest("[data-wdir]");
+  if (wdb) { S.settings.writeDir = wdb.dataset.wdir; Store.save(); renderWords(); return; }
   const sz = e.target.closest("[data-size]");
   if (sz) { S.settings.session = +sz.dataset.size; Store.save(); renderWords(); return; }
   const act = e.target.closest("[data-act]");
@@ -977,6 +987,7 @@ const MODES = {
   flash: { title: "Flashcards" },
   choose: { title: "Choose" },
   cloze: { title: "In context" },
+  listen: { title: "Listen" },
   translate: { title: "Translate", counts: true },
 };
 let session = null;
@@ -987,6 +998,10 @@ function renderStudy(mode) {
   const M = MODES[mode] || MODES.flash;
   let pool = mode === "review" ? reviewQueue(selectedCards()) : weakestFirst(scopeCards());
   if (mode === "cloze") pool = pool.filter((c) => c.example);
+  if (mode === "listen") {
+    if (!("speechSynthesis" in window)) { view.innerHTML = `<div class="study ui"><h1>${t(M.title)}</h1><div class="empty">${t("This browser can't read words aloud.")}<br><br><a class="btn" href="#/words">${t("Back to words")}</a></div></div>`; return; }
+    pool = pool.filter(canProduce);
+  }
   if (!pool.length) {
     view.innerHTML = `<div class="study ui"><h1>${t(M.title)}</h1><div class="empty">${mode === "review"
       ? t("Nothing due — all caught up 🎉") : S.statusFilter !== "all" ? t("No words here: {f}.", { f: filterLabel(S.statusFilter) }) : t("No words in the selected folders.")}<br><br><a class="btn" href="#/words">${t("Back to words")}</a></div></div>`;
@@ -1010,7 +1025,7 @@ function nextStep() {
   const s = session;
   if (s.i >= s.queue.length) return finish();
   const c = s.queue[s.i];
-  ({ review: stepWrite, write: stepWrite, flash: stepFlash, choose: stepChoose, cloze: stepCloze, translate: stepTranslate })[s.mode](c, s.retry.has(s.i));
+  ({ review: stepWriteAny, write: stepWriteAny, flash: stepFlash, choose: stepChoose, cloze: stepCloze, translate: stepTranslate, listen: stepListen })[s.mode](c, s.retry.has(s.i));
 }
 function advance(c, ok) {
   const s = session;
@@ -1186,6 +1201,131 @@ function stepWrite(c, isRetry) {
       const wasLearned = c.srs.reps > 0; gradeTest(c, true); if (!wasLearned) session.learned++;
       advance(c, true);
     };
+  };
+  $("#tf").onsubmit = (e) => { e.preventDefault(); submit(false); };
+  $("#go").onclick = () => submit(false);
+  $("#dk").onclick = () => submit(true);
+}
+
+// ---------- Write, the other way: meaning → the word in the language you learn ----------
+// Grammar patterns ("hay que + infinitivo") have no single wording to type — they stay meaning-only.
+// part of speech in the interface language (Spanish texts store it in Spanish: "adverbio")
+const POS_EN = { v: "verb", n: "noun", adj: "adjective", adv: "adverb", prep: "preposition", conj: "conjunction", pron: "pronoun", det: "determiner", num: "number", interj: "interjection" };
+const posName = (L) => t(L.pos === "phrase" ? L.posLabel || "" : POS_EN[L.pos] || "");
+const canProduce = (c) => !(c.L.pos === "phrase" && (c.L.type === "grammar" || /[+…]/.test(c.L.lemma)));
+const WRITE_DIRS = ["fwd", "rev", "mix"];
+const writeSetting = () => (WRITE_DIRS.includes(S.settings.writeDir) ? S.settings.writeDir : "mix");
+/** fwd = see the word, type its meaning; rev = see the meaning, type the word. Mix: meaning first, the word once
+    you know it — and a word you failed to write stays "rev" until you write it (c.wantRev). */
+function writeDir(c) {
+  const d = writeSetting();
+  if (!canProduce(c)) return "fwd";
+  return d === "mix" ? (c.srs.reps > 0 || c.wantRev ? "rev" : "fwd") : d;
+}
+function stepWriteAny(c, isRetry) {
+  const s = session; s.dirs = s.dirs || {};
+  if (!s.dirs[c.key]) s.dirs[c.key] = writeDir(c);         // the retry at the end keeps the first direction
+  return s.dirs[c.key] === "rev" ? stepProduce(c, isRetry) : stepWrite(c, isRetry);
+}
+/** A word typed in the language being learned: accents optional (but shown), one typo allowed in long words. */
+function checkForeign(input, target, typos = true) {
+  const a = normEs(input), e = normEs(target);
+  if (!a) return { ok: false };
+  if (a === e) return { ok: true, exact: true };
+  if (stripAcc(a) === stripAcc(e)) return { ok: true, accent: true };
+  return { ok: typos && e.length >= 7 && lev(stripAcc(a), stripAcc(e)) <= 1, spelling: true };
+}
+const ARTICLE = /^(el|la|los|las|un|una|unos|unas|the|a|an|to) /;
+/** {ok, exact, accent, gender, synonym, ops}: articles optional, a wrong el/la = gender mistake, another saved word with the same meaning = try again. */
+function checkProduce(input, c) {
+  if (c.L.pos === "phrase") return checkSpanish(input, c.L.lemma);
+  const a = normEs(input), m = a.match(ARTICLE), body = m ? a.slice(m[0].length) : a;
+  const r = checkForeign(body, c.L.lemma);
+  if (r.ok && m && c.L.pos === "n" && c.L.article && /^(el|la|los|las)$/.test(m[1]) && m[1] !== normEs(c.L.article)) return { ok: false, gender: true };
+  if (r.ok || !body) return r;
+  const mine = new Set(enAlternatives(c));
+  const other = myCards().find((o) => o !== c && o.L.pos !== "phrase" && stripAcc(normEs(o.L.lemma)) === stripAcc(body)
+    && enAlternatives(o).some((x) => mine.has(x)));
+  return other ? { ok: false, synonym: other } : r;
+}
+function stepProduce(c, isRetry) {
+  const lang = langOf(c.L), isPh = c.L.pos === "phrase";
+  const target = isPh ? spanishAlternatives(c.L.lemma)[0] : c.L.lemma;
+  shell(`<div class="card-ui"><div class="muted small">${t("Write it in {lang}", { lang: langName(lang) })} · <span class="faint">${esc(posName(c.L))}${isPh ? " · " + t("{n} words", { n: target.split(" ").length }) : ""}</span>${isRetry ? t(" · second try, not graded") : ""}</div>
+    <div class="prompt">${esc(cardGloss(c))}</div>
+    ${c.L.pos === "n" && c.L.article ? `<div class="faint small center">${t("the article is optional")}</div>` : ""}
+    <form id="tf"><input class="answer" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="${typeHere(lang)}"></form>
+    <div id="hint"></div>
+    <div class="row-btns" id="ab"><button class="btn" id="hb">${t("Hint")}</button>${c.example ? `<button class="btn" id="cx">${t("Context")}</button>` : ""}<button class="btn" id="dk">${t("Don't know")}</button><button class="btn primary" id="go">${t("Check")}</button></div>
+    <div id="fbk"></div></div>`);
+  const inp = $("#tf input"); inp.focus();
+  let shown = 0, triedSyn = false;
+  $("#hb").onclick = () => {                         // first letters of each word, one more per click
+    shown++;
+    $("#hint").innerHTML = `<div class="feedback hintbox">${esc(target.split(" ").map((w) => w.slice(0, shown) + (w.length > shown ? "…" : "")).join(" "))}</div>`;
+    inp.focus();
+  };
+  if ($("#cx")) $("#cx").onclick = () => { $("#hint").innerHTML = `<div class="feedback hintbox cloze">${exampleHtml(c.example, true)}</div>`; inp.focus(); };
+  const submit = (giveUp) => {
+    if ($("#tf").dataset.done) return;
+    const r = giveUp ? { ok: false } : checkProduce(inp.value, c);
+    if (r.synonym && !triedSyn) {                    // a right word, just not this card: one more try, not graded
+      triedSyn = true;
+      $("#hint").innerHTML = `<div class="feedback hintbox">${t("«{w}» means that too — it's another word you saved. Here we want a different one.", { w: esc(displayLemma(r.synonym.L)) })}</div>`;
+      inp.select(); return;
+    }
+    $("#tf").dataset.done = 1; inp.disabled = true; $("#ab").hidden = true;
+    if (isRetry) practice(c, r.ok);
+    else { const was = status(c) === "learned"; if (r.ok) delete c.wantRev; else c.wantRev = 1; gradeTest(c, r.ok); if (r.ok && !was) session.learned++; }
+    const answer = `<b>${esc(displayLemma(c.L))}</b> ${speakBtn(isPh ? target : displayLemma(c.L), lang)}`;
+    if (r.ok && r.exact) { speak(isPh ? target : displayLemma(c.L), lang); $("#fbk").innerHTML = `<div class="feedback ok">${t("Correct")}: ${answer}</div>`; setTimeout(() => advance(c, true), 900); return; }
+    const head = r.ok ? (r.accent ? t("Correct — mind the accent:") : t("Accepted, almost exact")) : giveUp ? t("Answer") : r.gender ? t("Not quite — check the article:") : t("Not quite");
+    const why = isPh && !giveUp && r.ops && r.ops.length ? explainOps(r.ops) : "";
+    $("#fbk").innerHTML = `<div class="feedback ${r.ok ? "ok" : "bad"}">${head} ${answer}${why}
+        ${c.example ? `<div class="ex small">${exampleHtml(c.example)}</div>` : ""}</div>
+      <div class="row-btns">${!r.ok && !giveUp && !isRetry ? `<button class="btn" id="ovr">${t("I was right")}</button>` : ""}<button class="btn primary" id="nx">${t("Next")}</button></div>`;
+    $("#nx").focus();
+    $("#nx").onclick = () => advance(c, r.ok);
+    const o = $("#ovr");
+    if (o) o.onclick = () => {
+      c.stats.wrong--; c.srs.lapses--; c.tested--; delete c.wantRev;
+      const was = c.srs.reps > 0; gradeTest(c, true); if (!was) session.learned++;
+      advance(c, true);
+    };
+  };
+  $("#tf").onsubmit = (e) => { e.preventDefault(); submit(false); };
+  $("#go").onclick = () => submit(false);
+  $("#dk").onclick = () => submit(true);
+}
+
+// ---------- Listen (practice): hear the word as it was in the text, type it ----------
+const listenTarget = (c) => (c.L.pos === "phrase" ? spanishAlternatives(c.L.lemma)[0] : c.surface || c.L.lemma);
+function stepListen(c) {
+  const lang = langOf(c.L), target = listenTarget(c), sentence = c.example && c.L.pos !== "phrase" ? c.example.before + c.example.word + c.example.after : "";
+  shell(`<div class="card-ui"><div class="muted small">${t("Listen and type what you hear")}</div>
+    <div class="listen-btns"><button class="btn primary play" id="pl" aria-label="${t("Play")}">▶</button>
+      <button class="btn" id="slow">🐢 ${t("Slower")}</button>${sentence ? `<button class="btn" id="sent">${t("In a sentence")}</button>` : ""}</div>
+    <form id="tf"><input class="answer" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="${typeHere(lang)}"></form>
+    <div class="row-btns" id="ab"><button class="btn" id="dk">${t("Don't know")}</button><button class="btn primary" id="go">${t("Check")}</button></div>
+    <div id="fbk"></div></div>`);
+  const inp = $("#tf input");
+  const play = (rate) => { speak(target, lang, rate); inp.focus(); };
+  $("#pl").onclick = () => play(0.9);
+  $("#slow").onclick = () => play(0.55);
+  if ($("#sent")) $("#sent").onclick = () => { speak(sentence, lang, 0.85); inp.focus(); };
+  setTimeout(() => play(0.9), 250);
+  inp.focus();
+  const submit = (giveUp) => {
+    if ($("#tf").dataset.done) return;
+    $("#tf").dataset.done = 1; inp.disabled = true; $("#ab").hidden = true;
+    const r = giveUp ? { ok: false } : checkForeign(inp.value, target, false);
+    practice(c, r.ok);
+    const meaning = `<div class="muted small">${c.L.pos !== "phrase" && normEs(target) !== normEs(c.L.lemma) ? esc(displayLemma(c.L)) + " · " : ""}${esc(cardForm(c) || cardGloss(c))}</div>`;
+    const head = r.ok ? (r.exact ? t("Correct") : t("Correct — mind the accent:")) : giveUp ? t("Answer") : t("Not quite");
+    $("#fbk").innerHTML = `<div class="feedback ${r.ok ? "ok" : "bad"}">${head} <b>${esc(target)}</b> ${speakBtn(target, lang)}${meaning}
+        ${sentence ? `<div class="ex small">${exampleHtml(c.example)}</div>` : ""}</div>
+      <div class="row-btns"><button class="btn primary" id="nx">${t("Next")}</button></div>`;
+    $("#nx").focus(); $("#nx").onclick = () => advance(c, r.ok);
   };
   $("#tf").onsubmit = (e) => { e.preventDefault(); submit(false); };
   $("#go").onclick = () => submit(false);
