@@ -67,5 +67,12 @@ const before = JSON.stringify(server.state);
 phone.save(8000); phone.sync(server);
 ok(JSON.stringify(server.state) === before, "a save without changes changes nothing");
 
+// streak: both devices answer on the same day, each under its own key — the day total is the sum
+laptop.state.activity = { "2026-10-29|lap": 6 }; laptop.save(9000);
+phone.state.activity = { "2026-10-29|pho": 5 }; phone.save(9100);
+laptop.sync(server); phone.sync(server); laptop.sync(server);
+const dayTotal = (st) => Object.entries(st.activity).filter(([k]) => k.startsWith("2026-10-29|")).reduce((n, [, v]) => n + v, 0);
+ok(dayTotal(laptop.state) === 11 && dayTotal(phone.state) === 11, "answers from two devices on one day add up");
+
 console.log(fails ? `\n${fails} FAILED` : "\nall passed");
 process.exit(fails ? 1 : 0);

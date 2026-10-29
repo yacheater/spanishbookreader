@@ -7,7 +7,8 @@
    Merge = per item, newest event wins (edit on one device, delete on another → whichever is later). */
 "use strict";
 
-const SYNCED = ["cards", "folders", "known", "positions", "hidden", "titles", "profile", "added"];
+// activity = answers per day for the streak, one key per device ("2026-10-29|k3x9q2") so devices never overwrite each other
+const SYNCED = ["cards", "folders", "known", "positions", "hidden", "titles", "profile", "added", "activity"];
 
 const Sync = {
   snapshot: {},
