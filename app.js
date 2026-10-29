@@ -6,7 +6,9 @@
    app/config.js is filled in and you are signed in; otherwise everything stays in this browser.
 
    Learning model: Flashcards / Choose / In context are PRACTICE (stats only). Only the Write test
-   (and Review, which is the Write test on due words) schedules words and marks them learned. */
+   (and Review, which is the Write test on due words) schedules words and marks them learned.
+   Every answer in any mode (first tries only) also updates the card's mistake mark and "last seen"
+   time, which decide what a session picks first; and it counts towards today's goal / the streak. */
 "use strict";
 
 // ---------- storage ----------
@@ -18,7 +20,7 @@ const Store = {
     try { s = JSON.parse(localStorage.getItem(KEY)); } catch (e) { s = null; }
     this.state = Object.assign({
       settings: { fs: { mobile: 18, desktop: 20 }, lh: "normal", width: "narrow", theme: "auto" },
-      cards: {}, known: {}, folders: {}, positions: {}, hidden: {}, titles: {}, profile: {}, added: {}, selected: [], statusFilter: "all",
+      cards: {}, known: {}, folders: {}, positions: {}, hidden: {}, titles: {}, profile: {}, added: {}, activity: {}, selected: [], statusFilter: "all",
     }, s || {});
     if (!Array.isArray(this.state.selected)) this.state.selected = [];
     Sync.init(this.state);
@@ -129,7 +131,57 @@ function gradeTest(c, ok) {            // the only place that moves a word towar
   Store.save();
 }
 function practice(c, ok) { c.stats[ok ? "right" : "wrong"]++; Store.save(); }
-const dueCards = (cards) => cards.filter((c) => c.srs.due <= Date.now());
+// Mistakes: any wrong first answer (any mode) opens one; two right answers in a row close it.
+// Cards from before this existed: a word whose last test failed ("learning") counts as a mistake.
+const hasMistake = (c) => (c.miss != null ? c.miss > 0 : status(c) === "learning");
+function markAnswer(c, ok) {
+  const open = hasMistake(c);
+  c.seen = Date.now();
+  if (!ok) { c.miss = Date.now(); c.run = 0; return; }
+  c.run = (c.run || 0) + 1;
+  c.miss = open && c.run < 2 ? c.miss || Date.now() : 0;
+}
+// Due = a tested word whose interval is over. New words aren't "due"; Review takes them after the due ones.
+const dueCards = (cards) => cards.filter((c) => c.tested && c.srs.due <= Date.now());
+function reviewQueue(cards) {
+  const due = dueCards(cards).sort((a, b) => a.srs.due - b.srs.due);
+  return [...due, ...cards.filter((c) => !c.tested).sort((a, b) => a.added - b.added)];
+}
+// What a practice session picks first: open mistakes, then learning, new, learned; inside each group the
+// word you haven't seen for the longest — so repeated short sessions walk through all of a big folder.
+const RANK = { learning: 1, new: 2, learned: 3 };
+const weakestFirst = (cards) => cards.slice().sort((a, b) =>
+  (hasMistake(b) - hasMistake(a)) || (RANK[status(a)] - RANK[status(b)]) || ((a.seen || 0) - (b.seen || 0)));
+const sessionSize = () => S.settings.session ?? 20;          // 0 = everything in scope
+const take = (cards) => (sessionSize() ? cards.slice(0, sessionSize()) : cards);
+
+// ---------- daily goal & streak ----------
+const GOAL = 10;                                               // answers a day that keep the streak
+const DEVICE = (() => { try { let d = localStorage.getItem("lector.device"); if (!d) localStorage.setItem("lector.device", (d = Math.random().toString(36).slice(2, 8))); return d; } catch (e) { return "x"; } })();
+const dayKey = (d = new Date()) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+function logAnswer() { const k = dayKey() + "|" + DEVICE; S.activity[k] = (S.activity[k] || 0) + 1; }
+function dayTotals() {
+  const m = {};
+  for (const [k, v] of Object.entries(S.activity || {})) { const d = k.split("|")[0]; m[d] = (m[d] || 0) + v; }
+  return m;
+}
+/** {today, streak, week:[{d, n}] (last 7 days, oldest first)}; today's open goal doesn't break the streak yet. */
+function streakInfo() {
+  const m = dayTotals(), d = new Date(), today = m[dayKey()] || 0;
+  let streak = 0;
+  if (today < GOAL) d.setDate(d.getDate() - 1);
+  while ((m[dayKey(d)] || 0) >= GOAL) { streak++; d.setDate(d.getDate() - 1); }
+  const week = [];
+  for (let i = 6; i >= 0; i--) { const x = new Date(); x.setDate(x.getDate() - i); week.push({ d: x, n: m[dayKey(x)] || 0 }); }
+  return { today, streak, week };
+}
+function streakHtml() {
+  const s = streakInfo(), met = s.today >= GOAL;
+  return `<div class="streak${met ? " met" : ""}">
+    <span class="fl">🔥</span><span class="st">${s.streak ? t(s.streak === 1 ? "streak: {n} day" : "streak: {n} days", { n: `<b>${s.streak}</b>` }) : t("{n} answers a day make a streak", { n: GOAL })}</span>
+    <span class="goal">${met ? t("today's goal ✓") : t("today {a} / {b}", { a: s.today, b: GOAL })}</span>
+    <span class="week">${s.week.map((w) => `<i class="${w.n >= GOAL ? "full" : w.n ? "part" : ""}" title="${esc(w.d.toLocaleDateString(UI_LANG, { weekday: "short", day: "numeric" }))}: ${w.n}">${esc(w.d.toLocaleDateString(UI_LANG, { weekday: "narrow" }))}</i>`).join("")}</span></div>`;
+}
 function updateBadges() {
   const all = myCards();
   $("#nav-count").textContent = all.length || "";
@@ -765,39 +817,70 @@ function selectedCards() {
   const all = myCards();
   return S.selected.length ? all.filter((c) => c.folders.some((f) => S.selected.includes(f))) : all;
 }
+const FILTERS = ["all", "new", "learning", "learned", "mistakes"];
+const matchesFilter = (c, f = S.statusFilter) => f === "all" || (f === "mistakes" ? hasMistake(c) : status(c) === f);
+/** Cards the practice modes and the list work on: selected folders × status filter. */
+const scopeCards = () => selectedCards().filter((c) => matchesFilter(c));
+const filterLabel = (k) => (k === "all" ? t("All") : k === "mistakes" ? t("Mistakes") : STATUS_LABEL[k]);
+// one example per test mode, from your own cards when there are some
+const MODE_EX = { es: { en: ["hablar → to speak", "de hecho ⇄ in fact"], ru: ["hablar → говорить", "de hecho ⇄ на самом деле"] },
+  en: { es: ["go → ir", "put off ⇄ postergar"], ru: ["go → идти", "put off ⇄ откладывать"] } };
+function modeExamples(cards) {
+  const fb = (MODE_EX[TARGET()] || MODE_EX.es)[NATIVE()] || MODE_EX.es.en;
+  const w = cards.find((c) => c.L.pos !== "phrase" && status(c) === "learned") || cards.find((c) => c.L.pos !== "phrase");
+  const p = cards.find((c) => c.L.pos === "phrase" && c.L.type !== "grammar" && !/[+…]/.test(c.L.lemma));
+  return [w ? `${displayLemma(w.L)} → ${cardGloss(w)}` : fb[0], p ? `${p.L.lemma} ⇄ ${cardGloss(p)}` : fb[1]];
+}
 function renderWords() {
   S.selected = S.selected.filter((id) => S.folders[id]);
+  if (!FILTERS.includes(S.statusFilter)) S.statusFilter = "all";
   const used = folderCounts();
   const folders = Object.values(S.folders).filter((f) => used[f.id] || !f.auto);
-  const scope = selectedCards();
-  const counts = { new: 0, learning: 0, learned: 0 };
-  scope.forEach((c) => counts[status(c)]++);
-  const due = dueCards(scope).length;
-  const list = scope.filter((c) => S.statusFilter === "all" || status(c) === S.statusFilter)
-    .sort((a, b) => a.L.lemma.localeCompare(b.L.lemma, "es"));
+  const inFolders = selectedCards();
+  const counts = { new: 0, learning: 0, learned: 0, mistakes: 0, all: inFolders.length };
+  inFolders.forEach((c) => { counts[status(c)]++; if (hasMistake(c)) counts.mistakes++; });
+  const due = dueCards(inFolders).length, fresh = counts.new;
+  const scope = scopeCards();
+  const list = scope.slice().sort((a, b) => a.L.lemma.localeCompare(b.L.lemma, "es"));
+  const n = sessionSize(), per = n && scope.length > n ? n : scope.length;
+  const [exW, exT] = modeExamples(inFolders);
   const custom = S.selected.length === 1 && S.folders[S.selected[0]] && !S.folders[S.selected[0]].auto ? S.folders[S.selected[0]] : null;
 
   view.innerHTML = `<div class="wide-col ui words-page">
     <h1>${t("Words")}</h1>
-    <div class="folders">
-      <button class="chip${!S.selected.length ? " on" : ""}" data-folder="">${t("All")} <span class="n">${myCards().length}</span></button>
-      ${folders.map((f) => `<button class="chip${S.selected.includes(f.id) ? " on" : ""}" data-folder="${esc(f.id)}">${f.auto ? "📄" : "📁"} ${esc(f.name)} <span class="n">${used[f.id] || 0}</span></button>`).join("")}
-      <button class="chip ghost" data-act="new-folder">${t("+ Folder")}</button>
-    </div>
-    ${custom ? `<div class="folder-tools"><button class="link-btn" data-act="rename-folder">${t("Rename folder")}</button> · <button class="link-btn danger" data-act="delete-folder">${t("Delete folder")}</button></div>` : ""}
-    ${scope.length ? `
+    ${myCards().length ? `
     <div class="progress-card">
-      <div class="pc-head"><div><span class="pc-big">${counts.learned}</span> <span class="muted">${t("of {n} learned", { n: scope.length })}</span></div>
+      <div class="pc-head"><div><span class="pc-big">${counts.learned}</span> <span class="muted">${t("of {n} learned", { n: inFolders.length })}</span></div>
         <span class="pc-due${due ? " on" : ""}">${due ? t("{n} due today", { n: due }) : t("nothing due")}</span></div>
       <div class="seg-bar">${["learned", "learning", "new"].map((k) => counts[k] ? `<span class="${k}" style="flex:${counts[k]}"></span>` : "").join("")}</div>
       <div class="legend"><span class="dot learned"></span>${t("learned")} ${counts.learned}<span class="dot learning"></span>${t("learning")} ${counts.learning}<span class="dot new"></span>${t("new")} ${counts.new}</div>
+      ${streakHtml()}
     </div>
-    <a class="review-cta${due ? "" : " quiet"}" href="#/study/review"><span class="ic">↻</span>
-      <span class="cta-text"><b>${t("Review")}</b><span>${due ? t("{n} waiting — the spaced-repetition test", { n: due }) : t("all caught up — come back later")}</span></span><span class="go">→</span></a>
+    <a class="review-cta${due || fresh ? "" : " quiet"}" href="#/study/review"><span class="ic">↻</span>
+      <span class="cta-text"><b>${t("Review")}</b><span>${due ? t("{n} due — the spaced-repetition test", { n: due })
+        : fresh ? t("nothing due · {n} new words to test", { n: fresh }) : t("all caught up — come back later")}</span></span><span class="go">→</span></a>
+
+    <section class="scope">
+      <h2 class="sec">${t("What to study")}</h2>
+      <div class="folders">
+        <button class="chip${!S.selected.length ? " on" : ""}" data-folder="">${t("All folders")} <span class="n">${myCards().length}</span></button>
+        ${folders.map((f) => `<button class="chip${S.selected.includes(f.id) ? " on" : ""}" data-folder="${esc(f.id)}">${f.auto ? "📄" : "📁"} ${esc(f.name)} <span class="n">${used[f.id] || 0}</span></button>`).join("")}
+        <button class="chip ghost" data-act="new-folder">${t("+ Folder")}</button>
+      </div>
+      ${custom ? `<div class="folder-tools"><button class="link-btn" data-act="rename-folder">${t("Rename folder")}</button> · <button class="link-btn danger" data-act="delete-folder">${t("Delete folder")}</button></div>` : ""}
+      <div class="scope-row"><span class="lbl">${t("Words")}</span><div class="seg wrap">${FILTERS.map((k) =>
+        `<button class="${S.statusFilter === k ? "on" : ""}${k === "mistakes" ? " miss" : ""}" data-filter="${k}">${filterLabel(k)} <span class="n">${counts[k]}</span></button>`).join("")}</div></div>
+      <div class="scope-row"><span class="lbl">${t("Session")}</span><div class="seg">${[10, 20, 0].map((k) =>
+        `<button class="${n === k ? "on" : ""}" data-size="${k}">${k || t("all")}</button>`).join("")}</div>
+        <span class="scope-sum">${scope.length ? t("{a} of {b} per session · weakest first", { a: per, b: scope.length }) : t("no words here")}</span></div>
+    </section>
+
     <h2 class="sec">${t("Test")} <span>${t("marks words as learned")}</span></h2>
     <div class="mode-row two">
-      <a class="mode" href="#/study/write"><span class="ic">✎</span><b>${t("Write")}</b><span>${t("type the translation")}</span></a>
-      <a class="mode" href="#/study/translate"><span class="ic">⇄</span><b>${t("Translate")}</b><span>${t("expressions, both ways")}</span></a>
+      <a class="mode" href="#/study/write"><span class="ic">✎</span><b>${t("Write")}</b>
+        <span>${t("one saved word at a time — you type what it means in {lang}", { lang: langName(NATIVE()) })}</span><span class="ex">${esc(exW)}</span></a>
+      <a class="mode" href="#/study/translate"><span class="ic">⇄</span><b>${t("Translate")}</b>
+        <span>${t("whole expressions from your texts, both directions")}</span><span class="ex">${esc(exT)}</span></a>
     </div>
     <h2 class="sec">${t("Practice")} <span>${t("doesn't change progress")}</span></h2>
     <div class="mode-row three">
@@ -805,13 +888,10 @@ function renderWords() {
       <a class="mode" href="#/study/choose"><span class="ic">◉</span><b>${t("Choose")}</b><span>${t("pick an answer")}</span></a>
       <a class="mode" href="#/study/cloze"><span class="ic">▁</span><b>${t("In context")}</b><span>${t("fill the gap")}</span></a>
     </div>
-    <div class="list-head">
-      <div class="seg">${["all", "new", "learning", "learned"].map((k) =>
-        `<button class="${S.statusFilter === k ? "on" : ""}" data-filter="${k}">${k === "all" ? t("All") : STATUS_LABEL[k]}${k === "all" ? "" : ` ${counts[k]}`}</button>`).join("")}</div>
-    </div>
+    <h2 class="sec list-head">${filterLabel(S.statusFilter)} <span>${list.length}</span></h2>
     <ul class="wlist">${list.map((c) => `
       <li data-open="${esc(c.key)}" tabindex="0">
-        <div class="wl-main"><span class="wl-lemma">${esc(displayLemma(c.L))}</span>${c.L.pos === "phrase" ? `<span class="tag-type">${esc(t(c.L.posLabel))}</span>` : ""}<span class="wl-en">${esc(cardGloss(c))}</span></div>
+        <div class="wl-main"><span class="wl-lemma">${hasMistake(c) ? `<i class="miss-dot" title="${esc(t("mistake"))}"></i>` : ""}${esc(displayLemma(c.L))}</span>${c.L.pos === "phrase" ? `<span class="tag-type">${esc(t(c.L.posLabel))}</span>` : ""}<span class="wl-en">${esc(cardGloss(c))}</span></div>
         <span class="pill ${status(c)}">${STATUS_LABEL[status(c)]}</span>
       </li>`).join("") || `<li class="empty">${t("Nothing here.")}</li>`}</ul>`
     : `<div class="empty">${esc(t("No words yet. Open a text, tap a word and press + Learn."))}</div>`}
@@ -828,6 +908,8 @@ view.addEventListener("click", (e) => {
   }
   const f = e.target.closest("[data-filter]");
   if (f) { S.statusFilter = f.dataset.filter; Store.save(); renderWords(); return; }
+  const sz = e.target.closest("[data-size]");
+  if (sz) { S.settings.session = +sz.dataset.size; Store.save(); renderWords(); return; }
   const act = e.target.closest("[data-act]");
   if (act) {
     const a = act.dataset.act, fid = S.selected[0];
@@ -873,7 +955,8 @@ function openWordDialog(key) {
   const st = status(c);
   openModal(`<button class="x" data-close aria-label="Close">×</button>${cardBack(c)}
     <div class="wd-meta"><span class="pill ${st}">${STATUS_LABEL[st]}</span>
-      <span class="muted small">${t("tests: {r} ✓ · {w} ✗", { r: c.stats.right, w: c.stats.wrong })}${st === "learned" ? " · " + t("next review {d}", { d: new Date(c.srs.due).toLocaleDateString(UI_LANG, { month: "short", day: "numeric" }) }) : ""}</span></div>
+      <span class="muted small">${t("answers: {r} ✓ · {w} ✗", { r: c.stats.right, w: c.stats.wrong })}${st === "learned" ? " · " + t("next review {d}", { d: new Date(c.srs.due).toLocaleDateString(UI_LANG, { month: "short", day: "numeric" }) }) : ""}</span></div>
+    ${hasMistake(c) ? `<div class="wd-miss"><i class="miss-dot"></i>${t("In your mistakes — answer it right twice in a row to clear it.")}</div>` : ""}
     <div class="wd-folders"><div class="muted small">${t("Folders")}</div>
       ${Object.values(S.folders).map((f) => `<label><input type="checkbox" value="${esc(f.id)}"${c.folders.includes(f.id) ? " checked" : ""}> ${f.auto ? "📄" : "📁"} ${esc(f.name)}</label>`).join("")}</div>
     <div class="row-btns spread"><button class="btn bad-ghost" id="wd-del">${t("Remove word")}</button><button class="btn primary" data-close>${t("Done")}</button></div>`);
@@ -897,17 +980,22 @@ const MODES = {
   translate: { title: "Translate", counts: true },
 };
 let session = null;
+// Review = due words, then untested ones (selected folders, status filter ignored — it's the schedule's job);
+// every other mode = the scope from the Words page, weakest first; a session takes `sessionSize()` of them.
 function renderStudy(mode) {
   if (mode === "translate") return startTranslate();
   const M = MODES[mode] || MODES.flash;
-  let pool = mode === "review" ? dueCards(selectedCards()) : selectedCards();
+  let pool = mode === "review" ? reviewQueue(selectedCards()) : weakestFirst(scopeCards());
   if (mode === "cloze") pool = pool.filter((c) => c.example);
   if (!pool.length) {
     view.innerHTML = `<div class="study ui"><h1>${t(M.title)}</h1><div class="empty">${mode === "review"
-      ? t("Nothing due — all caught up 🎉") : t("No words in the selected folders.")}<br><br><a class="btn" href="#/words">${t("Back to words")}</a></div></div>`;
+      ? t("Nothing due — all caught up 🎉") : S.statusFilter !== "all" ? t("No words here: {f}.", { f: filterLabel(S.statusFilter) }) : t("No words in the selected folders.")}<br><br><a class="btn" href="#/words">${t("Back to words")}</a></div></div>`;
     return;
   }
-  session = { mode, M, queue: shuffle(pool), i: 0, right: 0, wrong: 0, retry: new Set(), learned: 0, done: new Set() };
+  startSession(mode, M, shuffle(take(pool)), pool.length);
+}
+function startSession(mode, M, queue, total) {
+  session = { mode, M, queue, total, i: 0, right: 0, wrong: 0, retry: new Set(), learned: 0, done: new Set(), missed: [] };
   nextStep();
 }
 function shell(inner) {
@@ -926,7 +1014,13 @@ function nextStep() {
 }
 function advance(c, ok) {
   const s = session;
-  if (!s.retry.has(s.i)) { ok ? s.right++ : s.wrong++; }
+  const card = c.L ? c : S.cards["ph:" + c.key];          // Translate passes an expression, saved or not
+  if (!s.retry.has(s.i)) {
+    ok ? s.right++ : s.wrong++;
+    if (card) markAnswer(card, ok);
+    if (!ok && !s.missed.includes(c)) s.missed.push(c);
+  }
+  logAnswer(); Store.save();
   if (!ok && !s.done.has(c.key)) { s.done.add(c.key); s.retry.add(s.queue.length); s.queue.push(c); }  // one more try at the end, not graded
   s.i++; nextStep();
 }
@@ -934,11 +1028,24 @@ function finish() {
   const s = session; if (!s) return;
   const answered = s.right + s.wrong;
   const early = s.i < s.queue.length;
+  const missedCards = s.missed.map((x) => (x.L ? x : S.cards["ph:" + x.key])).filter(Boolean);
+  const label = (x) => (x.L ? `${displayLemma(x.L)} — ${cardGloss(x)}` : `${x.key} — ${gl(x)}`);
+  const more = s.total > s.queue.length - s.retry.size;
   view.innerHTML = `<div class="study ui"><h1>${early ? t("Session ended") : t("Done!")}</h1>
     <div class="card-ui flip"><div class="big">${s.right} ✓ · ${s.wrong} ✗</div>
       <div class="muted">${t("Answers: {n}", { n: answered })} · ${s.M.counts ? t("words learned: {n}", { n: s.learned }) : t("practice, not counted")}</div></div>
-    <div class="row-btns"><a class="btn" href="#/words">${t("Back to words")}</a><button class="btn primary" id="again">${t("Again")}</button></div></div>`;
+    ${streakHtml()}
+    ${s.missed.length ? `<div class="missed"><div class="muted small">${t("Mistakes this session")}</div>
+      <ul>${s.missed.map((x) => `<li>${esc(label(x))}</li>`).join("")}</ul></div>` : ""}
+    <div class="row-btns wrap"><a class="btn" href="#/words">${t("Back to words")}</a>
+      ${missedCards.length ? `<button class="btn" id="redo">${t("Practise these mistakes")}</button>` : ""}
+      <button class="btn primary" id="again">${more ? t("Next {n}", { n: Math.min(sessionSize() || s.total, s.total) }) : t("Again")}</button></div></div>`;
   $("#again").onclick = () => renderStudy(s.mode);
+  const r = $("#redo");
+  if (r) r.onclick = () => {                     // the same mode on just these (Review / Translate → Write)
+    const mode = ["review", "translate"].includes(s.mode) ? "write" : s.mode;
+    startSession(mode, MODES[mode], shuffle(missedCards).filter((c) => mode !== "cloze" || c.example), missedCards.length);
+  };
   session = null;
 }
 document.addEventListener("keydown", (e) => {
@@ -966,9 +1073,15 @@ function stepFlash(c) {
 // Choose (practice): multiple choice, both directions
 function stepChoose(c) {
   const dir = Math.random() < 0.5 ? "es-en" : "en-es";
-  let others = shuffle(myCards().filter((o) => o.key !== c.key && cardGloss(o) !== cardGloss(c))).slice(0, 3);
   const q = dir === "es-en" ? displayLemma(c.L) : cardGloss(c);
   const label = (o) => (dir === "es-en" ? cardGloss(o) : displayLemma(o.L));
+  // wrong options of the same kind first (verb with verbs, phrase with phrases) — otherwise the odd one out gives it away
+  const cand = myCards().filter((o) => o.key !== c.key && cardGloss(o) !== cardGloss(c));
+  const seen = new Set([label(c)]), others = [];
+  for (const o of [...shuffle(cand.filter((o) => o.L.pos === c.L.pos)), ...shuffle(cand.filter((o) => o.L.pos !== c.L.pos))]) {
+    if (others.length === 3) break;
+    if (!seen.has(label(o))) { seen.add(label(o)); others.push(o); }
+  }
   const opts = shuffle([c, ...others]);
   shell(`<div class="card-ui"><div class="muted small">${dir === "es-en" ? t("Choose the translation") : t("Choose the {lang} word", { lang: langName(langOf(c.L)) })}</div>
     <div class="prompt">${esc(q)} ${dir === "es-en" ? speakBtn(q, langOf(c.L)) : ""}</div>
@@ -1209,25 +1322,26 @@ async function startTranslate() {
   try { texts = await libraryTexts(); } catch (e) { /* offline: saved phrases only */ }
   const only = S.selected.filter((f) => f.startsWith("t:")).map((f) => f.slice(2));
   const byKey = {};
-  for (const t of texts) {
+  const filtered = S.statusFilter !== "all";            // a status filter = saved expressions with that status only
+  for (const t of filtered ? [] : texts) {
     if (only.length && !only.includes(t.id)) continue;
     for (const p of t.phrases || []) if (translatable(p) && !byKey[p.key]) byKey[p.key] = { ...p, lang: t.lang || "es", textId: t.id, textTitle: titleOf(t) };
   }
-  for (const c of myCards()) {                           // saved phrases count even if their text is gone
+  for (const c of filtered ? scopeCards() : myCards()) {  // saved phrases count even if their text is gone
     if (c.L.pos === "phrase" && c.L.type !== "grammar" && translatable({ key: c.L.lemma }) && !byKey[c.L.lemma])
       byKey[c.L.lemma] = { key: c.L.lemma, type: c.L.type, en: c.L.en, ru: c.L.ru, example: c.example, textId: c.textId, textTitle: "", lang: langOf(c.L) };
   }
   const all = Object.values(byKey);
   if (!all.length) {
-    view.innerHTML = `<div class="study ui"><h1>${t("Translate")}</h1><div class="empty">${t("No expressions in the selected texts yet.")}<br><br><a class="btn" href="#/words">${t("Back to words")}</a></div></div>`;
+    view.innerHTML = `<div class="study ui"><h1>${t("Translate")}</h1><div class="empty">${filtered ? t("No saved expressions here: {f}.", { f: filterLabel(S.statusFilter) }) : t("No expressions in the selected texts yet.")}<br><br><a class="btn" href="#/words">${t("Back to words")}</a></div></div>`;
     return;
   }
   const saved = (p) => S.cards["ph:" + p.key];
-  const first = shuffle(all.filter((p) => saved(p) && status(saved(p)) !== "learned"));
+  // saved expressions you haven't learned yet first (weakest first), then the rest — learned and unsaved — mixed
+  const first = weakestFirst(all.filter((p) => saved(p) && status(saved(p)) !== "learned").map(saved)).map((c) => all.find((p) => saved(p) === c));
   const rest = shuffle(all.filter((p) => !first.includes(p)));
-  const queue = [...first, ...rest].slice(0, 20).map((p) => ({ ...p, dir: Math.random() < 0.5 ? "to-base" : "to-foreign" }));
-  session = { mode: "translate", M: MODES.translate, queue, i: 0, right: 0, wrong: 0, retry: new Set(), learned: 0, done: new Set() };
-  nextStep();
+  const queue = shuffle(take([...first, ...rest])).map((p) => ({ ...p, dir: Math.random() < 0.5 ? "to-base" : "to-foreign" }));
+  startSession("translate", MODES.translate, queue, all.length);
 }
 function stepTranslate(p, isRetry) {
   const toEs = p.dir === "to-foreign";        // answer in the language being learned (historic name: "to Spanish")

@@ -468,3 +468,58 @@ h1 { font-size: 1.65rem; letter-spacing: -.01em; }
   border-radius: var(--radius); box-shadow: var(--shadow-sm); color: var(--text); }
 .cat-item a.cta { text-decoration: none; }
 .cat-item .item-src { text-transform: none; }
+
+/* streak, study scope, mistakes (v24) */
+.streak { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 10px; font-size: .78rem; color: var(--muted);
+  border-top: 1px dashed var(--line); margin-top: 10px; padding-top: 10px; }
+.streak .fl { font-size: 1rem; filter: grayscale(1); opacity: .55; }
+.streak.met .fl { filter: none; opacity: 1; }
+.streak .st b { color: var(--text); font-size: .9rem; }
+.streak .goal { padding: 1px 8px; border-radius: 99px; background: var(--bg); border: 1px solid var(--line); }
+.streak.met .goal { background: var(--ok-soft, var(--accent-soft)); border-color: transparent; color: var(--text); }
+.streak .week { margin-left: auto; display: inline-flex; gap: 3px; }
+.streak .week i { font-style: normal; width: 18px; height: 18px; border-radius: 50%; display: grid; place-items: center;
+  font-size: .6rem; text-transform: uppercase; color: var(--faint); border: 1px solid var(--line); }
+.streak .week i.part { border-color: var(--accent); color: var(--accent); }
+.streak .week i.full { background: var(--accent); border-color: var(--accent); color: #fff; }
+.study .streak { border: 1px solid var(--line); border-radius: var(--radius); padding: 10px 14px; margin: 12px 0 0; background: var(--surface); }
+.scope { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 2px 14px 12px;
+  margin-top: 18px; box-shadow: var(--shadow-sm); }
+.scope h2.sec { margin-top: 12px !important; }
+.scope-row { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 10px; margin-top: 10px; }
+.scope-row .lbl { font-size: .72rem; color: var(--faint); width: 4.6rem; text-transform: uppercase; letter-spacing: .04em; }
+.scope-row .seg.wrap { flex-wrap: wrap; }
+.scope-row .seg button .n { color: var(--faint); font-weight: 400; margin-left: 2px; }
+.scope-row .seg button.miss.on { background: var(--bad-soft); }
+.scope-sum { font-size: .74rem; color: var(--muted); }
+.mode-row .mode .ex { margin-top: 6px; font-size: .74rem !important; color: var(--text) !important; background: var(--bg);
+  border-radius: 7px; padding: 3px 7px; align-self: flex-start; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.miss-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--bad); margin-right: 7px; vertical-align: middle; }
+.wd-miss { font-size: .8rem; color: var(--muted); margin-top: 8px; }
+.missed { margin-top: 12px; }
+.missed ul { list-style: none; padding: 0; margin: 6px 0 0; display: flex; flex-direction: column; gap: 4px; }
+.missed li { font-size: .88rem; padding: 6px 10px; border-radius: 9px; background: var(--bad-soft); }
+.row-btns.wrap { flex-wrap: wrap; }
+@media (max-width: 560px) {
+  .scope-row .lbl { width: 100%; }
+  .streak .week { margin-left: 0; }
+}
+/* phones: tabs move to a bottom bar, the header stays one line (v24) */
+@media (max-width: 600px) {
+  .top { backdrop-filter: none; -webkit-backdrop-filter: none; background: var(--bg); }
+  .top .sync-status { margin-left: auto; }
+  .top nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
+    background: var(--surface); border-top: 1px solid var(--line); padding: 5px 6px calc(5px + env(safe-area-inset-bottom)); }
+  .top nav a { display: flex; align-items: center; justify-content: center; gap: 4px; padding: 9px 2px; font-size: 13px;
+    border-radius: 10px; overflow: hidden; text-overflow: ellipsis; }
+  .top nav a.active { box-shadow: none; background: var(--accent-soft); color: var(--text); font-weight: 600; }
+  .top nav .badge { font-size: 10px; }
+  main { padding-bottom: calc(5.5rem + env(safe-area-inset-bottom)); }
+  .resume-banner { bottom: calc(72px + env(safe-area-inset-bottom)); }
+}
+.mode-row .mode { min-width: 0; }                       /* the nowrap example line must not widen the grid */
+@media (max-width: 480px) { .mode-row.two { grid-template-columns: 1fr; } }
+@media (max-width: 600px) {
+  .top nav a { position: relative; font-size: 12.5px; padding: 11px 2px; white-space: nowrap; }
+  .top nav .badge { position: absolute; top: 1px; right: 3px; font-size: 9.5px; line-height: 1.5; }
+}
